@@ -1,0 +1,1718 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&display=swap');
+
+/* --- Estilos Generales y Tipografía --- */
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Para Firefox (propiedades estándar) */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #005B94 #f1f1f1;
+}
+
+/* --- Estilos Generales del Contenido Principal --- */
+.mainContent {
+    padding-bottom: 50px; /* Espacio al final del contenido antes del footer */
+    overflow-x: hidden; /* Evita el scroll horizontal no deseado */
+}
+
+/* --- Estilos para la Sección de Login/Registro/Recuperación --- */
+.loginContainer {
+    width: 700px;
+    margin: 70px auto 50px auto;
+    padding: 40px 25px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0;
+    color: #FF0000;
+    line-height: 1;
+    width: 45px;
+    height: 45px;
+    border: 2px solid red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    background-color: rgba(255, 0, 0, 0.1); /* Cambiado de color a background-color para ser consistente con el botón "cancelar" del modal */
+}
+
+.title {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    line-height: 1.3;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.inputGroup {
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.inputField::placeholder {
+    color: #888;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 2px solid #2e2eff;
+    background: transparent;
+    outline: none;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    color: #333;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.inputField:focus {
+    border-bottom-color: #8acf0a;
+    outline: none;
+}
+
+.primaryButton {
+    background-color: #0066a1;
+    color: white;
+    padding: 14px 50px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin: 30px auto 0 auto;
+    width: fit-content;
+}
+
+.primaryButton:hover {
+    background-color: #004d80;
+}
+
+.bottomLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 25px 0px 25px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.signupText {
+    margin: 0;
+    color: #111;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+.linkText {
+    color: #2e2eff;
+    text-decoration: underline;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-style: normal;
+}
+
+.linkText:hover {
+    color: #06b2beb2;
+}
+
+.recoveryRight {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: right;
+    font-style: normal;
+}
+
+.recoveryRight:hover {
+    color: #1a1aff;
+}
+
+.termsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 25px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.termsLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.termsLabel input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.infoCircleSvg circle {
+    transition: fill 0.3s ease;
+}
+
+.infoCircleSvg line {
+    transition: stroke 0.3s ease;
+}
+
+.infoCircleSvg:hover circle {
+    fill: #333333;
+}
+
+.infoCircleSvg:hover line {
+    stroke: #ffffff;
+}
+
+.codeContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.codeInput {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 30px;
+    max-width: 45px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    border: 2px solid #2e2eff;
+    font-size: 1.5rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.codeInput:focus {
+    border-color: #8acf0a;
+}
+
+.descriptionText {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #333;
+    padding: 0 25px;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+.codeLabel {
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para la Sección de Historial de Compras --- */
+.purchaseCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-style: normal;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.purchaseCardTopRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 20px;
+}
+
+.productThumbnails {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 45%;
+    min-width: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+    padding-right: 10px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productThumbnails::-webkit-scrollbar {
+    height: 8px;
+}
+
+.productThumbnails::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.productThumbnails::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.productThumbnails::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.thumbnail:last-child {
+    margin-right: 0;
+}
+
+.separator {
+    width: 1px;
+    background-color: #000;
+    height: 90px;
+    flex-shrink: 0;
+    margin: 0 10px;
+}
+
+.purchaseDetails {
+    flex-grow: 1;
+    flex-basis: 300px;
+    max-width: 45%;
+    min-width: 150px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.purchaseDetails p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.viewDetailsButton {
+    background-color: #0066a1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    max-width: 50%;
+    text-align: center;
+    align-self: center;
+    font-style: normal;
+}
+
+.viewDetailsButton:hover {
+    background-color: #004d80;
+}
+
+/* --- Estilos para la Sección de Perfil (Navegación y Contenido) --- */
+.profileContainer {
+    display: flex;
+    max-width: 1400px;
+    margin: 50px auto;
+    background-color: transparent;
+    overflow: hidden;
+    gap: 30px;
+    align-items: stretch;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.profileNav {
+    min-width: 280px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    border-right: 1px solid #b9b7b7;
+    border-left: 1px solid #c5c5c5;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+    font-style: normal;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    padding: 18px 30px;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-style: normal;
+}
+
+.navButton:hover {
+    background-color: #e0e0e0;
+}
+
+.activeNavButton {
+    background-color: #0066a1;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    font-style: normal;
+}
+
+.activeNavButton:hover {
+    background-color: #004d80;
+}
+
+.logoutButton {
+    background-color: #dc3545;
+    color: white;
+    padding: 18px 30px;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+    font-style: normal;
+}
+
+.logoutButton:hover {
+    background-color: #c82333;
+}
+
+.profileContent {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    border-right: 1px solid #b9b7b7;
+    border-left: 1px solid #c5c5c5;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    min-width: 700px;
+    box-sizing: border-box;
+    height: 600px;
+    overflow-y: auto;
+    font-style: normal;
+}
+
+.contentTitle {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    font-style: italic;
+}
+
+.inputGroupProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.labelProfile {
+    min-width: 120px;
+    margin-right: 20px;
+    font-weight: 700;
+    color: #000;
+    font-size: 1.1rem;
+    font-style: normal;
+}
+
+.inputFieldProfile {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    font-style: normal;
+}
+
+.inputFieldProfile:focus {
+    border-color: #0066a1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 161, 0.3);
+}
+
+.changePasswordButton {
+    background: none;
+    border: none;
+    color: #0066a1;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+    font-style: normal;
+}
+
+.changePasswordButton:hover {
+    color: #004d80;
+}
+
+.saveChangesButton {
+    background-color: #0066a1;
+    color: white;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    font-style: normal;
+}
+
+.saveChangesButton:hover {
+    background-color: #004d80;
+}
+
+/* --- Estilos para el Modal de Cambio de Contraseña (Ajustados para móvil) --- */
+
+/* Estilos para el Overlay (fondo oscuro detrás del modal) */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilos para el Contenido del Modal (la caja blanca) */
+.modalContent {
+    background-color: white;
+    padding: 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 850px; /* Ancho máximo para escritorio */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Encabezado del Modal con botón "Cancelar" a la izquierda y título centrado */
+.headerContainerModal {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    justify-content: space-between; /* Asegura el espacio entre elementos */
+}
+
+/* Botón "Cancelar" en la esquina superior izquierda */
+.cancelButtonHeader {
+    background: none;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    color: red;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+    /* Eliminadas las propiedades de posicionamiento absoluto para que fluya naturalmente */
+    position: relative; /* Asegura que el botón se posicione en el flujo normal del flexbox */
+}
+
+.cancelButtonHeader:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Título del Modal centrado en el header */
+.contentTitleModal {
+    font-size: 2em;
+    color: #333;
+    margin: 0 auto; /* Centra el título horizontalmente */
+    text-align: center;
+    flex-grow: 1; /* Permite que el título ocupe el espacio central */
+    /* padding-left: 120px;  Eliminado este padding fijo que causa problemas en móvil */
+}
+
+/* Estilos para el formulario con layout inline */
+.modalFormInline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada fila del formulario (label e input) */
+.formRow {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Estilo para las etiquetas (labels) */
+.labelInline {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    flex-basis: 220px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+/* Estilo para los campos de entrada (inputs) */
+.inputFieldInline {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.inputFieldInline:focus {
+    border-color: #0066a1;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Mensajes de error y éxito dentro del modal */
+.errorMessage {
+    color: #dc3545;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.successMessage {
+    color: #28a745;
+    font-size: 1em;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* --- Estilos para el Carrusel Principal --- */
+.mainCarousel {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura fija para el carrusel principal */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.carouselInner {
+    display: flex;
+    height: 100%;
+    /* La transición se controla dinámicamente en JS */
+    /* transition: transform 0.5s ease-in-out; */
+}
+
+.carouselItem {
+    min-width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.carouselItem img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.carouselCaption {
+    position: absolute;
+    top: 50%;
+    left: 60%; /* Ajusta la posición del texto */
+    transform: translate(-50%, -50%);
+    background: none; /* La imagen ya tiene el fondo, no necesitamos uno aquí */
+    text-align: left; /* Alinea el texto a la izquierda como en la imagen */
+    color: black; /* El texto es negro en la imagen */
+    max-width: 400px; /* Ancho máximo para el texto */
+}
+
+.carouselTitle {
+    font-size: 3em; /* Título grande */
+    font-weight: 900; /* Más grueso como en la imagen */
+    margin-bottom: 5px; /* Espacio reducido */
+    line-height: 1; /* Para que el texto esté más junto */
+}
+
+.carouselSubtitle {
+    font-size: 1.2em; /* Más pequeño que antes */
+    margin-bottom: 20px;
+    font-weight: 600; /* Semibold */
+}
+
+.carouselButton {
+    background-color: black; /* Botón negro como en la imagen */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carouselButton:hover {
+    background-color: #333;
+}
+
+.carouselDots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.activeDot {
+    background-color: #FFD700;
+    transform: scale(1.2);
+}
+
+/* Botones de navegación del carrusel principal */
+.mainCarouselButton {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2em;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.mainCarouselButton:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mainPrevButton {
+    left: 0;
+}
+
+.mainNextButton {
+    right: 0;
+}
+
+/* --- Nueva Sección de Anuncios Estáticos --- */
+.staticAdSection {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra los ítems si no llenan la línea */
+    gap: 20px; /* Espacio entre los anuncios */
+    padding: 20px; /* Padding alrededor de la sección */
+    margin-bottom: 40px;
+    max-width: 1200px; /* Limita el ancho para que no se extienda demasiado en pantallas muy grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.staticAdItem {
+    flex: 1 1 calc(25% - 20px); /* 4 columnas en desktop, ajusta el ancho y el gap */
+    min-width: 200px; /* Ancho mínimo para cada anuncio */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staticAdItem a {
+    display: block;
+    line-height: 0; /* Elimina espacio extra debajo de la imagen */
+}
+
+.staticAdImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* --- Estilos para Secciones de Slider (Productos, Marcas, Promociones) --- */
+.sliderSection {
+    margin-bottom: 50px;
+    padding: 0 20px; /* Padding horizontal para el contenido */
+}
+
+.sectionTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.sliderContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Ancho máximo del contenedor del slider */
+    margin: 0 auto;
+}
+
+.sliderWrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliderTrack {
+    display: flex;
+    /* La transición se controla dinámicamente en JS */
+    /* transition: transform 0.5s ease-in-out; */
+}
+
+.sliderItem {
+    flex-shrink: 0;
+    /* width se establecerá dinámicamente en JS */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.sliderButton {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 2em;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.sliderButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prevButton {
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.nextButton {
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Estilos para Tarjetas de Producto (Nuevos productos, Precios rebajados) */
+.productCard {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Para posicionar el tag "Top ventas" */
+    overflow: hidden; /* Para que el tag no se desborde */
+}
+
+.topVentasTag {
+    position: absolute;
+    top: 0px; /* Ajustado para que el borde superior de la tarjeta sea visible */
+    left: 10px;
+    background-color: black; /* Fondo negro como en la imagen */
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-bottom-left-radius: 5px; /* Bordes redondeados inferiores */
+    border-bottom-right-radius: 5px;
+    z-index: 5;
+}
+
+.productImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+}
+
+.dayFatherText {
+    font-size: 0.8em;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.productName {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: center; /* Centrar los precios */
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.productOldPrice {
+    font-size: 0.9em;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.productPrice {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000; /* Precio actual en negro */
+}
+
+.productActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.productButton {
+    background-color: black; /* Botón negro como en la imagen */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+}
+
+.productButton:hover {
+    background-color: #333;
+}
+
+.heartIcon {
+    background: none;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;
+    padding: 8px; /* Ajusta el padding para que el tamaño sea similar al botón */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Color del corazón por defecto */
+}
+
+.heartIcon:hover {
+    background-color: #f0f0f0;
+    color: red; /* Corazón rojo al pasar el ratón */
+}
+
+/* Estilos para Banners "Nuevo Ingreso" (imagen_34d0ba.jpg) */
+.newArrivalBannerCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px; /* Altura fija para los banners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el contenido al final */
+    align-items: center;
+}
+
+.newArrivalBannerImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.newArrivalBannerButton {
+    position: relative; /* Para que esté sobre la imagen */
+    z-index: 2;
+    background-color: black; /* Botón negro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px; /* Espacio desde la parte inferior */
+}
+
+.newArrivalBannerButton:hover {
+    background-color: #333;
+}
+
+/* Estilos para Tarjetas de Logo de Marca */
+.brandLogoCard {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px; /* Altura fija para los logos */
+    box-sizing: border-box;
+}
+
+.brandLogoImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Estilos para Logos de Equipos/Ligas (imagen_34cdd5.jpg) */
+.teamLogoBannerCard {
+    background-color: black; /* Fondo negro como en la imagen */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100px; /* Altura fija para estos logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamLogoBannerImage {
+    object-fit: contain; /* Contiene el logo dentro del espacio */
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Estilos para la Sección de Anuncios (Subsección, el banner grande) --- */
+.adSection {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden; /* Para contener la imagen responsive */
+}
+
+.adContent {
+    margin-bottom: 30px;
+}
+
+.adTitle {
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #005B94;
+    margin-bottom: 15px;
+}
+
+.adText {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adButton {
+    background-color: #dc3545; /* Rojo para el botón de acción */
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.adButton:hover {
+    background-color: #c82333;
+}
+
+.adImage {
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* --- Última Sección: Carrusel de Imágenes al Clic --- */
+.clickableCarouselSection {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Altura del carrusel clickeable */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.clickableCarouselInner {
+    display: flex;
+    height: 100%;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    /* Transición controlada por JS */
+}
+
+.clickableCarouselItem {
+    min-width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clickableCarouselItem img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.clickableCarouselOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2; /* Asegura que el overlay sea clickeable */
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .loginContainer {
+        width: 95%;
+        margin: 30px auto;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+    .inputGroup,
+    .bottomLinks,
+    .termsContainer {
+        padding: 0 15px;
+    }
+
+    .inputField::placeholder {
+        font-size: 1rem;
+    }
+
+    .inputField {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .primaryButton {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bottomLinks {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 1rem;
+    }
+
+    .signupText {
+        font-size: 1rem;
+    }
+
+    .recoveryRight {
+        text-align: left;
+    }
+
+    /* Ajustes para el Modal en móvil */
+    .modalContent {
+        width: 95%; /* Asegura que el modal ocupe un buen ancho en pantallas pequeñas */
+        max-width: 95%; /* Elimina el límite superior de ancho de escritorio */
+        padding: 25px 20px; /* Reducido el padding para hacerlo más compacto */
+        gap: 15px; /* Reducido el espacio entre elementos */
+    }
+
+    .headerContainerModal {
+        flex-direction: column; /* Apila el botón y el título */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        margin-bottom: 15px; /* Espacio debajo del header */
+    }
+
+    .cancelButtonHeader {
+        margin-bottom: 10px; /* Espacio entre el botón y el título apilado */
+        align-self: flex-start; /* Asegura que el botón se alinee a la izquierda */
+        position: relative; /* Restablecer a relativo o no usar absoluto en móvil */
+    }
+
+    .contentTitleModal {
+        font-size: 1.5em; /* Título más pequeño para móvil */
+        text-align: center; /* Centra el título incluso apilado */
+        padding-left: 0; /* Elimina el padding fijo que causaba desbordamiento */
+        width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+    }
+
+    .modalFormInline {
+        gap: 15px; /* Más compacto entre filas del formulario */
+    }
+
+    .formRow {
+        flex-direction: column; /* Apila etiquetas y campos de entrada */
+        align-items: flex-start; /* Alinea a la izquierda las etiquetas y campos */
+        gap: 8px; /* Espacio entre la etiqueta y el input apilados */
+    }
+
+    .labelInline {
+        flex-basis: auto; /* Permite que la etiqueta ocupe el ancho necesario */
+        width: 100%; /* Asegura que la etiqueta ocupe todo el ancho */
+        font-size: 1em; /* Fuente más pequeña para las etiquetas */
+    }
+
+    .inputFieldInline {
+        padding: 10px; /* Inputs más pequeños verticalmente */
+        font-size: 1em; /* Fuente más pequeña para los inputs */
+        width: 100%; /* Asegura que el input ocupe todo el ancho */
+    }
+
+    .saveChangesButton {
+        padding: 12px 25px; /* Botón más pequeño */
+        font-size: 1.1em; /* Fuente más pequeña para el botón */
+        margin-top: 20px; /* Menos margen superior */
+        width: 100%; /* El botón ocupa todo el ancho */
+        box-sizing: border-box; /* Asegura padding y border dentro del width */
+    }
+
+    .errorMessage,
+    .successMessage {
+        font-size: 0.9em; /* Mensajes más pequeños */
+    }
+
+    .codeInput {
+        min-width: 25px;
+        max-width: 40px;
+        font-size: 1.2rem;
+    }
+
+    .profileContainer {
+        flex-direction: column;
+        margin: 20px auto;
+        gap: 20px;
+        max-width: 95%;
+    }
+
+    .profileNav {
+        min-width: unset;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e0e0;
+        max-height: unset;
+        overflow-y: visible;
+    }
+
+    .navButton {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .profileContent {
+        min-width: unset;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        height: auto;
+        max-height: unset;
+        overflow-y: visible;
+    }
+
+    .contentTitle {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+
+    .inputGroupProfile {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .labelProfile {
+        min-width: unset;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .inputFieldProfile {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .saveChangesButton {
+        width: 100%;
+        margin-left: 0;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+
+    .purchaseCardTopRow {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .productThumbnails {
+        max-width: 100%;
+        padding-right: 0;
+        justify-content: center;
+        margin-bottom: 10px;
+        min-width: unset;
+        width: 100%;
+        flex-basis: auto;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        margin-right: 5px;
+    }
+
+    .thumbnail:last-child {
+        margin-right: 0;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .purchaseDetails {
+        text-align: center;
+        font-size: 1rem;
+        flex-basis: auto;
+        min-width: unset;
+    }
+
+    .viewDetailsButton {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .mainCarousel {
+        height: 400px; /* Altura reducida para tablet */
+    }
+
+    .carouselCaption {
+        padding: 15px 30px;
+        left: 55%; /* Ajusta la posición del texto */
+        max-width: 350px;
+    }
+
+    .carouselTitle {
+        font-size: 2.5em;
+    }
+
+    .carouselSubtitle {
+        font-size: 1.1em;
+    }
+
+    .carouselButton {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    /* Slider items para tablet (3 columnas) */
+    .sliderItem {
+        width: calc(100% / 3);
+    }
+
+    .sectionTitle {
+        font-size: 2em;
+    }
+
+    .adTitle {
+        font-size: 2.2em;
+    }
+
+    .adText {
+        font-size: 1.1em;
+    }
+
+    .adButton {
+        padding: 12px 30px;
+        font-size: 1.2em;
+    }
+
+    .brandLogoCard {
+        height: 120px;
+    }
+
+    .newArrivalBannerCard {
+        height: 180px;
+    }
+
+    .teamLogoBannerCard {
+        height: 80px;
+    }
+
+    /* Static Ads Tablet (2 columnas) */
+    .staticAdItem {
+        flex: 1 1 calc(50% - 20px); /* 2 columnas */
+    }
+
+    .clickableCarouselSection {
+        height: 280px;
+    }
+}
+
+/* Mobile (hasta 767px) */
+@media (max-width: 767px) {
+    .mainCarousel {
+        height: 300px; /* Altura aún más reducida para móvil */
+    }
+
+    .carouselCaption {
+        padding: 10px 20px;
+        max-width: 90%;
+        left: 50%; /* Centrar en móvil si el texto es parte de la imagen */
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo para mejor legibilidad */
+        border-radius: 5px;
+    }
+
+    .carouselTitle {
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+
+    .carouselSubtitle {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    .carouselButton {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .carouselDots {
+        bottom: 10px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .sliderSection {
+        padding: 0 10px; /* Menos padding horizontal en móvil */
+    }
+
+    .sectionTitle {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    /* Slider items para móvil (2 columnas) */
+    .sliderItem {
+        width: calc(100% / 2);
+    }
+
+    .sliderButton {
+        padding: 10px 5px;
+        font-size: 1.5em;
+    }
+
+    .productCard {
+        padding: 10px;
+    }
+
+    .topVentasTag {
+        font-size: 0.7em;
+        padding: 3px 6px;
+    }
+
+    .dayFatherText {
+        font-size: 0.7em;
+    }
+
+    .productName {
+        font-size: 1em;
+    }
+
+    .productOldPrice {
+        font-size: 0.8em;
+    }
+
+    .productPrice {
+        font-size: 1.2em;
+    }
+
+    .productActions {
+        flex-direction: column; /* Apila los botones en móvil */
+        gap: 8px;
+    }
+
+    .productButton {
+        padding: 8px 15px;
+        font-size: 0.9em;
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .heartIcon {
+        padding: 6px; /* Ajusta el padding para que sea más pequeño */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .adSection {
+        padding: 30px 15px;
+    }
+
+    .adTitle {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .adText {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .adButton {
+        padding: 10px 25px;
+        font-size: 1.1em;
+    }
+
+    .brandLogoCard {
+        height: 100px;
+        padding: 10px;
+    }
+
+    .newArrivalBannerCard {
+        height: 150px;
+    }
+
+    .newArrivalBannerButton {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .teamLogoBannerCard {
+        height: 70px;
+    }
+
+    /* Static Ads Mobile (1 columna) */
+    .staticAdItem {
+        flex: 1 1 100%; /* 1 columna */
+    }
+
+    .clickableCarouselSection {
+        height: 220px;
+    }
+}
