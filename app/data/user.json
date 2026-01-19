@@ -1,0 +1,24 @@
+{
+  "usuarios": [
+    {
+      "idUsuario": 1,
+      "correo": "admin@mitienda.com",
+      "contraseña": "admin123",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "estado": "ACTIVO",
+      "created_at": "2024-01-15T10:00:00Z",
+      "updated_at": "2024-01-15T10:00:00Z"
+    },
+    {
+      "idUsuario": 2,
+      "correo": "maria@ejemplo.com",
+      "contraseña": "maria456",
+      "nombre": "María",
+      "apellido": "García",
+      "estado": "ACTIVO",
+      "created_at": "2024-01-20T14:30:00Z",
+      "updated_at": "2024-01-20T14:30:00Z"
+    }
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "productos": [
+    {
+      "idProducto": 101,
+      "nombre": "iPhone 15 Pro Max",
+      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
+      "precio": 1299.99,
+      "precioOriginal": 1499.99,
+      "stockActual": 15,
+      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 111,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        },
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        },
+        {
+          "idEtiqueta": 3,
+          "descripcion": "Oferta"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" Super Retina XDR"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "A17 Pro"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 1,
+          "url": "https://picsum.photos/seed/iphone-natural-256-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 2,
+          "url": "https://picsum.photos/seed/iphone-natural-256-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 1,
+        "nombre": "Titanio Natural",
+        "valor": "#E8E6E3"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "256GB",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        102,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "idProducto": 102,
+      "nombre": "iPhone 15 Pro Max",
+      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
+      "precio": 1499.99,
+      "stockActual": 8,
+      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 111,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" Super Retina XDR"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "A17 Pro"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 3,
+          "url": "https://picsum.photos/seed/iphone-natural-512-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 4,
+          "url": "https://picsum.photos/seed/iphone-natural-512-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 1,
+        "nombre": "Titanio Natural",
+        "valor": "#E8E6E3"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        101,
+        103,
+        104,
+        105
+      ]
+    },
+    {
+      "idProducto": 103,
+      "nombre": "iPhone 15 Pro Max",
+      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
+      "precio": 1299.99,
+      "stockActual": 12,
+      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 111,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        },
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" Super Retina XDR"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "A17 Pro"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 5,
+          "url": "https://picsum.photos/seed/iphone-blue-256-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 6,
+          "url": "https://picsum.photos/seed/iphone-blue-256-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 2,
+        "nombre": "Titanio Azul",
+        "valor": "#4C6B8A"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "256GB",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        101,
+        102,
+        104,
+        105
+      ]
+    },
+    {
+      "idProducto": 104,
+      "nombre": "iPhone 15 Pro Max",
+      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
+      "precio": 1499.99,
+      "stockActual": 5,
+      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": false,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 3-5 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 111,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" Super Retina XDR"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "A17 Pro"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 7,
+          "url": "https://picsum.photos/seed/iphone-blue-512-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 8,
+          "url": "https://picsum.photos/seed/iphone-blue-512-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 2,
+        "nombre": "Titanio Azul",
+        "valor": "#4C6B8A"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        101,
+        102,
+        103,
+        105
+      ]
+    },
+    {
+      "idProducto": 105,
+      "nombre": "iPhone 15 Pro Max",
+      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
+      "precio": 1299.99,
+      "stockActual": 10,
+      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 111,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" Super Retina XDR"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "A17 Pro"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 9,
+          "url": "https://picsum.photos/seed/iphone-black-256-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 10,
+          "url": "https://picsum.photos/seed/iphone-black-256-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 3,
+        "nombre": "Titanio Negro",
+        "valor": "#2B2B2B"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "256GB",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "idProducto": 201,
+      "nombre": "Camisa Formal Slim Fit",
+      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
+      "precio": 59.99,
+      "stockActual": 20,
+      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "genero": {
+        "idGenero": 2,
+        "nombre": "Hombre"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Executive"
+      },
+      "coleccion": {
+        "idColeccion": 3,
+        "nombre": "Formal 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 2,
+          "nombre": "Ropa"
+        },
+        {
+          "idCategoria": 21,
+          "nombre": "Hombre"
+        },
+        {
+          "idCategoria": 211,
+          "nombre": "Camisas"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 6,
+          "descripcion": "Formal"
+        },
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Material",
+          "valor": "100% Algodón egipcio"
+        },
+        {
+          "nombre": "Corte",
+          "valor": "Slim Fit"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 11,
+          "url": "https://picsum.photos/seed/camisa-white-s-1/800/1000",
+          "descripcion": "Vista frontal"
+        }
+      ],
+      "color": {
+        "id": 10,
+        "nombre": "Blanco",
+        "valor": "#FFFFFF"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "S",
+        "valor": "S"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        202,
+        203,
+        204
+      ]
+    },
+    {
+      "idProducto": 202,
+      "nombre": "Camisa Formal Slim Fit",
+      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
+      "precio": 59.99,
+      "stockActual": 25,
+      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "genero": {
+        "idGenero": 2,
+        "nombre": "Hombre"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Executive"
+      },
+      "coleccion": {
+        "idColeccion": 3,
+        "nombre": "Formal 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 2,
+          "nombre": "Ropa"
+        },
+        {
+          "idCategoria": 21,
+          "nombre": "Hombre"
+        },
+        {
+          "idCategoria": 211,
+          "nombre": "Camisas"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 6,
+          "descripcion": "Formal"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Material",
+          "valor": "100% Algodón egipcio"
+        },
+        {
+          "nombre": "Corte",
+          "valor": "Slim Fit"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 12,
+          "url": "https://picsum.photos/seed/camisa-white-m-1/800/1000",
+          "descripcion": "Vista frontal"
+        }
+      ],
+      "color": {
+        "id": 10,
+        "nombre": "Blanco",
+        "valor": "#FFFFFF"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "M",
+        "valor": "M"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        201,
+        203,
+        204
+      ]
+    },
+    {
+      "idProducto": 203,
+      "nombre": "Camisa Formal Slim Fit",
+      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
+      "precio": 59.99,
+      "stockActual": 18,
+      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "genero": {
+        "idGenero": 2,
+        "nombre": "Hombre"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Executive"
+      },
+      "coleccion": {
+        "idColeccion": 3,
+        "nombre": "Formal 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 2,
+          "nombre": "Ropa"
+        },
+        {
+          "idCategoria": 21,
+          "nombre": "Hombre"
+        },
+        {
+          "idCategoria": 211,
+          "nombre": "Camisas"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 6,
+          "descripcion": "Formal"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Material",
+          "valor": "100% Algodón egipcio"
+        },
+        {
+          "nombre": "Corte",
+          "valor": "Slim Fit"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 13,
+          "url": "https://picsum.photos/seed/camisa-blue-s-1/800/1000",
+          "descripcion": "Vista frontal"
+        }
+      ],
+      "color": {
+        "id": 11,
+        "nombre": "Azul Cielo",
+        "valor": "#87CEEB"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "S",
+        "valor": "S"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        201,
+        202,
+        204
+      ]
+    },
+    {
+      "idProducto": 204,
+      "nombre": "Camisa Formal Slim Fit",
+      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
+      "precio": 59.99,
+      "stockActual": 22,
+      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "genero": {
+        "idGenero": 2,
+        "nombre": "Hombre"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Executive"
+      },
+      "coleccion": {
+        "idColeccion": 3,
+        "nombre": "Formal 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 2,
+          "nombre": "Ropa"
+        },
+        {
+          "idCategoria": 21,
+          "nombre": "Hombre"
+        },
+        {
+          "idCategoria": 211,
+          "nombre": "Camisas"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 6,
+          "descripcion": "Formal"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Material",
+          "valor": "100% Algodón egipcio"
+        },
+        {
+          "nombre": "Corte",
+          "valor": "Slim Fit"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 14,
+          "url": "https://picsum.photos/seed/camisa-blue-m-1/800/1000",
+          "descripcion": "Vista frontal"
+        }
+      ],
+      "color": {
+        "id": 11,
+        "nombre": "Azul Cielo",
+        "valor": "#87CEEB"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "M",
+        "valor": "M"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        201,
+        202,
+        203
+      ]
+    },
+    {
+      "idProducto": 301,
+      "nombre": "AirPods Pro (2da generación)",
+      "descripcion": "Audífonos inalámbricos con cancelación activa de ruido",
+      "precio": 249.99,
+      "stockActual": 12,
+      "detalle": "Los AirPods Pro ofrecen cancelación activa de ruido mejorada, modo de transparencia adaptable y audio espacial personalizado.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 13,
+          "nombre": "Accesorios"
+        },
+        {
+          "idCategoria": 131,
+          "nombre": "Audífonos"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Cancelación de ruido",
+          "valor": "Activa"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "6 horas"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 15,
+          "url": "https://picsum.photos/seed/airpods-1/800/800",
+          "descripcion": "En estuche"
+        },
+        {
+          "idImagen": 16,
+          "url": "https://picsum.photos/seed/airpods-2/800/800",
+          "descripcion": "Detalle"
+        }
+      ],
+      "color": {
+        "id": 9,
+        "nombre": "Blanco",
+        "valor": "#FFFFFF"
+      },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": []
+    }
+  ]
+}

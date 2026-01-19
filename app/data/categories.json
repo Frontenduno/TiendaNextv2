@@ -1,0 +1,376 @@
+{
+  "categorias": [
+    {
+      "idCategoria": 1,
+      "nombre": "Electrónica",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 111, "nombre": "iPhone", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 112, "nombre": "Samsung Galaxy", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 113, "nombre": "Xiaomi", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 114, "nombre": "Huawei", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 115, "nombre": "Motorola", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 116, "nombre": "Google Pixel", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 117, "nombre": "OnePlus", "categoria_padre": 11, "subcategorias": []},
+            {"idCategoria": 118, "nombre": "Oppo", "categoria_padre": 11, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 12,
+          "nombre": "Computadoras",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 121, "nombre": "Laptops Gaming", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 122, "nombre": "Laptops Trabajo", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 123, "nombre": "Desktop Gaming", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 124, "nombre": "All-in-One", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 125, "nombre": "Tablets", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 126, "nombre": "Chromebooks", "categoria_padre": 12, "subcategorias": []},
+            {"idCategoria": 127, "nombre": "Mini PCs", "categoria_padre": 12, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 13,
+          "nombre": "Accesorios",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 131, "nombre": "Audífonos Bluetooth", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 132, "nombre": "Audífonos Gaming", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 133, "nombre": "Cargadores Rápidos", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 134, "nombre": "Power Banks", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 135, "nombre": "Cables USB-C", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 136, "nombre": "Fundas y Protectores", "categoria_padre": 13, "subcategorias": []},
+            {"idCategoria": 137, "nombre": "Soportes", "categoria_padre": 13, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 14,
+          "nombre": "TV y Audio",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 141, "nombre": "Smart TV 4K", "categoria_padre": 14, "subcategorias": []},
+            {"idCategoria": 142, "nombre": "Smart TV 8K", "categoria_padre": 14, "subcategorias": []},
+            {"idCategoria": 143, "nombre": "Soundbars", "categoria_padre": 14, "subcategorias": []},
+            {"idCategoria": 144, "nombre": "Home Theater", "categoria_padre": 14, "subcategorias": []},
+            {"idCategoria": 145, "nombre": "Proyectores", "categoria_padre": 14, "subcategorias": []},
+            {"idCategoria": 146, "nombre": "Barras de Sonido", "categoria_padre": 14, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 15,
+          "nombre": "Gaming",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 151, "nombre": "PlayStation 5", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 152, "nombre": "Xbox Series X/S", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 153, "nombre": "Nintendo Switch", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 154, "nombre": "Sillas Gaming", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 155, "nombre": "Teclados Mecánicos", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 156, "nombre": "Mouse Gaming", "categoria_padre": 15, "subcategorias": []},
+            {"idCategoria": 157, "nombre": "Monitores Gaming", "categoria_padre": 15, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 16,
+          "nombre": "Cámaras y Foto",
+          "categoria_padre": 1,
+          "subcategorias": [
+            {"idCategoria": 161, "nombre": "Cámaras DSLR", "categoria_padre": 16, "subcategorias": []},
+            {"idCategoria": 162, "nombre": "Cámaras Mirrorless", "categoria_padre": 16, "subcategorias": []},
+            {"idCategoria": 163, "nombre": "GoPro", "categoria_padre": 16, "subcategorias": []},
+            {"idCategoria": 164, "nombre": "Drones", "categoria_padre": 16, "subcategorias": []},
+            {"idCategoria": 165, "nombre": "Lentes", "categoria_padre": 16, "subcategorias": []},
+            {"idCategoria": 166, "nombre": "Trípodes", "categoria_padre": 16, "subcategorias": []}
+          ]
+        }
+      ]
+    },
+    {
+      "idCategoria": 2,
+      "nombre": "Ropa",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 21,
+          "nombre": "Hombre",
+          "categoria_padre": 2,
+          "subcategorias": [
+            {"idCategoria": 211, "nombre": "Camisas Formales", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 212, "nombre": "Polos", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 213, "nombre": "Pantalones Jeans", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 214, "nombre": "Pantalones Formales", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 215, "nombre": "Zapatos Casuales", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 216, "nombre": "Zapatos Formales", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 217, "nombre": "Zapatillas", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 218, "nombre": "Chompas", "categoria_padre": 21, "subcategorias": []},
+            {"idCategoria": 219, "nombre": "Casacas", "categoria_padre": 21, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 22,
+          "nombre": "Mujer",
+          "categoria_padre": 2,
+          "subcategorias": [
+            {"idCategoria": 221, "nombre": "Blusas Elegantes", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 222, "nombre": "Blusas Casuales", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 223, "nombre": "Vestidos de Noche", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 224, "nombre": "Vestidos Casuales", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 225, "nombre": "Zapatos Tacones", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 226, "nombre": "Zapatos Planos", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 227, "nombre": "Sandalias", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 228, "nombre": "Faldas", "categoria_padre": 22, "subcategorias": []},
+            {"idCategoria": 229, "nombre": "Leggins", "categoria_padre": 22, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 23,
+          "nombre": "Niños",
+          "categoria_padre": 2,
+          "subcategorias": [
+            {"idCategoria": 231, "nombre": "Niño (0-3 años)", "categoria_padre": 23, "subcategorias": []},
+            {"idCategoria": 232, "nombre": "Niño (4-8 años)", "categoria_padre": 23, "subcategorias": []},
+            {"idCategoria": 233, "nombre": "Niña (0-3 años)", "categoria_padre": 23, "subcategorias": []},
+            {"idCategoria": 234, "nombre": "Niña (4-8 años)", "categoria_padre": 23, "subcategorias": []},
+            {"idCategoria": 235, "nombre": "Bebés", "categoria_padre": 23, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 24,
+          "nombre": "Accesorios Moda",
+          "categoria_padre": 2,
+          "subcategorias": [
+            {"idCategoria": 241, "nombre": "Bolsos", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 242, "nombre": "Carteras", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 243, "nombre": "Cinturones", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 244, "nombre": "Gorras", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 245, "nombre": "Lentes de Sol", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 246, "nombre": "Relojes", "categoria_padre": 24, "subcategorias": []},
+            {"idCategoria": 247, "nombre": "Joyas", "categoria_padre": 24, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 25,
+          "nombre": "Deportiva",
+          "categoria_padre": 2,
+          "subcategorias": [
+            {"idCategoria": 251, "nombre": "Polos Deportivos", "categoria_padre": 25, "subcategorias": []},
+            {"idCategoria": 252, "nombre": "Shorts", "categoria_padre": 25, "subcategorias": []},
+            {"idCategoria": 253, "nombre": "Leggins Deportivos", "categoria_padre": 25, "subcategorias": []},
+            {"idCategoria": 254, "nombre": "Zapatillas Running", "categoria_padre": 25, "subcategorias": []},
+            {"idCategoria": 255, "nombre": "Casacas Deportivas", "categoria_padre": 25, "subcategorias": []}
+          ]
+        }
+      ]
+    },
+    {
+      "idCategoria": 3,
+      "nombre": "Hogar",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 31,
+          "nombre": "Muebles",
+          "categoria_padre": 3,
+          "subcategorias": [
+            {"idCategoria": 311, "nombre": "Sofás", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 312, "nombre": "Sillones", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 313, "nombre": "Mesas de Centro", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 314, "nombre": "Comedores 4 Puestos", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 315, "nombre": "Comedores 6 Puestos", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 316, "nombre": "Camas Matrimoniales", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 317, "nombre": "Camas Individuales", "categoria_padre": 31, "subcategorias": []},
+            {"idCategoria": 318, "nombre": "Roperos", "categoria_padre": 31, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 32,
+          "nombre": "Electrodomésticos",
+          "categoria_padre": 3,
+          "subcategorias": [
+            {"idCategoria": 321, "nombre": "Refrigeradoras", "categoria_padre": 32, "subcategorias": []},
+            {"idCategoria": 322, "nombre": "Cocinas", "categoria_padre": 32, "subcategorias": []},
+            {"idCategoria": 323, "nombre": "Microondas", "categoria_padre": 32, "subcategorias": []},
+            {"idCategoria": 324, "nombre": "Lavadoras", "categoria_padre": 32, "subcategorias": []},
+            {"idCategoria": 325, "nombre": "Secadoras", "categoria_padre": 32, "subcategorias": []},
+            {"idCategoria": 326, "nombre": "Aspiradoras", "categoria_padre": 32, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 33,
+          "nombre": "Decoración",
+          "categoria_padre": 3,
+          "subcategorias": [
+            {"idCategoria": 331, "nombre": "Cuadros Decorativos", "categoria_padre": 33, "subcategorias": []},
+            {"idCategoria": 332, "nombre": "Espejos", "categoria_padre": 33, "subcategorias": []},
+            {"idCategoria": 333, "nombre": "Plantas Artificiales", "categoria_padre": 33, "subcategorias": []},
+            {"idCategoria": 334, "nombre": "Cojines", "categoria_padre": 33, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 34,
+          "nombre": "Iluminación",
+          "categoria_padre": 3,
+          "subcategorias": [
+            {"idCategoria": 341, "nombre": "Lámparas de Techo", "categoria_padre": 34, "subcategorias": []},
+            {"idCategoria": 342, "nombre": "Lámparas de Mesa", "categoria_padre": 34, "subcategorias": []},
+            {"idCategoria": 343, "nombre": "Lámparas de Pie", "categoria_padre": 34, "subcategorias": []}
+          ]
+        }
+      ]
+    },
+    {
+      "idCategoria": 4,
+      "nombre": "Deportes",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 41,
+          "nombre": "Fitness",
+          "categoria_padre": 4,
+          "subcategorias": [
+            {"idCategoria": 411, "nombre": "Pesas Libres", "categoria_padre": 41, "subcategorias": []},
+            {"idCategoria": 412, "nombre": "Mancuernas", "categoria_padre": 41, "subcategorias": []},
+            {"idCategoria": 413, "nombre": "Barras", "categoria_padre": 41, "subcategorias": []},
+            {"idCategoria": 414, "nombre": "Caminadoras", "categoria_padre": 41, "subcategorias": []},
+            {"idCategoria": 415, "nombre": "Bicicletas Estáticas", "categoria_padre": 41, "subcategorias": []},
+            {"idCategoria": 416, "nombre": "Colchonetas", "categoria_padre": 41, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 42,
+          "nombre": "Fútbol",
+          "categoria_padre": 4,
+          "subcategorias": [
+            {"idCategoria": 421, "nombre": "Balones", "categoria_padre": 42, "subcategorias": []},
+            {"idCategoria": 422, "nombre": "Zapatillas", "categoria_padre": 42, "subcategorias": []},
+            {"idCategoria": 423, "nombre": "Guantes de Arquero", "categoria_padre": 42, "subcategorias": []},
+            {"idCategoria": 424, "nombre": "Canilleras", "categoria_padre": 42, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 43,
+          "nombre": "Basketball",
+          "categoria_padre": 4,
+          "subcategorias": [
+            {"idCategoria": 431, "nombre": "Balones", "categoria_padre": 43, "subcategorias": []},
+            {"idCategoria": 432, "nombre": "Zapatillas", "categoria_padre": 43, "subcategorias": []},
+            {"idCategoria": 433, "nombre": "Aros", "categoria_padre": 43, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 44,
+          "nombre": "Ciclismo",
+          "categoria_padre": 4,
+          "subcategorias": [
+            {"idCategoria": 441, "nombre": "Bicicletas MTB", "categoria_padre": 44, "subcategorias": []},
+            {"idCategoria": 442, "nombre": "Bicicletas Ruta", "categoria_padre": 44, "subcategorias": []},
+            {"idCategoria": 443, "nombre": "Cascos", "categoria_padre": 44, "subcategorias": []},
+            {"idCategoria": 444, "nombre": "Guantes", "categoria_padre": 44, "subcategorias": []}
+          ]
+        }
+      ]
+    },
+    {
+      "idCategoria": 5,
+      "nombre": "Libros",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 51,
+          "nombre": "Ficción",
+          "categoria_padre": 5,
+          "subcategorias": [
+            {"idCategoria": 511, "nombre": "Novelas Clásicas", "categoria_padre": 51, "subcategorias": []},
+            {"idCategoria": 512, "nombre": "Ciencia Ficción", "categoria_padre": 51, "subcategorias": []},
+            {"idCategoria": 513, "nombre": "Fantasía", "categoria_padre": 51, "subcategorias": []},
+            {"idCategoria": 514, "nombre": "Thriller", "categoria_padre": 51, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 52,
+          "nombre": "No Ficción",
+          "categoria_padre": 5,
+          "subcategorias": [
+            {"idCategoria": 521, "nombre": "Biografías", "categoria_padre": 52, "subcategorias": []},
+            {"idCategoria": 522, "nombre": "Historia", "categoria_padre": 52, "subcategorias": []},
+            {"idCategoria": 523, "nombre": "Ciencia", "categoria_padre": 52, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 53,
+          "nombre": "Educativos",
+          "categoria_padre": 5,
+          "subcategorias": [
+            {"idCategoria": 531, "nombre": "Matemáticas", "categoria_padre": 53, "subcategorias": []},
+            {"idCategoria": 532, "nombre": "Lenguaje", "categoria_padre": 53, "subcategorias": []},
+            {"idCategoria": 533, "nombre": "Programación", "categoria_padre": 53, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 54,
+          "nombre": "Desarrollo Personal",
+          "categoria_padre": 5,
+          "subcategorias": [
+            {"idCategoria": 541, "nombre": "Autoayuda", "categoria_padre": 54, "subcategorias": []},
+            {"idCategoria": 542, "nombre": "Negocios", "categoria_padre": 54, "subcategorias": []},
+            {"idCategoria": 543, "nombre": "Finanzas", "categoria_padre": 54, "subcategorias": []}
+          ]
+        }
+      ]
+    },
+    {
+      "idCategoria": 6,
+      "nombre": "Belleza",
+      "categoria_padre": null,
+      "subcategorias": [
+        {
+          "idCategoria": 61,
+          "nombre": "Maquillaje",
+          "categoria_padre": 6,
+          "subcategorias": [
+            {"idCategoria": 611, "nombre": "Bases", "categoria_padre": 61, "subcategorias": []},
+            {"idCategoria": 612, "nombre": "Labiales", "categoria_padre": 61, "subcategorias": []},
+            {"idCategoria": 613, "nombre": "Máscaras de Pestañas", "categoria_padre": 61, "subcategorias": []},
+            {"idCategoria": 614, "nombre": "Sombras", "categoria_padre": 61, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 62,
+          "nombre": "Cuidado de la Piel",
+          "categoria_padre": 6,
+          "subcategorias": [
+            {"idCategoria": 621, "nombre": "Limpiadores", "categoria_padre": 62, "subcategorias": []},
+            {"idCategoria": 622, "nombre": "Hidratantes", "categoria_padre": 62, "subcategorias": []},
+            {"idCategoria": 623, "nombre": "Protectores Solares", "categoria_padre": 62, "subcategorias": []},
+            {"idCategoria": 624, "nombre": "Serums", "categoria_padre": 62, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 63,
+          "nombre": "Cuidado Capilar",
+          "categoria_padre": 6,
+          "subcategorias": [
+            {"idCategoria": 631, "nombre": "Shampoos", "categoria_padre": 63, "subcategorias": []},
+            {"idCategoria": 632, "nombre": "Acondicionadores", "categoria_padre": 63, "subcategorias": []},
+            {"idCategoria": 633, "nombre": "Tratamientos", "categoria_padre": 63, "subcategorias": []}
+          ]
+        },
+        {
+          "idCategoria": 64,
+          "nombre": "Fragancias",
+          "categoria_padre": 6,
+          "subcategorias": [
+            {"idCategoria": 641, "nombre": "Perfumes Mujer", "categoria_padre": 64, "subcategorias": []},
+            {"idCategoria": 642, "nombre": "Perfumes Hombre", "categoria_padre": 64, "subcategorias": []},
+            {"idCategoria": 643, "nombre": "Colonias", "categoria_padre": 64, "subcategorias": []}
+          ]
+        }
+      ]
+    }
+  ]
+}
