@@ -10,11 +10,11 @@ interface DistrictFilterProps {
 
 // Mapeo de nombres de distritos a slugs para URLs
 const districtSlugMap: Record<string, string> = {
+  "Todos": "todos",
   "Lima Centro": "lima-centro",
   "Miraflores": "miraflores",
   "San Isidro": "san-isidro",
   "Surco": "surco",
-  "Todos": "",
 };
 
 export function DistrictFilter({ 
@@ -22,9 +22,6 @@ export function DistrictFilter({
   selectedDistrict, 
 }: DistrictFilterProps) {
   const getDistrictUrl = (district: string) => {
-    if (district === "Todos") {
-      return "/locations";
-    }
     const slug = districtSlugMap[district] || district.toLowerCase().replace(/\s+/g, '-');
     return `/locations/${slug}`;
   };

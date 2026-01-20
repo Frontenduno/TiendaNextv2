@@ -15,6 +15,7 @@ interface DistrictPageProps {
 
 // Mapeo de slugs a nombres de distritos
 const districtMap: Record<string, string> = {
+  "todos": "Todos",
   "lima-centro": "Lima Centro",
   "miraflores": "Miraflores",
   "san-isidro": "San Isidro",
@@ -37,6 +38,13 @@ export async function generateMetadata({ params }: DistrictPageProps) {
     };
   }
 
+  if (districtName === "Todos") {
+    return {
+      title: "Nuestras Tiendas | JYP",
+      description: "Encuentra la tienda JYP más cercana a ti. Conoce nuestras ubicaciones, horarios de atención y direcciones.",
+    };
+  }
+
   return {
     title: `Tiendas en ${districtName} | JYP`,
     description: `Encuentra las tiendas JYP en ${districtName}. Conoce ubicaciones, horarios de atención y direcciones.`,
@@ -52,9 +60,9 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
   }
 
   const data = locationsData as LocationsDataJson;
-  const districtLocations = data.locations.filter(
-    (location) => location.district === districtName
-  );
+  const districtLocations = districtName === "Todos" 
+    ? data.locations 
+    : data.locations.filter((location) => location.district === districtName);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -70,33 +78,38 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
               Home
             </Link>
             <ChevronRight className="w-4 h-4 text-gray-400" />
-            <Link 
-              href="/locations" 
-              className="hover:text-[#2c1ff1] transition-colors"
-            >
-              Tiendas
-            </Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            <span className="font-medium text-gray-900">{districtName}</span>
+            {districtName === "Todos" ? (
+              <span className="font-medium text-gray-900">Tiendas</span>
+            ) : (
+              <>
+                <Link 
+                  href="/locations/todos" 
+                  className="hover:text-[#2c1ff1] transition-colors"
+                >
+                  Tiendas
+                </Link>
+                <ChevronRight className="w-4 h-4 text-gray-400" />
+                <span className="font-medium text-gray-900">{districtName}</span>
+              </>
+            )}
           </nav>
-        </div>
-      </div>
-
-      {/* Header */}
-      <div className="bg-gradient-to-r from-[#2c1ff1] to-[#5648f5] text-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-            Tiendas en {districtName}
-          </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Tenemos {districtLocations.length} tienda{districtLocations.length !== 1 ? 's' : ''} en {districtName} esperándote con los mejores productos y atención.
-          </p>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
-        <LocationsGrid 
+        {/* Header */}
+        <div className="bg-gradient-to-r from-[#2c1ff1] to-[#5648f5] rounded-lg p-8 sm:p-12 mb-8 text-white">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+            {districtName === "Todos" ? "Nuestras Tiendas" : `Tiendas en ${districtName}`}
+          </h1>
+          <p className="text-lg sm:text-xl">
+            {districtName === "Todos" 
+              ? "Encuentra la tienda más cercana a ti. Estamos ubicados en los principales distritos de Lima para estar siempre cerca de ti."
+              : `Tenemos ${districtLocations.length} tienda${districtLocations.length !== 1 ? 's' : ''} en ${districtName} esperándote con los mejores productos y atención.`
+            }
+          </p>
+        </div>        <LocationsGrid 
           locations={data.locations} 
           districts={data.districts}
           initialDistrict={districtName}

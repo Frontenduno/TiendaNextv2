@@ -25,10 +25,10 @@ export default function FooterPublic() {
                 className="h-16 w-auto brightness-0 invert hover:opacity-80 transition-opacity"
               />
             </Link>
-            <p className="text-sm text-gray-200 mb-4">
+            <p className="text-sm text-gray-200 mb-4 text-left">
               Tu tienda online de confianza para encontrar los mejores productos.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 justify-start">
               <Link href="#" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                 <Facebook className="w-4 h-4" />
               </Link>
@@ -42,11 +42,11 @@ export default function FooterPublic() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-left">
               <HelpCircle className="w-5 h-5" />
               Servicio al cliente
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm text-left">
               <li>
                 <Link href="/preguntas-frecuentes" className="hover:text-gray-300 transition-colors hover:underline">
                   Preguntas frecuentes
@@ -76,11 +76,11 @@ export default function FooterPublic() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-left">
               <Mail className="w-5 h-5" />
               Contacto
             </h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-sm text-left">
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>Av. Principal 123, Lima, Perú</span>
@@ -101,11 +101,11 @@ export default function FooterPublic() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-left">
               <Store className="w-5 h-5" />
               Nuestras tiendas
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm text-left">
               <li>
                 <Link href="/locations/lima-centro" className="hover:text-gray-300 transition-colors hover:underline">
                   Lima Centro
@@ -127,7 +127,7 @@ export default function FooterPublic() {
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
+                <Link href="/locations/todos" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
                   Ver todas las tiendas →
                 </Link>
               </li>
@@ -135,11 +135,11 @@ export default function FooterPublic() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-bold mb-4 flex items-center gap-2 text-left">
               <FileText className="w-5 h-5" />
               Legal
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm text-left">
               <li>
                 <button 
                   onClick={() => setIsReclamacionesOpen(true)}
