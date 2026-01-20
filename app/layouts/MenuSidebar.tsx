@@ -12,7 +12,7 @@ interface MenuSidebarProps {
 }
 
 type NavigationLevel = {
-  type: 'main' | 'subcategory' | 'element';
+  type: "main" | "subcategory" | "element";
   category?: Categoria;
   parentCategory?: Categoria;
 };
@@ -20,7 +20,7 @@ type NavigationLevel = {
 export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
   const [activeCategory, setActiveCategory] = useState<Categoria | null>(null);
   const [navigationStack, setNavigationStack] = useState<NavigationLevel[]>([
-    { type: 'main' }
+    { type: "main" },
   ]);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -28,11 +28,11 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const currentLevel = navigationStack[navigationStack.length - 1];
@@ -41,10 +41,13 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
     if (isMobile) {
       // En móvil, navegar al siguiente nivel
       if (categoria.subcategorias && categoria.subcategorias.length > 0) {
-        setNavigationStack([...navigationStack, { 
-          type: 'subcategory', 
-          category: categoria 
-        }]);
+        setNavigationStack([
+          ...navigationStack,
+          {
+            type: "subcategory",
+            category: categoria,
+          },
+        ]);
       }
     } else {
       // En desktop, mostrar hover
@@ -52,14 +55,20 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
     }
   };
 
-  const handleSubcategoryClick = (subcategoria: Categoria, parent: Categoria) => {
+  const handleSubcategoryClick = (
+    subcategoria: Categoria,
+    parent: Categoria
+  ) => {
     if (isMobile) {
       if (subcategoria.subcategorias && subcategoria.subcategorias.length > 0) {
-        setNavigationStack([...navigationStack, { 
-          type: 'element', 
-          category: subcategoria,
-          parentCategory: parent
-        }]);
+        setNavigationStack([
+          ...navigationStack,
+          {
+            type: "element",
+            category: subcategoria,
+            parentCategory: parent,
+          },
+        ]);
       }
     }
   };
@@ -71,12 +80,12 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
   };
 
   const handleClose = () => {
-    setNavigationStack([{ type: 'main' }]);
+    setNavigationStack([{ type: "main" }]);
     onClose();
   };
 
   const renderMobileContent = () => {
-    if (currentLevel.type === 'main') {
+    if (currentLevel.type === "main") {
       // Nivel 1: Categorías principales
       return (
         <>
@@ -111,9 +120,10 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                     </span>
                   </div>
 
-                  {categoria.subcategorias && categoria.subcategorias.length > 0 && (
-                    <ChevronRight className="w-5 h-5 text-gray-400" />
-                  )}
+                  {categoria.subcategorias &&
+                    categoria.subcategorias.length > 0 && (
+                      <ChevronRight className="w-5 h-5 text-gray-400" />
+                    )}
                 </button>
               </div>
             ))}
@@ -122,7 +132,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
       );
     }
 
-    if (currentLevel.type === 'subcategory' && currentLevel.category) {
+    if (currentLevel.type === "subcategory" && currentLevel.category) {
       // Nivel 2: Subcategorías
       return (
         <>
@@ -138,7 +148,9 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                 <h2 className="text-xl font-bold text-white">
                   {currentLevel.category.nombre}
                 </h2>
-                <p className="text-sm text-white/90">Selecciona una subcategoría</p>
+                <p className="text-sm text-white/90">
+                  Selecciona una subcategoría
+                </p>
               </div>
               <button
                 onClick={handleClose}
@@ -153,16 +165,19 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
             {currentLevel.category.subcategorias?.map((subcategoria) => (
               <div key={subcategoria.idCategoria}>
                 <button
-                  onClick={() => handleSubcategoryClick(subcategoria, currentLevel.category!)}
+                  onClick={() =>
+                    handleSubcategoryClick(subcategoria, currentLevel.category!)
+                  }
                   className="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   <span className="font-semibold text-gray-800">
                     {subcategoria.nombre}
                   </span>
 
-                  {subcategoria.subcategorias && subcategoria.subcategorias.length > 0 && (
-                    <ChevronRight className="w-5 h-5 text-gray-400" />
-                  )}
+                  {subcategoria.subcategorias &&
+                    subcategoria.subcategorias.length > 0 && (
+                      <ChevronRight className="w-5 h-5 text-gray-400" />
+                    )}
                 </button>
               </div>
             ))}
@@ -171,7 +186,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
       );
     }
 
-    if (currentLevel.type === 'element' && currentLevel.category) {
+    if (currentLevel.type === "element" && currentLevel.category) {
       // Nivel 3: Elementos finales
       return (
         <>
@@ -208,9 +223,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                   className="block px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
                   onClick={handleClose}
                 >
-                  <span className="text-gray-800">
-                    {elemento.nombre}
-                  </span>
+                  <span className="text-gray-800">{elemento.nombre}</span>
                 </Link>
               </div>
             ))}
@@ -269,20 +282,15 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
               </div>
             </div>
 
-            {/* Categorías principales */}
+            {/* Categorías principales - MODIFICADO AQUÍ */}
             <div className="p-3 overflow-y-auto h-[calc(100vh-88px)]">
               {categoriesData.categorias.map((categoria) => (
                 <div
                   key={categoria.idCategoria}
                   onMouseEnter={() => setActiveCategory(categoria)}
                 >
-                  <Link
-                    href={`/categoria/${categoria.nombre
-                      .toLowerCase()
-                      .replace(/ /g, "-")}`}
-                    className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
-                    onClick={handleClose}
-                  >
+                  {/* Se reemplazó Link por div y se eliminó href y onClick */}
+                  <div className="flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2c1ff1] to-[#4c3ff3] flex items-center justify-center">
                         <Package className="w-4 h-4 text-white" />
@@ -292,70 +300,71 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                       </span>
                     </div>
 
-                    {categoria.subcategorias && categoria.subcategorias.length > 0 && (
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
-                    )}
-                  </Link>
+                    {categoria.subcategorias &&
+                      categoria.subcategorias.length > 0 && (
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
+                      )}
+                  </div>
                 </div>
               ))}
             </div>
           </aside>
 
           {/* MEGA PANEL Desktop */}
-          {activeCategory && activeCategory.subcategorias && activeCategory.subcategorias.length > 0 && (
-            <div className="absolute top-0 left-[280px] h-full w-auto min-w-[600px] max-w-[calc(100vw-320px)] bg-white shadow-2xl">
-              <div className="px-8 bg-gradient-to-r from-[#4c3ff3] to-[#5c4ff5] h-[88px] flex items-center">
-                <h3 className="text-white text-2xl font-bold">
-                  {activeCategory.nombre}
-                </h3>
-              </div>
+          {activeCategory &&
+            activeCategory.subcategorias &&
+            activeCategory.subcategorias.length > 0 && (
+              <div className="absolute top-0 left-[280px] h-full w-auto min-w-[600px] max-w-[calc(100vw-320px)] bg-white shadow-2xl">
+                <div className="px-8 bg-gradient-to-r from-[#4c3ff3] to-[#5c4ff5] h-[88px] flex items-center">
+                  <h3 className="text-white text-2xl font-bold">
+                    {activeCategory.nombre}
+                  </h3>
+                </div>
 
-              <div className="p-8 overflow-y-auto h-[calc(100%-88px)]">
-                <div 
-                  className="grid gap-x-12 gap-y-8 items-start"
-                  style={{
-                    gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`,
-                    maxWidth: '100%'
-                  }}
-                >
-                  {activeCategory.subcategorias.map((subcat) => (
-                    <div
-                      key={subcat.idCategoria}
-                      className="space-y-3"
-                    >
-                      <Link
-                        href={`/categoria/${subcat.nombre
-                          .toLowerCase()
-                          .replace(/ /g, "-")}`}
-                        className="block font-bold text-gray-900 text-base hover:text-[#2c1ff1] transition-colors mb-4"
-                        onClick={handleClose}
-                      >
-                        {subcat.nombre}
-                      </Link>
+                <div className="p-8 overflow-y-auto h-[calc(100%-88px)]">
+                  <div
+                    className="grid gap-x-12 gap-y-8 items-start"
+                    style={{
+                      gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`,
+                      maxWidth: "100%",
+                    }}
+                  >
+                    {activeCategory.subcategorias.map((subcat) => (
+                      <div key={subcat.idCategoria} className="space-y-3">
+                        <Link
+                          href={`/categoria/${subcat.nombre
+                            .toLowerCase()
+                            .replace(/ /g, "-")}`}
+                          className="block font-bold text-gray-900 text-base hover:text-[#2c1ff1] transition-colors mb-4"
+                          onClick={handleClose}
+                        >
+                          {subcat.nombre}
+                        </Link>
 
-                      {subcat.subcategorias && subcat.subcategorias.length > 0 && (
-                        <ul className="space-y-2.5">
-                          {subcat.subcategorias.map((item) => (
-                            <li key={item.idCategoria}>
-                              <Link
-                                href={`/categoria/${item.nombre
-                                  .toLowerCase()
-                                  .replace(/ /g, "-")}`}
-                                className="text-sm text-gray-600 hover:text-[#2c1ff1] transition-colors block"
-                                onClick={handleClose}
-                              >
-                                {item.nombre}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
+                        {subcat.subcategorias &&
+                          subcat.subcategorias.length > 0 && (
+                            <ul className="space-y-2.5">
+                              {subcat.subcategorias.map((item) => (
+                                <li key={item.idCategoria}>
+                                  <Link
+                                    href={`/categoria/${item.nombre
+                                      .toLowerCase()
+                                      .replace(/ /g, "-")}`}
+                                    className="text-sm text-gray-600 hover:text-[#2c1ff1] transition-colors block"
+                                    onClick={handleClose}
+                                  >
+                                    {item.nombre}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
       )}
     </>
