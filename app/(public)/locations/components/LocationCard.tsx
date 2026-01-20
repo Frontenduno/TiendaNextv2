@@ -1,4 +1,4 @@
-// components/location/LocationCard.tsx
+// app/(public)/locations/components/LocationCard.tsx
 "use client";
 
 import Image from "next/image";

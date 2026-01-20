@@ -1,20 +1,13 @@
-// components/footer/libro-reclamaciones.tsx
+// layouts/public/components/libro-reclamaciones.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
 import { X, FileText, Send, CheckCircle } from "lucide-react";
-
-type DocumentType = "dni" | "carnet_extranjeria" | "pasaporte";
-
-interface FormData {
-  documentType: DocumentType;
-  documentNumber: string;
-  fullName: string;
-  phone: string;
-  email: string;
-  complaintDetail: string;
-  expectedSolution: string;
-}
+import {
+  validateLibroReclamaciones,
+  LibroReclamacionesFormData,
+  DocumentType,
+} from "@/utils/libroReclamacionesSchema";
 
 interface LibroReclamacionesProps {
   isOpen: boolean;
@@ -22,7 +15,7 @@ interface LibroReclamacionesProps {
 }
 
 export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps) {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<LibroReclamacionesFormData>({
     documentType: "dni",
     documentNumber: "",
     fullName: "",
@@ -32,11 +25,11 @@ export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps)
     expectedSolution: "",
   });
 
-  const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+  const [errors, setErrors] = useState<Partial<Record<keyof LibroReclamacionesFormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const documentTypes = [
+  const documentTypeOptions = [
     { value: "dni", label: "DNI" },
     { value: "carnet_extranjeria", label: "Carnet de Extranjería" },
     { value: "pasaporte", label: "Pasaporte" },
@@ -73,42 +66,9 @@ export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps)
   };
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<Record<keyof FormData, string>> = {};
-
-    if (!formData.documentNumber.trim()) {
-      newErrors.documentNumber = "El número de documento es requerido";
-    } else if (formData.documentType === "dni" && !/^\d{8}$/.test(formData.documentNumber)) {
-      newErrors.documentNumber = "El DNI debe tener 8 dígitos";
-    }
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = "Los apellidos y nombres son requeridos";
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = "El teléfono es requerido";
-    } else if (!/^\d{9}$/.test(formData.phone)) {
-      newErrors.phone = "El teléfono debe tener 9 dígitos";
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "El correo electrónico es requerido";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "El correo electrónico no es válido";
-    }
-
-    if (!formData.complaintDetail.trim()) {
-      newErrors.complaintDetail = "El detalle del reclamo es requerido";
-    } else if (formData.complaintDetail.trim().length < 20) {
-      newErrors.complaintDetail = "El detalle debe tener al menos 20 caracteres";
-    }
-
-    if (!formData.expectedSolution.trim()) {
-      newErrors.expectedSolution = "La solución esperada es requerida";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    const { success, errors: validationErrors } = validateLibroReclamaciones(formData);
+    setErrors(validationErrors);
+    return success;
   };
 
   const handleChange = (
@@ -117,7 +77,7 @@ export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps)
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    if (errors[name as keyof FormData]) {
+    if (errors[name as keyof LibroReclamacionesFormData]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
@@ -208,7 +168,7 @@ export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps)
                     onChange={handleChange}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2c1ff1] focus:border-transparent transition-all bg-white text-gray-800"
                   >
-                    {documentTypes.map((type) => (
+                    {documentTypeOptions.map((type) => (
                       <option key={type.value} value={type.value}>
                         {type.label}
                       </option>

@@ -1,4 +1,4 @@
-// components/location/DistrictFilter.tsx
+// app/(public)/locations/components/DistrictFilter.tsx
 "use client";
 
 import Link from "next/link";

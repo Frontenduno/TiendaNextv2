@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
-import { LocationsGrid } from "@/components/location/LocationsGrid";
+import { LocationsGrid } from "./components/LocationsGrid";
 import locationsData from "@/data/locations.json";
 import { LocationsDataJson } from "@/interfaces/location";
 
