@@ -1,11 +1,15 @@
 // layouts/public/FooterPublic.tsx
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ShoppingBag, HelpCircle, FileText, Store } from "lucide-react";
+import { LibroReclamaciones } from "@/components/footer/libro-reclamaciones";
 
 export default function FooterPublic() {
+  const [isReclamacionesOpen, setIsReclamacionesOpen] = useState(false);
+
   return (
     <footer className="w-full bg-[#2c1ff1] text-white mt-auto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-8 sm:py-12">
@@ -103,27 +107,27 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/tiendas/lima-centro" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/locations/lima-centro" className="hover:text-gray-300 transition-colors hover:underline">
                   Lima Centro
                 </Link>
               </li>
               <li>
-                <Link href="/tiendas/miraflores" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/locations/miraflores" className="hover:text-gray-300 transition-colors hover:underline">
                   Miraflores
                 </Link>
               </li>
               <li>
-                <Link href="/tiendas/san-isidro" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/locations/san-isidro" className="hover:text-gray-300 transition-colors hover:underline">
                   San Isidro
                 </Link>
               </li>
               <li>
-                <Link href="/tiendas/surco" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/locations/surco" className="hover:text-gray-300 transition-colors hover:underline">
                   Surco
                 </Link>
               </li>
               <li>
-                <Link href="/tiendas" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
+                <Link href="/locations" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
                   Ver todas las tiendas →
                 </Link>
               </li>
@@ -137,13 +141,13 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link 
-                  href="/libro-reclamaciones" 
+                <button 
+                  onClick={() => setIsReclamacionesOpen(true)}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-colors font-semibold"
                 >
                   <ShoppingBag className="w-4 h-4" />
                   Libro de reclamaciones
-                </Link>
+                </button>
               </li>
               <li className="pt-2">
                 <Link href="/terminos-condiciones" className="hover:text-gray-300 transition-colors hover:underline">
@@ -168,6 +172,12 @@ export default function FooterPublic() {
           <p>&copy; {new Date().getFullYear()} MiTienda. Todos los derechos reservados.</p>
         </div>
       </div>
+
+      {/* Modal de Libro de Reclamaciones */}
+      <LibroReclamaciones
+        isOpen={isReclamacionesOpen}
+        onClose={() => setIsReclamacionesOpen(false)}
+      />
     </footer>
   );
 }

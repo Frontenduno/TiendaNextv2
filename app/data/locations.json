@@ -1,0 +1,131 @@
+{
+  "districts": ["Todos", "Lima Centro", "Miraflores", "San Isidro", "Surco"],
+  "locations": [
+    {
+      "id": 1,
+      "name": "JYP Plaza Lima",
+      "district": "Lima Centro",
+      "address": "Av. Paseo de la República 3220, Lima Centro",
+      "schedule": "Lunes a Domingo, 9:00AM - 10:00PM",
+      "phone": "+51 999 111 001",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 2,
+      "name": "JYP Cercado",
+      "district": "Lima Centro",
+      "address": "Jr. de la Unión 456, Cercado de Lima",
+      "schedule": "Lunes a Domingo, 9:00AM - 9:00PM",
+      "phone": "+51 999 111 002",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 3,
+      "name": "JYP Real Plaza Centro",
+      "district": "Lima Centro",
+      "address": "Av. Venezuela 2850, Breña",
+      "schedule": "Lunes a Domingo, 10:00AM - 10:00PM",
+      "phone": "+51 999 111 003",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 4,
+      "name": "JYP Larcomar",
+      "district": "Miraflores",
+      "address": "Malecón de la Reserva 610, Larcomar",
+      "schedule": "Lunes a Domingo, 10:00AM - 10:00PM",
+      "phone": "+51 999 222 001",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 5,
+      "name": "JYP Óvalo Gutiérrez",
+      "district": "Miraflores",
+      "address": "Av. Santa Cruz 780, Miraflores",
+      "schedule": "Lunes a Domingo, 9:00AM - 10:00PM",
+      "phone": "+51 999 222 002",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 6,
+      "name": "JYP Parque Kennedy",
+      "district": "Miraflores",
+      "address": "Av. Larco 245, Miraflores",
+      "schedule": "Lunes a Domingo, 10:00AM - 9:00PM",
+      "phone": "+51 999 222 003",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 7,
+      "name": "JYP Real Plaza Miraflores",
+      "district": "Miraflores",
+      "address": "Av. 28 de Julio 1050, Miraflores",
+      "schedule": "Lunes a Domingo, 10:00AM - 10:00PM",
+      "phone": "+51 999 222 004",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 8,
+      "name": "JYP Camino Real",
+      "district": "San Isidro",
+      "address": "Av. Camino Real 1076, San Isidro",
+      "schedule": "Lunes a Viernes, 9:00AM - 8:00PM | Sábados, 10:00AM - 6:00PM",
+      "phone": "+51 999 333 001",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 9,
+      "name": "JYP El Golf",
+      "district": "San Isidro",
+      "address": "Av. Jorge Basadre 755, San Isidro",
+      "schedule": "Lunes a Domingo, 10:00AM - 9:00PM",
+      "phone": "+51 999 333 002",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 10,
+      "name": "JYP Centro Financiero",
+      "district": "San Isidro",
+      "address": "Av. República de Panamá 3450, San Isidro",
+      "schedule": "Lunes a Viernes, 8:00AM - 8:00PM",
+      "phone": "+51 999 333 003",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 11,
+      "name": "JYP Jockey Plaza",
+      "district": "Surco",
+      "address": "Av. Javier Prado Este 4200, Surco",
+      "schedule": "Lunes a Domingo, 10:00AM - 10:00PM",
+      "phone": "+51 999 444 001",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 12,
+      "name": "JYP Chacarilla",
+      "district": "Surco",
+      "address": "Av. Primavera 1650, Chacarilla",
+      "schedule": "Lunes a Domingo, 10:00AM - 9:00PM",
+      "phone": "+51 999 444 002",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 13,
+      "name": "JYP Open Plaza Angamos",
+      "district": "Surco",
+      "address": "Av. Angamos Este 1850, Surco",
+      "schedule": "Lunes a Domingo, 10:00AM - 10:00PM",
+      "phone": "+51 999 444 003",
+      "image": "/jyplogo.png"
+    },
+    {
+      "id": 14,
+      "name": "JYP Boulevard Surco",
+      "district": "Surco",
+      "address": "Av. República de Panamá 4675, Surco",
+      "schedule": "Lunes a Domingo, 10:00AM - 9:00PM",
+      "phone": "+51 999 444 004",
+      "image": "/jyplogo.png"
+    }
+  ]
+}
