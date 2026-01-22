@@ -14,8 +14,8 @@ export default function HeaderPublic() {
   const [user, setUser] = useState<Usuario | null>(null);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   // Estado para guardar lo que el usuario escribre en la barra de búsqueda
+  const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const profileMenuRef = useRef<HTMLDivElement>(null);
@@ -23,13 +23,20 @@ export default function HeaderPublic() {
   // Router de Next.js para navegación entre paginas
   const router = useRouter();
 
-  // Funcion para manejar la búsqueda
-  const handleSearch = () => {
-    // Evitar búsquedas vacías
-    if (!searchQuery.trim()) return;
-    // Redirigir a la página de productos con el parámetro de búsqueda
-    router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
-  };
+  const handleChange = (e : any) => {
+  // Extraer el valor de la busqueda
+  const value = e.target.value;
+  // Le pasamos el valor al estado
+  setSearchQuery(value);
+
+  // Ejecutamos la búsqueda inmediatamente con el nuevo valor
+  if (value.trim()) {
+    router.push(`/products?search=${encodeURIComponent(value)}`);
+  } else {
+    // Si borra todo, volvemos a la lista completa
+    router.push('/products');
+  }
+};
 
   // Controlar la visibilidad del header según el scroll
   useEffect(() => {
@@ -118,18 +125,12 @@ export default function HeaderPublic() {
                   // Guardamos lo que el usuario escribe en el estado
                   value={searchQuery}
                   // Cada vez que el usuario escribe, actualizamos el estado
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  // Permitir búsqueda al presionar Enter
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      handleSearch();
-                    }
-                  }}
+                  onChange={handleChange}
                   placeholder="Buscar productos..."
                   className="w-full px-4 py-2.5 lg:py-3 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm lg:text-base"
                 />
                 <button
-                  onClick={handleSearch}
+                  onClick={handleChange}
                   className="absolute right-4 top-1/2 -translate-y-1/2"
                 >
                   <Search className="text-gray-400 w-5 h-5" />
@@ -142,7 +143,7 @@ export default function HeaderPublic() {
               {/* Búsqueda móvil */}
               <button
                 // Manejamos la busqueda al hacer click en mobile
-                onClick={handleSearch}
+                onClick={handleChange}
                 className="md:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
               >
                 <Search className="w-5 h-5 text-[#2c1ff1]" />
