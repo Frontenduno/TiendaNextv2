@@ -1,0 +1,60 @@
+{
+  "title": "¿Cómo Comprar?",
+  "subtitle": "Comprar en nuestra tienda es fácil y seguro. Sigue estos simples pasos para realizar tu compra.",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Explora nuestros productos",
+      "description": "Navega por las categorías desde el menú principal (Hombre, Mujer, Niños, Accesorios) o usa la barra de búsqueda para encontrar productos específicos. Puedes filtrar por talla, color, precio y marca.",
+      "icon": "search"
+    },
+    {
+      "step": 2,
+      "title": "Selecciona tu producto",
+      "description": "Haz clic en el producto que te interese para ver sus detalles, fotos, descripción y opciones disponibles. Consulta nuestra guía de tallas si tienes dudas sobre qué talla elegir.",
+      "icon": "eye"
+    },
+    {
+      "step": 3,
+      "title": "Elige talla y cantidad",
+      "description": "Selecciona la talla y color deseados de las opciones disponibles. Ajusta la cantidad de unidades que deseas comprar usando los botones + y -.",
+      "icon": "options"
+    },
+    {
+      "step": 4,
+      "title": "Agregar al carrito",
+      "description": "Haz clic en el botón 'Agregar al carrito'. Verás una confirmación y podrás continuar comprando más productos o proceder al pago.",
+      "icon": "cart"
+    },
+    {
+      "step": 5,
+      "title": "Revisa tu carrito",
+      "description": "Haz clic en el icono del carrito en la esquina superior para revisar todos los productos agregados. Verifica las tallas, cantidades y precios antes de continuar.",
+      "icon": "clipboard"
+    },
+    {
+      "step": 6,
+      "title": "Ingresa tu dirección",
+      "description": "Haz clic en 'Finalizar compra' e ingresa o selecciona tu dirección de envío. Asegúrate de que todos los datos sean correctos para evitar problemas con la entrega.",
+      "icon": "location"
+    },
+    {
+      "step": 7,
+      "title": "Selecciona método de envío",
+      "description": "Elige la opción de envío que mejor se adapte a tus necesidades: envío estándar (3-5 días), envío express (24-48 horas) o retiro en tienda (gratis).",
+      "icon": "truck"
+    },
+    {
+      "step": 8,
+      "title": "Realiza el pago",
+      "description": "Selecciona tu método de pago preferido: tarjeta de crédito/débito, PayPal, transferencia bancaria o pago contra entrega. Todos los pagos son 100% seguros.",
+      "icon": "card"
+    },
+    {
+      "step": 9,
+      "title": "¡Confirma tu pedido!",
+      "description": "Revisa el resumen final con todos los detalles y haz clic en 'Confirmar pedido'. Recibirás un email de confirmación con el número de seguimiento de tu compra.",
+      "icon": "check"
+    }
+  ]
+}

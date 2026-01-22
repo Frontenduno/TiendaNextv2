@@ -45,8 +45,8 @@ export function DistrictFilter({
       </div>
       
       {/* Scroll indicators */}
-      <div className="absolute left-0 top-0 bottom-2 w-8 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none md:hidden" />
-      <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none md:hidden" />
+      <div className="absolute left-0 top-0 bottom-2 w-8 bg-linear-to-r from-gray-50 to-transparent pointer-events-none md:hidden" />
+      <div className="absolute right-0 top-0 bottom-2 w-8 bg-linear-to-l from-gray-50 to-transparent pointer-events-none md:hidden" />
     </div>
   );
 }

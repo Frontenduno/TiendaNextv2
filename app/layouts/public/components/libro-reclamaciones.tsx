@@ -85,7 +85,7 @@ export function LibroReclamaciones({ isOpen, onClose }: LibroReclamacionesProps)
       
       <div className="relative bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden mx-4">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2c1ff1] to-[#5648f5] text-white px-6 py-4 flex items-center justify-between">
+        <div className="bg-linear-to-r from-[#2c1ff1] to-[#5648f5] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
               <FileText className="w-5 h-5" />

@@ -41,7 +41,7 @@ export default function LegalPage({ params }: LegalPageProps) {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-6 sm:p-8 mb-8 text-white">
+        <div className="bg-linear-to-br from-blue-600 to-blue-800 rounded-lg p-6 sm:p-8 mb-8 text-white">
           <div className="max-w-5xl mx-auto px-4 py-6 text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">
               {pageConfig.title}

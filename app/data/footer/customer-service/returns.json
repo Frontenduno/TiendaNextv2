@@ -1,0 +1,134 @@
+{
+  "title": "Política de Devolución",
+  "subtitle": "Conoce nuestras políticas de cambios, devoluciones y reembolsos. Tu satisfacción es nuestra prioridad.",
+  "lastUpdated": "2026-01-15",
+  "sections": [
+    {
+      "id": "plazo-devolucion",
+      "title": "Plazo de Devolución",
+      "icon": "calendar",
+      "content": "Tienes un plazo determinado para solicitar la devolución de tus productos desde la fecha de recepción del pedido.",
+      "items": [
+        {
+          "label": "Productos en General",
+          "description": "30 días calendario desde la recepción"
+        },
+        {
+          "label": "Productos Electrónicos",
+          "description": "15 días calendario desde la recepción"
+        },
+        {
+          "label": "Ropa y Calzado",
+          "description": "30 días calendario con etiquetas originales"
+        },
+        {
+          "label": "Productos en Oferta",
+          "description": "15 días calendario, aplican restricciones"
+        }
+      ]
+    },
+    {
+      "id": "condiciones",
+      "title": "Condiciones para Devolución",
+      "icon": "check",
+      "content": "Para que tu devolución sea aceptada, los productos deben cumplir con las siguientes condiciones sin excepción.",
+      "items": [
+        {
+          "label": "Estado Original",
+          "description": "Producto sin uso, en su empaque original"
+        },
+        {
+          "label": "Etiquetas Intactas",
+          "description": "Todas las etiquetas y sellos deben estar en su lugar"
+        },
+        {
+          "label": "Accesorios Completos",
+          "description": "Incluir todos los accesorios y manuales"
+        },
+        {
+          "label": "Comprobante de Compra",
+          "description": "Factura o boleta original del pedido"
+        }
+      ]
+    },
+    {
+      "id": "proceso-devolucion",
+      "title": "Proceso de Devolución",
+      "icon": "refresh",
+      "content": "Sigue estos pasos para realizar tu devolución de manera rápida y sencilla.",
+      "items": [
+        {
+          "label": "1. Solicita tu Devolución",
+          "description": "Ingresa a Mi Cuenta > Mis Pedidos > Solicitar Devolución"
+        },
+        {
+          "label": "2. Empaca el Producto",
+          "description": "Usa el empaque original o uno similar de protección"
+        },
+        {
+          "label": "3. Entrega o Recojo",
+          "description": "Lleva el producto a tienda o programa un recojo"
+        },
+        {
+          "label": "4. Procesamiento",
+          "description": "Evaluamos el producto en 3-5 días hábiles"
+        }
+      ]
+    },
+    {
+      "id": "tipos-reembolso",
+      "title": "Tipos de Reembolso",
+      "icon": "currency",
+      "content": "Una vez aprobada tu devolución, podrás elegir entre las siguientes opciones de reembolso.",
+      "items": [
+        {
+          "label": "Reembolso al Medio de Pago",
+          "description": "Devolución al método original en 5-10 días hábiles"
+        },
+        {
+          "label": "Crédito en Tienda",
+          "description": "Saldo disponible inmediatamente para nuevas compras"
+        },
+        {
+          "label": "Cambio por Otro Producto",
+          "description": "Canjea por otro artículo de igual o mayor valor"
+        },
+        {
+          "label": "Voucher de Descuento",
+          "description": "Recibe un cupón con 10% adicional de bonificación"
+        }
+      ]
+    },
+    {
+      "id": "excepciones",
+      "title": "Productos No Retornables",
+      "icon": "x-circle",
+      "content": "Por razones de higiene y seguridad, algunos productos no pueden ser devueltos una vez abiertos.",
+      "items": [
+        {
+          "label": "Ropa Interior y Trajes de Baño",
+          "description": "Por razones de higiene personal"
+        },
+        {
+          "label": "Productos Personalizados",
+          "description": "Artículos con grabado o personalización"
+        },
+        {
+          "label": "Cosméticos Abiertos",
+          "description": "Perfumes y maquillaje sin sello"
+        },
+        {
+          "label": "Productos Perecederos",
+          "description": "Alimentos y productos con fecha de vencimiento"
+        }
+      ]
+    }
+  ],
+  "importantNotes": [
+    "El costo de envío por devolución es asumido por el cliente, excepto en casos de producto defectuoso o error nuestro.",
+    "Los productos devueltos serán inspeccionados antes de aprobar el reembolso.",
+    "En caso de productos defectuosos, el reembolso incluye los gastos de envío originales.",
+    "Las devoluciones de compras con tarjeta de crédito pueden tardar 1-2 ciclos de facturación en reflejarse.",
+    "Para cambios de talla, el proceso es más rápido si lo solicitas dentro de los primeros 7 días."
+  ]
+}

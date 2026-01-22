@@ -48,27 +48,27 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-2 text-sm text-left">
               <li>
-                <Link href="/preguntas-frecuentes" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/customer-service/preguntas-frecuentes" className="hover:text-gray-300 transition-colors hover:underline">
                   Preguntas frecuentes
                 </Link>
               </li>
               <li>
-                <Link href="/guia-de-tallas" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/customer-service/guia-de-tallas" className="hover:text-gray-300 transition-colors hover:underline">
                   Guía de tallas
                 </Link>
               </li>
               <li>
-                <Link href="/tutoriales-de-compra" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/customer-service/tutoriales-de-compra" className="hover:text-gray-300 transition-colors hover:underline">
                   Tutoriales de compra
                 </Link>
               </li>
               <li>
-                <Link href="/politica-de-envio" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/customer-service/politica-de-envio" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de envío
                 </Link>
               </li>
               <li>
-                <Link href="/politica-de-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/customer-service/politica-de-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de devolución
                 </Link>
               </li>
@@ -82,17 +82,17 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-3 text-sm text-left">
               <li className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 shrink-0 mt-0.5" />
                 <span>Av. Principal 123, Lima, Perú</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-5 h-5 flex-shrink-0" />
+                <Phone className="w-5 h-5 shrink-0" />
                 <a href="tel:+51999999999" className="hover:text-gray-300 transition-colors">
                   +51 999 999 999
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 flex-shrink-0" />
+                <Mail className="w-5 h-5 shrink-0" />
                 <a href="mailto:contacto@mitienda.com" className="hover:text-gray-300 transition-colors">
                   contacto@mitienda.com
                 </a>

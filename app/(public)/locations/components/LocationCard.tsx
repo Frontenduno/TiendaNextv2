@@ -32,12 +32,12 @@ export function LocationCard({ location }: LocationCardProps) {
         
         <div className="space-y-2 text-sm text-gray-600">
           <div className="flex items-start gap-2">
-            <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#2c1ff1]" />
+            <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-[#2c1ff1]" />
             <span className="line-clamp-2">{location.address}</span>
           </div>
           
           <div className="flex items-start gap-2">
-            <Clock className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#2c1ff1]" />
+            <Clock className="w-4 h-4 shrink-0 mt-0.5 text-[#2c1ff1]" />
             <div>
               <span className="font-semibold text-gray-800">Horario de Atención: </span>
               <span>{location.schedule}</span>
@@ -45,7 +45,7 @@ export function LocationCard({ location }: LocationCardProps) {
           </div>
           
           <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4 flex-shrink-0 text-[#2c1ff1]" />
+            <Phone className="w-4 h-4 shrink-0 text-[#2c1ff1]" />
             <a 
               href={`tel:${location.phone}`} 
               className="hover:text-[#2c1ff1] transition-colors"

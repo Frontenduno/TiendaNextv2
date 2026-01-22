@@ -20,12 +20,13 @@ const routeLabels: Record<string, string> = {
   "preguntas-frecuentes": "Preguntas Frecuentes",
   "guia-de-tallas": "Guía de Tallas",
   "tutoriales-de-compra": "Tutoriales de Compra",
+  "customer-service": "Servicio al Cliente",
   "locations": "Tiendas",
   "product": "Producto",
 };
 
 // Rutas que no tienen página propia (solo son agrupadores)
-const nonClickableRoutes = new Set(["legal"]);
+const nonClickableRoutes = new Set(["legal", "customer-service"]);
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
@@ -65,15 +66,15 @@ export default function Breadcrumbs() {
             
             return (
             <li key={item.href} className="flex items-center">
-              <ChevronRight className="w-4 h-4 text-gray-400 mx-1 flex-shrink-0" />
+              <ChevronRight className="w-4 h-4 text-gray-400 mx-1 shrink-0" />
               {isLast || isNonClickable ? (
-                <span className={`truncate max-w-[200px] sm:max-w-none ${isLast ? "text-gray-900 font-medium" : "text-gray-500"}`}>
+                <span className={`truncate max-w-50 sm:max-w-none ${isLast ? "text-gray-900 font-medium" : "text-gray-500"}`}>
                   {item.label}
                 </span>
               ) : (
                 <Link
                   href={item.href}
-                  className="text-gray-500 hover:text-blue-600 transition-colors truncate max-w-[150px] sm:max-w-none"
+                  className="text-gray-500 hover:text-blue-600 transition-colors truncate max-w-37.5 sm:max-w-none"
                 >
                   {item.label}
                 </Link>

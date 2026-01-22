@@ -1,0 +1,342 @@
+{
+  "genderTabs": [
+    { "id": "hombre", "label": "Hombre", "icon": "male" },
+    { "id": "mujer", "label": "Mujer", "icon": "female" },
+    { "id": "unisex", "label": "Unisex", "icon": "unisex" },
+    { "id": "nino", "label": "Niño", "icon": "boy" },
+    { "id": "nina", "label": "Niña", "icon": "girl" }
+  ],
+  "sizeData": {
+    "hombre": {
+      "categories": [
+        {
+          "id": "camisetas-hombre",
+          "title": "Camisetas y Polos",
+          "icon": "shirt",
+          "description": "Guía de tallas para camisetas, polos y tops de hombre",
+          "sizes": [
+            { "size": "S", "pecho": "91-96", "cintura": "76-81", "largo": "69" },
+            { "size": "M", "pecho": "96-101", "cintura": "81-86", "largo": "72" },
+            { "size": "L", "pecho": "101-106", "cintura": "86-91", "largo": "74" },
+            { "size": "XL", "pecho": "106-111", "cintura": "91-96", "largo": "76" },
+            { "size": "XXL", "pecho": "111-116", "cintura": "96-101", "largo": "78" },
+            { "size": "3XL", "pecho": "116-121", "cintura": "101-106", "largo": "80" }
+          ],
+          "headers": ["Talla", "Pecho (cm)", "Cintura (cm)", "Largo (cm)"]
+        },
+        {
+          "id": "pantalones-hombre",
+          "title": "Pantalones y Jeans",
+          "icon": "pants",
+          "description": "Guía de tallas para pantalones y jeans de hombre",
+          "sizes": [
+            { "size": "28", "cintura": "71-74", "cadera": "89-92", "largo": "76" },
+            { "size": "30", "cintura": "76-79", "cadera": "94-97", "largo": "78" },
+            { "size": "32", "cintura": "81-84", "cadera": "99-102", "largo": "80" },
+            { "size": "34", "cintura": "86-89", "cadera": "104-107", "largo": "81" },
+            { "size": "36", "cintura": "91-94", "cadera": "109-112", "largo": "82" },
+            { "size": "38", "cintura": "96-99", "cadera": "114-117", "largo": "83" },
+            { "size": "40", "cintura": "101-104", "cadera": "119-122", "largo": "84" }
+          ],
+          "headers": ["Talla", "Cintura (cm)", "Cadera (cm)", "Largo (cm)"]
+        },
+        {
+          "id": "calzado-hombre",
+          "title": "Calzado",
+          "icon": "shoe",
+          "description": "Conversión de tallas de calzado para hombre",
+          "sizes": [
+            { "size": "EU 40", "us": "7", "uk": "6", "cm": "25" },
+            { "size": "EU 41", "us": "8", "uk": "7", "cm": "26" },
+            { "size": "EU 42", "us": "9", "uk": "8", "cm": "27" },
+            { "size": "EU 43", "us": "10", "uk": "9", "cm": "28" },
+            { "size": "EU 44", "us": "11", "uk": "10", "cm": "29" },
+            { "size": "EU 45", "us": "12", "uk": "11", "cm": "30" },
+            { "size": "EU 46", "us": "13", "uk": "12", "cm": "31" }
+          ],
+          "headers": ["Talla EU", "Talla US", "Talla UK", "Longitud (cm)"]
+        }
+      ]
+    },
+    "mujer": {
+      "categories": [
+        {
+          "id": "blusas-mujer",
+          "title": "Blusas y Tops",
+          "icon": "shirt",
+          "description": "Guía de tallas para blusas, tops y camisetas de mujer",
+          "sizes": [
+            { "size": "XS", "busto": "80-84", "cintura": "60-64", "cadera": "86-90" },
+            { "size": "S", "busto": "84-88", "cintura": "64-68", "cadera": "90-94" },
+            { "size": "M", "busto": "88-92", "cintura": "68-72", "cadera": "94-98" },
+            { "size": "L", "busto": "92-96", "cintura": "72-76", "cadera": "98-102" },
+            { "size": "XL", "busto": "96-102", "cintura": "76-82", "cadera": "102-108" },
+            { "size": "XXL", "busto": "102-108", "cintura": "82-88", "cadera": "108-114" }
+          ],
+          "headers": ["Talla", "Busto (cm)", "Cintura (cm)", "Cadera (cm)"]
+        },
+        {
+          "id": "vestidos-mujer",
+          "title": "Vestidos y Faldas",
+          "icon": "dress",
+          "description": "Guía de tallas para vestidos, faldas y enterizos",
+          "sizes": [
+            { "size": "XS", "busto": "80-84", "cintura": "60-64", "cadera": "86-90" },
+            { "size": "S", "busto": "84-88", "cintura": "64-68", "cadera": "90-94" },
+            { "size": "M", "busto": "88-92", "cintura": "68-72", "cadera": "94-98" },
+            { "size": "L", "busto": "92-96", "cintura": "72-76", "cadera": "98-102" },
+            { "size": "XL", "busto": "96-102", "cintura": "76-82", "cadera": "102-108" },
+            { "size": "XXL", "busto": "102-108", "cintura": "82-88", "cadera": "108-114" }
+          ],
+          "headers": ["Talla", "Busto (cm)", "Cintura (cm)", "Cadera (cm)"]
+        },
+        {
+          "id": "pantalones-mujer",
+          "title": "Pantalones y Jeans",
+          "icon": "pants",
+          "description": "Guía de tallas para pantalones y jeans de mujer",
+          "sizes": [
+            { "size": "24", "cintura": "60-62", "cadera": "84-86", "largo": "74" },
+            { "size": "26", "cintura": "64-66", "cadera": "88-90", "largo": "75" },
+            { "size": "28", "cintura": "68-70", "cadera": "92-94", "largo": "76" },
+            { "size": "30", "cintura": "72-74", "cadera": "96-98", "largo": "77" },
+            { "size": "32", "cintura": "76-78", "cadera": "100-102", "largo": "78" },
+            { "size": "34", "cintura": "80-82", "cadera": "104-106", "largo": "79" }
+          ],
+          "headers": ["Talla", "Cintura (cm)", "Cadera (cm)", "Largo (cm)"]
+        },
+        {
+          "id": "calzado-mujer",
+          "title": "Calzado",
+          "icon": "shoe",
+          "description": "Conversión de tallas de calzado para mujer",
+          "sizes": [
+            { "size": "EU 35", "us": "5", "uk": "2.5", "cm": "22" },
+            { "size": "EU 36", "us": "5.5", "uk": "3", "cm": "22.5" },
+            { "size": "EU 37", "us": "6", "uk": "4", "cm": "23" },
+            { "size": "EU 38", "us": "7", "uk": "5", "cm": "24" },
+            { "size": "EU 39", "us": "8", "uk": "6", "cm": "25" },
+            { "size": "EU 40", "us": "9", "uk": "7", "cm": "26" },
+            { "size": "EU 41", "us": "10", "uk": "8", "cm": "27" }
+          ],
+          "headers": ["Talla EU", "Talla US", "Talla UK", "Longitud (cm)"]
+        }
+      ]
+    },
+    "unisex": {
+      "categories": [
+        {
+          "id": "camisetas-unisex",
+          "title": "Camisetas Unisex",
+          "icon": "shirt",
+          "description": "Guía de tallas para camisetas y sudaderas unisex",
+          "sizes": [
+            { "size": "XS", "pecho": "86-91", "cintura": "71-76", "largo": "66" },
+            { "size": "S", "pecho": "91-96", "cintura": "76-81", "largo": "69" },
+            { "size": "M", "pecho": "96-101", "cintura": "81-86", "largo": "72" },
+            { "size": "L", "pecho": "101-106", "cintura": "86-91", "largo": "74" },
+            { "size": "XL", "pecho": "106-111", "cintura": "91-96", "largo": "76" },
+            { "size": "XXL", "pecho": "111-116", "cintura": "96-101", "largo": "78" }
+          ],
+          "headers": ["Talla", "Pecho (cm)", "Cintura (cm)", "Largo (cm)"]
+        },
+        {
+          "id": "accesorios-unisex",
+          "title": "Accesorios",
+          "icon": "accessory",
+          "description": "Guía de tallas para cinturones, gorras y anillos",
+          "subCategories": [
+            {
+              "name": "Cinturones",
+              "sizes": [
+                { "size": "S", "medida": "75-85" },
+                { "size": "M", "medida": "85-95" },
+                { "size": "L", "medida": "95-105" },
+                { "size": "XL", "medida": "105-115" }
+              ],
+              "headers": ["Talla", "Medida (cm)"]
+            },
+            {
+              "name": "Gorras",
+              "sizes": [
+                { "size": "S/M", "medida": "54-57" },
+                { "size": "L/XL", "medida": "58-61" }
+              ],
+              "headers": ["Talla", "Circunferencia (cm)"]
+            },
+            {
+              "name": "Anillos",
+              "sizes": [
+                { "size": "5", "diametro": "15.7" },
+                { "size": "6", "diametro": "16.5" },
+                { "size": "7", "diametro": "17.3" },
+                { "size": "8", "diametro": "18.1" },
+                { "size": "9", "diametro": "18.9" },
+                { "size": "10", "diametro": "19.8" }
+              ],
+              "headers": ["Talla", "Diámetro (mm)"]
+            }
+          ]
+        }
+      ]
+    },
+    "nino": {
+      "categories": [
+        {
+          "id": "camisetas-nino",
+          "title": "Camisetas y Polos",
+          "icon": "shirt",
+          "description": "Guía de tallas para camisetas y polos de niño",
+          "sizes": [
+            { "size": "2-3 años", "altura": "92-98", "pecho": "52-54", "cintura": "50-51" },
+            { "size": "4-5 años", "altura": "104-110", "pecho": "55-57", "cintura": "52-53" },
+            { "size": "6-7 años", "altura": "116-122", "pecho": "58-61", "cintura": "54-56" },
+            { "size": "8-9 años", "altura": "128-134", "pecho": "62-66", "cintura": "57-60" },
+            { "size": "10-11 años", "altura": "140-146", "pecho": "67-72", "cintura": "61-64" },
+            { "size": "12-13 años", "altura": "152-158", "pecho": "73-78", "cintura": "65-68" },
+            { "size": "14-15 años", "altura": "164-170", "pecho": "79-84", "cintura": "69-72" }
+          ],
+          "headers": ["Edad", "Altura (cm)", "Pecho (cm)", "Cintura (cm)"]
+        },
+        {
+          "id": "pantalones-nino",
+          "title": "Pantalones y Shorts",
+          "icon": "pants",
+          "description": "Guía de tallas para pantalones y shorts de niño",
+          "sizes": [
+            { "size": "2-3 años", "altura": "92-98", "cintura": "50-51", "cadera": "54-56" },
+            { "size": "4-5 años", "altura": "104-110", "cintura": "52-53", "cadera": "58-60" },
+            { "size": "6-7 años", "altura": "116-122", "cintura": "54-56", "cadera": "62-65" },
+            { "size": "8-9 años", "altura": "128-134", "cintura": "57-60", "cadera": "67-70" },
+            { "size": "10-11 años", "altura": "140-146", "cintura": "61-64", "cadera": "72-76" },
+            { "size": "12-13 años", "altura": "152-158", "cintura": "65-68", "cadera": "78-82" },
+            { "size": "14-15 años", "altura": "164-170", "cintura": "69-72", "cadera": "84-88" }
+          ],
+          "headers": ["Edad", "Altura (cm)", "Cintura (cm)", "Cadera (cm)"]
+        },
+        {
+          "id": "calzado-nino",
+          "title": "Calzado",
+          "icon": "shoe",
+          "description": "Conversión de tallas de calzado para niño",
+          "sizes": [
+            { "size": "EU 28", "us": "11", "uk": "10", "cm": "17.1" },
+            { "size": "EU 29", "us": "11.5", "uk": "11", "cm": "17.8" },
+            { "size": "EU 30", "us": "12", "uk": "11.5", "cm": "18.4" },
+            { "size": "EU 31", "us": "13", "uk": "12.5", "cm": "19.1" },
+            { "size": "EU 32", "us": "1", "uk": "13", "cm": "19.7" },
+            { "size": "EU 33", "us": "2", "uk": "1", "cm": "20.3" },
+            { "size": "EU 34", "us": "3", "uk": "2", "cm": "21" },
+            { "size": "EU 35", "us": "4", "uk": "3", "cm": "21.6" },
+            { "size": "EU 36", "us": "4.5", "uk": "3.5", "cm": "22.2" },
+            { "size": "EU 37", "us": "5", "uk": "4", "cm": "22.9" }
+          ],
+          "headers": ["Talla EU", "Talla US", "Talla UK", "Longitud (cm)"]
+        }
+      ]
+    },
+    "nina": {
+      "categories": [
+        {
+          "id": "blusas-nina",
+          "title": "Blusas y Tops",
+          "icon": "shirt",
+          "description": "Guía de tallas para blusas y tops de niña",
+          "sizes": [
+            { "size": "2-3 años", "altura": "92-98", "pecho": "52-54", "cintura": "50-51" },
+            { "size": "4-5 años", "altura": "104-110", "pecho": "55-57", "cintura": "52-53" },
+            { "size": "6-7 años", "altura": "116-122", "pecho": "58-61", "cintura": "54-56" },
+            { "size": "8-9 años", "altura": "128-134", "pecho": "62-66", "cintura": "57-60" },
+            { "size": "10-11 años", "altura": "140-146", "pecho": "67-72", "cintura": "61-64" },
+            { "size": "12-13 años", "altura": "152-158", "pecho": "73-78", "cintura": "65-68" },
+            { "size": "14-15 años", "altura": "164-170", "pecho": "79-84", "cintura": "69-72" }
+          ],
+          "headers": ["Edad", "Altura (cm)", "Pecho (cm)", "Cintura (cm)"]
+        },
+        {
+          "id": "vestidos-nina",
+          "title": "Vestidos y Faldas",
+          "icon": "dress",
+          "description": "Guía de tallas para vestidos y faldas de niña",
+          "sizes": [
+            { "size": "2-3 años", "altura": "92-98", "pecho": "52-54", "cintura": "50-51" },
+            { "size": "4-5 años", "altura": "104-110", "pecho": "55-57", "cintura": "52-53" },
+            { "size": "6-7 años", "altura": "116-122", "pecho": "58-61", "cintura": "54-56" },
+            { "size": "8-9 años", "altura": "128-134", "pecho": "62-66", "cintura": "57-60" },
+            { "size": "10-11 años", "altura": "140-146", "pecho": "67-72", "cintura": "61-64" },
+            { "size": "12-13 años", "altura": "152-158", "pecho": "73-78", "cintura": "65-68" },
+            { "size": "14-15 años", "altura": "164-170", "pecho": "79-84", "cintura": "69-72" }
+          ],
+          "headers": ["Edad", "Altura (cm)", "Pecho (cm)", "Cintura (cm)"]
+        },
+        {
+          "id": "pantalones-nina",
+          "title": "Pantalones y Shorts",
+          "icon": "pants",
+          "description": "Guía de tallas para pantalones y shorts de niña",
+          "sizes": [
+            { "size": "2-3 años", "altura": "92-98", "cintura": "50-51", "cadera": "54-56" },
+            { "size": "4-5 años", "altura": "104-110", "cintura": "52-53", "cadera": "58-60" },
+            { "size": "6-7 años", "altura": "116-122", "cintura": "54-56", "cadera": "62-65" },
+            { "size": "8-9 años", "altura": "128-134", "cintura": "57-60", "cadera": "67-70" },
+            { "size": "10-11 años", "altura": "140-146", "cintura": "61-64", "cadera": "72-76" },
+            { "size": "12-13 años", "altura": "152-158", "cintura": "65-68", "cadera": "78-82" },
+            { "size": "14-15 años", "altura": "164-170", "cintura": "69-72", "cadera": "84-88" }
+          ],
+          "headers": ["Edad", "Altura (cm)", "Cintura (cm)", "Cadera (cm)"]
+        },
+        {
+          "id": "calzado-nina",
+          "title": "Calzado",
+          "icon": "shoe",
+          "description": "Conversión de tallas de calzado para niña",
+          "sizes": [
+            { "size": "EU 28", "us": "11", "uk": "10", "cm": "17.1" },
+            { "size": "EU 29", "us": "11.5", "uk": "11", "cm": "17.8" },
+            { "size": "EU 30", "us": "12", "uk": "11.5", "cm": "18.4" },
+            { "size": "EU 31", "us": "13", "uk": "12.5", "cm": "19.1" },
+            { "size": "EU 32", "us": "1", "uk": "13", "cm": "19.7" },
+            { "size": "EU 33", "us": "2", "uk": "1", "cm": "20.3" },
+            { "size": "EU 34", "us": "3", "uk": "2", "cm": "21" },
+            { "size": "EU 35", "us": "4", "uk": "3", "cm": "21.6" },
+            { "size": "EU 36", "us": "4.5", "uk": "3.5", "cm": "22.2" },
+            { "size": "EU 37", "us": "5", "uk": "4", "cm": "22.9" }
+          ],
+          "headers": ["Talla EU", "Talla US", "Talla UK", "Longitud (cm)"]
+        }
+      ]
+    }
+  },
+  "measurementTips": [
+    {
+      "id": "pecho",
+      "title": "Pecho",
+      "description": "Mide la parte más ancha del pecho, pasando la cinta por debajo de las axilas.",
+      "icon": "chest"
+    },
+    {
+      "id": "cintura",
+      "title": "Cintura",
+      "description": "Mide alrededor de la parte más estrecha de tu cintura, generalmente a la altura del ombligo.",
+      "icon": "waist"
+    },
+    {
+      "id": "cadera",
+      "title": "Cadera",
+      "description": "Mide alrededor de la parte más ancha de tus caderas.",
+      "icon": "hip"
+    },
+    {
+      "id": "largo",
+      "title": "Largo de pierna",
+      "description": "Mide desde la entrepierna hasta el tobillo, por la parte interior de la pierna.",
+      "icon": "leg"
+    },
+    {
+      "id": "pie",
+      "title": "Pie",
+      "description": "Coloca el pie sobre una hoja de papel, marca el talón y el dedo más largo, y mide la distancia.",
+      "icon": "foot"
+    }
+  ]
+}
