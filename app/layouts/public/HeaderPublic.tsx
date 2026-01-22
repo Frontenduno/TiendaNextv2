@@ -34,7 +34,7 @@ export default function HeaderPublic() {
     router.push(`/products?search=${encodeURIComponent(value)}`);
   } else {
     // Si borra todo, volvemos a la lista completa
-    router.push('/products');
+    router.push('/');
   }
 };
 
@@ -142,8 +142,6 @@ export default function HeaderPublic() {
             <div className="flex items-center gap-6 sm:gap-8 lg:gap-12 ml-auto md:ml-8 lg:ml-12">
               {/* Búsqueda móvil */}
               <button
-                // Manejamos la busqueda al hacer click en mobile
-                onClick={handleChange}
                 className="md:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
               >
                 <Search className="w-5 h-5 text-[#2c1ff1]" />
@@ -240,8 +238,10 @@ export default function HeaderPublic() {
             <div className="relative">
               <input
                 type="text"
+                // Guardamos lo que el usuario escribe en el estado
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                // Cada vez que el usuario escribe, actualizamos el estado
+                onChange= {handleChange}
                 placeholder="Buscar productos..."
                 className="w-full px-4 py-2.5 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm"
               />
