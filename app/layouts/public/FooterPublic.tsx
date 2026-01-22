@@ -29,13 +29,13 @@ export default function FooterPublic() {
               Tu tienda online de confianza para encontrar los mejores productos.
             </p>
             <div className="flex gap-3 justify-start">
-              <Link href="#" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+              <Link href="https://www.facebook.com/JYPPERIFERICOSSA/?locale=es_LA" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                 <Facebook className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+              <Link href="https://www.instagram.com/jypsac/" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                 <Instagram className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+              <Link href="https://x.com/jypsac" className="w-9 h-9 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
                 <Twitter className="w-4 h-4" />
               </Link>
             </div>
@@ -53,22 +53,22 @@ export default function FooterPublic() {
                 </Link>
               </li>
               <li>
-                <Link href="/guias-tallas" className="hover:text-gray-300 transition-colors hover:underline">
-                  Guías de tallas
+                <Link href="/guia-de-tallas" className="hover:text-gray-300 transition-colors hover:underline">
+                  Guía de tallas
                 </Link>
               </li>
               <li>
-                <Link href="/tutoriales" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/tutoriales-de-compra" className="hover:text-gray-300 transition-colors hover:underline">
                   Tutoriales de compra
                 </Link>
               </li>
               <li>
-                <Link href="/politica-envios" className="hover:text-gray-300 transition-colors hover:underline">
-                  Política de envíos
+                <Link href="/politica-de-envio" className="hover:text-gray-300 transition-colors hover:underline">
+                  Política de envío
                 </Link>
               </li>
               <li>
-                <Link href="/politica-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/politica-de-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de devolución
                 </Link>
               </li>
@@ -150,17 +150,17 @@ export default function FooterPublic() {
                 </button>
               </li>
               <li className="pt-2">
-                <Link href="/terminos-condiciones" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/legal/terminos-y-condiciones" className="hover:text-gray-300 transition-colors hover:underline">
                   Términos y condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/politica-privacidad" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/legal/politica-de-privacidad" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/politica-cookies" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/legal/politica-de-cookies" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de cookies
                 </Link>
               </li>

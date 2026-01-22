@@ -1,10 +1,8 @@
 // app/(public)/locations/[district]/page.tsx
 import React from "react";
-import Link from "next/link";
-import { ChevronRight, Home } from "lucide-react";
 import { LocationsGrid } from "../components/LocationsGrid";
-import locationsData from "@/data/locations.json";
-import { LocationsDataJson } from "@/interfaces/location";
+import locationsData from "@/data/footer/location/locations.json";
+import { LocationsDataJson } from "@/interfaces/footer/location/location";
 import { notFound } from "next/navigation";
 
 interface DistrictPageProps {
@@ -66,40 +64,10 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Breadcrumb */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-3">
-          <nav className="flex items-center gap-2 text-sm text-gray-600">
-            <Link 
-              href="/" 
-              className="flex items-center gap-1 hover:text-[#2c1ff1] transition-colors"
-            >
-              <Home className="w-4 h-4" />
-              Home
-            </Link>
-            <ChevronRight className="w-4 h-4 text-gray-400" />
-            {districtName === "Todos" ? (
-              <span className="font-medium text-gray-900">Tiendas</span>
-            ) : (
-              <>
-                <Link 
-                  href="/locations/todos" 
-                  className="hover:text-[#2c1ff1] transition-colors"
-                >
-                  Tiendas
-                </Link>
-                <ChevronRight className="w-4 h-4 text-gray-400" />
-                <span className="font-medium text-gray-900">{districtName}</span>
-              </>
-            )}
-          </nav>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#2c1ff1] to-[#5648f5] rounded-lg p-8 sm:p-12 mb-8 text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 sm:p-12 mb-8 text-white">
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">
             {districtName === "Todos" ? "Nuestras Tiendas" : `Tiendas en ${districtName}`}
           </h1>

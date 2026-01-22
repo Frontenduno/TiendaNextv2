@@ -1,0 +1,193 @@
+{
+  "categorias": [
+    {
+      "id": "pedidos",
+      "title": "Pedidos",
+      "icon": "clipboard-list",
+      "items": [
+        {
+          "question": "¿Cómo puedo realizar un pedido?",
+          "answer": "Para realizar un pedido, simplemente navega por nuestra tienda, selecciona los productos que deseas, añádelos al carrito y procede al checkout. Completa tus datos de envío y pago, y confirma tu pedido. Recibirás un correo de confirmación con los detalles de tu compra."
+        },
+        {
+          "question": "¿Puedo modificar mi pedido después de realizarlo?",
+          "answer": "Puedes modificar tu pedido dentro de las primeras 2 horas después de haberlo realizado, siempre que no haya sido procesado para envío. Contáctanos a través de nuestro servicio al cliente o envíanos un correo a pedidos@tienda.com para solicitar cambios."
+        },
+        {
+          "question": "¿Cómo puedo cancelar mi pedido?",
+          "answer": "Para cancelar tu pedido, accede a 'Mis Pedidos' en tu cuenta y selecciona la opción de cancelar, o contáctanos directamente. Solo es posible cancelar pedidos que aún no hayan sido enviados. El reembolso se procesará en un plazo de 5-7 días hábiles."
+        },
+        {
+          "question": "¿Cómo puedo hacer seguimiento de mi pedido?",
+          "answer": "Una vez que tu pedido sea enviado, recibirás un correo electrónico con el número de seguimiento. También puedes ver el estado de tu pedido iniciando sesión en tu cuenta y accediendo a la sección 'Mis Pedidos'."
+        },
+        {
+          "question": "¿Qué hago si mi pedido llega dañado o incompleto?",
+          "answer": "Si tu pedido llega dañado o incompleto, contáctanos dentro de las 48 horas siguientes a la recepción. Envía fotos del producto y el empaque, junto con tu número de pedido. Procederemos a enviarte un reemplazo o realizar el reembolso correspondiente."
+        }
+      ]
+    },
+    {
+      "id": "envios",
+      "title": "Envíos y Entregas",
+      "icon": "package",
+      "items": [
+        {
+          "question": "¿Cuáles son los tiempos de entrega?",
+          "answer": "Los tiempos de entrega varían según tu ubicación: Lima Metropolitana: 1-3 días hábiles. Provincias: 3-7 días hábiles. Para zonas alejadas, el tiempo puede extenderse hasta 10 días hábiles. Recibirás actualizaciones por correo sobre el estado de tu envío."
+        },
+        {
+          "question": "¿Cuánto cuesta el envío?",
+          "answer": "El costo de envío depende de tu ubicación y el peso del paquete. Lima Metropolitana: desde S/ 10.00. Provincias: desde S/ 15.00. ¡Envío gratis en compras mayores a S/ 150.00! El costo exacto se calculará al momento del checkout."
+        },
+        {
+          "question": "¿Realizan envíos internacionales?",
+          "answer": "Actualmente solo realizamos envíos dentro del Perú. Estamos trabajando para expandir nuestros servicios de envío internacional próximamente. Suscríbete a nuestro newsletter para ser el primero en enterarte cuando estén disponibles."
+        },
+        {
+          "question": "¿Puedo cambiar la dirección de envío después de realizar el pedido?",
+          "answer": "Sí, puedes cambiar la dirección de envío si el pedido aún no ha sido despachado. Contáctanos lo antes posible a través de WhatsApp o correo electrónico proporcionando tu número de pedido y la nueva dirección."
+        },
+        {
+          "question": "¿Qué pasa si no estoy en casa cuando llegue mi pedido?",
+          "answer": "El courier intentará la entrega hasta 2 veces. Si no te encuentra, dejará una notificación con instrucciones para coordinar una nueva entrega o recoger tu paquete en la oficina más cercana. También puedes optar por recoger en tienda al momento de la compra."
+        }
+      ]
+    },
+    {
+      "id": "pagos",
+      "title": "Pagos y Facturación",
+      "icon": "credit-card",
+      "items": [
+        {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos múltiples métodos de pago: Tarjetas de crédito y débito (Visa, Mastercard, American Express, Diners), Yape, Plin, transferencia bancaria (BCP, Interbank, BBVA, Scotiabank), PagoEfectivo y pago contra entrega en Lima Metropolitana."
+        },
+        {
+          "question": "¿Es seguro pagar en su tienda online?",
+          "answer": "Sí, tu seguridad es nuestra prioridad. Utilizamos encriptación SSL de 256 bits para proteger tus datos. Además, trabajamos con pasarelas de pago certificadas por PCI-DSS. Nunca almacenamos los datos completos de tu tarjeta."
+        },
+        {
+          "question": "¿Puedo pagar en cuotas?",
+          "answer": "Sí, ofrecemos pago en cuotas con tarjetas de crédito participantes. Puedes elegir entre 3, 6, 9 o 12 cuotas según el banco emisor de tu tarjeta. Las cuotas sin intereses están sujetas a promociones vigentes."
+        },
+        {
+          "question": "¿Cómo solicito una factura?",
+          "answer": "Para recibir factura, selecciona la opción 'Factura' durante el checkout e ingresa tu RUC y razón social. Si olvidaste solicitarla, contáctanos dentro de los 7 días siguientes a tu compra con tu número de pedido y datos de facturación."
+        },
+        {
+          "question": "Mi pago fue rechazado, ¿qué hago?",
+          "answer": "Si tu pago fue rechazado, verifica que los datos ingresados sean correctos, que tu tarjeta tenga fondos suficientes y que esté habilitada para compras online. Si el problema persiste, contacta a tu banco o intenta con otro método de pago."
+        }
+      ]
+    },
+    {
+      "id": "productos",
+      "title": "Productos",
+      "icon": "cube",
+      "items": [
+        {
+          "question": "¿Cómo sé qué talla elegir?",
+          "answer": "Te recomendamos consultar nuestra Guía de Tallas disponible en cada producto. Allí encontrarás medidas detalladas y consejos para tomar tus medidas correctamente. Si tienes dudas, nuestro equipo de atención al cliente puede ayudarte a elegir la talla ideal."
+        },
+        {
+          "question": "¿Los productos son originales?",
+          "answer": "Sí, todos nuestros productos son 100% originales. Trabajamos directamente con marcas autorizadas y distribuidores oficiales. Cada producto cuenta con garantía de autenticidad y certificados cuando aplica."
+        },
+        {
+          "question": "¿Puedo ver el producto antes de comprarlo?",
+          "answer": "Sí, puedes visitar nuestra tienda física para ver y probarte los productos. Consulta nuestras ubicaciones en la sección 'Tiendas'. También ofrecemos fotos detalladas y videos de cada producto en nuestra web."
+        },
+        {
+          "question": "¿Tienen garantía los productos?",
+          "answer": "Sí, todos nuestros productos cuentan con garantía. La duración varía según el tipo de producto: electrónicos (1 año), ropa (30 días por defectos de fabricación), calzado (3 meses). La garantía no cubre daños por mal uso."
+        },
+        {
+          "question": "¿Cómo cuido mis productos?",
+          "answer": "Cada producto incluye instrucciones de cuidado en su etiqueta o descripción. En general, recomendamos seguir las indicaciones de lavado, evitar exposición prolongada al sol y almacenar en lugares secos. Consulta nuestra sección de cuidados para tips específicos."
+        }
+      ]
+    },
+    {
+      "id": "devoluciones",
+      "title": "Devoluciones y Cambios",
+      "icon": "refresh",
+      "items": [
+        {
+          "question": "¿Cuál es la política de devoluciones?",
+          "answer": "Tienes 30 días desde la recepción para devolver productos que no cumplan tus expectativas. El producto debe estar sin usar, con etiquetas originales y en su empaque. Algunos productos como ropa interior y accesorios personalizados no admiten devolución."
+        },
+        {
+          "question": "¿Cómo solicito un cambio de producto?",
+          "answer": "Para solicitar un cambio, ingresa a 'Mis Pedidos', selecciona el producto y haz clic en 'Solicitar Cambio'. Indica el motivo y la talla o color deseado. Te enviaremos una guía de envío para devolver el producto original sin costo adicional."
+        },
+        {
+          "question": "¿Cuánto demora el reembolso?",
+          "answer": "Una vez recibido y verificado el producto devuelto, procesamos el reembolso en 3-5 días hábiles. El tiempo en que se refleje en tu cuenta depende de tu banco: tarjetas de crédito (1-2 ciclos de facturación), tarjetas de débito (5-10 días hábiles)."
+        },
+        {
+          "question": "¿El envío de devolución tiene costo?",
+          "answer": "Si la devolución es por defecto del producto o error nuestro, el envío es gratuito. Para devoluciones por cambio de opinión, el costo del envío corre por cuenta del cliente. Puedes también devolver sin costo en cualquiera de nuestras tiendas físicas."
+        },
+        {
+          "question": "¿Puedo devolver un producto comprado en oferta?",
+          "answer": "Sí, los productos en oferta tienen las mismas condiciones de devolución que los productos a precio regular. El reembolso se realizará por el monto pagado. Las promociones de 'Venta Final' o 'Sin Devolución' se indican claramente en el producto."
+        }
+      ]
+    },
+    {
+      "id": "cuenta",
+      "title": "Mi Cuenta",
+      "icon": "user",
+      "items": [
+        {
+          "question": "¿Cómo creo una cuenta?",
+          "answer": "Haz clic en 'Registrarse' en la parte superior de la página. Puedes registrarte con tu correo electrónico o a través de tu cuenta de Google o Facebook. Completa tus datos personales y acepta los términos y condiciones. ¡Listo! Ya puedes disfrutar de todos los beneficios."
+        },
+        {
+          "question": "¿Qué beneficios tengo al crear una cuenta?",
+          "answer": "Al crear una cuenta obtienes: historial de pedidos, seguimiento de envíos, lista de favoritos, direcciones guardadas, ofertas exclusivas, acumulación de puntos, checkout más rápido y acceso anticipado a promociones especiales."
+        },
+        {
+          "question": "¿Cómo recupero mi contraseña?",
+          "answer": "Haz clic en 'Iniciar Sesión' y luego en '¿Olvidaste tu contraseña?'. Ingresa el correo asociado a tu cuenta y recibirás un enlace para crear una nueva contraseña. El enlace es válido por 24 horas. Si no recibes el correo, revisa tu carpeta de spam."
+        },
+        {
+          "question": "¿Cómo actualizo mis datos personales?",
+          "answer": "Inicia sesión en tu cuenta, ve a 'Mi Perfil' y selecciona 'Editar Datos'. Puedes actualizar tu nombre, teléfono, fecha de nacimiento y preferencias de comunicación. Para cambiar tu correo electrónico, deberás verificar tu identidad."
+        },
+        {
+          "question": "¿Cómo elimino mi cuenta?",
+          "answer": "Si deseas eliminar tu cuenta, ve a 'Mi Perfil' > 'Configuración' > 'Eliminar Cuenta'. Ten en cuenta que esta acción es irreversible y perderás tu historial de pedidos, puntos acumulados y lista de favoritos. También puedes contactarnos para solicitar la eliminación."
+        }
+      ]
+    },
+    {
+      "id": "promociones",
+      "title": "Promociones y Descuentos",
+      "icon": "tag",
+      "items": [
+        {
+          "question": "¿Cómo aplico un código de descuento?",
+          "answer": "Durante el checkout, encontrarás un campo llamado 'Código de descuento' o 'Cupón'. Ingresa tu código y haz clic en 'Aplicar'. El descuento se reflejará automáticamente en el total. Solo se puede usar un código por compra."
+        },
+        {
+          "question": "¿Por qué mi código de descuento no funciona?",
+          "answer": "Verifica que: el código esté escrito correctamente (sin espacios), no haya expirado, aplique a los productos en tu carrito, se cumpla el monto mínimo de compra y no se haya usado previamente. Algunos códigos son de un solo uso."
+        },
+        {
+          "question": "¿Cómo me entero de las promociones?",
+          "answer": "Suscríbete a nuestro newsletter para recibir ofertas exclusivas, síguenos en redes sociales (@tiendaoficial), descarga nuestra app para notificaciones push y revisa la sección 'Ofertas' en nuestra web regularmente."
+        },
+        {
+          "question": "¿Puedo combinar promociones?",
+          "answer": "En general, las promociones no son acumulables entre sí, salvo que se indique lo contrario. No puedes usar un cupón de descuento en productos ya rebajados, pero sí puedes acumular puntos de fidelidad en todas tus compras."
+        },
+        {
+          "question": "¿Tienen programa de puntos o fidelidad?",
+          "answer": "¡Sí! Con cada compra acumulas puntos que puedes canjear por descuentos. Por cada S/ 1 gastado recibes 1 punto. Al alcanzar 500 puntos obtienes S/ 25 de descuento. Además, los miembros VIP reciben puntos dobles en todas sus compras."
+        }
+      ]
+    }
+  ]
+}

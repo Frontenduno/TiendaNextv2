@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
-import { Location } from "@/interfaces/location";
+import { Location } from "@/interfaces/footer/location/location";
 
 interface LocationCardProps {
   location: Location;

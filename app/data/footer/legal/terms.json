@@ -1,0 +1,166 @@
+{
+  "lastUpdated": "Enero 2026",
+  "sections": [
+    {
+      "id": "introduccion",
+      "title": "1. Introducción",
+      "content": [
+        "Bienvenido a nuestra tienda en línea. Al acceder y utilizar este sitio web, usted acepta cumplir y estar sujeto a los siguientes términos y condiciones de uso. Si no está de acuerdo con alguna parte de estos términos, le recomendamos no utilizar nuestro sitio web.",
+        "Estos términos y condiciones se aplican a todos los visitantes, usuarios y otras personas que accedan o utilicen el servicio. Al acceder o utilizar el servicio, usted acepta estar sujeto a estos términos.",
+        "Nos reservamos el derecho de actualizar o modificar estos términos en cualquier momento sin previo aviso. Su uso continuado del sitio después de cualquier cambio constituye su aceptación de los nuevos términos."
+      ]
+    },
+    {
+      "id": "definiciones",
+      "title": "2. Definiciones",
+      "content": [
+        "\"Sitio web\" se refiere a nuestra plataforma de comercio electrónico accesible a través de www.tienda.com y sus subdominios.",
+        "\"Usuario\" se refiere a cualquier persona que acceda, navegue o utilice nuestro sitio web, ya sea registrado o no.",
+        "\"Cuenta\" se refiere al perfil personal creado por el usuario para acceder a funcionalidades adicionales del sitio.",
+        "\"Productos\" se refiere a todos los artículos disponibles para la venta en nuestro sitio web.",
+        "\"Pedido\" se refiere a la solicitud de compra realizada por el usuario a través de nuestro sitio web.",
+        "\"Nosotros\", \"Nuestro\" o \"La Empresa\" se refiere a [Nombre de la Empresa S.A.C.], con RUC [20XXXXXXXXX], domiciliada en [Dirección Fiscal], Lima, Perú."
+      ]
+    },
+    {
+      "id": "uso-del-sitio",
+      "title": "3. Uso del Sitio Web",
+      "content": [
+        "El uso de este sitio web está sujeto a las siguientes condiciones de uso:",
+        "• El contenido de las páginas de este sitio web es para su información general y uso personal únicamente. Está sujeto a cambios sin previo aviso.",
+        "• Usted debe tener al menos 18 años de edad para realizar compras en este sitio web. Los menores de edad deben contar con la supervisión de un adulto.",
+        "• Usted se compromete a proporcionar información veraz, precisa, actual y completa sobre usted mismo según lo solicitado en el formulario de registro.",
+        "• Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, y de restringir el acceso a su computadora.",
+        "• Usted acepta la responsabilidad de todas las actividades que ocurran bajo su cuenta o contraseña.",
+        "• No debe usar este sitio web de ninguna manera que cause, o pueda causar, daño al sitio web o deterioro de la disponibilidad o accesibilidad del sitio."
+      ]
+    },
+    {
+      "id": "registro-cuenta",
+      "title": "4. Registro y Cuenta de Usuario",
+      "content": [
+        "Para acceder a ciertas funcionalidades del sitio web, puede ser necesario registrarse y crear una cuenta de usuario.",
+        "Al registrarse, usted se compromete a: (a) proporcionar información verdadera, exacta, actual y completa; (b) mantener y actualizar dicha información para mantenerla verdadera, exacta, actual y completa.",
+        "Usted es el único responsable de mantener la confidencialidad de su contraseña y cuenta. Usted acepta notificarnos inmediatamente sobre cualquier uso no autorizado de su cuenta.",
+        "Nos reservamos el derecho de suspender o cancelar su cuenta si cualquier información proporcionada resulta ser falsa, inexacta, desactualizada o incompleta.",
+        "No seremos responsables de ninguna pérdida o daño que surja de su incumplimiento de esta sección."
+      ]
+    },
+    {
+      "id": "productos-precios",
+      "title": "5. Productos y Precios",
+      "content": [
+        "Todos los productos mostrados en nuestro sitio web están sujetos a disponibilidad. Nos esforzamos por mostrar con precisión los colores y características de los productos, pero no podemos garantizar que la visualización de cualquier color en su monitor sea precisa.",
+        "Los precios de nuestros productos están expresados en Soles Peruanos (S/) e incluyen el Impuesto General a las Ventas (IGV) donde corresponda.",
+        "Nos reservamos el derecho de modificar los precios de los productos en cualquier momento sin previo aviso. Sin embargo, los pedidos confirmados antes de una modificación de precio serán procesados al precio original.",
+        "En caso de error en el precio de un producto, nos reservamos el derecho de cancelar el pedido y reembolsar cualquier pago realizado. Le notificaremos de inmediato sobre dicha cancelación.",
+        "Las promociones y descuentos tienen condiciones específicas que serán indicadas en cada caso y tienen vigencia limitada."
+      ]
+    },
+    {
+      "id": "proceso-compra",
+      "title": "6. Proceso de Compra",
+      "content": [
+        "Para realizar una compra en nuestro sitio web, debe seguir el proceso de pedido establecido, que incluye: selección de productos, adición al carrito, revisión del pedido, ingreso de datos de envío, selección del método de pago y confirmación del pedido.",
+        "Una vez que haya completado el proceso de compra, recibirá un correo electrónico de confirmación con los detalles de su pedido. Este correo electrónico no constituye aceptación de su pedido.",
+        "Nos reservamos el derecho de aceptar o rechazar cualquier pedido por cualquier motivo, incluyendo pero no limitado a: falta de disponibilidad del producto, errores en la información del producto o precio, o problemas con el pago.",
+        "El contrato de compraventa se perfecciona únicamente cuando le enviamos un correo electrónico confirmando que su pedido ha sido despachado.",
+        "Si no podemos aceptar su pedido o si alguna parte del mismo no puede ser procesada, le informaremos y procederemos al reembolso de cualquier suma que haya sido cobrada."
+      ]
+    },
+    {
+      "id": "metodos-pago",
+      "title": "7. Métodos de Pago",
+      "content": [
+        "Aceptamos los siguientes métodos de pago: tarjetas de crédito (Visa, Mastercard, American Express, Diners Club), tarjetas de débito, Yape, Plin, transferencias bancarias, PagoEfectivo y pago contra entrega (solo en Lima Metropolitana).",
+        "Al proporcionar información de pago, usted declara y garantiza que tiene derecho legal a utilizar dicho método de pago y que la información proporcionada es verdadera, correcta y completa.",
+        "Utilizamos servicios de procesamiento de pagos de terceros que cumplen con los estándares de seguridad PCI-DSS. No almacenamos información completa de tarjetas de crédito o débito en nuestros servidores.",
+        "Nos reservamos el derecho de implementar medidas de verificación adicionales para prevenir fraudes, incluyendo la solicitud de documentos de identidad o la cancelación de pedidos sospechosos.",
+        "En caso de rechazo del pago, el pedido no será procesado. Le notificaremos para que pueda intentar con un método de pago alternativo."
+      ]
+    },
+    {
+      "id": "envios-entregas",
+      "title": "8. Envíos y Entregas",
+      "content": [
+        "Realizamos envíos a todo el territorio peruano. Los tiempos de entrega varían según la ubicación: Lima Metropolitana (1-3 días hábiles), resto del país (3-7 días hábiles), zonas alejadas (hasta 10 días hábiles).",
+        "Los costos de envío se calcularán y mostrarán antes de completar la compra. El envío es gratuito para pedidos superiores a S/ 150.00.",
+        "Usted es responsable de proporcionar una dirección de entrega correcta y completa. No nos hacemos responsables de entregas fallidas debido a información incorrecta o incompleta proporcionada por el usuario.",
+        "El riesgo de pérdida y daño de los productos pasa a usted en el momento de la entrega. Si no se encuentra nadie en la dirección de entrega, se intentará la entrega hasta en dos ocasiones adicionales.",
+        "Para más detalles sobre nuestra política de envíos, consulte nuestra página de Política de Envío."
+      ]
+    },
+    {
+      "id": "devoluciones-reembolsos",
+      "title": "9. Devoluciones y Reembolsos",
+      "content": [
+        "Usted tiene derecho a devolver los productos dentro de los 30 días calendario siguientes a la recepción del pedido, siempre que el producto se encuentre en su estado original, sin uso y con todas sus etiquetas y empaques.",
+        "No se aceptarán devoluciones de: ropa interior, trajes de baño, productos personalizados, productos en oferta marcados como \"venta final\", productos dañados por mal uso del cliente.",
+        "Para solicitar una devolución, debe iniciar el proceso a través de su cuenta de usuario o contactándonos directamente. Le proporcionaremos las instrucciones para el envío del producto.",
+        "Los reembolsos se procesarán dentro de los 5-7 días hábiles siguientes a la recepción y verificación del producto devuelto. El reembolso se realizará al mismo método de pago utilizado en la compra original.",
+        "Para más información, consulte nuestra Política de Devolución completa."
+      ]
+    },
+    {
+      "id": "propiedad-intelectual",
+      "title": "10. Propiedad Intelectual",
+      "content": [
+        "Todo el contenido de este sitio web, incluyendo pero no limitado a textos, gráficos, logotipos, iconos, imágenes, clips de audio, descargas digitales y compilaciones de datos, es propiedad de la empresa o de sus proveedores de contenido y está protegido por las leyes de propiedad intelectual peruanas e internacionales.",
+        "Todas las marcas comerciales, marcas de servicio, nombres comerciales y presentaciones comerciales son propiedad de la empresa o de terceros que han autorizado su uso.",
+        "No se le concede ninguna licencia ni derecho a utilizar ninguna de las marcas sin el consentimiento previo por escrito de la empresa o del tercero propietario de la marca.",
+        "La reproducción, modificación, distribución, transmisión, republicación, exhibición o ejecución del contenido de este sitio web está estrictamente prohibida sin autorización previa por escrito."
+      ]
+    },
+    {
+      "id": "limitacion-responsabilidad",
+      "title": "11. Limitación de Responsabilidad",
+      "content": [
+        "En la máxima medida permitida por la ley aplicable, no seremos responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo, incluyendo la pérdida de beneficios, datos, uso u otra pérdida intangible.",
+        "No garantizamos que el sitio web funcionará de manera ininterrumpida, oportuna, segura o libre de errores. No garantizamos los resultados que puedan obtenerse del uso del sitio web.",
+        "Nuestra responsabilidad total hacia usted por todos los daños, pérdidas y causas de acción no excederá el monto pagado por usted, si lo hubiere, por acceder al sitio web.",
+        "Algunas jurisdicciones no permiten la exclusión o limitación de responsabilidad por daños consecuentes o incidentales, por lo que la limitación anterior puede no aplicarse en su caso."
+      ]
+    },
+    {
+      "id": "privacidad",
+      "title": "12. Privacidad y Protección de Datos",
+      "content": [
+        "El tratamiento de sus datos personales se rige por nuestra Política de Privacidad, que forma parte integral de estos términos y condiciones.",
+        "Al utilizar nuestro sitio web, usted consiente la recopilación y uso de su información personal de acuerdo con nuestra Política de Privacidad.",
+        "Nos comprometemos a proteger su información personal y a utilizarla únicamente para los fines descritos en nuestra Política de Privacidad, en cumplimiento de la Ley N° 29733, Ley de Protección de Datos Personales del Perú.",
+        "Tiene derecho a acceder, rectificar, cancelar y oponerse al tratamiento de sus datos personales. Para ejercer estos derechos, contáctenos a través de los canales indicados en nuestra Política de Privacidad."
+      ]
+    },
+    {
+      "id": "ley-aplicable",
+      "title": "13. Ley Aplicable y Jurisdicción",
+      "content": [
+        "Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes de la República del Perú, sin dar efecto a ningún principio de conflicto de leyes.",
+        "Cualquier disputa que surja de o en relación con estos términos y condiciones estará sujeta a la jurisdicción exclusiva de los tribunales de Lima, Perú.",
+        "Si alguna disposición de estos términos y condiciones se considera inválida o inaplicable por un tribunal de jurisdicción competente, las disposiciones restantes continuarán en pleno vigor y efecto.",
+        "La falta de ejercicio o aplicación por nuestra parte de cualquier derecho o disposición de estos términos y condiciones no constituirá una renuncia a dicho derecho o disposición."
+      ]
+    },
+    {
+      "id": "modificaciones",
+      "title": "14. Modificaciones a los Términos",
+      "content": [
+        "Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en el sitio web.",
+        "Le recomendamos revisar periódicamente estos términos y condiciones para estar informado de cualquier cambio. Su uso continuado del sitio web después de la publicación de cambios constituye su aceptación de dichos cambios.",
+        "En caso de cambios sustanciales, haremos esfuerzos razonables para notificarle a través del correo electrónico asociado a su cuenta o mediante un aviso destacado en el sitio web.",
+        "Si no está de acuerdo con los términos modificados, debe dejar de utilizar el sitio web inmediatamente."
+      ]
+    },
+    {
+      "id": "contacto",
+      "title": "15. Información de Contacto",
+      "content": [
+        "Si tiene preguntas o comentarios sobre estos términos y condiciones, puede contactarnos a través de los siguientes medios:",
+        "• Correo electrónico: legal@tienda.com",
+        "• Teléfono: (01) 234-5678",
+        "• Dirección: Av. Ejemplo 123, San Isidro, Lima, Perú",
+        "• Horario de atención: Lunes a Viernes de 9:00 am a 6:00 pm"
+      ]
+    }
+  ]
+}

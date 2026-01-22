@@ -1,7 +1,7 @@
 // app/(public)/locations/components/LocationsGrid.tsx
 import { LocationCard } from "./LocationCard";
 import { DistrictFilter } from "./DistrictFilter";
-import { Location } from "@/interfaces/location";
+import { Location } from "@/interfaces/footer/location/location";
 
 interface LocationsGridProps {
   locations: Location[];
