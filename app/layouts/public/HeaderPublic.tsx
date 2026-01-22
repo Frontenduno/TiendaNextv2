@@ -23,20 +23,13 @@ export default function HeaderPublic() {
   // Router de Next.js para navegación entre paginas
   const router = useRouter();
 
-  const handleChange = (e : any) => {
-  // Extraer el valor de la busqueda
-  const value = e.target.value;
-  // Le pasamos el valor al estado
-  setSearchQuery(value);
-
-  // Ejecutamos la búsqueda inmediatamente con el nuevo valor
-  if (value.trim()) {
-    router.push(`/products?search=${encodeURIComponent(value)}`);
-  } else {
-    // Si borra todo, volvemos a la lista completa
-    router.push('/');
-  }
-};
+  // Funcion para manejar la búsqueda
+  const handleSearch = () => {
+    // Evitar búsquedas vacías
+    if (!searchQuery.trim()) return;
+    // Redirigir a la página de productos con el parámetro de búsqueda
+    router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
+  };
 
   // Controlar la visibilidad del header según el scroll
   useEffect(() => {
@@ -125,12 +118,18 @@ export default function HeaderPublic() {
                   // Guardamos lo que el usuario escribe en el estado
                   value={searchQuery}
                   // Cada vez que el usuario escribe, actualizamos el estado
-                  onChange={handleChange}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  // Permitir búsqueda al presionar Enter
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSearch();
+                    }
+                  }}
                   placeholder="Buscar productos..."
                   className="w-full px-4 py-2.5 lg:py-3 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm lg:text-base"
                 />
                 <button
-                  onClick={handleChange}
+                  onClick={handleSearch}
                   className="absolute right-4 top-1/2 -translate-y-1/2"
                 >
                   <Search className="text-gray-400 w-5 h-5" />
@@ -140,13 +139,6 @@ export default function HeaderPublic() {
 
             {/* Acciones del usuario */}
             <div className="flex items-center gap-6 sm:gap-8 lg:gap-12 ml-auto md:ml-8 lg:ml-12">
-              {/* Búsqueda móvil */}
-              <button
-                className="md:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
-              >
-                <Search className="w-5 h-5 text-[#2c1ff1]" />
-              </button>
-
               {/* Botón de Perfil con menú desplegable */}
               <div className="relative" ref={profileMenuRef}>
                 <button
@@ -238,14 +230,30 @@ export default function HeaderPublic() {
             <div className="relative">
               <input
                 type="text"
-                // Guardamos lo que el usuario escribe en el estado
                 value={searchQuery}
-                // Cada vez que el usuario escribe, actualizamos el estado
-                onChange= {handleChange}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSearch();
+                  }
+                }}
                 placeholder="Buscar productos..."
-                className="w-full px-4 py-2.5 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm"
+                className="w-full px-4 py-2.5 pr-14 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-gray-700 placeholder-gray-400 text-sm"
               />
-              <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+              {/* Botón lupa */}
+              <button
+                onClick={handleSearch}
+                className="absolute right-2 top-1/2 -translate-y-1/2 
+                 flex items-center justify-center
+                 w-10 h-10 rounded-md
+                 bg-gray-100 text-gray-500
+                 active:scale-95
+                 hover:bg-gray-200 transition"
+                aria-label="Buscar"
+              >
+                <Search className="w-5 h-5" />
+              </button>
             </div>
           </div>
         </div>
