@@ -2,6 +2,8 @@
 
 // Hook para leer los parámetros de búsqueda
 import { useSearchParams } from "next/navigation";
+// Componente Link de Next.js para la navegación
+import Link from "next/link";
 // Importamos los productos desde el archivo JSON
 import productosData from "@/data/products.json";
 // Importamos las interfaces necesarias
@@ -65,7 +67,7 @@ export default function ProductosPage() {
         {/* Paginación */}
         <div className="flex justify-center mt-10 gap-2 flex-wrap">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <a
+            <Link
               key={page}
               href={`/products?search=${search}&page=${page}`}
               className={`px-3 py-1 rounded border text-sm ${
@@ -75,7 +77,7 @@ export default function ProductosPage() {
               }`}
             >
               {page}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
