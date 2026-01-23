@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Producto } from '@/interfaces/products';
-import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { FavoriteButton } from '@/feature/favorite-button/FavoriteButton';
 import { getPriceInfo } from '@/utils/pricing';
 
 interface ProductCardProps {

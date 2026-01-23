@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ShoppingCart, Truck, Store, Package } from 'lucide-react';
 import { Producto, OpcionVariante } from '@/interfaces/products';
 import { OptionSelector } from './OptionSelector';
-import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { FavoriteButton } from '@/feature/favorite-button/FavoriteButton';
 import { getPriceInfo } from '@/utils/pricing';
 import productosData from '@/data/products.json';
 import { ProductosDataJson } from '@/interfaces/products';

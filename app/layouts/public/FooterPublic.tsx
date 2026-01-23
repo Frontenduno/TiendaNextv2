@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ShoppingBag, HelpCircle, FileText, Store } from "lucide-react";
-import { LibroReclamaciones } from "./components/libro-reclamaciones";
+import { LibroReclamaciones } from "./feature/libro-reclamaciones";
 
 export default function FooterPublic() {
   const [isReclamacionesOpen, setIsReclamacionesOpen] = useState(false);
@@ -48,27 +48,27 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-2 text-sm text-left">
               <li>
-                <Link href="/customer-service/preguntas-frecuentes" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/customer-service/preguntas-frecuentes" className="hover:text-gray-300 transition-colors hover:underline">
                   Preguntas frecuentes
                 </Link>
               </li>
               <li>
-                <Link href="/customer-service/guia-de-tallas" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/customer-service/guia-de-tallas" className="hover:text-gray-300 transition-colors hover:underline">
                   Guía de tallas
                 </Link>
               </li>
               <li>
-                <Link href="/customer-service/tutoriales-de-compra" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/customer-service/tutoriales-de-compra" className="hover:text-gray-300 transition-colors hover:underline">
                   Tutoriales de compra
                 </Link>
               </li>
               <li>
-                <Link href="/customer-service/politica-de-envio" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/customer-service/politica-de-envio" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de envío
                 </Link>
               </li>
               <li>
-                <Link href="/customer-service/politica-de-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/customer-service/politica-de-devolucion" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de devolución
                 </Link>
               </li>
@@ -107,27 +107,27 @@ export default function FooterPublic() {
             </h3>
             <ul className="space-y-2 text-sm text-left">
               <li>
-                <Link href="/locations/lima-centro" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/locations/lima-centro" className="hover:text-gray-300 transition-colors hover:underline">
                   Lima Centro
                 </Link>
               </li>
               <li>
-                <Link href="/locations/miraflores" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/locations/miraflores" className="hover:text-gray-300 transition-colors hover:underline">
                   Miraflores
                 </Link>
               </li>
               <li>
-                <Link href="/locations/san-isidro" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/locations/san-isidro" className="hover:text-gray-300 transition-colors hover:underline">
                   San Isidro
                 </Link>
               </li>
               <li>
-                <Link href="/locations/surco" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/locations/surco" className="hover:text-gray-300 transition-colors hover:underline">
                   Surco
                 </Link>
               </li>
               <li>
-                <Link href="/locations/todos" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
+                <Link href="/footer/locations/todos" className="hover:text-gray-300 transition-colors hover:underline font-semibold">
                   Ver todas las tiendas →
                 </Link>
               </li>
@@ -150,17 +150,17 @@ export default function FooterPublic() {
                 </button>
               </li>
               <li className="pt-2">
-                <Link href="/legal/terminos-y-condiciones" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/legal/terminos-y-condiciones" className="hover:text-gray-300 transition-colors hover:underline">
                   Términos y condiciones
                 </Link>
               </li>
               <li>
-                <Link href="/legal/politica-de-privacidad" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/legal/politica-de-privacidad" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/legal/politica-de-cookies" className="hover:text-gray-300 transition-colors hover:underline">
+                <Link href="/footer/legal/politica-de-cookies" className="hover:text-gray-300 transition-colors hover:underline">
                   Política de cookies
                 </Link>
               </li>

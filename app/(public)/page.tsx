@@ -1,6 +1,6 @@
 // app/(public)/page.tsx
 import React from 'react';
-import { ProductCarousel } from '@/components/product/ProductCarousel';
+import { ProductCarousel } from '@/feature/carousel-product/ProductCarousel';
 
 export default function HomePage() {
   return (

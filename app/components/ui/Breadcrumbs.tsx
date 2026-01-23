@@ -23,10 +23,11 @@ const routeLabels: Record<string, string> = {
   "customer-service": "Servicio al Cliente",
   "locations": "Tiendas",
   "product": "Producto",
+  "footer": "footer"
 };
 
 // Rutas que no tienen página propia (solo son agrupadores)
-const nonClickableRoutes = new Set(["legal", "customer-service"]);
+const nonClickableRoutes = new Set(["legal", "customer-service", "locations", "footer"]);
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
