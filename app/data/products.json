@@ -90,12 +90,7 @@
         "valor": "256GB"
       },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        102,
-        103,
-        104,
-        105
-      ]
+      "productosRelacionados": [102, 103, 104, 105]
     },
     {
       "idProducto": 102,
@@ -178,12 +173,7 @@
         "valor": "512GB"
       },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        103,
-        104,
-        105
-      ]
+      "productosRelacionados": [101, 103, 104, 105]
     },
     {
       "idProducto": 103,
@@ -270,12 +260,7 @@
         "valor": "256GB"
       },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        104,
-        105
-      ]
+      "productosRelacionados": [101, 102, 104, 105]
     },
     {
       "idProducto": 104,
@@ -358,12 +343,7 @@
         "valor": "512GB"
       },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        103,
-        105
-      ]
+      "productosRelacionados": [101, 102, 103, 105]
     },
     {
       "idProducto": 105,
@@ -446,12 +426,7 @@
         "valor": "256GB"
       },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        103,
-        104
-      ]
+      "productosRelacionados": [101, 102, 103, 104]
     },
     {
       "idProducto": 201,
@@ -529,11 +504,7 @@
         "valor": "S"
       },
       "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        202,
-        203,
-        204
-      ]
+      "productosRelacionados": [202, 203, 204]
     },
     {
       "idProducto": 202,
@@ -607,11 +578,7 @@
         "valor": "M"
       },
       "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        203,
-        204
-      ]
+      "productosRelacionados": [201, 203, 204]
     },
     {
       "idProducto": 203,
@@ -685,11 +652,7 @@
         "valor": "S"
       },
       "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        202,
-        204
-      ]
+      "productosRelacionados": [201, 202, 204]
     },
     {
       "idProducto": 204,
@@ -763,11 +726,7 @@
         "valor": "M"
       },
       "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        202,
-        203
-      ]
+      "productosRelacionados": [201, 202, 203]
     },
     {
       "idProducto": 301,

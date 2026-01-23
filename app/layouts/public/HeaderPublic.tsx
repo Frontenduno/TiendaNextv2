@@ -3,81 +3,97 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { Search, User, ShoppingCart, Menu} from "lucide-react";
+import { Search, User, ShoppingCart, Menu } from "lucide-react";
 import MenuSidebar from "../MenuSidebar";
 import { Usuario } from "@/interfaces/user";
+
+import { useRouter } from "next/navigation";
 
 export default function HeaderPublic() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<Usuario | null>(null);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
+  // Estado para guardar lo que el usuario escribre en la barra de búsqueda
   const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const profileMenuRef = useRef<HTMLDivElement>(null);
 
+  // Router de Next.js para navegación entre paginas
+  const router = useRouter();
+
+  // Funcion para manejar la búsqueda
+  const handleSearch = () => {
+    // Evitar búsquedas vacías
+    if (!searchQuery.trim()) return;
+    // Redirigir a la página de productos con el parámetro de búsqueda
+    router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
+  };
+
   // Controlar la visibilidad del header según el scroll
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Si estamos en el tope de la página, siempre mostrar
       if (currentScrollY < 10) {
         setIsVisible(true);
-      } 
+      }
       // Si hacemos scroll hacia arriba, mostrar
       else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
-      } 
+      }
       // Si hacemos scroll hacia abajo, ocultar
       else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
         setShowProfileMenu(false); // Cerrar menú de perfil al ocultar
       }
-      
+
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (profileMenuRef.current && !profileMenuRef.current.contains(event.target as Node)) {
+      if (
+        profileMenuRef.current &&
+        !profileMenuRef.current.contains(event.target as Node)
+      ) {
         setShowProfileMenu(false);
       }
     };
 
     if (showProfileMenu) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showProfileMenu]);
 
   return (
     <>
-      <header 
+      <header
         className={`w-full bg-[#2c1ff1] shadow-md font-sans fixed top-0 left-0 right-0 z-40 transition-transform duration-300 ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
+          isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3 sm:py-5">
           <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
-            
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 cursor-pointer">
-              <Image 
-                src="/logo.png" 
-                alt="MiTienda Logo" 
-                width={260} 
+              <Image
+                src="/logo.png"
+                alt="MiTienda Logo"
+                width={260}
                 height={90}
                 className="h-16 sm:h-20 lg:h-24 w-auto"
               />
@@ -89,7 +105,9 @@ export default function HeaderPublic() {
               className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 bg-white rounded-lg hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
             >
               <Menu className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
-              <span className="hidden sm:inline text-sm lg:text-base font-semibold text-[#2c1ff1]">Menú</span>
+              <span className="hidden sm:inline text-sm lg:text-base font-semibold text-[#2c1ff1]">
+                Menú
+              </span>
             </button>
 
             {/* Barra de búsqueda */}
@@ -97,23 +115,30 @@ export default function HeaderPublic() {
               <div className="relative">
                 <input
                   type="text"
+                  // Guardamos lo que el usuario escribe en el estado
                   value={searchQuery}
+                  // Cada vez que el usuario escribe, actualizamos el estado
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  // Permitir búsqueda al presionar Enter
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleSearch();
+                    }
+                  }}
                   placeholder="Buscar productos..."
                   className="w-full px-4 py-2.5 lg:py-3 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm lg:text-base"
                 />
-                <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <button
+                  onClick={handleSearch}
+                  className="absolute right-4 top-1/2 -translate-y-1/2"
+                >
+                  <Search className="text-gray-400 w-5 h-5" />
+                </button>
               </div>
             </div>
 
             {/* Acciones del usuario */}
             <div className="flex items-center gap-6 sm:gap-8 lg:gap-12 ml-auto md:ml-8 lg:ml-12">
-              
-              {/* Búsqueda móvil */}
-              <button className="md:hidden flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer">
-                <Search className="w-5 h-5 text-[#2c1ff1]" />
-              </button>
-
               {/* Botón de Perfil con menú desplegable */}
               <div className="relative" ref={profileMenuRef}>
                 <button
@@ -149,7 +174,9 @@ export default function HeaderPublic() {
                 {showProfileMenu && isLoggedIn && user && (
                   <div className="absolute right-0 top-full mt-3 w-52 sm:w-56 bg-white rounded-lg shadow-2xl overflow-hidden z-50">
                     <div className="px-4 py-3 bg-[#2c1ff1] text-white border-b">
-                      <p className="font-semibold text-sm">¡Hola {user.nombre}!</p>
+                      <p className="font-semibold text-sm">
+                        ¡Hola {user.nombre}!
+                      </p>
                     </div>
                     <div className="p-3 space-y-2">
                       <Link
@@ -158,7 +185,9 @@ export default function HeaderPublic() {
                         onClick={() => setShowProfileMenu(false)}
                       >
                         <span className="text-[#2c1ff1]">🛍️</span>
-                        <span className="text-sm text-gray-700">Mis compras</span>
+                        <span className="text-sm text-gray-700">
+                          Mis compras
+                        </span>
                       </Link>
                       <Link
                         href="/mi-cuenta"
@@ -195,7 +224,7 @@ export default function HeaderPublic() {
               </Link>
             </div>
           </div>
-          
+
           {/* Barra de búsqueda móvil (debajo del header) */}
           <div className="md:hidden px-0 pt-3">
             <div className="relative">
@@ -203,10 +232,28 @@ export default function HeaderPublic() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleSearch();
+                  }
+                }}
                 placeholder="Buscar productos..."
-                className="w-full px-4 py-2.5 pr-12 rounded-lg border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm"
+                className="w-full px-4 py-2.5 pr-14 rounded-lg border-2 border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-gray-700 placeholder-gray-400 text-sm"
               />
-              <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+              {/* Botón lupa */}
+              <button
+                onClick={handleSearch}
+                className="absolute right-2 top-1/2 -translate-y-1/2 
+                 flex items-center justify-center
+                 w-10 h-10 rounded-md
+                 bg-gray-100 text-gray-500
+                 active:scale-95
+                 hover:bg-gray-200 transition"
+                aria-label="Buscar"
+              >
+                <Search className="w-5 h-5" />
+              </button>
             </div>
           </div>
         </div>
@@ -216,9 +263,9 @@ export default function HeaderPublic() {
       <div className="h-24 sm:h-28 md:h-32 lg:h-36"></div>
 
       {/* Componente de menú lateral */}
-      <MenuSidebar 
-        isOpen={showMenuSidebar} 
-        onClose={() => setShowMenuSidebar(false)} 
+      <MenuSidebar
+        isOpen={showMenuSidebar}
+        onClose={() => setShowMenuSidebar(false)}
       />
     </>
   );
