@@ -3,7 +3,7 @@
 import React from 'react';
 import { FAQCategoryData } from '@/interfaces/footer/customer-service/faq';
 import { FAQAccordion } from './FAQAccordion';
-import { getIcon } from '@/components/ui/Icons';
+import { getIcon } from '../../components/Icons';
 
 interface CategorySectionProps {
   category: FAQCategoryData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShippingSection } from '@/interfaces/footer/customer-service/shipping';
-import { getIcon, CheckCircleIcon } from '@/components/ui/Icons';
+import { getIcon, CheckCircleIcon } from '../../components/Icons';
 
 interface ShippingSectionCardProps {
   section: ShippingSection;

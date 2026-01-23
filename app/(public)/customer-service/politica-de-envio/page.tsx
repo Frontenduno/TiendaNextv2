@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import shippingDataJson from "@/data/footer/customer-service/shipping.json";
 import { ShippingData } from "@/interfaces/footer/customer-service/shipping";
-import { HeroSection, ImportantNotes, StickyNav } from "@/components/ui/index";
-import { TruckIcon } from "@/components/ui/Icons";
+import { HeroSection, ImportantNotes, StickyNav, TruckIcon } from "../components";
 import { ShippingSectionCard } from "./components";
 
 const shippingData = shippingDataJson as ShippingData;

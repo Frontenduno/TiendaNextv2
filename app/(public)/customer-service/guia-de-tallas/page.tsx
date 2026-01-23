@@ -7,7 +7,7 @@ import {
   GenderTab,
   SizeGuideData
 } from '@/interfaces/footer/customer-service/size-guide';
-import { StickyNav } from '@/components/ui/index';
+import { StickyNav } from '../components';
 import { 
   CategoryCard, 
   MeasurementTipCard 

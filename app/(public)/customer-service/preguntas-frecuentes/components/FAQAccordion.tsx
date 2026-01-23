@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FAQItem } from '@/interfaces/footer/customer-service/faq';
-import { ChevronDownIcon } from '@/components/ui/Icons';
+import { ChevronDownIcon } from '../../components/Icons';
 
 interface FAQAccordionProps {
   item: FAQItem;

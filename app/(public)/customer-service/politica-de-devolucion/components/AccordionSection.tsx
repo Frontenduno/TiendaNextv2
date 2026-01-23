@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ReturnSection } from '@/interfaces/footer/customer-service/returns';
-import { getIcon, ChevronDownIcon, ArrowRightIcon } from '@/components/ui/Icons';
+import { getIcon, ChevronDownIcon, ArrowRightIcon } from '../../components/Icons';
 
 interface AccordionSectionProps {
   section: ReturnSection;

@@ -3,8 +3,7 @@
 import { useState, useCallback, useMemo } from "react";
 import faqDataJson from "@/data/footer/customer-service/faq.json";
 import { FAQData } from "@/interfaces/footer/customer-service/faq";
-import { StickyNav, HeroSection } from "@/components/ui/index";
-import { ClipboardListIcon } from "@/components/ui/Icons";
+import { StickyNav, HeroSection, ClipboardListIcon } from "../components";
 import { CategorySection } from "./components";
 
 const faqData = faqDataJson as FAQData;

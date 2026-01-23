@@ -3,8 +3,7 @@
 import { useState, useCallback, useMemo } from "react";
 import returnsDataJson from "@/data/footer/customer-service/returns.json";
 import { ReturnsData } from "@/interfaces/footer/customer-service/returns";
-import { HeroSection, ImportantNotes } from "@/components/ui/index";
-import { RefreshIcon } from "@/components/ui/Icons";
+import { HeroSection, ImportantNotes, RefreshIcon } from "../components";
 import { AccordionSection } from "./components";
 
 const returnsData = returnsDataJson as ReturnsData;
