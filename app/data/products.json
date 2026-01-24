@@ -754,7 +754,7 @@
       "color": { "id": 80, "nombre": "Negro", "valor": "#000000" },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
-      "productosRelacionados": []
+      "productosRelacionados": [232, 234]
     }
   ]
 }

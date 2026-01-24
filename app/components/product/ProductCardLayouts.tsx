@@ -9,6 +9,18 @@ import { Producto } from '@/interfaces/products';
 import { FavoriteButton } from '@/feature/favorite-button/FavoriteButton';
 import { SizeConfiguration, renderStars } from './product-card.config';
 
+// Función helper para crear slug
+function createProductSlug(nombre: string, id: number): string {
+  const nombreSlug = nombre
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  
+  return `${nombreSlug}-${id}`;
+}
+
 interface LayoutProps {
   producto: Producto;
   config: SizeConfiguration;
@@ -40,10 +52,11 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
   showRating,
 }) => {
   const stars = renderStars(producto.calificacion || 0, config.starSize);
+  const productSlug = createProductSlug(producto.nombre, producto.idProducto);
 
   return (
     <div className="bg-white rounded-lg overflow-hidden group h-full flex border border-gray-200 hover:shadow-lg transition-all duration-300">
-      <Link href={`/product/${producto.idProducto}`} className="relative w-32 flex-shrink-0">
+      <Link href={`/product/${productSlug}`} className="relative w-32 flex-shrink-0">
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
             src={producto.imagenes[0]?.url || '/placeholder.png'}
@@ -78,7 +91,7 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
       </Link>
 
       <div className={`${contentPadding} flex-1 flex flex-col justify-between`}>
-        <Link href={`/product/${producto.idProducto}`} className="flex-1">
+        <Link href={`/product/${productSlug}`} className="flex-1">
           <p className={`${config.brand} text-gray-500 mb-0.5`}>{producto.marca.nombre}</p>
           
           <h3 className={`${config.title} font-medium text-gray-900 hover:text-blue-600 transition`}>
@@ -154,10 +167,11 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
   maxTags,
 }) => {
   const stars = renderStars(producto.calificacion || 0, config.starSize);
+  const productSlug = createProductSlug(producto.nombre, producto.idProducto);
 
   return (
     <div className="bg-white rounded-lg overflow-hidden group h-full flex flex-col border border-gray-200 hover:shadow-lg transition-all duration-300">
-      <Link href={`/product/${producto.idProducto}`}>
+      <Link href={`/product/${productSlug}`}>
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
             src={producto.imagenes[0]?.url || '/placeholder.png'}
@@ -212,7 +226,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
       </Link>
 
       <div className={`${contentPadding} flex-1 flex flex-col`}>
-        <Link href={`/product/${producto.idProducto}`} className="flex-1 flex flex-col">
+        <Link href={`/product/${productSlug}`} className="flex-1 flex flex-col">
           <p className={`${config.brand} text-gray-500 mb-1`}>{producto.marca.nombre}</p>
           
           <h3 className={`${config.title} font-medium text-gray-900 mb-2 hover:text-blue-600 transition`}>

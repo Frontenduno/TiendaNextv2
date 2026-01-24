@@ -11,6 +11,7 @@ interface ProductSpecsProps {
 
 export const ProductSpecs: React.FC<ProductSpecsProps> = ({ producto }) => {
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+  const [isDetalleOpen, setIsDetalleOpen] = useState(false);
   const [isSpecsOpen, setIsSpecsOpen] = useState(false);
 
   return (
@@ -28,6 +29,25 @@ export const ProductSpecs: React.FC<ProductSpecsProps> = ({ producto }) => {
           />
         </button>
         {isDescriptionOpen && (
+          <div className="px-4 pb-4">
+            <p className="text-gray-700">{producto.descripcion}</p>
+          </div>
+        )}
+      </div>
+
+      <div className="border-b border-gray-200">
+        <button
+          onClick={() => setIsDetalleOpen(!isDetalleOpen)}
+          className="w-full flex justify-between items-center py-4 hover:bg-gray-50 px-4"
+        >
+          <span className="font-semibold text-gray-900">Detalle</span>
+          <ChevronDown
+            className={`w-5 h-5 text-gray-900 transition-transform ${
+              isDetalleOpen ? 'rotate-180' : ''
+            }`}
+          />
+        </button>
+        {isDetalleOpen && (
           <div className="px-4 pb-4">
             <p className="text-gray-700">{producto.detalle}</p>
           </div>

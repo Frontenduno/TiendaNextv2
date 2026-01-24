@@ -21,9 +21,21 @@ interface ProductInfoProps {
   producto: Producto;
 }
 
+// Función helper para crear slug (solo para navegación interna)
+function createSlug(nombre: string, id: number): string {
+  const nombreSlug = nombre
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  
+  return `${nombreSlug}-${id}`;
+}
+
 // Función para renderizar estrellas correctamente
 const renderStars = (rating: number) => {
-  const fullStars = Math.ceil(rating); // Redondear hacia arriba
+  const fullStars = Math.ceil(rating);
   
   return [...Array(5)].map((_, i) => (
     <Star
@@ -77,8 +89,9 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     );
     
     if (nuevoProducto) {
+      const slug = createSlug(nuevoProducto.nombre, nuevoProducto.idProducto);
       startTransition(() => {
-        router.push(`/product/${nuevoProducto.idProducto}`, { scroll: false });
+        router.push(`/product/${slug}`, { scroll: false });
       });
     }
   };
@@ -92,8 +105,9 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     );
     
     if (nuevoProducto) {
+      const slug = createSlug(nuevoProducto.nombre, nuevoProducto.idProducto);
       startTransition(() => {
-        router.push(`/product/${nuevoProducto.idProducto}`, { scroll: false });
+        router.push(`/product/${slug}`, { scroll: false });
       });
     }
   };
@@ -248,7 +262,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
           </span>
         </div>
 
-        {/* Mostrar opciones de envío/recojo SOLO si están disponibles */}
         {producto.disponibleEnvio && (
           <div className="flex items-start gap-3">
             <Truck className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
@@ -275,7 +288,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
           </div>
         )}
 
-        {/* Si NO hay envío ni recojo disponible */}
         {!producto.disponibleEnvio && !producto.disponibleRecojo && (
           <div className="flex items-center gap-3">
             <Package className="w-5 h-5 text-gray-600 flex-shrink-0" />

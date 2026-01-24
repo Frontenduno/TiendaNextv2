@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { ChevronDown, ChevronUp, Star, X } from "lucide-react";
+import { ChevronUp, X, Star } from "lucide-react";
 
 // Definimos la estructura del estado de los filtros
 export interface FilterState {
@@ -25,7 +25,6 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
   const pathname = usePathname();
 
   // --- 1. DETERMINAR LA FUENTE DE LA VERDAD ---
-  // Si nos pasan 'manualState', usamos ese (Móvil). Si no, leemos la URL (Desktop).
   const isManual = !!manualState;
 
   // Valores actuales (calculados)
@@ -37,19 +36,12 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
     almacenamiento: searchParams.get("almacenamiento")?.split(",") || [],
   };
 
-  // Estados locales solo para los inputs de texto (para evitar lag al escribir)
+  // Estados locales solo para los inputs de texto (con valores iniciales directos)
   const [localMin, setLocalMin] = useState(currentValues.min);
   const [localMax, setLocalMax] = useState(currentValues.max);
 
-  // Sincronizar inputs locales cuando cambian los valores externos
-  useEffect(() => {
-    setLocalMin(currentValues.min);
-    setLocalMax(currentValues.max);
-  }, [currentValues.min, currentValues.max]);
-
   // --- 2. LÓGICA DE ACTUALIZACIÓN ---
 
-  // Función central para aplicar cambios
   const applyChange = (newState: FilterState) => {
     if (isManual && onManualChange) {
       // MODO MÓVIL: Solo actualizamos el estado en memoria del padre
@@ -71,8 +63,10 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
       else params.delete("rating");
 
       // Actualizar Precios
-      if (newState.min) params.set("min", newState.min); else params.delete("min");
-      if (newState.max) params.set("max", newState.max); else params.delete("max");
+      if (newState.min) params.set("min", newState.min); 
+      else params.delete("min");
+      if (newState.max) params.set("max", newState.max); 
+      else params.delete("max");
 
       params.delete("page"); // Reset paginación
       router.push(`${pathname}?${params.toString()}`, { scroll: false });
@@ -110,7 +104,6 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
     if (e.key === "Enter") applyPriceFilter();
   };
 
-  // Botón limpiar (solo visible en Desktop si no es manual, o controlado por padre en móvil)
   const hasFilters = 
     currentValues.marca.length > 0 || 
     currentValues.almacenamiento.length > 0 || 
@@ -119,29 +112,31 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
     !!currentValues.max;
 
   const clearAll = () => {
+    setLocalMin("");
+    setLocalMax("");
     if (isManual && onManualChange) {
-        onManualChange({ marca: [], min: "", max: "", rating: null, almacenamiento: [] });
+      onManualChange({ marca: [], min: "", max: "", rating: null, almacenamiento: [] });
     } else {
-        router.push(pathname);
+      router.push(pathname);
     }
   };
 
-  // --- RENDERIZADO ---
-  const brands = ["Apple", "Samsung", "Xiaomi", "Motorola", "Honor"];
-  const storageOptions = ["64 GB", "128 GB", "256 GB", "512 GB", "1 TB"];
+  // --- MARCAS Y OPCIONES BASADAS EN EL JSON REAL ---
+  const brands = ["Apple", "Samsung", "Xiaomi", "Motorola", "Sony", "LG", "Razer", "ASUS", "Nike", "Levi's"];
+  const storageOptions = ["256GB", "512GB", "1TB"];
 
   return (
     <div className="w-full space-y-6">
       
-      {/* Header Desktop (Oculto en móvil si se desea manejar fuera) */}
+      {/* Header Desktop */}
       {!isManual && (
         <div className="flex items-center justify-between pb-2 border-b border-gray-100">
-            <h2 className="font-bold text-lg text-gray-900">Filtros</h2>
-            {hasFilters && (
+          <h2 className="font-bold text-lg text-gray-900">Filtros</h2>
+          {hasFilters && (
             <button onClick={clearAll} className="text-xs text-[#2c1ff1] font-semibold hover:underline flex items-center gap-1">
-                Limpiar todo <X className="w-3 h-3" />
+              Limpiar todo <X className="w-3 h-3" />
             </button>
-            )}
+          )}
         </div>
       )}
 
@@ -180,7 +175,7 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
               placeholder="Mín"
               value={localMin}
               onChange={(e) => setLocalMin(e.target.value)}
-              onBlur={applyPriceFilter} // Aplicar al salir del foco en móvil
+              onBlur={applyPriceFilter}
               onKeyDown={handlePriceKeyDown}
               className="w-full pl-6 pr-2 py-1.5 text-sm border border-gray-300 rounded focus:border-[#2c1ff1] outline-none"
             />
@@ -220,7 +215,9 @@ export const CategoryFilters = ({ manualState, onManualChange }: CategoryFilters
                   <Star key={i} size={14} className={`${i < stars ? "fill-current" : "text-gray-300 fill-transparent"}`} />
                 ))}
               </div>
-              <span className={`text-xs ${currentValues.rating === stars.toString() ? "font-semibold text-[#2c1ff1]" : "text-gray-500"}`}>& más</span>
+              <span className={`text-xs ${currentValues.rating === stars.toString() ? "font-semibold text-[#2c1ff1]" : "text-gray-500"}`}>
+                & más
+              </span>
             </button>
           ))}
         </div>
