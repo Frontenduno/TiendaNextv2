@@ -10,18 +10,6 @@ interface ProductPageProps {
   }>;
 }
 
-// Función helper para crear slug
-function createSlug(nombre: string, id: number): string {
-  const nombreSlug = nombre
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // Elimina acentos
-    .replace(/[^a-z0-9]+/g, '-') // Reemplaza caracteres especiales con guiones
-    .replace(/^-+|-+$/g, ''); // Elimina guiones al inicio y final
-  
-  return `${nombreSlug}-${id}`;
-}
-
 // Función para extraer el ID del slug
 function extractIdFromSlug(slug: string): number | null {
   const parts = slug.split('-');
