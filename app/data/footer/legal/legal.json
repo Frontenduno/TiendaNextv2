@@ -1,0 +1,27 @@
+{
+  "pages": {
+    "terminos-y-condiciones": {
+      "title": "Términos y Condiciones",
+      "subtitle": "Lea detenidamente estos términos y condiciones antes de utilizar nuestro sitio web. Al acceder y usar este sitio, acepta estar sujeto a estos términos.",
+      "lastUpdatedNote": "Por favor, revise estos términos periódicamente para estar informado de cualquier cambio.",
+      "footerTitle": "Aceptación de los Términos",
+      "footerContent": [
+        "Al utilizar nuestro sitio web, usted reconoce que ha leído, entendido y acepta estar sujeto a estos términos y condiciones. Si no está de acuerdo con estos términos, por favor no utilice nuestro sitio web.",
+        "Si tiene alguna pregunta sobre estos términos, no dude en contactarnos antes de utilizar nuestros servicios."
+      ],
+      "dataFile": "terms.json"
+    },
+    "politica-de-privacidad": {
+      "title": "Política de Privacidad",
+      "subtitle": "Tu privacidad es importante para nosotros. Conoce cómo recopilamos, utilizamos y protegemos tu información personal.",
+      "lastUpdatedNote": "Esta política cumple con la Ley N° 29733, Ley de Protección de Datos Personales del Perú.",
+      "dataFile": "privacy.json"
+    },
+    "politica-de-cookies": {
+      "title": "Política de Cookies",
+      "subtitle": "Conoce cómo utilizamos las cookies para mejorar tu experiencia de navegación y cómo puedes gestionar tus preferencias.",
+      "lastUpdatedNote": "Esta política describe cómo utilizamos las cookies y tecnologías similares en nuestro sitio web.",
+      "dataFile": "cookies.json"
+    }
+  }
+}

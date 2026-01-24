@@ -3,2076 +3,758 @@
     {
       "idProducto": 101,
       "nombre": "iPhone 15 Pro Max",
-      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
-      "precio": 1299.99,
-      "precioOriginal": 1499.99,
+      "descripcion": "Smartphone premium con chip A17 Pro",
+      "precioBase": 1499.99,
+      "precioDescuento": 1299.99,
       "stockActual": 15,
-      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "detalle": "Diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
       "tiempoEnvio": "Llega mañana",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 111,
-          "nombre": "iPhone"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        },
-        {
-          "idEtiqueta": 2,
-          "descripcion": "Más vendido"
-        },
-        {
-          "idEtiqueta": 3,
-          "descripcion": "Oferta"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" Super Retina XDR"
-        },
-        {
-          "nombre": "Procesador",
-          "valor": "A17 Pro"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 1,
-          "url": "https://picsum.photos/seed/iphone-natural-256-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 2,
-          "url": "https://picsum.photos/seed/iphone-natural-256-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 1,
-        "nombre": "Titanio Natural",
-        "valor": "#E8E6E3"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "256GB",
-        "valor": "256GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        102,
-        103,
-        104,
-        105
-      ]
+      "mensajeEnvio": "Envío gratis",
+      "calificacion": 4.9,
+      "totalReviews": 18,
+      "genero": { "idGenero": 3, "nombre": "Mujer" },
+      "marca": { "idMarca": 75, "nombre": "Evening Star" },
+      "coleccion": { "idColeccion": 4, "nombre": "Invierno 2024" },
+      "categorias": [{ "idCategoria": 223, "nombre": "Vestidos de Noche" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "Material", "valor": "Terciopelo" }],
+      "imagenes": [{ "idImagen": 170, "url": "https://picsum.photos/seed/dress/800/1000", "descripcion": "Modelo" }],
+      "color": { "id": 70, "nombre": "Vino", "valor": "#800000" },
+      "opcionAdicional": { "id": 12, "nombre": "M", "valor": "M" },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [225]
     },
     {
-      "idProducto": 102,
-      "nombre": "iPhone 15 Pro Max",
-      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
-      "precio": 1499.99,
-      "stockActual": 8,
-      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 111,
-          "nombre": "iPhone"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" Super Retina XDR"
-        },
-        {
-          "nombre": "Procesador",
-          "valor": "A17 Pro"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 3,
-          "url": "https://picsum.photos/seed/iphone-natural-512-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 4,
-          "url": "https://picsum.photos/seed/iphone-natural-512-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 1,
-        "nombre": "Titanio Natural",
-        "valor": "#E8E6E3"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        103,
-        104,
-        105
-      ]
-    },
-    {
-      "idProducto": 103,
-      "nombre": "iPhone 15 Pro Max",
-      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
-      "precio": 1299.99,
+      "idProducto": 241,
+      "nombre": "Bolso Cuero Minimal",
+      "descripcion": "Bolso de mano cuero legítimo",
+      "precioBase": 120.00,
+      "precioDescuento": null,
       "stockActual": 12,
-      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
+      "detalle": "Diseño estructurado con acabados dorados.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
       "tiempoEnvio": "Llega mañana",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 111,
-          "nombre": "iPhone"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        },
-        {
-          "idEtiqueta": 2,
-          "descripcion": "Más vendido"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" Super Retina XDR"
-        },
-        {
-          "nombre": "Procesador",
-          "valor": "A17 Pro"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 5,
-          "url": "https://picsum.photos/seed/iphone-blue-256-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 6,
-          "url": "https://picsum.photos/seed/iphone-blue-256-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 2,
-        "nombre": "Titanio Azul",
-        "valor": "#4C6B8A"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "256GB",
-        "valor": "256GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        104,
-        105
-      ]
+      "mensajeEnvio": null,
+      "calificacion": 4.7,
+      "totalReviews": 40,
+      "genero": { "idGenero": 3, "nombre": "Mujer" },
+      "marca": { "idMarca": 80, "nombre": "Prada Style" },
+      "coleccion": { "idColeccion": 8, "nombre": "Accesorios 24" },
+      "categorias": [{ "idCategoria": 241, "nombre": "Bolsos" }],
+      "etiquetas": [{ "idEtiqueta": 6, "descripcion": "Elegante" }],
+      "especificaciones": [{ "nombre": "Origen", "valor": "Cuero vacuno" }],
+      "imagenes": [{ "idImagen": 180, "url": "https://picsum.photos/seed/bag/800/1000", "descripcion": "Bolso" }],
+      "color": { "id": 75, "nombre": "Camel", "valor": "#C19A6B" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [242]
     },
     {
-      "idProducto": 104,
-      "nombre": "iPhone 15 Pro Max",
-      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
-      "precio": 1499.99,
-      "stockActual": 5,
-      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": false,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 3-5 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 111,
-          "nombre": "iPhone"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" Super Retina XDR"
-        },
-        {
-          "nombre": "Procesador",
-          "valor": "A17 Pro"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 7,
-          "url": "https://picsum.photos/seed/iphone-blue-512-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 8,
-          "url": "https://picsum.photos/seed/iphone-blue-512-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 2,
-        "nombre": "Titanio Azul",
-        "valor": "#4C6B8A"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        103,
-        105
-      ]
-    },
-    {
-      "idProducto": 105,
-      "nombre": "iPhone 15 Pro Max",
-      "descripcion": "Smartphone premium con chip A17 Pro y cámara de 48MP",
-      "precio": 1299.99,
-      "stockActual": 10,
-      "detalle": "El iPhone 15 Pro Max cuenta con un diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas, chip A17 Pro, sistema de cámaras profesional con teleobjetivo 5x y batería de larga duración.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 111,
-          "nombre": "iPhone"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" Super Retina XDR"
-        },
-        {
-          "nombre": "Procesador",
-          "valor": "A17 Pro"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 9,
-          "url": "https://picsum.photos/seed/iphone-black-256-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 10,
-          "url": "https://picsum.photos/seed/iphone-black-256-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 3,
-        "nombre": "Titanio Negro",
-        "valor": "#2B2B2B"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "256GB",
-        "valor": "256GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [
-        101,
-        102,
-        103,
-        104
-      ]
-    },
-    {
-      "idProducto": 201,
-      "nombre": "Camisa Formal Slim Fit",
-      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
-      "precio": 59.99,
+      "idProducto": 245,
+      "nombre": "Ray-Ban Aviator",
+      "descripcion": "Lentes de sol clásicos",
+      "precioBase": 160.00,
+      "precioDescuento": null,
       "stockActual": 20,
-      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
+      "detalle": "Protección UV total y montura metálica dorada.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
       "tiempoEnvio": "Llega hoy",
-      "genero": {
-        "idGenero": 2,
-        "nombre": "Hombre"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Executive"
-      },
-      "coleccion": {
-        "idColeccion": 3,
-        "nombre": "Formal 2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 2,
-          "nombre": "Ropa"
-        },
-        {
-          "idCategoria": 21,
-          "nombre": "Hombre"
-        },
-        {
-          "idCategoria": 211,
-          "nombre": "Camisas"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 6,
-          "descripcion": "Formal"
-        },
-        {
-          "idEtiqueta": 2,
-          "descripcion": "Más vendido"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Material",
-          "valor": "100% Algodón egipcio"
-        },
-        {
-          "nombre": "Corte",
-          "valor": "Slim Fit"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 11,
-          "url": "https://picsum.photos/seed/camisa-white-s-1/800/1000",
-          "descripcion": "Vista frontal"
-        }
-      ],
-      "color": {
-        "id": 10,
-        "nombre": "Blanco",
-        "valor": "#FFFFFF"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "S",
-        "valor": "S"
-      },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        202,
-        203,
-        204
-      ]
-    },
-    {
-      "idProducto": 202,
-      "nombre": "Camisa Formal Slim Fit",
-      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
-      "precio": 59.99,
-      "stockActual": 25,
-      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "genero": {
-        "idGenero": 2,
-        "nombre": "Hombre"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Executive"
-      },
-      "coleccion": {
-        "idColeccion": 3,
-        "nombre": "Formal 2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 2,
-          "nombre": "Ropa"
-        },
-        {
-          "idCategoria": 21,
-          "nombre": "Hombre"
-        },
-        {
-          "idCategoria": 211,
-          "nombre": "Camisas"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 6,
-          "descripcion": "Formal"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Material",
-          "valor": "100% Algodón egipcio"
-        },
-        {
-          "nombre": "Corte",
-          "valor": "Slim Fit"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 12,
-          "url": "https://picsum.photos/seed/camisa-white-m-1/800/1000",
-          "descripcion": "Vista frontal"
-        }
-      ],
-      "color": {
-        "id": 10,
-        "nombre": "Blanco",
-        "valor": "#FFFFFF"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "M",
-        "valor": "M"
-      },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        203,
-        204
-      ]
-    },
-    {
-      "idProducto": 203,
-      "nombre": "Camisa Formal Slim Fit",
-      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
-      "precio": 59.99,
-      "stockActual": 18,
-      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "genero": {
-        "idGenero": 2,
-        "nombre": "Hombre"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Executive"
-      },
-      "coleccion": {
-        "idColeccion": 3,
-        "nombre": "Formal 2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 2,
-          "nombre": "Ropa"
-        },
-        {
-          "idCategoria": 21,
-          "nombre": "Hombre"
-        },
-        {
-          "idCategoria": 211,
-          "nombre": "Camisas"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 6,
-          "descripcion": "Formal"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Material",
-          "valor": "100% Algodón egipcio"
-        },
-        {
-          "nombre": "Corte",
-          "valor": "Slim Fit"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 13,
-          "url": "https://picsum.photos/seed/camisa-blue-s-1/800/1000",
-          "descripcion": "Vista frontal"
-        }
-      ],
-      "color": {
-        "id": 11,
-        "nombre": "Azul Cielo",
-        "valor": "#87CEEB"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "S",
-        "valor": "S"
-      },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        202,
-        204
-      ]
-    },
-    {
-      "idProducto": 204,
-      "nombre": "Camisa Formal Slim Fit",
-      "descripcion": "Camisa de vestir de corte ajustado en algodón premium",
-      "precio": 59.99,
-      "stockActual": 22,
-      "detalle": "Camisa formal confeccionada en algodón egipcio de alta calidad, ideal para ocasiones formales o uso ejecutivo.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "genero": {
-        "idGenero": 2,
-        "nombre": "Hombre"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Executive"
-      },
-      "coleccion": {
-        "idColeccion": 3,
-        "nombre": "Formal 2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 2,
-          "nombre": "Ropa"
-        },
-        {
-          "idCategoria": 21,
-          "nombre": "Hombre"
-        },
-        {
-          "idCategoria": 211,
-          "nombre": "Camisas"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 6,
-          "descripcion": "Formal"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Material",
-          "valor": "100% Algodón egipcio"
-        },
-        {
-          "nombre": "Corte",
-          "valor": "Slim Fit"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 14,
-          "url": "https://picsum.photos/seed/camisa-blue-m-1/800/1000",
-          "descripcion": "Vista frontal"
-        }
-      ],
-      "color": {
-        "id": 11,
-        "nombre": "Azul Cielo",
-        "valor": "#87CEEB"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "M",
-        "valor": "M"
-      },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [
-        201,
-        202,
-        203
-      ]
-    },
-    {
-      "idProducto": 301,
-      "nombre": "AirPods Pro (2da generación)",
-      "descripcion": "Audífonos inalámbricos con cancelación activa de ruido",
-      "precio": 249.99,
-      "stockActual": 12,
-      "detalle": "Los AirPods Pro ofrecen cancelación activa de ruido mejorada, modo de transparencia adaptable y audio espacial personalizado.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 1,
-        "nombre": "Apple"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 13,
-          "nombre": "Accesorios"
-        },
-        {
-          "idCategoria": 131,
-          "nombre": "Audífonos"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 2,
-          "descripcion": "Más vendido"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Cancelación de ruido",
-          "valor": "Activa"
-        },
-        {
-          "nombre": "Batería",
-          "valor": "6 horas"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 15,
-          "url": "https://picsum.photos/seed/airpods-1/800/800",
-          "descripcion": "En estuche"
-        },
-        {
-          "idImagen": 16,
-          "url": "https://picsum.photos/seed/airpods-2/800/800",
-          "descripcion": "Detalle"
-        }
-      ],
-      "color": {
-        "id": 9,
-        "nombre": "Blanco",
-        "valor": "#FFFFFF"
-      },
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 500,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 85, "nombre": "Ray-Ban" },
+      "coleccion": { "idColeccion": 7, "nombre": "Clásicos" },
+      "categorias": [{ "idCategoria": 245, "nombre": "Lentes de Sol" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Filtro", "valor": "G-15" }],
+      "imagenes": [{ "idImagen": 190, "url": "https://picsum.photos/seed/sunglasses/800/1000", "descripcion": "Frontal" }],
+      "color": { "id": 80, "nombre": "Dorado/Verde", "valor": "#DAA520" },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
       "productosRelacionados": []
     },
     {
-      "idProducto": 500,
-      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
-      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
-      "precio": 1028.99,
-      "stockActual": 11,
-      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 318,
+      "nombre": "Ropero Nordik 4 Puertas",
+      "descripcion": "Ropero de madera estilo nórdico",
+      "precioBase": 450.00,
+      "precioDescuento": null,
+      "stockActual": 2,
+      "detalle": "Gran capacidad con espejos internos incluidos.",
+      "esReservio": true,
+      "esFavorito": false,
+      "disponibleRecojo": false,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "10 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.3,
+      "totalReviews": 8,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 30, "nombre": "EcoHome" },
+      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
+      "categorias": [{ "idCategoria": 318, "nombre": "Roperos" }],
+      "etiquetas": [{ "idEtiqueta": 8, "descripcion": "Armado incluido" }],
+      "especificaciones": [{ "nombre": "Puertas", "valor": "4" }],
+      "imagenes": [{ "idImagen": 200, "url": "https://picsum.photos/seed/wardrobe/800/1000", "descripcion": "Abierto" }],
+      "color": { "id": 10, "nombre": "Blanco/Madera", "valor": "#F5F5F5" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [316]
+    },
+    {
+      "idProducto": 115,
+      "nombre": "Motorola Edge 40",
+      "descripcion": "Smartphone con pantalla curva 144Hz",
+      "precioBase": 699.00,
+      "precioDescuento": 599.00,
+      "stockActual": 18,
+      "detalle": "Resistencia al agua IP68 y carga ultra rápida.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Xiaomi"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Xiaomi"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 500,
-          "url": "https://picsum.photos/seed/500-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 501,
-          "url": "https://picsum.photos/seed/500-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 3,
-        "nombre": "Negro",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.4,
+      "totalReviews": 85,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 90, "nombre": "Motorola" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 115, "nombre": "Motorola" }],
+      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
+      "especificaciones": [{ "nombre": "Carga", "valor": "68W TurboPower" }],
+      "imagenes": [{ "idImagen": 210, "url": "https://picsum.photos/seed/moto/800/1000", "descripcion": "Frontal" }],
+      "color": { "id": 85, "nombre": "Viva Magenta", "valor": "#BB2649" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [133]
+    },
+    {
+      "idProducto": 133,
+      "nombre": "Cargador Baseus 100W",
+      "descripcion": "Cargador GaN 4 puertos",
+      "precioBase": 55.00,
+      "precioDescuento": null,
+      "stockActual": 100,
+      "detalle": "Carga laptops y celulares simultáneamente.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 400,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 95, "nombre": "Baseus" },
+      "coleccion": { "idColeccion": 2, "nombre": "Power" },
+      "categorias": [{ "idCategoria": 133, "nombre": "Cargadores Rápidos" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Puertos", "valor": "2 USB-C / 2 USB-A" }],
+      "imagenes": [{ "idImagen": 220, "url": "https://picsum.photos/seed/charger/800/1000", "descripcion": "Cargador" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [135]
+    },
+    {
+      "idProducto": 155,
+      "nombre": "Teclado Razer BlackWidow V4",
+      "descripcion": "Teclado mecánico gaming RGB",
+      "precioBase": 189.00,
+      "precioDescuento": null,
+      "stockActual": 14,
+      "detalle": "Switches mecánicos amarillos silenciosos.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 210,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 100, "nombre": "Razer" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 155, "nombre": "Teclados Mecánicos" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "Switch", "valor": "Yellow Mechanical" }],
+      "imagenes": [{ "idImagen": 230, "url": "https://picsum.photos/seed/razer/800/1000", "descripcion": "Teclado" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [156, 157]
+    },
+    {
+      "idProducto": 235,
+      "nombre": "Body Algodón Orgánico",
+      "descripcion": "Pack de 3 bodies para bebés",
+      "precioBase": 30.00,
+      "precioDescuento": 25.00,
+      "stockActual": 60,
+      "detalle": "Hipoalergénico y suave para la piel del bebé.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "mensajeEnvio": "Envío gratis",
+      "calificacion": 4.9,
+      "totalReviews": 95,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 105, "nombre": "BabySoft" },
+      "coleccion": { "idColeccion": 9, "nombre": "Bebés 24" },
+      "categorias": [{ "idCategoria": 235, "nombre": "Bebés" }],
+      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
+      "especificaciones": [{ "nombre": "Tallas", "valor": "0-12 meses" }],
+      "imagenes": [{ "idImagen": 240, "url": "https://picsum.photos/seed/baby/800/1000", "descripcion": "Pack" }],
+      "color": { "id": 90, "nombre": "Pastel Mix", "valor": "#FFB6C1" },
+      "opcionAdicional": { "id": 1, "nombre": "3-6m", "valor": "3-6m" },
+      "tipoOpcionAdicional": "Edad",
+      "productosRelacionados": []
+    },
+    {
+      "idProducto": 313,
+      "nombre": "Mesa de Centro Industrial",
+      "descripcion": "Madera recuperada y hierro",
+      "precioBase": 140.00,
+      "precioDescuento": null,
+      "stockActual": 7,
+      "detalle": "Estilo rústico moderno para salas.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "3 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.4,
+      "totalReviews": 22,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 30, "nombre": "EcoHome" },
+      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
+      "categorias": [{ "idCategoria": 313, "nombre": "Mesas de Centro" }],
+      "etiquetas": [{ "idEtiqueta": 7, "descripcion": "Hecho a mano" }],
+      "especificaciones": [{ "nombre": "Material", "valor": "Roble y Acero" }],
+      "imagenes": [{ "idImagen": 250, "url": "https://picsum.photos/seed/table/800/1000", "descripcion": "Mesa" }],
+      "color": { "id": 95, "nombre": "Roble Oscuro", "valor": "#5C4033" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [311]
+    },
+    {
+      "idProducto": 112,
+      "nombre": "Samsung Galaxy S24 Ultra",
+      "descripcion": "IA integrada y cámara de 200MP",
+      "precioBase": 1350.00,
+      "precioDescuento": 1199.00,
+      "stockActual": 10,
+      "detalle": "Incluye S-Pen y pantalla Dynamic AMOLED 2X de 120Hz.",
+      "esReservio": false,
+      "esFavorito": true,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 150,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 2, "nombre": "Samsung" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 112, "nombre": "Samsung Galaxy" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Procesador", "valor": "Snapdragon 8 Gen 3" }],
+      "imagenes": [{ "idImagen": 20, "url": "https://picsum.photos/seed/s24u/800/1000", "descripcion": "Vista lateral" }],
+      "color": { "id": 5, "nombre": "Titanium Black", "valor": "#222222" },
+      "opcionAdicional": { "id": 2, "nombre": "512GB", "valor": "512GB" },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.9,
-      "reviews": 166
+      "productosRelacionados": [113, 133]
+    },
+    {
+      "idProducto": 121,
+      "nombre": "Laptop ASUS ROG Zephyrus G14",
+      "descripcion": "Laptop potente para gaming y diseño",
+      "precioBase": 1599.99,
+      "precioDescuento": null,
+      "stockActual": 4,
+      "detalle": "RTX 4060, Ryzen 9, 16GB RAM, pantalla Nebula Display.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": false,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "3-5 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.7,
+      "totalReviews": 85,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 5, "nombre": "ASUS" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 121, "nombre": "Laptops Gaming" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "GPU", "valor": "NVIDIA RTX 4060" }],
+      "imagenes": [{ "idImagen": 30, "url": "https://picsum.photos/seed/rog/800/1000", "descripcion": "Cerrada" }],
+      "color": { "id": 6, "nombre": "Eclipse Gray", "valor": "#333333" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [156, 157]
+    },
+    {
+      "idProducto": 131,
+      "nombre": "Sony WH-1000XM5",
+      "descripcion": "Audífonos con cancelación de ruido líder",
+      "precioBase": 349.00,
+      "precioDescuento": null,
+      "stockActual": 25,
+      "detalle": "30 horas de batería y llamadas ultra nítidas.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "mensajeEnvio": null,
+      "calificacion": 5.0,
+      "totalReviews": 2100,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 8, "nombre": "Sony" },
+      "coleccion": { "idColeccion": 2, "nombre": "Audio Pro" },
+      "categorias": [{ "idCategoria": 131, "nombre": "Audífonos Bluetooth" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "ANC", "valor": "Dual Processor V1" }],
+      "imagenes": [{ "idImagen": 40, "url": "https://picsum.photos/seed/sony/800/1000", "descripcion": "Puestos" }],
+      "color": { "id": 7, "nombre": "Plata", "valor": "#C0C0C0" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": []
+    },
+    {
+      "idProducto": 151,
+      "nombre": "PlayStation 5 Slim",
+      "descripcion": "Consola con lector de discos",
+      "precioBase": 499.99,
+      "precioDescuento": null,
+      "stockActual": 12,
+      "detalle": "SSD de 1TB de ultra alta velocidad y soporte 4K.",
+      "esReservio": false,
+      "esFavorito": true,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 5400,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 8, "nombre": "Sony" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 151, "nombre": "PlayStation 5" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Almacenamiento", "valor": "1TB SSD" }],
+      "imagenes": [{ "idImagen": 50, "url": "https://picsum.photos/seed/ps5/800/1000", "descripcion": "Vertical" }],
+      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [156, 157]
+    },
+    {
+      "idProducto": 201,
+      "nombre": "Camisa Formal Executive",
+      "descripcion": "Corte Slim Fit algodón egipcio",
+      "precioBase": 45.00,
+      "precioDescuento": null,
+      "stockActual": 50,
+      "detalle": "Ideal para reuniones de negocios y eventos de gala.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.2,
+      "totalReviews": 45,
+      "genero": { "idGenero": 2, "nombre": "Hombre" },
+      "marca": { "idMarca": 10, "nombre": "Executive" },
+      "coleccion": { "idColeccion": 3, "nombre": "Formal 2024" },
+      "categorias": [{ "idCategoria": 211, "nombre": "Camisas Formales" }],
+      "etiquetas": [{ "idEtiqueta": 6, "descripcion": "Formal" }],
+      "especificaciones": [{ "nombre": "Material", "valor": "100% Algodón" }],
+      "imagenes": [{ "idImagen": 60, "url": "https://picsum.photos/seed/shirt1/800/1000", "descripcion": "Doblada" }],
+      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
+      "opcionAdicional": { "id": 10, "nombre": "M", "valor": "M" },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [214, 216]
+    },
+    {
+      "idProducto": 221,
+      "nombre": "Blusa Seda Elegante",
+      "descripcion": "Blusa de seda natural con lazo",
+      "precioBase": 75.00,
+      "precioDescuento": null,
+      "stockActual": 18,
+      "detalle": "Textura suave y caída elegante para oficina o eventos.",
+      "esReservio": false,
+      "esFavorito": true,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega hoy",
+      "mensajeEnvio": null,
+      "calificacion": 4.6,
+      "totalReviews": 32,
+      "genero": { "idGenero": 3, "nombre": "Mujer" },
+      "marca": { "idMarca": 12, "nombre": "Zara Style" },
+      "coleccion": { "idColeccion": 4, "nombre": "Otoño 2024" },
+      "categorias": [{ "idCategoria": 221, "nombre": "Blusas Elegantes" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "Tejido", "valor": "100% Seda" }],
+      "imagenes": [{ "idImagen": 70, "url": "https://picsum.photos/seed/blouse/800/1000", "descripcion": "Frontal" }],
+      "color": { "id": 15, "nombre": "Esmeralda", "valor": "#008B8B" },
+      "opcionAdicional": { "id": 11, "nombre": "S", "valor": "S" },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [223, 225]
+    },
+    {
+      "idProducto": 254,
+      "nombre": "Nike Air Zoom Pegasus 40",
+      "descripcion": "Zapatillas para running profesional",
+      "precioBase": 129.99,
+      "precioDescuento": null,
+      "stockActual": 35,
+      "detalle": "Amortiguación reactiva y ajuste seguro.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 890,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 20, "nombre": "Nike" },
+      "coleccion": { "idColeccion": 5, "nombre": "Sport 2024" },
+      "categorias": [{ "idCategoria": 254, "nombre": "Zapatillas Running" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Uso", "valor": "Asfalto" }],
+      "imagenes": [{ "idImagen": 80, "url": "https://picsum.photos/seed/nike/800/1000", "descripcion": "Perfil" }],
+      "color": { "id": 18, "nombre": "Volt Green", "valor": "#CEFF00" },
+      "opcionAdicional": { "id": 42, "nombre": "42", "valor": "42" },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [251, 252]
+    },
+    {
+      "idProducto": 311,
+      "nombre": "Sofá Modular Cloud",
+      "descripcion": "Sofá de 3 piezas ultra confortable",
+      "precioBase": 899.00,
+      "precioDescuento": null,
+      "stockActual": 3,
+      "detalle": "Tapiz resistente a mascotas y fácil limpieza.",
+      "esReservio": true,
+      "esFavorito": false,
+      "disponibleRecojo": false,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "10-15 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.5,
+      "totalReviews": 12,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 30, "nombre": "EcoHome" },
+      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
+      "categorias": [{ "idCategoria": 311, "nombre": "Sofás" }],
+      "etiquetas": [{ "idEtiqueta": 8, "descripcion": "Gran volumen" }],
+      "especificaciones": [{ "nombre": "Dimensiones", "valor": "240x90cm" }],
+      "imagenes": [{ "idImagen": 90, "url": "https://picsum.photos/seed/sofa/800/1000", "descripcion": "Ambiente" }],
+      "color": { "id": 25, "nombre": "Gris Perla", "valor": "#E1E1E1" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [313]
+    },
+    {
+      "idProducto": 401,
+      "nombre": "Smart TV LG OLED G3 65\"",
+      "descripcion": "Televisor OLED 4K con tecnología Evo",
+      "precioBase": 2299.00,
+      "precioDescuento": 1999.00,
+      "stockActual": 6,
+      "detalle": "Brillo superior y negros perfectos para cine.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "3 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 140,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 35, "nombre": "LG" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 141, "nombre": "Smart TV 4K" }],
+      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
+      "especificaciones": [{ "nombre": "Refresh Rate", "valor": "120Hz" }],
+      "imagenes": [{ "idImagen": 100, "url": "https://picsum.photos/seed/tv/800/1000", "descripcion": "Pantalla encendida" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [143, 144]
+    },
+    {
+      "idProducto": 405,
+      "nombre": "Nintendo Switch OLED",
+      "descripcion": "Consola híbrida con pantalla OLED",
+      "precioBase": 349.00,
+      "precioDescuento": null,
+      "stockActual": 20,
+      "detalle": "Colores vibrantes y soporte ajustable ancho.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.7,
+      "totalReviews": 2300,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 40, "nombre": "Nintendo" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 153, "nombre": "Nintendo Switch" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Pantalla", "valor": "7\" OLED" }],
+      "imagenes": [{ "idImagen": 110, "url": "https://picsum.photos/seed/switch/800/1000", "descripcion": "Modo portátil" }],
+      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [156]
     },
     {
       "idProducto": 501,
-      "nombre": "Honor Magic6 Pro 128GB",
-      "descripcion": "Smartphone Honor de última generación con gran capacidad.",
-      "precio": 1218.99,
-      "stockActual": 18,
-      "detalle": "El Honor Magic6 Pro 128GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "nombre": "MacBook Air 13\" M3",
+      "descripcion": "Laptop ultra delgada con chip M3",
+      "precioBase": 1099.00,
+      "precioDescuento": null,
+      "stockActual": 8,
+      "detalle": "Silenciosa y potente con hasta 18h de batería.",
       "esReservio": false,
-      "esFavorito": false,
+      "esFavorito": true,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 5,
-        "nombre": "Honor"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Honor"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "128GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 502,
-          "url": "https://picsum.photos/seed/501-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 503,
-          "url": "https://picsum.photos/seed/501-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 4,
-        "nombre": "Azul",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 5,
-        "nombre": "128GB",
-        "valor": "128GB"
-      },
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 45,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 1, "nombre": "Apple" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 122, "nombre": "Laptops Trabajo" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "Chip", "valor": "Apple M3" }],
+      "imagenes": [{ "idImagen": 120, "url": "https://picsum.photos/seed/mac/800/1000", "descripcion": "Abierta" }],
+      "color": { "id": 40, "nombre": "Medianoche", "valor": "#2F353B" },
+      "opcionAdicional": { "id": 10, "nombre": "256GB SSD", "valor": "256GB" },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 3.9,
-      "reviews": 23
+      "productosRelacionados": []
     },
     {
-      "idProducto": 502,
-      "nombre": "Samsung Galaxy Z Flip 5 1TB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 526.99,
-      "stockActual": 46,
-      "detalle": "El Samsung Galaxy Z Flip 5 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 601,
+      "nombre": "Xiaomi 14 Ultra",
+      "descripcion": "Cámara Leica de nivel profesional",
+      "precioBase": 999.00,
+      "precioDescuento": null,
+      "stockActual": 5,
+      "detalle": "Sensor de 1 pulgada y carga rápida de 90W.",
       "esReservio": false,
       "esFavorito": false,
-      "disponibleRecojo": true,
+      "disponibleRecojo": false,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "1TB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 504,
-          "url": "https://picsum.photos/seed/502-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 505,
-          "url": "https://picsum.photos/seed/502-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 3,
-        "nombre": "Negro",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "1TB",
-        "valor": "1TB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 3.7,
-      "reviews": 128
+      "tiempoEnvio": "5 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.6,
+      "totalReviews": 60,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 45, "nombre": "Xiaomi" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 113, "nombre": "Xiaomi" }],
+      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
+      "especificaciones": [{ "nombre": "Cámara", "valor": "Leica Optic" }],
+      "imagenes": [{ "idImagen": 130, "url": "https://picsum.photos/seed/xiaomi/800/1000", "descripcion": "Trasera" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [134]
     },
     {
-      "idProducto": 503,
-      "nombre": "Samsung Galaxy S24 Ultra 128GB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 536.99,
-      "stockActual": 20,
-      "detalle": "El Samsung Galaxy S24 Ultra 128GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 701,
+      "nombre": "Silla Gaming Secretlab Titan",
+      "descripcion": "Ergonomía premium para largas jornadas",
+      "precioBase": 549.00,
+      "precioDescuento": null,
+      "stockActual": 10,
+      "detalle": "Soporte lumbar magnético y cuero sintético híbrido.",
       "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
+      "esFavorito": true,
+      "disponibleRecojo": false,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "128GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 506,
-          "url": "https://picsum.photos/seed/503-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 507,
-          "url": "https://picsum.photos/seed/503-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 2,
-        "nombre": "Plata",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 5,
-        "nombre": "128GB",
-        "valor": "128GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 3.5,
-      "reviews": 329
+      "tiempoEnvio": "7 días",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 1200,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 50, "nombre": "Secretlab" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 154, "nombre": "Sillas Gaming" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Material", "valor": "Cuero Neo" }],
+      "imagenes": [{ "idImagen": 140, "url": "https://picsum.photos/seed/chair/800/1000", "descripcion": "Frontal" }],
+      "color": { "id": 55, "nombre": "Stealth", "valor": "#1A1A1A" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [155, 156]
     },
     {
-      "idProducto": 504,
-      "nombre": "Motorola Edge 50 Ultra 512GB",
-      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
-      "precio": 646.99,
-      "stockActual": 49,
-      "detalle": "El Motorola Edge 50 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 801,
+      "nombre": "GoPro Hero 12 Black",
+      "descripcion": "Cámara de acción 5.3K",
+      "precioBase": 399.00,
+      "precioDescuento": null,
+      "stockActual": 15,
+      "detalle": "Estabilización HyperSmooth 6.0 y resistente al agua.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 4,
-        "nombre": "Motorola"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Motorola"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 508,
-          "url": "https://picsum.photos/seed/504-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 509,
-          "url": "https://picsum.photos/seed/504-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 5,
-        "nombre": "Verde",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.1,
-      "reviews": 116
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 310,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 60, "nombre": "GoPro" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 163, "nombre": "GoPro" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Resolución", "valor": "5.3K 60fps" }],
+      "imagenes": [{ "idImagen": 150, "url": "https://picsum.photos/seed/gopro/800/1000", "descripcion": "Cámara" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [166]
     },
     {
-      "idProducto": 505,
-      "nombre": "Motorola Edge 50 Ultra 1TB",
-      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
-      "precio": 894.99,
-      "stockActual": 43,
-      "detalle": "El Motorola Edge 50 Ultra 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 213,
+      "nombre": "Jeans Levi's 501",
+      "descripcion": "Jeans de corte recto clásicos",
+      "precioBase": 89.00,
+      "precioDescuento": null,
+      "stockActual": 40,
+      "detalle": "El diseño original desde 1873. Denim de alta calidad.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 4,
-        "nombre": "Motorola"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Motorola"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "1TB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "8GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 510,
-          "url": "https://picsum.photos/seed/505-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 511,
-          "url": "https://picsum.photos/seed/505-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 1,
-        "nombre": "Verde",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "1TB",
-        "valor": "1TB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 3.7,
-      "reviews": 115
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.5,
+      "totalReviews": 1500,
+      "genero": { "idGenero": 2, "nombre": "Hombre" },
+      "marca": { "idMarca": 70, "nombre": "Levi's" },
+      "coleccion": { "idColeccion": 7, "nombre": "Clásicos" },
+      "categorias": [{ "idCategoria": 213, "nombre": "Pantalones Jeans" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Corte", "valor": "Straight Fit" }],
+      "imagenes": [{ "idImagen": 160, "url": "https://picsum.photos/seed/levis/800/1000", "descripcion": "Perfil" }],
+      "color": { "id": 65, "nombre": "Blue Denim", "valor": "#4169E1" },
+      "opcionAdicional": { "id": 32, "nombre": "32", "valor": "32" },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [212]
     },
     {
-      "idProducto": 506,
-      "nombre": "Samsung Galaxy Z Flip 5 512GB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 880.99,
-      "stockActual": 37,
-      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 135,
+      "nombre": "Cargador GaN 4 Puertos",
+      "descripcion": "Cargador rápido con tecnología GaN",
+      "precioBase": 55.00,
+      "precioDescuento": null,
+      "stockActual": 100,
+      "detalle": "Carga laptops y celulares simultáneamente.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 512,
-          "url": "https://picsum.photos/seed/506-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 513,
-          "url": "https://picsum.photos/seed/506-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 2,
-        "nombre": "Plata",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.1,
-      "reviews": 112
+      "tiempoEnvio": "Llega hoy",
+      "mensajeEnvio": null,
+      "calificacion": 4.9,
+      "totalReviews": 420,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 90, "nombre": "Anker" },
+      "coleccion": { "idColeccion": 1, "nombre": "2024" },
+      "categorias": [{ "idCategoria": 135, "nombre": "Cargadores" }],
+      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
+      "especificaciones": [{ "nombre": "Potencia", "valor": "100W" }],
+      "imagenes": [{ "idImagen": 220, "url": "https://picsum.photos/seed/charger/800/1000", "descripcion": "Cargador" }],
+      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [136, 137]
     },
     {
-      "idProducto": 507,
-      "nombre": "Samsung Galaxy Z Flip 5 512GB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 966.99,
-      "stockActual": 46,
-      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 232,
+      "nombre": "Teclado Mecánico Razer BlackWidow V4",
+      "descripcion": "Teclado mecánico gaming RGB",
+      "precioBase": 189.00,
+      "precioDescuento": null,
+      "stockActual": 14,
+      "detalle": "Switches mecánicos amarillos silenciosos.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "16GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 514,
-          "url": "https://picsum.photos/seed/507-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 515,
-          "url": "https://picsum.photos/seed/507-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 4,
-        "nombre": "Azul",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.5,
-      "reviews": 320
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": null,
+      "calificacion": 4.8,
+      "totalReviews": 220,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 95, "nombre": "Razer" },
+      "coleccion": { "idColeccion": 8, "nombre": "Gaming 2024" },
+      "categorias": [{ "idCategoria": 232, "nombre": "Teclados Gaming" }],
+      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
+      "especificaciones": [{ "nombre": "Switches", "valor": "Mechanical Yellow" }],
+      "imagenes": [{ "idImagen": 230, "url": "https://picsum.photos/seed/keyboard/800/1000", "descripcion": "Teclado" }],
+      "color": { "id": 80, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": [233, 234]
     },
     {
-      "idProducto": 508,
-      "nombre": "Samsung Galaxy S24 Ultra 256GB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 1289.99,
-      "stockActual": 29,
-      "detalle": "El Samsung Galaxy S24 Ultra 256GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "idProducto": 233,
+      "nombre": "Teclado Mecánico Razer BlackWidow V4 Pro",
+      "descripcion": "Teclado mecánico gaming RGB premium",
+      "precioBase": 249.00,
+      "precioDescuento": 219.00,
+      "stockActual": 8,
+      "detalle": "Switches mecánicos amarillos silenciosos con conectividad inalámbrica.",
       "esReservio": false,
-      "esFavorito": false,
+      "esFavorito": true,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "256GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 516,
-          "url": "https://picsum.photos/seed/508-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 517,
-          "url": "https://picsum.photos/seed/508-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 4,
-        "nombre": "Azul",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "256GB",
-        "valor": "256GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.3,
-      "reviews": 468
-    },
-    {
-      "idProducto": 509,
-      "nombre": "Honor Magic6 Pro 1TB",
-      "descripcion": "Smartphone Honor de última generación con gran capacidad.",
-      "precio": 820.99,
-      "stockActual": 45,
-      "detalle": "El Honor Magic6 Pro 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 5,
-        "nombre": "Honor"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Honor"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "1TB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 518,
-          "url": "https://picsum.photos/seed/509-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 519,
-          "url": "https://picsum.photos/seed/509-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 1,
-        "nombre": "Verde",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "1TB",
-        "valor": "1TB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.1,
-      "reviews": 111
-    },
-    {
-      "idProducto": 510,
-      "nombre": "Samsung Galaxy Z Flip 5 512GB",
-      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
-      "precio": 880.99,
-      "stockActual": 49,
-      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 2,
-        "nombre": "Samsung"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Samsung"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 520,
-          "url": "https://picsum.photos/seed/510-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 521,
-          "url": "https://picsum.photos/seed/510-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 4,
-        "nombre": "Azul",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.9,
-      "reviews": 235
-    },
-    {
-      "idProducto": 511,
-      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
-      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
-      "precio": 1248.99,
-      "stockActual": 18,
-      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Xiaomi"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Xiaomi"
-        }
-      ],
-      "etiquetas": [
-        {
-          "idEtiqueta": 1,
-          "descripcion": "Nuevo"
-        }
-      ],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 522,
-          "url": "https://picsum.photos/seed/511-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 523,
-          "url": "https://picsum.photos/seed/511-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 4,
-        "nombre": "Azul",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.1,
-      "reviews": 184
-    },
-    {
-      "idProducto": 512,
-      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
-      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
-      "precio": 832.99,
-      "stockActual": 45,
-      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Xiaomi"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Xiaomi"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "512GB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "16GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 524,
-          "url": "https://picsum.photos/seed/512-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 525,
-          "url": "https://picsum.photos/seed/512-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 1,
-        "nombre": "Verde",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 2,
-        "nombre": "512GB",
-        "valor": "512GB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 3.7,
-      "reviews": 56
-    },
-    {
-      "idProducto": 513,
-      "nombre": "Xiaomi Redmi Note 13 Pro 1TB",
-      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
-      "precio": 427.99,
-      "stockActual": 46,
-      "detalle": "El Xiaomi Redmi Note 13 Pro 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 3,
-        "nombre": "Xiaomi"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Xiaomi"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "1TB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 526,
-          "url": "https://picsum.photos/seed/513-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 527,
-          "url": "https://picsum.photos/seed/513-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 3,
-        "nombre": "Negro",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "1TB",
-        "valor": "1TB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.5,
-      "reviews": 328
-    },
-    {
-      "idProducto": 514,
-      "nombre": "Motorola Edge 50 Ultra 1TB",
-      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
-      "precio": 962.99,
-      "stockActual": 20,
-      "detalle": "El Motorola Edge 50 Ultra 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega en 2-4 días",
-      "genero": {
-        "idGenero": 1,
-        "nombre": "Unisex"
-      },
-      "marca": {
-        "idMarca": 4,
-        "nombre": "Motorola"
-      },
-      "coleccion": {
-        "idColeccion": 1,
-        "nombre": "2024"
-      },
-      "categorias": [
-        {
-          "idCategoria": 1,
-          "nombre": "Electrónica"
-        },
-        {
-          "idCategoria": 11,
-          "nombre": "Smartphones"
-        },
-        {
-          "idCategoria": 112,
-          "nombre": "Motorola"
-        }
-      ],
-      "etiquetas": [],
-      "especificaciones": [
-        {
-          "nombre": "Almacenamiento",
-          "valor": "1TB"
-        },
-        {
-          "nombre": "RAM",
-          "valor": "12GB"
-        },
-        {
-          "nombre": "Pantalla",
-          "valor": "6.7\" AMOLED"
-        }
-      ],
-      "imagenes": [
-        {
-          "idImagen": 528,
-          "url": "https://picsum.photos/seed/514-1/800/1000",
-          "descripcion": "Vista frontal"
-        },
-        {
-          "idImagen": 529,
-          "url": "https://picsum.photos/seed/514-2/800/1000",
-          "descripcion": "Vista trasera"
-        }
-      ],
-      "color": {
-        "id": 2,
-        "nombre": "Plata",
-        "valor": "#000000"
-      },
-      "opcionAdicional": {
-        "id": 1,
-        "nombre": "1TB",
-        "valor": "1TB"
-      },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [],
-      "rating": 4.1,
-      "reviews": 110
+      "tiempoEnvio": "Llega mañana",
+      "mensajeEnvio": "Envío gratis",
+      "calificacion": 4.9,
+      "totalReviews": 150,
+      "genero": { "idGenero": 1, "nombre": "Unisex" },
+      "marca": { "idMarca": 95, "nombre": "Razer" },
+      "coleccion": { "idColeccion": 8, "nombre": "Gaming 2024" },
+      "categorias": [{ "idCategoria": 232, "nombre": "Teclados Gaming" }],
+      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
+      "especificaciones": [{ "nombre": "Switches", "valor": "Mechanical Yellow" }],
+      "imagenes": [{ "idImagen": 235, "url": "https://picsum.photos/seed/keyboardpro/800/1000", "descripcion": "Teclado Pro" }],
+      "color": { "id": 80, "nombre": "Negro", "valor": "#000000" },
+      "opcionAdicional": null,
+      "tipoOpcionAdicional": null,
+      "productosRelacionados": []
     }
   ]
 }
