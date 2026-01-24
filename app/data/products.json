@@ -843,6 +843,1236 @@
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
       "productosRelacionados": []
+    },
+    {
+      "idProducto": 500,
+      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
+      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
+      "precio": 1028.99,
+      "stockActual": 11,
+      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Xiaomi"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Xiaomi"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 500,
+          "url": "https://picsum.photos/seed/500-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 501,
+          "url": "https://picsum.photos/seed/500-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 3,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.9,
+      "reviews": 166
+    },
+    {
+      "idProducto": 501,
+      "nombre": "Honor Magic6 Pro 128GB",
+      "descripcion": "Smartphone Honor de última generación con gran capacidad.",
+      "precio": 1218.99,
+      "stockActual": 18,
+      "detalle": "El Honor Magic6 Pro 128GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 5,
+        "nombre": "Honor"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Honor"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "128GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 502,
+          "url": "https://picsum.photos/seed/501-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 503,
+          "url": "https://picsum.photos/seed/501-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 4,
+        "nombre": "Azul",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 5,
+        "nombre": "128GB",
+        "valor": "128GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 3.9,
+      "reviews": 23
+    },
+    {
+      "idProducto": 502,
+      "nombre": "Samsung Galaxy Z Flip 5 1TB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 526.99,
+      "stockActual": 46,
+      "detalle": "El Samsung Galaxy Z Flip 5 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 504,
+          "url": "https://picsum.photos/seed/502-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 505,
+          "url": "https://picsum.photos/seed/502-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 3,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "1TB",
+        "valor": "1TB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 3.7,
+      "reviews": 128
+    },
+    {
+      "idProducto": 503,
+      "nombre": "Samsung Galaxy S24 Ultra 128GB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 536.99,
+      "stockActual": 20,
+      "detalle": "El Samsung Galaxy S24 Ultra 128GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "128GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 506,
+          "url": "https://picsum.photos/seed/503-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 507,
+          "url": "https://picsum.photos/seed/503-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 2,
+        "nombre": "Plata",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 5,
+        "nombre": "128GB",
+        "valor": "128GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 3.5,
+      "reviews": 329
+    },
+    {
+      "idProducto": 504,
+      "nombre": "Motorola Edge 50 Ultra 512GB",
+      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
+      "precio": 646.99,
+      "stockActual": 49,
+      "detalle": "El Motorola Edge 50 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 4,
+        "nombre": "Motorola"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Motorola"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 508,
+          "url": "https://picsum.photos/seed/504-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 509,
+          "url": "https://picsum.photos/seed/504-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 5,
+        "nombre": "Verde",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.1,
+      "reviews": 116
+    },
+    {
+      "idProducto": 505,
+      "nombre": "Motorola Edge 50 Ultra 1TB",
+      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
+      "precio": 894.99,
+      "stockActual": 43,
+      "detalle": "El Motorola Edge 50 Ultra 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 4,
+        "nombre": "Motorola"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Motorola"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "8GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 510,
+          "url": "https://picsum.photos/seed/505-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 511,
+          "url": "https://picsum.photos/seed/505-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 1,
+        "nombre": "Verde",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "1TB",
+        "valor": "1TB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 3.7,
+      "reviews": 115
+    },
+    {
+      "idProducto": 506,
+      "nombre": "Samsung Galaxy Z Flip 5 512GB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 880.99,
+      "stockActual": 37,
+      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 512,
+          "url": "https://picsum.photos/seed/506-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 513,
+          "url": "https://picsum.photos/seed/506-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 2,
+        "nombre": "Plata",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.1,
+      "reviews": 112
+    },
+    {
+      "idProducto": 507,
+      "nombre": "Samsung Galaxy Z Flip 5 512GB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 966.99,
+      "stockActual": 46,
+      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "16GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 514,
+          "url": "https://picsum.photos/seed/507-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 515,
+          "url": "https://picsum.photos/seed/507-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 4,
+        "nombre": "Azul",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.5,
+      "reviews": 320
+    },
+    {
+      "idProducto": 508,
+      "nombre": "Samsung Galaxy S24 Ultra 256GB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 1289.99,
+      "stockActual": 29,
+      "detalle": "El Samsung Galaxy S24 Ultra 256GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "256GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 516,
+          "url": "https://picsum.photos/seed/508-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 517,
+          "url": "https://picsum.photos/seed/508-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 4,
+        "nombre": "Azul",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "256GB",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.3,
+      "reviews": 468
+    },
+    {
+      "idProducto": 509,
+      "nombre": "Honor Magic6 Pro 1TB",
+      "descripcion": "Smartphone Honor de última generación con gran capacidad.",
+      "precio": 820.99,
+      "stockActual": 45,
+      "detalle": "El Honor Magic6 Pro 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 5,
+        "nombre": "Honor"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Honor"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 518,
+          "url": "https://picsum.photos/seed/509-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 519,
+          "url": "https://picsum.photos/seed/509-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 1,
+        "nombre": "Verde",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "1TB",
+        "valor": "1TB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.1,
+      "reviews": 111
+    },
+    {
+      "idProducto": 510,
+      "nombre": "Samsung Galaxy Z Flip 5 512GB",
+      "descripcion": "Smartphone Samsung de última generación con gran capacidad.",
+      "precio": 880.99,
+      "stockActual": 49,
+      "detalle": "El Samsung Galaxy Z Flip 5 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 520,
+          "url": "https://picsum.photos/seed/510-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 521,
+          "url": "https://picsum.photos/seed/510-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 4,
+        "nombre": "Azul",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.9,
+      "reviews": 235
+    },
+    {
+      "idProducto": 511,
+      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
+      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
+      "precio": 1248.99,
+      "stockActual": 18,
+      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Xiaomi"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Xiaomi"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 522,
+          "url": "https://picsum.photos/seed/511-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 523,
+          "url": "https://picsum.photos/seed/511-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 4,
+        "nombre": "Azul",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.1,
+      "reviews": 184
+    },
+    {
+      "idProducto": 512,
+      "nombre": "Xiaomi Xiaomi 14 Ultra 512GB",
+      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
+      "precio": 832.99,
+      "stockActual": 45,
+      "detalle": "El Xiaomi Xiaomi 14 Ultra 512GB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Xiaomi"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Xiaomi"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "16GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 524,
+          "url": "https://picsum.photos/seed/512-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 525,
+          "url": "https://picsum.photos/seed/512-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 1,
+        "nombre": "Verde",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 3.7,
+      "reviews": 56
+    },
+    {
+      "idProducto": 513,
+      "nombre": "Xiaomi Redmi Note 13 Pro 1TB",
+      "descripcion": "Smartphone Xiaomi de última generación con gran capacidad.",
+      "precio": 427.99,
+      "stockActual": 46,
+      "detalle": "El Xiaomi Redmi Note 13 Pro 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 3,
+        "nombre": "Xiaomi"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Xiaomi"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 526,
+          "url": "https://picsum.photos/seed/513-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 527,
+          "url": "https://picsum.photos/seed/513-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 3,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "1TB",
+        "valor": "1TB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.5,
+      "reviews": 328
+    },
+    {
+      "idProducto": 514,
+      "nombre": "Motorola Edge 50 Ultra 1TB",
+      "descripcion": "Smartphone Motorola de última generación con gran capacidad.",
+      "precio": 962.99,
+      "stockActual": 20,
+      "detalle": "El Motorola Edge 50 Ultra 1TB ofrece un rendimiento excepcional con su procesador optimizado, pantalla AMOLED de alta frecuencia y sistema de cámaras versátil.",
+      "esReservio": false,
+      "esFavorito": false,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 2-4 días",
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 4,
+        "nombre": "Motorola"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 1,
+          "nombre": "Electrónica"
+        },
+        {
+          "idCategoria": 11,
+          "nombre": "Smartphones"
+        },
+        {
+          "idCategoria": 112,
+          "nombre": "Motorola"
+        }
+      ],
+      "etiquetas": [],
+      "especificaciones": [
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB"
+        },
+        {
+          "nombre": "RAM",
+          "valor": "12GB"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "6.7\" AMOLED"
+        }
+      ],
+      "imagenes": [
+        {
+          "idImagen": 528,
+          "url": "https://picsum.photos/seed/514-1/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        {
+          "idImagen": 529,
+          "url": "https://picsum.photos/seed/514-2/800/1000",
+          "descripcion": "Vista trasera"
+        }
+      ],
+      "color": {
+        "id": 2,
+        "nombre": "Plata",
+        "valor": "#000000"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "1TB",
+        "valor": "1TB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [],
+      "rating": 4.1,
+      "reviews": 110
     }
   ]
 }
