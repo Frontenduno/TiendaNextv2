@@ -14,33 +14,25 @@ export default function HeaderPublic() {
   const [user, setUser] = useState<Usuario | null>(null);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
-  // Estado para guardar lo que el usuario escribre en la barra de búsqueda
   const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const profileMenuRef = useRef<HTMLDivElement>(null);
 
-  // Router de Next.js para navegación entre paginas
   const router = useRouter();
 
-  // Funcion para manejar la búsqueda
   const handleSearch = () => {
-    // Evitar búsquedas vacías
     if (!searchQuery.trim()) return;
-    // Redirigir a la página de productos con el parámetro de búsqueda
-    router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
+    router.push(`/search?search=${encodeURIComponent(searchQuery)}`);
   };
 
-  // Controlar la visibilidad del header según el scroll
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Si estamos en el tope de la página, siempre mostrar
       if (currentScrollY < 10) {
         setIsVisible(true);
       }
-      // Si hacemos scroll hacia arriba, mostrar
       else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }
