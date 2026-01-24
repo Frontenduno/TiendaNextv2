@@ -1,56 +1,64 @@
-// components/ui/FavoriteButton.tsx
+// feature/favorite-button/FavoriteButton.tsx
 'use client';
 
 import React, { useState } from 'react';
 import { Heart } from 'lucide-react';
+import { useFavoritesStore } from '@/store/favoriteProduc/favoritesStore';
 
 interface FavoriteButtonProps {
   productId: number;
-  initialFavorite?: boolean;
   size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'card';
-  onFavoriteChange?: (isFavorite: boolean) => void;
 }
 
 export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
-  initialFavorite = false,
+  productId,
   size = 'md',
   variant = 'default',
-  onFavoriteChange,
 }) => {
-  const [isFavorite, setIsFavorite] = useState(initialFavorite);
+  const { isFavorite, toggleFavorite, _hasHydrated } = useFavoritesStore();
   const [isAnimating, setIsAnimating] = useState(false);
+  
+  const favorite = isFavorite(productId);
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
-    const newFavoriteState = !isFavorite;
-    setIsFavorite(newFavoriteState);
+    toggleFavorite(productId);
     setIsAnimating(true);
-    
-    if (onFavoriteChange) {
-      onFavoriteChange(newFavoriteState);
-    }
     
     setTimeout(() => setIsAnimating(false), 600);
   };
 
   const sizeClasses = {
     sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-7 h-7',
+    md: 'w-5 h-5',
+    lg: 'w-6 h-6',
   };
 
   const buttonSizeClasses = {
     sm: 'p-1.5',
     md: 'p-2',
-    lg: 'p-3',
+    lg: 'p-2.5',
   };
 
   const variantClasses = variant === 'card' 
-    ? 'bg-white rounded-full shadow-md hover:bg-gray-100'
+    ? 'bg-white/90 backdrop-blur-sm rounded-full shadow-md hover:bg-white hover:shadow-lg'
     : 'border border-gray-300 rounded-lg hover:bg-gray-100';
+
+  // Mostrar el estado neutral hasta que se complete la hidratación
+  if (!_hasHydrated) {
+    return (
+      <button
+        className={`relative ${buttonSizeClasses[size]} ${variantClasses} transition-all overflow-visible z-10 cursor-pointer opacity-50`}
+        aria-label="Cargando favoritos..."
+        disabled
+      >
+        <Heart className={`${sizeClasses[size]} text-gray-400`} />
+      </button>
+    );
+  }
 
   return (
     <>
@@ -135,8 +143,8 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
 
         .particle {
           position: absolute;
-          width: 8px;
-          height: 8px;
+          width: 6px;
+          height: 6px;
           background: #ef4444;
           border-radius: 50%;
           pointer-events: none;
@@ -152,15 +160,15 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
 
       <button
         onClick={handleClick}
-        className={`relative ${buttonSizeClasses[size]} ${variantClasses} transition overflow-visible z-10 cursor-pointer`}
-        aria-label={isFavorite ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+        className={`relative ${buttonSizeClasses[size]} ${variantClasses} transition-all overflow-visible z-10 cursor-pointer`}
+        aria-label={favorite ? 'Quitar de favoritos' : 'Agregar a favoritos'}
       >
         <Heart
           className={`${sizeClasses[size]} transition-colors ${
-            isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-600'
+            favorite ? 'fill-red-500 text-red-500' : 'text-gray-600'
           } ${isAnimating ? 'heart-bounce' : ''}`}
         />
-        {isAnimating && isFavorite && (
+        {isAnimating && favorite && (
           <>
             <span className="particle particle-1" />
             <span className="particle particle-2" />
