@@ -1,17 +1,21 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, Lock, Eye, EyeOff, Edit3, Save, X, Shield } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, Edit3, Save, X } from 'lucide-react';
 
 export default function PersonalDataForm({ user }: { user: any }) {
+  // Validación defensiva: asegurar que user tenga valores por defecto
+  const initialData = {
+    nombre: user?.nombre || '',
+    apellido: user?.apellido || '',
+    correo: user?.correo || '',
+    contraseña: user?.contraseña || '',
+    estado: user?.estado || 'Activo'
+  };
+
   const [isEditing, setIsEditing] = useState(false);
   const [showPass, setShowPass] = useState(false);
-  const [formData, setFormData] = useState({
-    nombre: user.nombre,
-    apellido: user.apellido,
-    correo: user.correo,
-    contraseña: user.contraseña
-  });
+  const [formData, setFormData] = useState(initialData);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,13 +27,15 @@ export default function PersonalDataForm({ user }: { user: any }) {
   };
 
   const handleCancel = () => {
-    setFormData({
-      nombre: user.nombre,
-      apellido: user.apellido,
-      correo: user.correo,
-      contraseña: user.contraseña
-    });
+    setFormData(initialData);
     setIsEditing(false);
+  };
+
+  // Obtener inicial del nombre de forma segura
+  const getInitial = () => {
+    return formData.nombre && formData.nombre.length > 0 
+      ? formData.nombre.charAt(0).toUpperCase() 
+      : '?';
   };
 
   return (
@@ -38,11 +44,13 @@ export default function PersonalDataForm({ user }: { user: any }) {
       <div className="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-6">
           <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg shadow-blue-100">
-            {formData.nombre.charAt(0)}
+            {getInitial()}
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-800">{formData.nombre} {formData.apellido}</h2>
-            <p className="text-gray-500 text-sm">{formData.correo}</p>
+            <h2 className="text-xl font-bold text-gray-800">
+              {formData.nombre || 'Sin nombre'} {formData.apellido || 'Sin apellido'}
+            </h2>
+            <p className="text-gray-500 text-sm">{formData.correo || 'Sin correo'}</p>
           </div>
         </div>
 
@@ -77,11 +85,14 @@ export default function PersonalDataForm({ user }: { user: any }) {
             <label className="text-[11px] font-black text-gray-400 uppercase tracking-wider">Nombre</label>
             {isEditing ? (
               <input 
-                type="text" name="nombre" value={formData.nombre} onChange={handleChange}
+                type="text" 
+                name="nombre" 
+                value={formData.nombre} 
+                onChange={handleChange}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             ) : (
-              <p className="text-gray-900 font-semibold py-2">{formData.nombre}</p>
+              <p className="text-gray-900 font-semibold py-2">{formData.nombre || 'No especificado'}</p>
             )}
           </div>
 
@@ -90,11 +101,14 @@ export default function PersonalDataForm({ user }: { user: any }) {
             <label className="text-[11px] font-black text-gray-400 uppercase tracking-wider">Apellido</label>
             {isEditing ? (
               <input 
-                type="text" name="apellido" value={formData.apellido} onChange={handleChange}
+                type="text" 
+                name="apellido" 
+                value={formData.apellido} 
+                onChange={handleChange}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             ) : (
-              <p className="text-gray-900 font-semibold py-2">{formData.apellido}</p>
+              <p className="text-gray-900 font-semibold py-2">{formData.apellido || 'No especificado'}</p>
             )}
           </div>
 
@@ -103,13 +117,16 @@ export default function PersonalDataForm({ user }: { user: any }) {
             <label className="text-[11px] font-black text-gray-400 uppercase tracking-wider">Email</label>
             {isEditing ? (
               <input 
-                type="email" name="correo" value={formData.correo} onChange={handleChange}
+                type="email" 
+                name="correo" 
+                value={formData.correo} 
+                onChange={handleChange}
                 className="w-full border border-gray-200 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
               />
             ) : (
               <div className="flex items-center gap-2 text-gray-700 py-2">
                 <Mail size={14} className="text-blue-500" />
-                <span className="font-medium">{formData.correo}</span>
+                <span className="font-medium">{formData.correo || 'No especificado'}</span>
               </div>
             )}
           </div>
@@ -122,12 +139,15 @@ export default function PersonalDataForm({ user }: { user: any }) {
                 <Lock size={14} className="text-gray-400" />
                 {isEditing ? (
                   <input 
-                    type={showPass ? "text" : "password"} name="contraseña" value={formData.contraseña} onChange={handleChange}
+                    type={showPass ? "text" : "password"} 
+                    name="contraseña" 
+                    value={formData.contraseña} 
+                    onChange={handleChange}
                     className="bg-transparent w-full outline-none font-mono text-gray-600"
                   />
                 ) : (
                   <span className="font-mono text-gray-600">
-                    {showPass ? formData.contraseña : "••••••••••••"}
+                    {showPass ? (formData.contraseña || 'No especificado') : "••••••••••••"}
                   </span>
                 )}
               </div>
@@ -143,7 +163,7 @@ export default function PersonalDataForm({ user }: { user: any }) {
             <div className="py-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-green-100 text-green-700 border border-green-200">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-600"></span>
-                {user.estado}
+                {formData.estado}
               </span>
             </div>
           </div>
