@@ -2,12 +2,17 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Modal from "@/components/ui/Modal";
+import LoginModal from "@/features/auth/components/LoginModal";
+import RegisterModal from "@/features/auth/components/RegisterModal";
 import { useState, useEffect, useRef } from "react";
 import { Search, User, ShoppingCart, Menu} from "lucide-react";
 import MenuSidebar from "../MenuSidebar";
 import { Usuario } from "@/interfaces/user";
 
 export default function HeaderPublic() {
+  const [openAuthModal, setOpenAuthModal] = useState(false);
+  const [isRegister, setIsRegister] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<Usuario | null>(null);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -123,27 +128,37 @@ export default function HeaderPublic() {
                   <User className="w-5 h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
                 </button>
 
-                {/* Menú desplegable */}
-                {showProfileMenu && !isLoggedIn && (
-                  <div className="absolute right-0 top-full mt-3 w-48 sm:w-52 bg-white rounded-lg shadow-2xl overflow-hidden z-50">
-                    <div className="p-3 sm:p-4 space-y-2">
-                      <Link
-                        href="/login"
-                        className="block w-full px-4 py-2.5 bg-[#2c1ff1] hover:bg-[#2416d4] text-white font-medium rounded text-center transition-colors text-sm cursor-pointer"
-                        onClick={() => setShowProfileMenu(false)}
-                      >
-                        Iniciar sesión
-                      </Link>
-                      <Link
-                        href="/register"
-                        className="block w-full px-4 py-2.5 bg-white hover:bg-gray-50 text-[#2c1ff1] font-medium rounded text-center transition-colors border border-[#2c1ff1] text-sm cursor-pointer"
-                        onClick={() => setShowProfileMenu(false)}
-                      >
-                        Registrarse
-                      </Link>
-                    </div>
-                  </div>
-                )}
+                  {showProfileMenu && !isLoggedIn && (
+              <div className="absolute right-0 top-full mt-3 w-48 sm:w-52 bg-white rounded-lg shadow-2xl overflow-hidden z-50">
+                <div className="p-3 sm:p-4 space-y-2">
+                  
+                  {/* LOGIN */}
+                  <button
+                    onClick={() => {
+                      setIsRegister(false);
+                      setOpenAuthModal(true);
+                      setShowProfileMenu(false);
+                    }}
+                    className="block w-full px-4 py-2.5 bg-[#2c1ff1] hover:bg-[#2416d4] text-white font-medium rounded text-center transition-colors text-sm cursor-pointer"
+                  >
+                    Iniciar sesión
+                  </button>
+
+                  {/* REGISTER */}
+                  <button
+                    onClick={() => {
+                      setIsRegister(true);
+                      setOpenAuthModal(true);
+                      setShowProfileMenu(false);
+                    }}
+                    className="block w-full px-4 py-2.5 bg-white hover:bg-gray-50 text-[#2c1ff1] font-medium rounded text-center transition-colors border border-[#2c1ff1] text-sm cursor-pointer"
+                  >
+                    Registrarse
+                  </button>
+
+                </div>
+              </div>
+            )}
 
                 {/* Menú para usuario logueado */}
                 {showProfileMenu && isLoggedIn && user && (
@@ -212,14 +227,27 @@ export default function HeaderPublic() {
         </div>
       </header>
 
-      {/* Espaciador para compensar el header fixed */}
-      <div className="h-24 sm:h-28 md:h-32 lg:h-36"></div>
+          {/* Espaciador para compensar el header fixed */}
+          <div className="h-24 sm:h-28 md:h-32 lg:h-36"></div>
 
-      {/* Componente de menú lateral */}
-      <MenuSidebar 
-        isOpen={showMenuSidebar} 
-        onClose={() => setShowMenuSidebar(false)} 
-      />
+        {/* Componente de menú lateral */}
+            <MenuSidebar 
+              isOpen={showMenuSidebar} 
+              onClose={() => setShowMenuSidebar(false)} 
+            />
+            <Modal isOpen={openAuthModal} onClose={() => setOpenAuthModal(false)}>
+        {isRegister ? (
+          <RegisterModal
+            onSwitchLogin={() => setIsRegister(false)}
+            onClose={() => setOpenAuthModal(false)}
+          />
+        ) : (
+          <LoginModal
+            onSwitchRegister={() => setIsRegister(true)}
+            onClose={() => setOpenAuthModal(false)}
+          />
+        )}
+      </Modal>
     </>
   );
 }
