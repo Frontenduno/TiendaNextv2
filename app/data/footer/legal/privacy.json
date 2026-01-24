@@ -1,0 +1,174 @@
+{
+  "lastUpdated": "Enero 2026",
+  "sections": [
+    {
+      "id": "introduccion",
+      "title": "1. Introducción",
+      "content": [
+        "En [Nombre de la Empresa S.A.C.] (en adelante, \"la Empresa\", \"nosotros\" o \"nuestro\"), nos comprometemos a proteger la privacidad de nuestros usuarios y clientes.",
+        "Esta Política de Privacidad describe cómo recopilamos, utilizamos, almacenamos y protegemos su información personal cuando utiliza nuestro sitio web www.tienda.com y servicios relacionados.",
+        "Al utilizar nuestro sitio web, usted acepta las prácticas descritas en esta política. Si no está de acuerdo con alguna parte de esta política, le recomendamos no utilizar nuestros servicios.",
+        "Esta política cumple con la Ley N° 29733, Ley de Protección de Datos Personales del Perú, y su Reglamento aprobado por Decreto Supremo N° 003-2013-JUS."
+      ]
+    },
+    {
+      "id": "responsable-tratamiento",
+      "title": "2. Responsable del Tratamiento",
+      "content": [
+        "El responsable del tratamiento de sus datos personales es [Nombre de la Empresa S.A.C.], identificada con RUC N° [20XXXXXXXXX].",
+        "Domicilio: Av. Ejemplo 123, San Isidro, Lima, Perú.",
+        "Correo electrónico para consultas de privacidad: privacidad@tienda.com",
+        "Teléfono: (01) 234-5678",
+        "Nuestro banco de datos personales se encuentra inscrito en el Registro Nacional de Protección de Datos Personales de la Autoridad Nacional de Protección de Datos Personales."
+      ]
+    },
+    {
+      "id": "datos-recopilados",
+      "title": "3. Datos Personales que Recopilamos",
+      "content": [
+        "Recopilamos los siguientes tipos de información personal:",
+        "• Datos de identificación: nombre completo, documento de identidad (DNI, CE, pasaporte), fecha de nacimiento, género.",
+        "• Datos de contacto: dirección de correo electrónico, número de teléfono fijo y/o móvil, dirección postal de entrega y facturación.",
+        "• Datos de cuenta: nombre de usuario, contraseña encriptada, historial de pedidos, lista de deseos, preferencias de comunicación.",
+        "• Datos de transacciones: información de compras, métodos de pago utilizados (no almacenamos datos completos de tarjetas), historial de pagos.",
+        "• Datos de navegación: dirección IP, tipo de navegador, sistema operativo, páginas visitadas, tiempo de permanencia, cookies y tecnologías similares.",
+        "• Datos de interacción: consultas de servicio al cliente, comentarios, reseñas de productos, participación en encuestas o promociones."
+      ]
+    },
+    {
+      "id": "finalidad-tratamiento",
+      "title": "4. Finalidad del Tratamiento",
+      "content": [
+        "Utilizamos sus datos personales para las siguientes finalidades:",
+        "• Gestión de pedidos: procesar, enviar y entregar sus compras, así como gestionar devoluciones y reembolsos.",
+        "• Comunicación: responder a sus consultas, enviar confirmaciones de pedidos, actualizaciones de envío y notificaciones importantes sobre su cuenta.",
+        "• Personalización: mejorar su experiencia de compra ofreciendo recomendaciones de productos basadas en sus preferencias e historial.",
+        "• Marketing: enviar comunicaciones promocionales, ofertas especiales y novedades (solo si ha dado su consentimiento).",
+        "• Análisis y mejora: analizar el uso del sitio web para mejorar nuestros servicios, productos y experiencia de usuario.",
+        "• Cumplimiento legal: cumplir con obligaciones legales, fiscales y regulatorias aplicables.",
+        "• Seguridad: prevenir fraudes, proteger la seguridad de nuestro sitio web y usuarios."
+      ]
+    },
+    {
+      "id": "base-legal",
+      "title": "5. Base Legal del Tratamiento",
+      "content": [
+        "El tratamiento de sus datos personales se fundamenta en las siguientes bases legales:",
+        "• Ejecución de contrato: cuando el tratamiento es necesario para cumplir con un contrato de compraventa o para tomar medidas previas a su solicitud.",
+        "• Consentimiento: cuando usted ha dado su consentimiento expreso para finalidades específicas, como el envío de comunicaciones comerciales.",
+        "• Interés legítimo: para mejorar nuestros servicios, prevenir fraudes y garantizar la seguridad de nuestras plataformas.",
+        "• Obligación legal: cuando el tratamiento es necesario para cumplir con obligaciones legales aplicables.",
+        "Usted puede retirar su consentimiento en cualquier momento sin que ello afecte la licitud del tratamiento basado en el consentimiento previo a su retirada."
+      ]
+    },
+    {
+      "id": "compartir-datos",
+      "title": "6. Compartición de Datos",
+      "content": [
+        "Podemos compartir sus datos personales con las siguientes categorías de destinatarios:",
+        "• Proveedores de servicios: empresas de logística y mensajería para la entrega de pedidos, procesadores de pagos, proveedores de hosting y servicios tecnológicos.",
+        "• Autoridades públicas: cuando sea requerido por ley o para responder a procesos legales válidos.",
+        "• Socios comerciales: en caso de promociones conjuntas, siempre con su consentimiento previo.",
+        "Exigimos a todos nuestros proveedores de servicios que protejan sus datos personales y los utilicen únicamente para los fines especificados.",
+        "No vendemos, alquilamos ni comercializamos sus datos personales a terceros para sus propios fines de marketing sin su consentimiento expreso."
+      ]
+    },
+    {
+      "id": "transferencia-internacional",
+      "title": "7. Transferencia Internacional de Datos",
+      "content": [
+        "Sus datos personales pueden ser transferidos y procesados en países distintos al Perú, donde nuestros proveedores de servicios (como servidores en la nube, procesadores de pago) pueden estar ubicados.",
+        "Antes de realizar cualquier transferencia internacional, nos aseguramos de que existan garantías adecuadas para la protección de sus datos, tales como:",
+        "• Cláusulas contractuales tipo aprobadas por autoridades de protección de datos.",
+        "• Certificaciones de privacidad reconocidas internacionalmente.",
+        "• Transferencias a países con nivel adecuado de protección de datos.",
+        "Al utilizar nuestros servicios, usted consiente la transferencia internacional de sus datos bajo estas condiciones de protección."
+      ]
+    },
+    {
+      "id": "conservacion-datos",
+      "title": "8. Conservación de Datos",
+      "content": [
+        "Conservamos sus datos personales durante el tiempo necesario para cumplir con las finalidades descritas en esta política:",
+        "• Datos de cuenta y transacciones: mientras mantenga una cuenta activa con nosotros y durante 5 años adicionales para cumplir con obligaciones legales y fiscales.",
+        "• Datos de facturación: 10 años según requerimientos tributarios peruanos.",
+        "• Datos de marketing: hasta que retire su consentimiento o solicite la eliminación.",
+        "• Datos de navegación y cookies: según los períodos especificados en nuestra Política de Cookies.",
+        "Una vez transcurridos los plazos de conservación, sus datos serán eliminados o anonimizados de forma segura."
+      ]
+    },
+    {
+      "id": "derechos-usuario",
+      "title": "9. Sus Derechos",
+      "content": [
+        "De acuerdo con la Ley N° 29733, usted tiene los siguientes derechos respecto a sus datos personales:",
+        "• Derecho de acceso: solicitar información sobre qué datos personales tenemos sobre usted y cómo los tratamos.",
+        "• Derecho de rectificación: solicitar la corrección de datos inexactos o incompletos.",
+        "• Derecho de cancelación: solicitar la eliminación de sus datos cuando ya no sean necesarios para las finalidades para las que fueron recopilados.",
+        "• Derecho de oposición: oponerse al tratamiento de sus datos para determinadas finalidades, especialmente el marketing directo.",
+        "• Derecho a la portabilidad: recibir sus datos en un formato estructurado y de uso común.",
+        "Para ejercer estos derechos, puede contactarnos a través de privacidad@tienda.com o mediante su cuenta de usuario. Responderemos a su solicitud en un plazo máximo de 20 días hábiles."
+      ]
+    },
+    {
+      "id": "seguridad",
+      "title": "10. Medidas de Seguridad",
+      "content": [
+        "Implementamos medidas técnicas y organizativas apropiadas para proteger sus datos personales contra acceso no autorizado, alteración, divulgación o destrucción:",
+        "• Encriptación SSL/TLS para todas las comunicaciones entre su navegador y nuestro sitio web.",
+        "• Almacenamiento seguro de contraseñas mediante algoritmos de hash avanzados.",
+        "• Cumplimiento con estándares PCI-DSS para el procesamiento de pagos.",
+        "• Controles de acceso estrictos para el personal que maneja datos personales.",
+        "• Monitoreo continuo de seguridad y auditorías periódicas.",
+        "• Procedimientos de respuesta ante incidentes de seguridad.",
+        "A pesar de nuestros esfuerzos, ningún sistema de transmisión o almacenamiento de datos es 100% seguro. Si tiene motivos para creer que su interacción con nosotros ya no es segura, notifíquenos inmediatamente."
+      ]
+    },
+    {
+      "id": "menores",
+      "title": "11. Menores de Edad",
+      "content": [
+        "Nuestro sitio web no está dirigido a menores de 18 años. No recopilamos intencionalmente información personal de menores de edad sin el consentimiento de sus padres o tutores legales.",
+        "Si usted es menor de 18 años, debe utilizar nuestro sitio web bajo la supervisión de un padre o tutor legal.",
+        "Si descubrimos que hemos recopilado datos personales de un menor sin el consentimiento parental adecuado, tomaremos medidas para eliminar dicha información lo antes posible.",
+        "Los padres o tutores que crean que su hijo nos ha proporcionado datos personales pueden contactarnos en privacidad@tienda.com para solicitar su eliminación."
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "12. Cookies y Tecnologías Similares",
+      "content": [
+        "Utilizamos cookies y tecnologías similares para mejorar su experiencia en nuestro sitio web, analizar el tráfico y personalizar el contenido.",
+        "Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita nuestro sitio web.",
+        "Utilizamos los siguientes tipos de cookies:",
+        "• Cookies esenciales: necesarias para el funcionamiento básico del sitio web (carrito de compras, inicio de sesión).",
+        "• Cookies de rendimiento: nos ayudan a entender cómo los visitantes interactúan con el sitio web.",
+        "• Cookies de funcionalidad: permiten recordar sus preferencias y personalizar su experiencia.",
+        "• Cookies de marketing: utilizadas para mostrar anuncios relevantes basados en sus intereses.",
+        "Para más información sobre nuestro uso de cookies, consulte nuestra Política de Cookies."
+      ]
+    },
+    {
+      "id": "cambios-politica",
+      "title": "13. Cambios en esta Política",
+      "content": [
+        "Nos reservamos el derecho de modificar esta Política de Privacidad en cualquier momento. Las modificaciones entrarán en vigor inmediatamente después de su publicación en el sitio web.",
+        "En caso de cambios significativos, le notificaremos a través del correo electrónico asociado a su cuenta o mediante un aviso destacado en nuestro sitio web.",
+        "Le recomendamos revisar periódicamente esta política para estar informado sobre cómo protegemos su información.",
+        "La fecha de última actualización se indica al inicio de esta política. Su uso continuado del sitio web después de la publicación de cambios constituye su aceptación de la política modificada."
+      ]
+    },
+    {
+      "id": "contacto",
+      "title": "14. Contacto",
+      "content": [
+        "Si tiene preguntas, comentarios o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de sus datos personales, puede contactarnos a través de:",
+        "• Correo electrónico: privacidad@tienda.com",
+        "• Teléfono: (01) 234-5678",
+        "• Dirección postal: Av. Ejemplo 123, San Isidro, Lima, Perú",
+        "• Formulario web: Disponible en la sección \"Contacto\" de nuestro sitio web",
+        "También puede presentar una reclamación ante la Autoridad Nacional de Protección de Datos Personales si considera que el tratamiento de sus datos vulnera la normativa vigente."
+      ]
+    }
+  ]
+}

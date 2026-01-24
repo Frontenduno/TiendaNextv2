@@ -3,10 +3,11 @@
 
 import React, { useState, useMemo, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import { ShoppingCart, Truck, Store, Package } from 'lucide-react';
+import { ShoppingCart, Truck, Store, Package, Star } from 'lucide-react';
 import { Producto, OpcionVariante } from '@/interfaces/products';
 import { OptionSelector } from './OptionSelector';
-import { FavoriteButton } from '@/components/ui/FavoriteButton';
+import { FavoriteButton } from '@/feature/favorite-button/FavoriteButton';
+import { useCartStore } from '@/store/cart/cartStore';
 import { getPriceInfo } from '@/utils/pricing';
 import productosData from '@/data/products.json';
 import { ProductosDataJson } from '@/interfaces/products';
@@ -20,11 +21,40 @@ interface ProductInfoProps {
   producto: Producto;
 }
 
+// Función helper para crear slug (solo para navegación interna)
+function createSlug(nombre: string, id: number): string {
+  const nombreSlug = nombre
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  
+  return `${nombreSlug}-${id}`;
+}
+
+// Función para renderizar estrellas correctamente
+const renderStars = (rating: number) => {
+  const fullStars = Math.ceil(rating);
+  
+  return [...Array(5)].map((_, i) => (
+    <Star
+      key={i}
+      className={`w-5 h-5 ${
+        i < fullStars
+          ? 'fill-yellow-400 text-yellow-400'
+          : 'text-gray-300'
+      }`}
+    />
+  ));
+};
+
 export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const data = productosData as ProductosDataJson;
   const todosProductos = data.productos;
+  const addItem = useCartStore((state) => state.addItem);
   
   const productosRelacionadosIds = useMemo(() => 
     [producto.idProducto, ...producto.productosRelacionados],
@@ -34,7 +64,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
   const [quantity, setQuantity] = useState(1);
   const priceInfo = getPriceInfo(producto);
 
-  // Obtener colores disponibles basados en la opción adicional seleccionada
   const coloresDisponibles = useMemo(() => {
     return getAvailableColorsForOption(
       todosProductos,
@@ -43,7 +72,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     );
   }, [todosProductos, productosRelacionadosIds, producto.opcionAdicional?.id]);
 
-  // Obtener opciones adicionales disponibles basadas en el color seleccionado
   const opcionesAdicionalesDisponibles = useMemo(() => {
     return getAvailableOptionsForColor(
       todosProductos,
@@ -61,8 +89,9 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     );
     
     if (nuevoProducto) {
+      const slug = createSlug(nuevoProducto.nombre, nuevoProducto.idProducto);
       startTransition(() => {
-        router.push(`/product/${nuevoProducto.idProducto}`, { scroll: false });
+        router.push(`/product/${slug}`, { scroll: false });
       });
     }
   };
@@ -76,18 +105,23 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     );
     
     if (nuevoProducto) {
+      const slug = createSlug(nuevoProducto.nombre, nuevoProducto.idProducto);
       startTransition(() => {
-        router.push(`/product/${nuevoProducto.idProducto}`, { scroll: false });
+        router.push(`/product/${slug}`, { scroll: false });
       });
     }
   };
 
   const handleAddToCart = () => {
-    console.log('Agregar al carrito:', {
+    addItem({
       idProducto: producto.idProducto,
+      nombre: producto.nombre,
+      precio: priceInfo.finalPrice,
       cantidad: quantity,
-      color: producto.color,
-      opcionAdicional: producto.opcionAdicional,
+      imagen: producto.imagenes[0]?.url || '/placeholder.png',
+      color: producto.color.nombre,
+      opcionAdicional: producto.opcionAdicional?.nombre,
+      stockDisponible: producto.stockActual,
     });
   };
 
@@ -102,6 +136,19 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
     <div className={`w-full text-left transition-opacity duration-200 ${isPending ? 'opacity-50' : 'opacity-100'}`}>
       <p className="text-gray-600 mb-1 text-left">{producto.marca.nombre}</p>
       <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 text-left">{producto.nombre}</h1>
+
+      {producto.calificacion && (
+        <div className="flex items-center gap-2 mb-4">
+          <div className="flex items-center">
+            {renderStars(producto.calificacion)}
+          </div>
+          {producto.totalReviews && (
+            <span className="text-sm text-gray-600">
+              ({producto.totalReviews} reseñas)
+            </span>
+          )}
+        </div>
+      )}
 
       <p className="text-sm text-gray-600 mb-4 text-left">
         Vendido por <span className="text-green-600 font-semibold">Falabella</span>
@@ -129,7 +176,9 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
         )}
       </div>
 
-      <p className="text-green-600 font-semibold mb-6 text-left">{producto.tiempoEnvio}</p>
+      {producto.mensajeEnvio && (
+        <p className="text-green-600 font-semibold mb-6 text-left">{producto.mensajeEnvio}</p>
+      )}
 
       <div className="text-left">
         <OptionSelector
@@ -164,9 +213,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
         ))}
       </div>
 
-      {/* Selector de cantidad y botones - Layout responsivo */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6">
-        {/* Selector de cantidad */}
         <div className="flex items-center justify-between sm:justify-start gap-4 order-1 sm:order-none">
           <span className="text-sm text-gray-700 font-medium sm:hidden">Cantidad:</span>
           <div className="flex items-center border border-gray-300 rounded-lg">
@@ -188,7 +235,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
           </div>
         </div>
 
-        {/* Botones de acción */}
         <div className="flex gap-3 flex-1 order-2 sm:order-none">
           <button
             onClick={handleAddToCart}
@@ -202,7 +248,6 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
 
           <FavoriteButton 
             productId={producto.idProducto}
-            initialFavorite={producto.esFavorito}
             size="lg"
             variant="default"
           />
@@ -216,24 +261,33 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
             Stock disponible: {producto.stockActual} unidades
           </span>
         </div>
+
         {producto.disponibleEnvio && (
           <div className="flex items-start gap-3">
             <Truck className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
-            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-              <span className="text-sm text-gray-900">Despacho a domicilio</span>
-              <span className="text-green-600 text-sm">{producto.tiempoEnvio}</span>
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                <span className="text-sm text-gray-900">Despacho a domicilio</span>
+                {producto.tiempoEnvio && (
+                  <span className="text-green-600 text-sm font-medium">{producto.tiempoEnvio}</span>
+                )}
+              </div>
             </div>
           </div>
         )}
+
         {producto.disponibleRecojo && (
           <div className="flex items-start gap-3">
             <Package className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
-            <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-              <span className="text-sm text-gray-900">Retira tu compra</span>
-              <span className="text-green-600 text-sm">Retira hoy</span>
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                <span className="text-sm text-gray-900">Retira tu compra</span>
+                <span className="text-green-600 text-sm font-medium">Disponible para retiro</span>
+              </div>
             </div>
           </div>
         )}
+
         {!producto.disponibleEnvio && !producto.disponibleRecojo && (
           <div className="flex items-center gap-3">
             <Package className="w-5 h-5 text-gray-600 flex-shrink-0" />

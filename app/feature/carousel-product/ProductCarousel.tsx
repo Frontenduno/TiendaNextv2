@@ -1,3 +1,4 @@
+// feature/product-carousel/ProductCarousel.tsx
 'use client';
 
 import React, {
@@ -8,21 +9,43 @@ import React, {
 } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Producto, ProductosDataJson } from '@/interfaces/products';
-import { ProductCard } from './ProductCard';
+import { ProductCard } from '@/components/product/ProductCard';
+import type { 
+  CardSize, 
+  ImageAspectRatio, 
+  CardLayout, 
+  AddToCartBehavior 
+} from '@/interfaces/product-card';
 import productosData from '@/data/products.json';
 
 const PAGE_SIZE = 6;
 
 interface ProductCarouselProps {
   titulo: string;
-  filtro?: 'mas-vendidos' | 'nuevos' | 'descuentos' | 'todos';
+  filtro?: 'mas-vendidos' | 'nuevos' | 'descuentos' | 'todos';  
   productoActualId?: number;
+  cardSize?: CardSize;
+  imageAspect?: ImageAspectRatio;
+  layout?: CardLayout;
+  showColors?: boolean;
+  showAddToCart?: boolean;
+  addToCartBehavior?: AddToCartBehavior;
+  maxTags?: number;
+  itemWidth?: string;
 }
 
 export const ProductCarousel: React.FC<ProductCarouselProps> = ({
   titulo,
   filtro = 'todos',
   productoActualId,
+  cardSize = 'md',
+  imageAspect = 'portrait',
+  layout = 'vertical',
+  showColors = true,
+  showAddToCart = true,
+  addToCartBehavior = 'hover',
+  maxTags = 2,
+  itemWidth,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -112,9 +135,26 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({
 
   if (!items.length) return null;
 
+  const getItemWidth = () => {
+    if (itemWidth) return itemWidth;
+    
+    const widthMap: Record<CardSize, string> = {
+      xs: 'w-[180px] sm:w-[200px]',
+      sm: 'w-[220px] sm:w-[240px]',
+      md: 'w-[260px] sm:w-[280px] md:w-[300px]',
+      lg: 'w-[300px] sm:w-[320px] md:w-[340px]',
+      xl: 'w-[340px] sm:w-[360px] md:w-[380px]',
+    };
+    
+    return widthMap[cardSize];
+  };
+
+  const itemWidthClass = layout === 'horizontal' 
+    ? 'w-[320px] sm:w-[360px] md:w-[400px]'
+    : getItemWidth();
+
   return (
     <div className="py-8">
-      {/* HEADER */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">
           {titulo}
@@ -149,7 +189,6 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({
         </div>
       </div>
 
-      {/* CARRUSEL */}
       <div className="relative -mx-4 px-4">
         <div
           ref={containerRef}
@@ -163,15 +202,23 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({
           {items.map(producto => (
             <div
               key={producto.idProducto}
-              className="flex-none w-[260px] sm:w-[280px] md:w-[300px]"
+              className={`flex-none ${itemWidthClass}`}
             >
-              <ProductCard producto={producto} />
+              <ProductCard 
+                producto={producto}
+                size={cardSize}
+                imageAspect={imageAspect}
+                layout={layout}
+                showColors={showColors}
+                showAddToCart={showAddToCart}
+                addToCartBehavior={addToCartBehavior}
+                maxTags={maxTags}
+              />
             </div>
           ))}
         </div>
       </div>
 
-      {/* OCULTAR SCROLLBAR */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
