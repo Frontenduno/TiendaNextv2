@@ -1,7 +1,7 @@
 // app/(public)/locations/[district]/page.tsx
 import React from "react";
 import { LocationsGrid } from "../components/LocationsGrid";
-import locationsData from "@/data/footer/location/locations.json";
+import locationsData from "@/data/footer/premises/premises.json";
 import { LocationsDataJson } from "@/interfaces/footer/premises/premises";
 import { notFound } from "next/navigation";
 
