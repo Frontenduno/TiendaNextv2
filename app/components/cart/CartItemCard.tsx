@@ -4,7 +4,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Minus, Plus, Trash2, MoreVertical } from 'lucide-react';
+import { Minus, Plus, Trash2 } from 'lucide-react';
 import { CartItem } from '@/interfaces/cart';
 import { PriceDisplay } from '@/components/ui/PriceDisplay';
 import { getCartItemPriceInfo, getItemSubtotal, getItemOriginalSubtotal } from '@/utils/pricing';

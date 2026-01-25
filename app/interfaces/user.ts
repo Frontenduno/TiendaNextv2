@@ -9,6 +9,9 @@ export interface Usuario {
   updated_at: string;
 }
 
+// Usuario sin contraseña pero con todos los demás campos
+export type UserWithoutPassword = Omit<Usuario, 'contraseña'>;
+
 export interface Carrito {
   idCarrito: number;
   idUsuario: number;

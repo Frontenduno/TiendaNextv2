@@ -1,0 +1,37 @@
+{
+  "ubicaciones": [
+    {
+      "id": 1,
+      "alias": "Mi casa",
+      "direccion": "Av. Arequipa 1234",
+      "distrito": "Miraflores",
+      "ciudad": "Lima",
+      "referencia": "Casa blanca de dos pisos, frente al parque",
+      "nombreContacto": "María García",
+      "telefono": "987654321",
+      "esPrincipal": true
+    },
+    {
+      "id": 2,
+      "alias": "Mi oficina",
+      "direccion": "Jr. Lampa 456",
+      "distrito": "Cercado de Lima",
+      "ciudad": "Lima",
+      "referencia": "Edificio Torre Azul, piso 5",
+      "nombreContacto": "María García",
+      "telefono": "987654321",
+      "esPrincipal": false
+    },
+    {
+      "id": 3,
+      "alias": "Casa de mamá",
+      "direccion": "Av. Universitaria 890",
+      "distrito": "San Miguel",
+      "ciudad": "Lima",
+      "referencia": "Casa verde con rejas negras, al lado de la bodega",
+      "nombreContacto": "Rosa García",
+      "telefono": "923456789",
+      "esPrincipal": false
+    }
+  ]
+}

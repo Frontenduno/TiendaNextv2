@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Tienda",
   description: "Tienda online",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/logo.png",
   },
 };
 

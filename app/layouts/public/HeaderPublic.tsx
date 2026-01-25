@@ -1,22 +1,23 @@
+// components/layout/HeaderPublic.tsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import Modal from "@/components/ui/Modal";
-import LoginModal from "@/features/auth/components/LoginModal";
-import RegisterModal from "@/features/auth/components/RegisterModal";
+import LoginModal from "@/components/auth/LoginModal";
+import RegisterModal from "@/components/auth/RegisterModal";
+import RecoveryPasswordModal from "@/components/auth/RecoveryPasswordModal";
 import { useState, useEffect, useRef } from "react";
 import { Search, User, ShoppingCart, Menu } from "lucide-react";
 import MenuSidebar from "../MenuSidebar";
-import { Usuario } from "@/interfaces/user";
 import { useRouter } from "next/navigation";
 import { useCartStore } from "@/store/cart/cartStore";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function HeaderPublic() {
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [isRegister, setIsRegister] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState<Usuario | null>(null);
+  const [isRecovery, setIsRecovery] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showMenuSidebar, setShowMenuSidebar] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,18 +26,32 @@ export default function HeaderPublic() {
   const profileMenuRef = useRef<HTMLDivElement>(null);
 
   const router = useRouter();
+  const { user, isAuthenticated, logout } = useAuth();
 
-  // Integración con Zustand para el carrito
   const itemsCount = useCartStore((state) => state.getItemsCount());
   const hasHydrated = useCartStore((state) => state._hasHydrated);
 
-  // Función para manejar la búsqueda
   const handleSearch = () => {
     if (!searchQuery.trim()) return;
     router.push(`/search?search=${encodeURIComponent(searchQuery)}`);
   };
 
-  // Controlar la visibilidad del header según el scroll
+  // Redirigir a la sección por defecto del perfil
+  const handleProfileClick = () => {
+    if (isAuthenticated) {
+      router.push('/profile/datos-personales');
+      setShowProfileMenu(false);
+    } else {
+      setShowProfileMenu(!showProfileMenu);
+    }
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    setShowProfileMenu(false);
+    router.push('/');
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -54,13 +69,9 @@ export default function HeaderPublic() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Cerrar menú al hacer click fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -89,7 +100,6 @@ export default function HeaderPublic() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3 sm:py-5">
           <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
-            {/* Logo */}
             <Link href="/" className="flex-shrink-0 cursor-pointer">
               <Image
                 src="/logo.png"
@@ -100,7 +110,6 @@ export default function HeaderPublic() {
               />
             </Link>
 
-            {/* Botón de Menú */}
             <button
               onClick={() => setShowMenuSidebar(!showMenuSidebar)}
               className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 bg-white rounded-lg hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
@@ -111,7 +120,6 @@ export default function HeaderPublic() {
               </span>
             </button>
 
-            {/* Barra de búsqueda (Desktop) */}
             <div className="flex-1 max-w-2xl hidden md:block md:ml-8 lg:ml-12">
               <div className="relative">
                 <input
@@ -136,25 +144,28 @@ export default function HeaderPublic() {
               </div>
             </div>
 
-            {/* Acciones del usuario */}
             <div className="flex items-center gap-6 sm:gap-8 lg:gap-12 ml-auto md:ml-8 lg:ml-12">
-              {/* Botón de Perfil con menú desplegable */}
               <div className="relative" ref={profileMenuRef}>
                 <button
-                  onClick={() => setShowProfileMenu(!showProfileMenu)}
+                  onClick={handleProfileClick}
                   className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
                 >
-                  <User className="w-5 h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
+                  {isAuthenticated && user ? (
+                    <div className="w-full h-full rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm">
+                      {user.nombre.charAt(0).toUpperCase()}
+                    </div>
+                  ) : (
+                    <User className="w-5 h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
+                  )}
                 </button>
 
-                {/* Menú para usuario NO logueado */}
-                {showProfileMenu && !isLoggedIn && (
+                {showProfileMenu && !isAuthenticated && (
                   <div className="absolute right-0 top-full mt-3 w-48 sm:w-52 bg-white rounded-lg shadow-2xl overflow-hidden z-50">
                     <div className="p-3 sm:p-4 space-y-2">
-                      {/* LOGIN - Abre modal */}
                       <button
                         onClick={() => {
                           setIsRegister(false);
+                          setIsRecovery(false);
                           setOpenAuthModal(true);
                           setShowProfileMenu(false);
                         }}
@@ -163,10 +174,10 @@ export default function HeaderPublic() {
                         Iniciar sesión
                       </button>
 
-                      {/* REGISTER - Abre modal */}
                       <button
                         onClick={() => {
                           setIsRegister(true);
+                          setIsRecovery(false);
                           setOpenAuthModal(true);
                           setShowProfileMenu(false);
                         }}
@@ -178,8 +189,7 @@ export default function HeaderPublic() {
                   </div>
                 )}
 
-                {/* Menú para usuario logueado */}
-                {showProfileMenu && isLoggedIn && user && (
+                {showProfileMenu && isAuthenticated && user && (
                   <div className="absolute right-0 top-full mt-3 w-52 sm:w-56 bg-white rounded-lg shadow-2xl overflow-hidden z-50">
                     <div className="px-4 py-3 bg-[#2c1ff1] text-white border-b">
                       <p className="font-semibold text-sm">
@@ -188,7 +198,15 @@ export default function HeaderPublic() {
                     </div>
                     <div className="p-3 space-y-2">
                       <Link
-                        href="/mis-compras"
+                        href="/profile/datos-personales"
+                        className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded transition-colors cursor-pointer"
+                        onClick={() => setShowProfileMenu(false)}
+                      >
+                        <span className="text-[#2c1ff1]">👤</span>
+                        <span className="text-sm text-gray-700">Mi perfil</span>
+                      </Link>
+                      <Link
+                        href="/profile/historial-compras"
                         className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded transition-colors cursor-pointer"
                         onClick={() => setShowProfileMenu(false)}
                       >
@@ -197,21 +215,9 @@ export default function HeaderPublic() {
                           Mis compras
                         </span>
                       </Link>
-                      <Link
-                        href="/mi-cuenta"
-                        className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 rounded transition-colors cursor-pointer"
-                        onClick={() => setShowProfileMenu(false)}
-                      >
-                        <span className="text-[#2c1ff1]">👤</span>
-                        <span className="text-sm text-gray-700">Mi cuenta</span>
-                      </Link>
                       <button
-                        onClick={() => {
-                          setIsLoggedIn(false);
-                          setUser(null);
-                          setShowProfileMenu(false);
-                        }}
-                        className="w-full mt-2 px-4 py-2.5 bg-[#2c1ff1] hover:bg-[#2416d4] text-white font-medium rounded text-center transition-colors text-sm cursor-pointer"
+                        onClick={handleLogout}
+                        className="w-full mt-2 px-4 py-2.5 bg-[#ef233c] hover:bg-red-700 text-white font-medium rounded text-center transition-colors text-sm cursor-pointer"
                       >
                         Cerrar sesión
                       </button>
@@ -220,13 +226,11 @@ export default function HeaderPublic() {
                 )}
               </div>
 
-              {/* Carrito con contador dinámico desde Zustand */}
               <Link
                 href="/cart"
                 className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-white hover:bg-gray-50 transition-colors relative shadow-md cursor-pointer"
               >
                 <ShoppingCart className="w-5 h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
-                {/* Solo mostrar el badge después de la hidratación para evitar errores */}
                 {hasHydrated && itemsCount > 0 && (
                   <span className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">
                     {itemsCount}
@@ -236,7 +240,6 @@ export default function HeaderPublic() {
             </div>
           </div>
 
-          {/* Barra de búsqueda móvil (debajo del header) */}
           <div className="md:hidden px-0 pt-3">
             <div className="relative">
               <input
@@ -263,25 +266,44 @@ export default function HeaderPublic() {
         </div>
       </header>
 
-      {/* Espaciador para compensar el header fixed */}
       <div className="h-24 sm:h-28 md:h-32 lg:h-36"></div>
 
-      {/* Componente de menú lateral */}
       <MenuSidebar
         isOpen={showMenuSidebar}
         onClose={() => setShowMenuSidebar(false)}
       />
 
-      {/* Modal de autenticación (Login/Register) */}
       <Modal isOpen={openAuthModal} onClose={() => setOpenAuthModal(false)}>
-        {isRegister ? (
+        {isRecovery ? (
+          <RecoveryPasswordModal
+            onSwitchLogin={() => {
+              setIsRecovery(false);
+              setIsRegister(false);
+            }}
+            onClose={() => setOpenAuthModal(false)}
+          />
+        ) : isRegister ? (
           <RegisterModal
-            onSwitchLogin={() => setIsRegister(false)}
+            onSwitchLogin={() => {
+              setIsRegister(false);
+              setIsRecovery(false);
+            }}
+            onSwitchRecovery={() => {
+              setIsRecovery(true);
+              setIsRegister(false);
+            }}
             onClose={() => setOpenAuthModal(false)}
           />
         ) : (
           <LoginModal
-            onSwitchRegister={() => setIsRegister(true)}
+            onSwitchRegister={() => {
+              setIsRegister(true);
+              setIsRecovery(false);
+            }}
+            onSwitchRecovery={() => {
+              setIsRecovery(true);
+              setIsRegister(false);
+            }}
             onClose={() => setOpenAuthModal(false)}
           />
         )}

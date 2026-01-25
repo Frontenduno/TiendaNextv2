@@ -24,6 +24,7 @@ const routeLabels: Record<string, string> = {
   "guia-de-tallas": "Guía de Tallas",
   "tutoriales-de-compra": "Tutoriales de Compra",
   "customer-service": "Servicio al Cliente",
+  profile: "Perfil",
   locations: "Tiendas",
   product: "Producto",
   categoria: "Categorías",
@@ -38,6 +39,7 @@ const nonClickableRoutes = new Set([
   "locations",
   "footer",
   "categoria",
+  "profile"
 ]);
 
 // Buscar categoría por nombre

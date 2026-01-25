@@ -1,0 +1,112 @@
+{
+  "ordenesEnProceso": [
+    {
+      "idOrden": 1,
+      "numeroOrden": "ORD-2024-001234",
+      "fecha": "2024-01-20T14:30:00",
+      "estado": "en_camino",
+      "total": 458.90,
+      "subtotal": 398.90,
+      "envio": 30.00,
+      "descuento": 0.00,
+      "metodoPago": "Tarjeta de crédito",
+      "direccionEnvio": {
+        "tipo": "casa",
+        "direccion": "Av. Arequipa 1234, Miraflores",
+        "referencia": "Casa blanca de dos pisos",
+        "distrito": "Miraflores",
+        "ciudad": "Lima"
+      },
+      "tracking": {
+        "codigoSeguimiento": "TRK-98765432",
+        "empresa": "Olva Courier",
+        "estadoActual": "En tránsito",
+        "fechaEntregaEstimada": "2024-01-22T18:00:00",
+        "historial": [
+          {
+            "fecha": "2024-01-20T14:30:00",
+            "estado": "Pedido confirmado",
+            "descripcion": "Tu pedido ha sido confirmado y está siendo preparado"
+          },
+          {
+            "fecha": "2024-01-20T18:45:00",
+            "estado": "Pedido despachado",
+            "descripcion": "Tu pedido ha salido de nuestro almacén"
+          },
+          {
+            "fecha": "2024-01-21T10:20:00",
+            "estado": "En tránsito",
+            "descripcion": "Tu pedido está en camino"
+          }
+        ]
+      },
+      "productos": [
+        {
+          "idProducto": 155,
+          "nombre": "Teclado Razer BlackWidow V4",
+          "precio": 189.00,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/razer/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        },
+        {
+          "idProducto": 102,
+          "nombre": "Mouse Logitech G Pro X",
+          "precio": 209.90,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/logitech/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        }
+      ]
+    },
+    {
+      "idOrden": 2,
+      "numeroOrden": "ORD-2024-001189",
+      "fecha": "2024-01-18T10:15:00",
+      "estado": "procesando",
+      "total": 325.50,
+      "subtotal": 289.90,
+      "envio": 35.60,
+      "descuento": 0.00,
+      "metodoPago": "Yape",
+      "direccionEnvio": {
+        "tipo": "trabajo",
+        "direccion": "Jr. Lampa 456, Cercado de Lima",
+        "referencia": "Edificio Torre Azul, piso 5",
+        "distrito": "Cercado de Lima",
+        "ciudad": "Lima"
+      },
+      "tracking": {
+        "codigoSeguimiento": "TRK-98765431",
+        "empresa": "Shalom",
+        "estadoActual": "Procesando",
+        "fechaEntregaEstimada": "2024-01-23T18:00:00",
+        "historial": [
+          {
+            "fecha": "2024-01-18T10:15:00",
+            "estado": "Pedido confirmado",
+            "descripcion": "Tu pedido ha sido confirmado"
+          },
+          {
+            "fecha": "2024-01-18T14:30:00",
+            "estado": "Procesando",
+            "descripcion": "Estamos preparando tu pedido"
+          }
+        ]
+      },
+      "productos": [
+        {
+          "idProducto": 89,
+          "nombre": "Audífonos Sony WH-1000XM5",
+          "precio": 289.90,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/sony/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        }
+      ]
+    }
+  ]
+}

@@ -131,7 +131,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                 ) : (
                   // Caso raro: Categoría principal sin hijos (Link directo)
                   <Link
-                    href={`/categoria/${getSlug(categoria.nombre)}`}
+                    href={`/category/${getSlug(categoria.nombre)}`}
                     onClick={handleClose}
                     className="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
                   >
@@ -194,7 +194,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                   <div className="flex items-center justify-between rounded-xl hover:bg-gray-50 transition-colors">
                     {/* PARTE IZQUIERDA: Link al producto/categoría */}
                     <Link
-                      href={`/categoria/${getSlug(subcategoria.nombre)}`}
+                      href={`/category/${getSlug(subcategoria.nombre)}`}
                       onClick={handleClose}
                       className="flex-1 px-4 py-3 font-semibold text-gray-800 active:bg-gray-100 rounded-l-xl"
                     >
@@ -217,7 +217,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                 ) : (
                   // Si no tiene hijos, es un Link normal completo
                   <Link
-                    href={`/categoria/${getSlug(subcategoria.nombre)}`}
+                    href={`/category/${getSlug(subcategoria.nombre)}`}
                     onClick={handleClose}
                     className="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
                   >
@@ -265,7 +265,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
             {currentLevel.category.subcategorias?.map((elemento) => (
               <div key={elemento.idCategoria}>
                 <Link
-                  href={`/categoria/${getSlug(elemento.nombre)}`}
+                  href={`/category/${getSlug(elemento.nombre)}`}
                   className="block px-4 py-3 rounded-xl hover:bg-gray-100 transition-colors"
                   onClick={handleClose}
                 >
@@ -376,7 +376,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                     {activeCategory.subcategorias.map((subcat) => (
                       <div key={subcat.idCategoria} className="space-y-3">
                         <Link
-                          href={`/categoria/${getSlug(subcat.nombre)}`}
+                          href={`/category/${getSlug(subcat.nombre)}`}
                           className="block font-bold text-gray-900 text-base hover:text-[#2c1ff1] transition-colors mb-4"
                           onClick={handleClose}
                         >
@@ -389,7 +389,7 @@ export default function MenuSidebar({ isOpen, onClose }: MenuSidebarProps) {
                               {subcat.subcategorias.map((item) => (
                                 <li key={item.idCategoria}>
                                   <Link
-                                    href={`/categoria/${getSlug(item.nombre)}`}
+                                    href={`/category/${getSlug(item.nombre)}`}
                                     className="text-sm text-gray-600 hover:text-[#2c1ff1] transition-colors block"
                                     onClick={handleClose}
                                   >

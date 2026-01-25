@@ -1,0 +1,123 @@
+{
+  "historialCompras": [
+    {
+      "idCompra": 1,
+      "numeroOrden": "ORD-2024-001045",
+      "fecha": "2024-01-10T16:20:00",
+      "estado": "entregado",
+      "total": 589.00,
+      "subtotal": 559.00,
+      "envio": 30.00,
+      "descuento": 0.00,
+      "metodoPago": "Tarjeta de débito",
+      "direccionEntrega": {
+        "tipo": "casa",
+        "direccion": "Av. Arequipa 1234, Miraflores",
+        "referencia": "Casa blanca de dos pisos",
+        "distrito": "Miraflores",
+        "ciudad": "Lima"
+      },
+      "fechaEntrega": "2024-01-12T15:45:00",
+      "productos": [
+        {
+          "idProducto": 45,
+          "nombre": "Monitor LG UltraWide 34'",
+          "precio": 559.00,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/lg/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        }
+      ]
+    },
+    {
+      "idCompra": 2,
+      "numeroOrden": "ORD-2023-009876",
+      "fecha": "2023-12-28T11:30:00",
+      "estado": "entregado",
+      "total": 892.50,
+      "subtotal": 849.00,
+      "envio": 43.50,
+      "descuento": 0.00,
+      "metodoPago": "Tarjeta de crédito",
+      "direccionEntrega": {
+        "tipo": "casa",
+        "direccion": "Av. Arequipa 1234, Miraflores",
+        "referencia": "Casa blanca de dos pisos",
+        "distrito": "Miraflores",
+        "ciudad": "Lima"
+      },
+      "fechaEntrega": "2023-12-30T14:20:00",
+      "productos": [
+        {
+          "idProducto": 78,
+          "nombre": "Laptop ASUS ROG Strix G15",
+          "precio": 849.00,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/asus/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        }
+      ]
+    },
+    {
+      "idCompra": 3,
+      "numeroOrden": "ORD-2023-008654",
+      "fecha": "2023-12-15T09:20:00",
+      "estado": "entregado",
+      "total": 178.90,
+      "subtotal": 149.90,
+      "envio": 29.00,
+      "descuento": 0.00,
+      "metodoPago": "PayPal",
+      "direccionEntrega": {
+        "tipo": "trabajo",
+        "direccion": "Jr. Lampa 456, Cercado de Lima",
+        "referencia": "Edificio Torre Azul, piso 5",
+        "distrito": "Cercado de Lima",
+        "ciudad": "Lima"
+      },
+      "fechaEntrega": "2023-12-17T16:30:00",
+      "productos": [
+        {
+          "idProducto": 34,
+          "nombre": "Mochila Nike Sportswear",
+          "precio": 149.90,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/nike-bag/800/1000",
+          "color": "Negro",
+          "opcionAdicional": null
+        }
+      ]
+    },
+    {
+      "idCompra": 4,
+      "numeroOrden": "ORD-2023-007234",
+      "fecha": "2023-11-28T14:45:00",
+      "estado": "cancelado",
+      "total": 0.00,
+      "subtotal": 299.00,
+      "envio": 25.00,
+      "descuento": 0.00,
+      "metodoPago": "Tarjeta de crédito",
+      "direccionEntrega": {
+        "tipo": "casa",
+        "direccion": "Av. Arequipa 1234, Miraflores",
+        "referencia": "Casa blanca de dos pisos",
+        "distrito": "Miraflores",
+        "ciudad": "Lima"
+      },
+      "productos": [
+        {
+          "idProducto": 67,
+          "nombre": "Silla Gamer Corsair T3",
+          "precio": 299.00,
+          "cantidad": 1,
+          "imagen": "https://picsum.photos/seed/corsair/800/1000",
+          "color": "Rojo",
+          "opcionAdicional": null
+        }
+      ]
+    }
+  ]
+}

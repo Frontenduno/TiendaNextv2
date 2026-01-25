@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, ShoppingBag, HelpCircle, FileText, Store } from "lucide-react";
-import { LibroReclamaciones } from "./feature/libro-reclamaciones";
+import { LibroReclamaciones } from "./components/libro-reclamaciones";
 
 export default function FooterPublic() {
   const [isReclamacionesOpen, setIsReclamacionesOpen] = useState(false);
