@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode } from "react";
+import { useEffect, ReactNode } from "react";
+import { X } from "lucide-react";
 
 interface ModalProps {
   isOpen: boolean;
@@ -9,29 +10,45 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       
-      {/* Overlay */}
+      {/* Overlay con backdrop blur */}
       <div
-        className="absolute inset-0 bg-black/40 backdrop-blur-md transition"
+        className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
       />
 
-      {/* Modal */}
-      <div className="relative z-50 w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 animate-[fadeIn_0.2s_ease-out]">
+      {/* Modal Container */}
+      <div className="relative z-50 w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-[fadeIn_0.3s_ease-out]">
         
-        {/* BOTÓN CERRAR */}
+        {/* Botón cerrar */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-400 hover:text-gray-700 text-xl font-bold transition"
+          className="absolute top-4 right-4 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-all duration-200"
+          aria-label="Cerrar modal"
         >
-          X
+          <X className="w-5 h-5" />
         </button>
 
-        {children}
+        {/* Contenido del modal */}
+        <div className="px-8 py-8">
+          {children}
+        </div>
       </div>
     </div>
   );

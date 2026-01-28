@@ -4,6 +4,7 @@ import { LocationsGrid } from "../components/LocationsGrid";
 import locationsData from "@/data/footer/premises/premises.json";
 import { LocationsDataJson } from "@/interfaces/footer/premises/premises";
 import { notFound } from "next/navigation";
+import { HeroBanner } from "@/components/shared/HeroBanner";
 
 interface DistrictPageProps {
   params: Promise<{
@@ -67,17 +68,19 @@ export default async function DistrictPage({ params }: DistrictPageProps) {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 sm:p-12 mb-8 text-white">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-            {districtName === "Todos" ? "Nuestras Tiendas" : `Tiendas en ${districtName}`}
-          </h1>
-          <p className="text-lg sm:text-xl">
-            {districtName === "Todos" 
-              ? "Encuentra la tienda más cercana a ti. Estamos ubicados en los principales distritos de Lima para estar siempre cerca de ti."
-              : `Tenemos ${districtLocations.length} tienda${districtLocations.length !== 1 ? 's' : ''} en ${districtName} esperándote con los mejores productos y atención.`
-            }
-          </p>
-        </div>        <LocationsGrid 
+        <HeroBanner
+          title={districtName === "Todos" ? "Nuestras Tiendas" : `Tiendas en ${districtName}`}
+          subtitle={districtName === "Todos" 
+            ? "Encuentra la tienda más cercana a ti. Estamos ubicados en los principales distritos de Lima para estar siempre cerca de ti."
+            : `Tenemos ${districtLocations.length} tienda${districtLocations.length !== 1 ? 's' : ''} en ${districtName} esperándote con los mejores productos y atención.`
+          }
+          gradient="from-blue-600 to-blue-800"
+          padding="p-8 sm:p-12 mb-8"
+          titleClassName="text-3xl sm:text-4xl mb-4"
+          subtitleClassName="text-lg sm:text-xl"
+        />
+        
+        <LocationsGrid 
           locations={data.locations} 
           districts={data.districts}
           initialDistrict={districtName}

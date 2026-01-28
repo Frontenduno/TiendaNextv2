@@ -55,7 +55,7 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
   const productSlug = createProductSlug(producto.nombre, producto.idProducto);
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden group h-full flex border border-gray-200 hover:shadow-lg transition-all duration-300">
+    <div className="bg-white overflow-hidden group h-full flex border border-gray-200 hover:shadow-lg transition-all duration-300">
       <Link href={`/product/${productSlug}`} className="relative w-32 flex-shrink-0">
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
@@ -68,14 +68,14 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
           
           {producto.etiquetas.length > 0 && (
             <div className="absolute top-1 left-1 z-10">
-              <span className={`bg-blue-600 text-white ${config.tag} rounded font-medium block`}>
+              <span className={`bg-blue-600 text-white ${config.tag} font-medium block`}>
                 {producto.etiquetas[0].descripcion}
               </span>
             </div>
           )}
 
           {priceInfo.hasDiscount && (
-            <div className={`absolute bottom-1 left-1 bg-red-500 text-white font-bold ${config.discount} rounded z-10`}>
+            <div className={`absolute bottom-1 left-1 bg-red-500 text-white font-bold ${config.discount} z-10`}>
               -{priceInfo.discountPercentage}%
             </div>
           )}
@@ -140,7 +140,7 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
           {showAddToCart && (
             <button
               onClick={handleAddToCart}
-              className={`bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-all flex items-center justify-center ${config.button} px-2`}
+              className={`bg-gray-900 text-white hover:bg-gray-800 transition-all flex items-center justify-center ${config.button} px-2`}
               aria-label="Agregar al carrito"
             >
               <ShoppingCart className={config.icon} />
@@ -170,7 +170,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
   const productSlug = createProductSlug(producto.nombre, producto.idProducto);
 
   return (
-    <div className="bg-white rounded-lg overflow-hidden group h-full flex flex-col border border-gray-200 hover:shadow-lg transition-all duration-300">
+    <div className="bg-white overflow-hidden group h-full flex flex-col border border-gray-200 hover:shadow-lg transition-all duration-300">
       <Link href={`/product/${productSlug}`}>
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
@@ -186,7 +186,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
               {producto.etiquetas.slice(0, maxTags).map((etiqueta) => (
                 <span
                   key={etiqueta.idEtiqueta}
-                  className={`bg-blue-600 text-white ${config.tag} rounded font-medium`}
+                  className={`bg-blue-600 text-white ${config.tag} font-medium`}
                 >
                   {etiqueta.descripcion}
                 </span>
@@ -196,7 +196,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
 
           {priceInfo.hasDiscount && (
             <>
-              <div className={`absolute top-2 left-2 bg-red-500 text-white font-bold ${config.discount} rounded z-10`}>
+              <div className={`absolute top-2 left-2 bg-red-500 text-white font-bold ${config.discount} z-10`}>
                 -{priceInfo.discountPercentage}%
               </div>
               
@@ -205,7 +205,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
                   {producto.etiquetas.slice(0, maxTags).map((etiqueta) => (
                     <span
                       key={etiqueta.idEtiqueta}
-                      className={`bg-blue-600 text-white ${config.tag} rounded font-medium`}
+                      className={`bg-blue-600 text-white ${config.tag} font-medium`}
                     >
                       {etiqueta.descripcion}
                     </span>
@@ -283,7 +283,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
               {coloresDisponibles.map((color) => (
                 <div
                   key={color.id}
-                  className={`rounded-full border border-gray-300 ${
+                  className={`border border-gray-300 ${
                     config.container === 'text-xs' ? 'w-3 h-3' : 
                     config.container === 'text-sm' ? 'w-3.5 h-3.5' : 'w-4 h-4'
                   }`}
@@ -298,7 +298,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
         {showAddToCart && (
           <button
             onClick={handleAddToCart}
-            className={`w-full bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-all flex items-center justify-center gap-2 ${config.button} ${
+            className={`w-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-all flex items-center justify-center gap-2 ${config.button} ${
               addToCartBehavior === 'hover' ? 'lg:opacity-0 lg:group-hover:opacity-100' : ''
             }`}
           >

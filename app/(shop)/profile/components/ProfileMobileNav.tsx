@@ -8,6 +8,7 @@ import {
   Heart,
   Clock,
   MapPin,
+  Building2,
   LogOut,
   LucideIcon,
 } from "lucide-react";
@@ -43,6 +44,7 @@ export default function ProfileMobileNav({
     { name: "Mis favoritos", icon: Heart, url: "/profile/favoritos" },
     { name: "Compras en proceso", icon: Clock, url: "/profile/pedidos" },
     { name: "Mis ubicaciones", icon: MapPin, url: "/profile/ubicaciones" },
+    { name: "Mis empresas", icon: Building2, url: "/profile/empresas" },
     { name: "Cerrar sesión", icon: LogOut, action: onLogout },
   ];
 

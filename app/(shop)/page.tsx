@@ -1,20 +1,18 @@
 // app/(public)/page.tsx
 import React from 'react';
 import { ProductCarousel } from '@/feature/carousel-product/ProductCarousel';
+import { HeroBanner } from '@/components/shared/HeroBanner';
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 sm:p-12 mb-8 text-white">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-white">
-            Bienvenido a Nuestra Tienda
-          </h1>
-          <p className="text-lg sm:text-xl mb-6 text-white">
-            Descubre las mejores ofertas y productos
-          </p>
-        </div>
+        <HeroBanner
+          title="Bienvenido a Nuestra Tienda"
+          subtitle="Descubre las mejores ofertas y productos"
+          padding="p-8 sm:p-12 mb-8"
+        />
 
         {/* Carruseles de productos con diferentes tamaños */}
         <div className="space-y-12">
@@ -145,7 +143,7 @@ export default function HomePage() {
         </div>
 
         {/* Sección informativa */}
-        <div className="mt-16 bg-white rounded-lg p-8 border border-gray-200">
+        <div className="mt-16 bg-white p-8 border border-gray-200">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Configuraciones Disponibles</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -153,44 +151,44 @@ export default function HomePage() {
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Tamaños de Tarjeta</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">xs</code> - Mini (180-200px)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">sm</code> - Pequeña (220-240px)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">md</code> - Mediana (260-300px) <span className="text-blue-600">Default</span></li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">lg</code> - Grande (300-340px)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">xl</code> - Extra Grande (340-380px)</li>
+                <li><code className="bg-gray-100 px-2 py-1">xs</code> - Mini (180-200px)</li>
+                <li><code className="bg-gray-100 px-2 py-1">sm</code> - Pequeña (220-240px)</li>
+                <li><code className="bg-gray-100 px-2 py-1">md</code> - Mediana (260-300px) <span className="text-blue-600">Default</span></li>
+                <li><code className="bg-gray-100 px-2 py-1">lg</code> - Grande (300-340px)</li>
+                <li><code className="bg-gray-100 px-2 py-1">xl</code> - Extra Grande (340-380px)</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Proporciones de Imagen</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">square</code> - Cuadrado (1:1)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">portrait</code> - Vertical (3:4) <span className="text-blue-600">Default</span></li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">landscape</code> - Horizontal (4:3)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">tall</code> - Muy vertical (2:3)</li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">wide</code> - Panorámico (16:9)</li>
+                <li><code className="bg-gray-100 px-2 py-1">square</code> - Cuadrado (1:1)</li>
+                <li><code className="bg-gray-100 px-2 py-1">portrait</code> - Vertical (3:4) <span className="text-blue-600">Default</span></li>
+                <li><code className="bg-gray-100 px-2 py-1">landscape</code> - Horizontal (4:3)</li>
+                <li><code className="bg-gray-100 px-2 py-1">tall</code> - Muy vertical (2:3)</li>
+                <li><code className="bg-gray-100 px-2 py-1">wide</code> - Panorámico (16:9)</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Layouts</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">vertical</code> - Diseño normal <span className="text-blue-600">Default</span></li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">horizontal</code> - Diseño compacto lado a lado</li>
+                <li><code className="bg-gray-100 px-2 py-1">vertical</code> - Diseño normal <span className="text-blue-600">Default</span></li>
+                <li><code className="bg-gray-100 px-2 py-1">horizontal</code> - Diseño compacto lado a lado</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Comportamiento del Botón</h3>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li><code className="bg-gray-100 px-2 py-1 rounded">hover</code> - Solo visible en hover <span className="text-blue-600">Default</span></li>
-                <li><code className="bg-gray-100 px-2 py-1 rounded">always</code> - Siempre visible</li>
+                <li><code className="bg-gray-100 px-2 py-1">hover</code> - Solo visible en hover <span className="text-blue-600">Default</span></li>
+                <li><code className="bg-gray-100 px-2 py-1">always</code> - Siempre visible</li>
               </ul>
             </div>
 
           </div>
 
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <div className="mt-6 p-4 bg-blue-50 border border-blue-200">
             <p className="text-sm text-blue-900">
               Combina diferentes configuraciones para crear una experiencia de usuario única.
             </p>

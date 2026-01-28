@@ -1,11 +1,13 @@
-// app/cart/page.tsx
 'use client';
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, ShoppingBag, X } from 'lucide-react';
+import React, { useState, useCallback, useMemo } from 'react';
+import { ChevronDown, ChevronUp, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCartStore } from '@/store/cart/cartStore';
 import { useDeliveryStore } from '@/store/delivery/deliveryStore';
+import { useAuth } from '@/hooks/useAuth';
+import { useToast } from '@/hooks/useToast';
 import { CartItemCard } from '@/components/cart/CartItemCard';
 import { CartSummary } from '@/components/cart/CartSummary';
 import { DeliveryMethodSelector } from '@/components/cart/DeliveryMethodSelector';
@@ -14,9 +16,25 @@ import { StoreSelector } from '@/components/cart/StoreSelector';
 import { PaymentMethodSelector } from '@/components/cart/PaymentMethodSelector';
 import { PaymentSuccessModal } from '@/components/cart/PaymentSuccessModal';
 import { ProductCarousel } from '@/feature/carousel-product/ProductCarousel';
-import RegisterModal from '@/components/auth/RegisterModal';
+import { HeroBanner } from '@/components/shared/HeroBanner';
+import { CartRegisterSection } from '@/components/cart/CartRegisterSection';
+import { PurchaseTermsSection } from '@/components/cart/PurchaseTermsSection';
+import { Toast } from '@/components/toast';
+import type { RegisterFormData, InvoiceData } from '@/utils/validations/schemas';
 
 type PaymentMethod = 'card' | 'transfer' | 'wallet';
+type VoucherType = 'boleta' | 'factura';
+
+interface OrderData {
+  items: ReturnType<typeof useCartStore.getState>['items'];
+  deliveryMethod: 'home' | 'store';
+  deliveryLocationId: number | null;
+  deliveryStoreId: number | null;
+  paymentMethod: PaymentMethod;
+  voucherType: VoucherType;
+  invoiceData: InvoiceData | null;
+  registerData: RegisterFormData | null;
+}
 
 export default function CartPage() {
   const { items, updateQuantity, removeItem, clearCart } = useCartStore();
@@ -29,90 +47,277 @@ export default function CartPage() {
     setSelectedStore
   } = useDeliveryStore();
   
+  const router = useRouter();
+  const { register: registerUser } = useAuth();
+  const { toast, showToast, hideToast } = useToast();
+  
+  // Estados de UI
   const [isVendorExpanded, setIsVendorExpanded] = useState(true);
   const [showPaymentSuccess, setShowPaymentSuccess] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  
+  // Estados de pago
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<PaymentMethod>('card');
   const [isPaymentFormComplete, setIsPaymentFormComplete] = useState(false);
   
-  // Simulación: cambia esto a false para simular usuario no registrado
-  const [isUserRegistered] = useState(true);
-  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  // Estados de registro
+  const [isUserRegistered] = useState(false);
+  const [registerData, setRegisterData] = useState<RegisterFormData | null>(null);
+  const [isRegisterDataValid, setIsRegisterDataValid] = useState(false);
+  const [acceptRegisterTerms, setAcceptRegisterTerms] = useState(false);
+  
+  // Estados de facturación
+  const [voucherType, setVoucherType] = useState<VoucherType>('boleta');
+  const [invoiceData, setInvoiceData] = useState<InvoiceData | null>(null);
+  const [isInvoiceDataValid, setIsInvoiceDataValid] = useState(true);
+  const [acceptPurchaseTerms, setAcceptPurchaseTerms] = useState(false);
 
-  const handlePaymentMethodChange = (method: PaymentMethod) => {
+  // Handlers de pago
+  const handlePaymentMethodChange = useCallback((method: PaymentMethod) => {
     setSelectedPaymentMethod(method);
-    // Resetear el estado cuando cambie el método
     setIsPaymentFormComplete(false);
-  };
+    showToast('Método de pago seleccionado', 'info');
+  }, [showToast]);
 
-  const handlePaymentFormConfirm = (isComplete: boolean) => {
+  const handlePaymentFormConfirm = useCallback((isComplete: boolean) => {
     setIsPaymentFormComplete(isComplete);
-  };
+    if (isComplete) {
+      showToast('✓ Datos de pago completados', 'success');
+    }
+  }, [showToast]);
 
-  const handlePaymentComplete = () => {
-    // Si no está registrado, mostrar modal de registro
-    if (!isUserRegistered) {
-      setShowRegisterModal(true);
+  // Handlers de registro
+  const handleRegisterDataChange = useCallback((data: RegisterFormData | null, isValid: boolean) => {
+    setRegisterData(data);
+    setIsRegisterDataValid(isValid);
+  }, []);
+
+  const handleRegisterTermsChange = useCallback((accepted: boolean) => {
+    setAcceptRegisterTerms(accepted);
+    if (accepted) {
+      showToast('✓ Términos de registro aceptados', 'success');
+    }
+  }, [showToast]);
+
+  // Handlers de facturación
+  const handleVoucherTypeChange = useCallback((type: VoucherType) => {
+    setVoucherType(type);
+    showToast(`Tipo de comprobante: ${type === 'boleta' ? 'Boleta' : 'Factura'}`, 'info');
+  }, [showToast]);
+
+  const handleInvoiceDataChange = useCallback((data: InvoiceData | null, isValid: boolean) => {
+    setInvoiceData(data);
+    setIsInvoiceDataValid(isValid);
+    
+    if (data && isValid) {
+      showToast('✓ Datos de factura válidos', 'success');
+    }
+  }, [showToast]);
+
+  const handlePurchaseTermsChange = useCallback((accepted: boolean) => {
+    setAcceptPurchaseTerms(accepted);
+    if (accepted) {
+      showToast('✓ Términos de compra aceptados', 'success');
+    }
+  }, [showToast]);
+
+  // Handler para actualizar cantidad con notificación
+  const handleUpdateQuantity = useCallback((productId: number, quantity: number) => {
+    updateQuantity(productId, quantity);
+    showToast(`Cantidad actualizada: ${quantity}`, 'info');
+  }, [updateQuantity, showToast]);
+
+  // Handler para eliminar item con notificación
+  const handleRemoveItem = useCallback((productId: number) => {
+    removeItem(productId);
+    showToast('Producto eliminado del carrito', 'warning');
+  }, [removeItem, showToast]);
+
+  // Validar si se puede proceder con el pago
+  const canProceedWithPayment = useMemo(() => {
+    const hasDeliveryInfo = (method === 'home' && selectedLocationId !== null) || 
+                           (method === 'store' && selectedStoreId !== null);
+    const hasValidRegisterData = isUserRegistered || (isRegisterDataValid && acceptRegisterTerms);
+    const hasValidInvoiceData = voucherType === 'boleta' || (voucherType === 'factura' && isInvoiceDataValid);
+    
+    return hasDeliveryInfo && 
+           isPaymentFormComplete && 
+           hasValidRegisterData && 
+           hasValidInvoiceData && 
+           acceptPurchaseTerms;
+  }, [
+    method, 
+    selectedLocationId, 
+    selectedStoreId, 
+    isPaymentFormComplete, 
+    isUserRegistered, 
+    isRegisterDataValid, 
+    acceptRegisterTerms,
+    voucherType,
+    isInvoiceDataValid,
+    acceptPurchaseTerms
+  ]);
+
+  const handlePaymentComplete = async () => {
+    if (!canProceedWithPayment) {
+      // Mostrar mensajes específicos sobre qué falta
+      if (method === 'home' && selectedLocationId === null) {
+        showToast('⚠️ Selecciona una dirección de entrega', 'warning');
+        return;
+      }
+      if (method === 'store' && selectedStoreId === null) {
+        showToast('⚠️ Selecciona una tienda para recoger', 'warning');
+        return;
+      }
+      if (!isPaymentFormComplete) {
+        showToast('⚠️ Completa los datos de pago', 'warning');
+        return;
+      }
+      if (!isUserRegistered && !isRegisterDataValid) {
+        showToast('⚠️ Completa tus datos de registro', 'warning');
+        return;
+      }
+      if (!isUserRegistered && !acceptRegisterTerms) {
+        showToast('⚠️ Acepta los términos de registro', 'warning');
+        return;
+      }
+      if (voucherType === 'factura' && !isInvoiceDataValid) {
+        showToast('⚠️ Completa los datos de factura correctamente', 'warning');
+        return;
+      }
+      if (!acceptPurchaseTerms) {
+        showToast('⚠️ Acepta los términos y condiciones de compra', 'warning');
+        return;
+      }
+      
+      showToast('⚠️ Completa todos los datos requeridos', 'warning');
       return;
     }
+
+    setIsProcessing(true);
     
-    // Si está registrado, proceder con el pago
-    setShowPaymentSuccess(true);
+    try {
+      // Registrar usuario si es necesario
+      if (!isUserRegistered && registerData) {
+        showToast('Registrando usuario...', 'info');
+        
+        const result = await registerUser(
+          registerData.nombre,
+          registerData.apellido,
+          registerData.email,
+          registerData.password
+        );
+
+        if (!result.success) {
+          // Verificar si el error es por correo duplicado
+          if (result.error?.toLowerCase().includes('correo') || 
+              result.error?.toLowerCase().includes('email') ||
+              result.error?.toLowerCase().includes('ya existe') ||
+              result.error?.toLowerCase().includes('registrado')) {
+            showToast('❌ Este correo ya está registrado. Por favor usa otro correo o inicia sesión.', 'error');
+          } else {
+            showToast(`❌ Error al registrarse: ${result.error || 'Intenta de nuevo'}`, 'error');
+          }
+          setIsProcessing(false);
+          return;
+        }
+        
+        showToast('✓ Usuario registrado exitosamente', 'success');
+      }
+
+      // Preparar datos de la orden
+      const orderData: OrderData = {
+        items,
+        deliveryMethod: method,
+        deliveryLocationId: method === 'home' ? selectedLocationId : null,
+        deliveryStoreId: method === 'store' ? selectedStoreId : null,
+        paymentMethod: selectedPaymentMethod,
+        voucherType,
+        invoiceData: voucherType === 'factura' ? invoiceData : null,
+        registerData: !isUserRegistered ? registerData : null,
+      };
+
+      // TODO: Enviar orden al backend
+      console.log('📦 Orden preparada:', orderData);
+      
+      showToast('Procesando pago...', 'info');
+      
+      // Simulación de envío al backend
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      showToast('✓ ¡Pago procesado exitosamente!', 'success');
+      setShowPaymentSuccess(true);
+    } catch (error) {
+      console.error('Error en el proceso de pago:', error);
+      showToast('❌ Error al procesar el pago. Intenta de nuevo.', 'error');
+    } finally {
+      setIsProcessing(false);
+    }
   };
 
   const handleModalClose = () => {
     setShowPaymentSuccess(false);
     clearCart();
     setIsPaymentFormComplete(false);
+    showToast('Carrito limpiado. Redirigiendo a tu perfil...', 'info');
+    router.push("/profile/datos-personales");
   };
 
-  const handleRegisterClose = () => {
-    setShowRegisterModal(false);
-  };
-
+  // Carrito vacío
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <ShoppingBag className="w-24 h-24 mx-auto text-gray-300 mb-4" />
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">Tu carrito está vacío</h1>
-              <p className="text-gray-600 mb-8">Agrega productos para comenzar tu compra</p>
-              <Link
-                href="/"
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
-                Ir a comprar
-              </Link>
-            </div>
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-8">
+          <HeroBanner
+            title="Tu carrito está vacío"
+            subtitle="Agrega productos para comenzar tu compra"
+            gradient="from-gray-600 to-gray-800"
+            padding="p-12 mb-8"
+            className="relative"
+          />
+          
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <ShoppingBag className="w-24 h-24 mx-auto text-gray-300 mb-6" />
+            <Link
+              href="/"
+              className="inline-block bg-blue-600 text-white px-8 py-3 font-semibold hover:bg-blue-700 transition"
+            >
+              Ir a comprar
+            </Link>
           </div>
 
-          <div className="mt-16">
-            <ProductCarousel 
-              titulo="💎 Productos que podrían interesarte"
-              filtro="mas-vendidos"
-              cardSize="md"
-              imageAspect="portrait"
-              addToCartBehavior="always"
-            />
-          </div>
+          <ProductCarousel 
+            titulo="💎 Productos que podrían interesarte"
+            filtro="mas-vendidos"
+            cardSize="md"
+            imageAspect="portrait"
+            addToCartBehavior="always"
+          />
         </div>
       </div>
     );
   }
 
+  const hasLocationOrStore = (method === 'home' && selectedLocationId !== null) || 
+                             (method === 'store' && selectedStoreId !== null);
+
   return (
-    <div className="min-h-screen bg-gray-50 py-4 sm:py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header - Desktop */}
-        <h1 className="hidden sm:block text-2xl font-bold text-gray-900 mb-8">Mi Carrito</h1>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:py-8">
+        <HeroBanner
+          title="Mi Carrito de Compras"
+          subtitle={`${items.length} ${items.length === 1 ? 'producto' : 'productos'} en tu carrito`}
+          gradient="from-blue-600 to-blue-800"
+          padding="p-6 sm:p-8 mb-6"
+          titleClassName="text-2xl sm:text-3xl"
+          subtitleClassName="text-base sm:text-lg"
+        />
 
         <div className="flex flex-col lg:flex-row gap-6">
-          {/* Columna izquierda - Productos y Entrega */}
+          {/* Columna principal */}
           <div className="flex-1 space-y-6">
             {/* Lista de productos */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              {/* Header del vendedor */}
+            <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
               <button
                 onClick={() => setIsVendorExpanded(!isVendorExpanded)}
                 className="w-full flex items-center justify-between p-4 hover:bg-gray-50 transition"
@@ -130,28 +335,25 @@ export default function CartPage() {
                 )}
               </button>
 
-              {/* Lista de items */}
               {isVendorExpanded && (
                 <div className="border-t border-gray-200">
                   <div className="divide-y divide-gray-200">
                     {items.map((item) => (
                       <div key={item.idProducto} className="p-4">
-                        {/* Desktop */}
                         <div className="hidden sm:block">
                           <CartItemCard
                             item={item}
-                            onUpdateQuantity={(quantity) => updateQuantity(item.idProducto, quantity)}
-                            onRemove={() => removeItem(item.idProducto)}
+                            onUpdateQuantity={(quantity) => handleUpdateQuantity(item.idProducto, quantity)}
+                            onRemove={() => handleRemoveItem(item.idProducto)}
                             layout="default"
                           />
                         </div>
 
-                        {/* Mobile */}
                         <div className="sm:hidden">
                           <CartItemCard
                             item={item}
-                            onUpdateQuantity={(quantity) => updateQuantity(item.idProducto, quantity)}
-                            onRemove={() => removeItem(item.idProducto)}
+                            onUpdateQuantity={(quantity) => handleUpdateQuantity(item.idProducto, quantity)}
+                            onRemove={() => handleRemoveItem(item.idProducto)}
                             layout="compact"
                           />
                         </div>
@@ -162,13 +364,21 @@ export default function CartPage() {
               )}
             </div>
 
-            {/* Selector de método de entrega */}
+            {/* Sección de registro (solo si no está registrado) */}
+            {!isUserRegistered && (
+              <CartRegisterSection 
+                onDataChange={handleRegisterDataChange}
+                onTermsChange={handleRegisterTermsChange}
+              />
+            )}
+
+            {/* Método de entrega */}
             <DeliveryMethodSelector
               selectedMethod={method}
               onMethodChange={setMethod}
             />
 
-            {/* Selector de ubicación o tienda según el método */}
+            {/* Selector de ubicación o tienda */}
             {method === 'home' ? (
               <DeliveryLocationSelector
                 selectedLocationId={selectedLocationId}
@@ -181,17 +391,24 @@ export default function CartPage() {
               />
             )}
 
-            {/* Método de pago - solo si hay ubicación/tienda seleccionada */}
-            {((method === 'home' && selectedLocationId) || (method === 'store' && selectedStoreId)) && (
-              <PaymentMethodSelector 
-                selectedMethod={selectedPaymentMethod}
-                onMethodChange={handlePaymentMethodChange}
-                onPaymentConfirm={handlePaymentFormConfirm}
-              />
+            {/* Método de pago y términos (solo si hay ubicación/tienda seleccionada) */}
+            {hasLocationOrStore && (
+              <>
+                <PaymentMethodSelector 
+                  selectedMethod={selectedPaymentMethod}
+                  onMethodChange={handlePaymentMethodChange}
+                  onPaymentConfirm={handlePaymentFormConfirm}
+                />
+                <PurchaseTermsSection
+                  onTermsChange={handlePurchaseTermsChange}
+                  onVoucherTypeChange={handleVoucherTypeChange}
+                  onInvoiceDataChange={handleInvoiceDataChange}
+                />
+              </>
             )}
           </div>
 
-          {/* Columna derecha - Resumen - Desktop */}
+          {/* Resumen del carrito - Desktop */}
           <div className="hidden lg:block w-full lg:w-96">
             <CartSummary
               items={items}
@@ -202,11 +419,16 @@ export default function CartPage() {
               hasSelectedStore={selectedStoreId !== null}
               selectedPaymentMethod={selectedPaymentMethod}
               hasSelectedPaymentMethod={isPaymentFormComplete}
+              isUserRegistered={isUserRegistered}
+              hasRegisterData={isRegisterDataValid && (!isUserRegistered ? acceptRegisterTerms : true)}
+              hasAcceptedPurchaseTerms={acceptPurchaseTerms}
+              hasValidInvoiceData={voucherType === 'boleta' || isInvoiceDataValid}
+              isProcessing={isProcessing}
             />
           </div>
         </div>
 
-        {/* Resumen - Mobile (fixed bottom) */}
+        {/* Resumen del carrito - Mobile (fixed bottom) */}
         <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-40">
           <CartSummary
             items={items}
@@ -217,10 +439,15 @@ export default function CartPage() {
             hasSelectedStore={selectedStoreId !== null}
             selectedPaymentMethod={selectedPaymentMethod}
             hasSelectedPaymentMethod={isPaymentFormComplete}
+            isUserRegistered={isUserRegistered}
+            hasRegisterData={isRegisterDataValid && (!isUserRegistered ? acceptRegisterTerms : true)}
+            hasAcceptedPurchaseTerms={acceptPurchaseTerms}
+            hasValidInvoiceData={voucherType === 'boleta' || isInvoiceDataValid}
+            isProcessing={isProcessing}
           />
         </div>
 
-        {/* Sección de productos recomendados - Compra Rápida Horizontal */}
+        {/* Carruseles de productos relacionados */}
         <div className="mt-16">
           <ProductCarousel 
             titulo="⚡ Completa tu compra"
@@ -233,7 +460,6 @@ export default function CartPage() {
           />
         </div>
 
-        {/* Sección de ofertas */}
         <div className="mt-12 mb-8">
           <ProductCarousel 
             titulo="🔥 Ofertas que no puedes dejar pasar"
@@ -245,41 +471,24 @@ export default function CartPage() {
           />
         </div>
 
-        {/* Espaciado para el footer mobile */}
+        {/* Espaciador para mobile */}
         <div className="h-32 lg:hidden" />
       </div>
 
-      {/* Modal de pago exitoso */}
+      {/* Modal de éxito */}
       <PaymentSuccessModal
         isOpen={showPaymentSuccess}
         onClose={handleModalClose}
       />
 
-      {/* Modal de registro (solo si isUserRegistered es false) */}
-      {showRegisterModal && (
-        <div 
-          className="fixed inset-0 backdrop-blur-sm bg-white/30 flex items-center justify-center z-50 p-4"
-          onClick={handleRegisterClose}
-        >
-          <div 
-            className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Botón cerrar X */}
-            <button
-              onClick={handleRegisterClose}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
-            <RegisterModal
-              onSwitchLogin={() => {}}
-              onSwitchRecovery={() => {}}
-              onClose={handleRegisterClose}
-            />
-          </div>
-        </div>
+      {/* Toast de notificaciones */}
+      {toast.isVisible && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={hideToast}
+          duration={4000}
+        />
       )}
     </div>
   );

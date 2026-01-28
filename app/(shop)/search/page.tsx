@@ -5,6 +5,7 @@ import Link from "next/link";
 import productosData from "@/data/products.json";
 import { ProductosDataJson, Producto } from "@/interfaces/products";
 import { ProductCard } from "@/components/product/ProductCard";
+import { HeroBanner } from "@/components/shared/HeroBanner";
 
 const ITEMS_PER_PAGE = 30;
 
@@ -29,14 +30,15 @@ export default function ProductosPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Búsqueda: <span className="text-blue-600">{search}</span>
-          </h1>
-          <p className="text-gray-600">
-            {productosFiltrados.length} {productosFiltrados.length === 1 ? 'producto encontrado' : 'productos encontrados'}
-          </p>
-        </div>
+        {/* Hero Section */}
+        <HeroBanner
+          title="Resultados de Búsqueda"
+          subtitle={`${productosFiltrados.length} ${productosFiltrados.length === 1 ? 'producto encontrado' : 'productos encontrados'}`}
+          gradient="from-blue-600 to-blue-800"
+          padding="p-6 sm:p-8 mb-8"
+          titleClassName="text-2xl sm:text-3xl"
+          subtitleClassName="text-base sm:text-lg"
+        />
 
         {productosFiltrados.length === 0 && (
           <p className="text-gray-500 text-center py-12">No se encontraron productos</p>
@@ -52,7 +54,7 @@ export default function ProductosPage() {
           <div className="flex justify-center items-center mt-10 gap-4">
             <Link
               href={`/search?search=${search}&page=${Math.max(1, currentPage - 1)}`}
-              className={`px-4 py-2 rounded-lg border font-medium transition-colors ${
+              className={`px-4 py-2 border font-medium transition-colors ${
                 currentPage === 1
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
                   : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
@@ -68,7 +70,7 @@ export default function ProductosPage() {
 
             <Link
               href={`/search?search=${search}&page=${Math.min(totalPages, currentPage + 1)}`}
-              className={`px-4 py-2 rounded-lg border font-medium transition-colors ${
+              className={`px-4 py-2 border font-medium transition-colors ${
                 currentPage === totalPages
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
                   : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"

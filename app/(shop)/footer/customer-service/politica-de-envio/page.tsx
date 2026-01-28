@@ -3,8 +3,9 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import shippingDataJson from "@/data/footer/customer-service/shipping.json";
 import { ShippingData } from "@/interfaces/footer/customer-service/shipping";
-import { HeroSection, ImportantNotes, StickyNav, TruckIcon } from "../components";
+import { ImportantNotes, StickyNav, TruckIcon } from "../components";
 import { ShippingSectionCard } from "./components/ShippingSectionCard";
+import { HeroBanner } from "@/components/shared/HeroBanner";
 
 const shippingData = shippingDataJson as ShippingData;
 
@@ -52,12 +53,14 @@ export default function PoliticaDeEnvioPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <HeroSection
+        <HeroBanner
           title={shippingData.title}
           subtitle={shippingData.subtitle}
-          lastUpdated={shippingData.lastUpdated}
-          badgeText="Información de Envíos"
-          badgeIcon={badgeIcon}
+          badge={{
+            text: "Información de Envíos",
+            icon: badgeIcon
+          }}
+          padding="p-8 sm:p-12 mb-8"
         />
 
         {/* Section Navigation */}

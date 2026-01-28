@@ -3,8 +3,9 @@
 import { useState, useCallback, useMemo } from "react";
 import faqDataJson from "@/data/footer/customer-service/faq.json";
 import { FAQData } from "@/interfaces/footer/customer-service/faq";
-import { StickyNav, HeroSection, ClipboardListIcon } from "../components";
+import { StickyNav, ClipboardListIcon } from "../components";
 import { CategorySection } from "./components/CategorySection";
+import { HeroBanner } from "@/components/shared/HeroBanner";
 
 const faqData = faqDataJson as FAQData;
 
@@ -49,11 +50,14 @@ export default function PreguntasFrecuentesPage() {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <HeroSection
+        <HeroBanner
           title="Preguntas Frecuentes"
           subtitle="Encuentra respuestas a las dudas más comunes sobre pedidos, envíos, pagos y más. ¿No encuentras lo que buscas? Contáctanos."
-          badgeText="Centro de Ayuda"
-          badgeIcon={badgeIcon}
+          badge={{
+            text: "Centro de Ayuda",
+            icon: badgeIcon
+          }}
+          padding="p-8 sm:p-12 mb-8"
         />
 
         {/* Category Navigation */}

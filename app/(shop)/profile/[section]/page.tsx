@@ -9,6 +9,7 @@ import PurchaseHistoryPage from '../pages/PurchaseHistoryPage';
 import FavoritesPage from '../pages/FavoritesPage';
 import OrdersInProgressPage from '../pages/OrdersInProgressPage';
 import LocationsPage from '../pages/LocationsPage';
+import CompaniesPage from '../pages/CompaniesPage';
 
 const SECTIONS = {
   'datos-personales': {
@@ -25,6 +26,9 @@ const SECTIONS = {
   },
   'ubicaciones': {
     title: 'Mis ubicaciones',
+  },
+  'empresas': {
+    title: 'Mis empresas',
   },
 } as const;
 
@@ -65,6 +69,7 @@ export default function ProfileSectionPage() {
           {section === 'favoritos' && <FavoritesPage />}
           {section === 'pedidos' && <OrdersInProgressPage />}
           {section === 'ubicaciones' && <LocationsPage />}
+          {section === 'empresas' && <CompaniesPage />}
         </div>
       </div>
     </main>

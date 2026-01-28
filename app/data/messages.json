@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "text": "🚚 Envío gratis en compras mayores a $50"
+    },
+    {
+      "id": 2,
+      "text": "🎉 Descuento del 20% en productos seleccionados"
+    },
+    {
+      "id": 3,
+      "text": "⭐ Nuevos productos cada semana"
+    },
+    {
+      "id": 4,
+      "text": "💳 Hasta 12 cuotas sin interés"
+    },
+    {
+      "id": 5,
+      "text": "🎁 Promoción especial: 2x1 en productos seleccionados"
+    }
+  ]
+}

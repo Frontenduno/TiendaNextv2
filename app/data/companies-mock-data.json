@@ -1,0 +1,31 @@
+{
+  "companies": [
+    {
+      "id": "company-001",
+      "ruc": "20131312955",
+      "razonSocial": "TECNOLOGIA Y SERVICIOS SAC",
+      "direccionFiscal": "Av. Javier Prado Este 4200, Santiago de Surco, Lima",
+      "isDefault": true,
+      "verifiedAt": "2024-01-15T10:30:00.000Z",
+      "createdAt": "2024-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "company-002",
+      "ruc": "20517182673",
+      "razonSocial": "COMERCIAL IMPORTADORA DEL NORTE EIRL",
+      "direccionFiscal": "Jr. Los Olivos 456, La Victoria, Lima",
+      "isDefault": false,
+      "verifiedAt": "2024-02-20T14:15:00.000Z",
+      "createdAt": "2024-02-15T09:30:00.000Z"
+    },
+    {
+      "id": "company-003",
+      "ruc": "20382036655",
+      "razonSocial": "INVERSIONES Y PROYECTOS DELTA SA",
+      "direccionFiscal": "Av. Arequipa 3850, Miraflores, Lima",
+      "isDefault": false,
+      "verifiedAt": "2024-03-10T11:45:00.000Z",
+      "createdAt": "2024-03-05T16:20:00.000Z"
+    }
+  ]
+}
