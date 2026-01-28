@@ -195,7 +195,7 @@ export default function HeaderPublic() {
                   </div>
                 )}
 
-                {/* Menú de usuario autenticado */}
+                {/* Menú de usuario autenticado - SIN rounded */}
                 {isAuthenticated && user && (
                   <div 
                     className="relative"
@@ -213,7 +213,7 @@ export default function HeaderPublic() {
                     </button>
 
                     {showProfileMenu && (
-                      <div className="absolute right-0 top-full mt-0 w-52 sm:w-56 bg-white rounded-xl shadow-2xl overflow-hidden z-50 border-2 border-gray-200 animate-[fadeIn_0.2s_ease-out]">
+                      <div className="absolute right-0 top-full mt-0 w-52 sm:w-56 bg-white shadow-2xl overflow-hidden z-50 border-2 border-gray-200 animate-[fadeIn_0.2s_ease-out]">
                         <div className="px-4 py-3 bg-white border-b border-gray-200">
                           <p className="font-semibold text-sm text-blue-600">
                             ¡Hola {user.nombre}!
@@ -222,7 +222,7 @@ export default function HeaderPublic() {
                         <div className="p-3 space-y-2">
                           <Link
                             href="/profile/datos-personales"
-                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer active:scale-95"
+                            className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 transition-colors cursor-pointer active:scale-95"
                             onClick={() => setShowProfileMenu(false)}
                           >
                             <span className="text-blue-600">👤</span>
@@ -230,7 +230,7 @@ export default function HeaderPublic() {
                           </Link>
                           <Link
                             href="/profile/historial-compras"
-                            className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer active:scale-95"
+                            className="flex items-center gap-3 px-3 py-2 hover:bg-gray-50 transition-colors cursor-pointer active:scale-95"
                             onClick={() => setShowProfileMenu(false)}
                           >
                             <span className="text-blue-600">🛍️</span>
@@ -240,7 +240,7 @@ export default function HeaderPublic() {
                           </Link>
                           <button
                             onClick={handleLogout}
-                            className="w-full mt-2 px-4 py-2.5 bg-[#ef233c] hover:bg-red-700 text-white font-medium text-center transition-colors text-sm rounded-lg cursor-pointer active:scale-95"
+                            className="w-full mt-2 px-4 py-2.5 bg-[#ef233c] hover:bg-red-700 text-white font-medium text-center transition-colors text-sm cursor-pointer active:scale-95"
                           >
                             Cerrar sesión
                           </button>

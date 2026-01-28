@@ -33,13 +33,13 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         onClick={onClose}
       />
 
-      {/* Modal Container */}
-      <div className="relative z-50 w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-[fadeIn_0.3s_ease-out]">
+      {/* Modal Container - SIN rounded */}
+      <div className="relative z-50 w-full max-w-lg bg-white shadow-2xl animate-[fadeIn_0.3s_ease-out]">
         
-        {/* Botón cerrar */}
+        {/* Botón cerrar - SIN rounded */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-all duration-200"
+          className="absolute top-4 right-4 z-10 flex items-center justify-center w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 transition-all duration-200"
           aria-label="Cerrar modal"
         >
           <X className="w-5 h-5" />
