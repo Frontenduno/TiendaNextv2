@@ -26,7 +26,6 @@ export default function CompanyFormModal({ isOpen, company, onClose, onSave }: P
     handleSubmit,
     reset,
     formState: { errors, isDirty },
-    setValue,
   } = useForm<FormData>({
     resolver: zodResolver(
       invoiceDataSchema.extend({

@@ -38,13 +38,6 @@ export default function HeaderPublic() {
     router.push(`/search?search=${encodeURIComponent(searchQuery)}`);
   };
 
-  const handleProfileClick = () => {
-    if (isAuthenticated) {
-      router.push("/profile/datos-personales");
-      setShowProfileMenu(false);
-    }
-  };
-
   const handleLogout = async () => {
     await logout();
     setShowProfileMenu(false);

@@ -70,18 +70,6 @@ export function PurchaseTermsSection({
     }
   };
 
-  // Determinar si los datos de factura son válidos
-  const isInvoiceDataValid = useMemo((): boolean => {
-    if (voucherType === 'boleta') return true;
-    
-    if (selectionMode === 'saved' && selectedCompanyId) {
-      return true;
-    }
-    
-    const { isValid } = validateInvoiceData(invoiceData);
-    return isValid;
-  }, [voucherType, selectionMode, selectedCompanyId, invoiceData]);
-
   // Notificar cambios al componente padre
   useEffect(() => {
     if (voucherType === 'factura' && onInvoiceDataChange) {
