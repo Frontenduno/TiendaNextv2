@@ -70,7 +70,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       nombre: producto.nombre,
       precio: priceInfo.finalPrice,
       cantidad: 1,
-      imagen: producto.imagenes[0]?.url || '/placeholder.png',
+      imagen: producto.imagenes.principal?.url || 'https://picsum.photos/seed/placeholder/800/1000',
       color: producto.color.nombre,
       opcionAdicional: producto.opcionAdicional?.nombre,
       stockDisponible: producto.stockActual,

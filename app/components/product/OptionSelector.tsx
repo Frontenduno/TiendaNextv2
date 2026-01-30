@@ -25,7 +25,7 @@ export const OptionSelector: React.FC<OptionSelectorProps> = ({
 
   return (
     <div className="mb-6">
-      <p className="text-sm font-semibold text-gray-900 mb-3">
+      <p className="text-sm font-semibold text-gray-900 mb-3 text-left">
         {label}: {selectedOpcion?.nombre || 'Selecciona una opción'}
       </p>
       <div className="flex gap-2 flex-wrap">

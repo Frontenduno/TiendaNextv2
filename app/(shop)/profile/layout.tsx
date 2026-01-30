@@ -13,6 +13,7 @@ const SECTIONS = {
   '/profile/favoritos': 'Mis favoritos',
   '/profile/pedidos': 'Compras en proceso',
   '/profile/ubicaciones': 'Mis ubicaciones',
+  '/profile/empresas': 'Mis empresas',
 } as const;
 
 export default function ProfileLayout({ children }: { children: React.ReactNode }) {

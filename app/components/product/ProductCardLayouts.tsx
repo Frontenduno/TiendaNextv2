@@ -59,7 +59,7 @@ export const HorizontalLayout: React.FC<LayoutProps> = ({
       <Link href={`/product/${productSlug}`} className="relative w-32 flex-shrink-0">
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
-            src={producto.imagenes[0]?.url || '/placeholder.png'}
+            src={producto.imagenes.principal?.url || 'https://picsum.photos/seed/placeholder/800/1000'}
             alt={producto.nombre}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -174,7 +174,7 @@ export const VerticalLayout: React.FC<LayoutProps> = ({
       <Link href={`/product/${productSlug}`}>
         <div className={`relative ${aspectRatio} overflow-hidden bg-gray-50`}>
           <Image
-            src={producto.imagenes[0]?.url || '/placeholder.png'}
+            src={producto.imagenes.principal?.url || 'https://picsum.photos/seed/placeholder/800/1000'}
             alt={producto.nombre}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-300"

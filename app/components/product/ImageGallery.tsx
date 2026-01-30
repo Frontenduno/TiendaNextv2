@@ -3,13 +3,19 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Imagen } from '@/interfaces/products';
+import { ImagenesProducto } from '@/interfaces/products';
 
 interface ImageGalleryProps {
-  imagenes: Imagen[];
+  imagenes: ImagenesProducto;
 }
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({ imagenes }) => {
+  // ✅ Combinar imagen principal con secundarias
+  const todasLasImagenes = [
+    imagenes.principal,
+    ...(imagenes.secundarias || [])
+  ];
+
   const [selectedImage, setSelectedImage] = useState(0);
   const [loadingMain, setLoadingMain] = useState(true);
   const [loadingThumbs, setLoadingThumbs] = useState<{ [key: number]: boolean }>({});
@@ -26,8 +32,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ imagenes }) => {
           </div>
         )}
         <Image
-          src={imagenes[selectedImage]?.url || '/placeholder.png'}
-          alt={imagenes[selectedImage]?.descripcion || 'Producto'}
+          src={todasLasImagenes[selectedImage]?.url || 'https://picsum.photos/seed/placeholder/800/1000'}
+          alt={todasLasImagenes[selectedImage]?.descripcion || 'Producto'}
           fill
           className={`object-contain transition-opacity duration-300 ${
             loadingMain ? 'opacity-0' : 'opacity-100'
@@ -39,9 +45,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ imagenes }) => {
       </div>
 
       {/* Miniaturas */}
-      {imagenes.length > 1 && (
+      {todasLasImagenes.length > 1 && (
         <div className="grid grid-cols-6 gap-2">
-          {imagenes.map((imagen, index) => (
+          {todasLasImagenes.map((imagen, index) => (
             <button
               key={imagen.idImagen}
               onClick={() => {

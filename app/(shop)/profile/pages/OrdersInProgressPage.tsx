@@ -11,9 +11,22 @@ import { OrdersInProgressData, OrdenEnProceso } from '@/interfaces/orders-in-pro
 
 export default function OrdersInProgressPage() {
   const [selectedOrder, setSelectedOrder] = useState<OrdenEnProceso | null>(null);
-  
-  const data = ordersInProgressData as OrdersInProgressData;
-  const orders = data.ordenesEnProceso;
+  const [orders, setOrders] = useState<OrdenEnProceso[]>((ordersInProgressData as OrdersInProgressData).ordenesEnProceso);
+
+  const handleCancelOrder = (orderId: number) => {
+    setOrders(prevOrders =>
+      prevOrders.map(order =>
+        order.idOrden === orderId
+          ? { ...order, estado: 'cancelado' as const }
+          : order
+      )
+    );
+    
+    // Si el modal está abierto con esta orden, actualizamos también
+    if (selectedOrder?.idOrden === orderId) {
+      setSelectedOrder({ ...selectedOrder, estado: 'cancelado' as const });
+    }
+  };
 
   if (orders.length === 0) {
     return (
@@ -52,6 +65,7 @@ export default function OrdersInProgressPage() {
         <OrderDetailModal
           order={selectedOrder}
           onClose={() => setSelectedOrder(null)}
+          onCancelOrder={handleCancelOrder}
         />
       )}
     </>

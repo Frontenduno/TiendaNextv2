@@ -36,7 +36,7 @@ export interface OrdenEnProceso {
   idOrden: number;
   numeroOrden: string;
   fecha: string;
-  estado: 'procesando' | 'en_camino';
+  estado: 'procesando' | 'en_camino' | 'cancelado';
   total: number;
   subtotal: number;
   envio: number;

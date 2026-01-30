@@ -31,6 +31,12 @@ export interface Imagen {
   descripcion: string;
 }
 
+// ✅ NUEVA INTERFAZ para la estructura de imágenes
+export interface ImagenesProducto {
+  principal: Imagen;
+  secundarias: Imagen[];
+}
+
 export interface Etiqueta {
   idEtiqueta: number;
   descripcion: string;
@@ -63,7 +69,7 @@ export interface Producto {
   categorias: Categoria[];
   etiquetas: Etiqueta[];
   especificaciones: Especificacion[];
-  imagenes: Imagen[];
+  imagenes: ImagenesProducto;
   color: OpcionVariante;
   opcionAdicional: OpcionVariante | null;
   tipoOpcionAdicional: string | null;

@@ -118,7 +118,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
       nombre: producto.nombre,
       precio: priceInfo.finalPrice,
       cantidad: quantity,
-      imagen: producto.imagenes[0]?.url || '/placeholder.png',
+      imagen: producto.imagenes.principal?.url || 'https://picsum.photos/seed/placeholder/800/1000',
       color: producto.color.nombre,
       opcionAdicional: producto.opcionAdicional?.nombre,
       stockDisponible: producto.stockActual,
@@ -133,7 +133,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
   };
 
   return (
-    <div className={`w-full text-left transition-opacity duration-200 ${isPending ? 'opacity-50' : 'opacity-100'}`}>
+    <div className={`w-full transition-opacity duration-200 ${isPending ? 'opacity-50' : 'opacity-100'}`}>
       <p className="text-gray-600 mb-1 text-left">{producto.marca.nombre}</p>
       <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 text-left">{producto.nombre}</h1>
 
@@ -154,7 +154,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
         Vendido por <span className="text-green-600 font-semibold">Falabella</span>
       </p>
 
-      <div className="mb-6 text-left">
+      <div className="mb-6">
         {priceInfo.hasDiscount ? (
           <>
             <div className="flex items-center gap-2 mb-1">
@@ -165,7 +165,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
                 -{priceInfo.discountPercentage}%
               </span>
             </div>
-            <p className="text-base sm:text-lg text-gray-500 line-through">
+            <p className="text-base sm:text-lg text-gray-500 line-through text-left">
               S/ {priceInfo.originalPrice.toFixed(2)}
             </p>
           </>
@@ -180,35 +180,34 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
         <p className="text-green-600 font-semibold mb-6 text-left">{producto.mensajeEnvio}</p>
       )}
 
-      <div className="text-left">
-        <OptionSelector
-          label="Color"
-          opciones={coloresDisponibles}
-          selectedOpcion={producto.color}
-          onOpcionChange={handleColorChange}
-          tipo="color"
-          disabled={isPending}
-        />
-      </div>
+      <OptionSelector
+        label="Color"
+        opciones={coloresDisponibles}
+        selectedOpcion={producto.color}
+        onOpcionChange={handleColorChange}
+        tipo="color"
+        disabled={isPending}
+      />
 
       {producto.tipoOpcionAdicional && opcionesAdicionalesDisponibles.length > 0 && (
-        <div className="text-left">
-          <OptionSelector
-            label={producto.tipoOpcionAdicional}
-            opciones={opcionesAdicionalesDisponibles}
-            selectedOpcion={producto.opcionAdicional}
-            onOpcionChange={handleOpcionAdicionalChange}
-            tipo="text"
-            disabled={isPending}
-          />
-        </div>
+        <OptionSelector
+          label={producto.tipoOpcionAdicional}
+          opciones={opcionesAdicionalesDisponibles}
+          selectedOpcion={producto.opcionAdicional}
+          onOpcionChange={handleOpcionAdicionalChange}
+          tipo="text"
+          disabled={isPending}
+        />
       )}
 
-      <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+      {/* Especificaciones destacadas - Diseño mejorado según referencia */}
+      <div className="space-y-4 mb-6">
         {producto.especificaciones.slice(0, 4).map((spec, index) => (
-          <div key={index} className="text-left">
-            <p className="text-xs sm:text-sm text-gray-600">{spec.nombre}:</p>
-            <p className="text-sm sm:text-base font-semibold text-gray-900">{spec.valor}</p>
+          <div key={index} className="border-b border-gray-200 pb-3">
+            <p className="text-xs sm:text-sm text-gray-700 mb-1 text-left">{spec.nombre}:</p>
+            <p className="text-sm sm:text-base text-gray-900 leading-relaxed text-left">
+              {spec.valor}
+            </p>
           </div>
         ))}
       </div>
@@ -220,15 +219,17 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
             <button
               onClick={() => handleQuantityChange(-1)}
               disabled={quantity <= 1 || isPending}
-              className="px-4 py-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-900"
+              className="px-4 py-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-900 transition-colors"
             >
               -
             </button>
-            <span className="px-6 py-2 border-x border-gray-300 text-gray-900">{quantity}</span>
+            <span className="px-6 py-2 border-x border-gray-300 text-gray-900 min-w-[60px] text-center">
+              {quantity}
+            </span>
             <button
               onClick={() => handleQuantityChange(1)}
               disabled={quantity >= producto.stockActual || isPending}
-              className="px-4 py-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-900"
+              className="px-4 py-2 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed text-gray-900 transition-colors"
             >
               +
             </button>
@@ -239,7 +240,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
           <button
             onClick={handleAddToCart}
             disabled={isPending}
-            className="flex-1 bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-700 transition flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 bg-gray-900 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ShoppingCart className="w-5 h-5" />
             <span className="hidden sm:inline">Agregar al Carro</span>
@@ -257,8 +258,8 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
       <div className="space-y-3 border-t border-gray-200 pt-4">
         <div className="flex items-center gap-3">
           <Store className="w-5 h-5 text-gray-600 flex-shrink-0" />
-          <span className="text-sm text-gray-900">
-            Stock disponible: {producto.stockActual} unidades
+          <span className="text-sm text-gray-900 text-left">
+            Stock disponible: <span className="font-medium">{producto.stockActual} unidades</span>
           </span>
         </div>
 
@@ -267,9 +268,9 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
             <Truck className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                <span className="text-sm text-gray-900">Despacho a domicilio</span>
+                <span className="text-sm text-gray-900 text-left">Despacho a domicilio</span>
                 {producto.tiempoEnvio && (
-                  <span className="text-green-600 text-sm font-medium">{producto.tiempoEnvio}</span>
+                  <span className="text-green-600 text-sm font-medium text-left">{producto.tiempoEnvio}</span>
                 )}
               </div>
             </div>
@@ -281,8 +282,8 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
             <Package className="w-5 h-5 text-gray-600 flex-shrink-0 mt-0.5" />
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                <span className="text-sm text-gray-900">Retira tu compra</span>
-                <span className="text-green-600 text-sm font-medium">Disponible para retiro</span>
+                <span className="text-sm text-gray-900 text-left">Retira tu compra</span>
+                <span className="text-green-600 text-sm font-medium text-left">Disponible para retiro</span>
               </div>
             </div>
           </div>
@@ -291,7 +292,7 @@ export const ProductInfo: React.FC<ProductInfoProps> = ({ producto }) => {
         {!producto.disponibleEnvio && !producto.disponibleRecojo && (
           <div className="flex items-center gap-3">
             <Package className="w-5 h-5 text-gray-600 flex-shrink-0" />
-            <span className="text-sm text-gray-600">Solo disponible en línea</span>
+            <span className="text-sm text-gray-600 text-left">Solo disponible en línea</span>
           </div>
         )}
       </div>

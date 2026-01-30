@@ -7,7 +7,7 @@
       "precioBase": 1499.99,
       "precioDescuento": 1299.99,
       "stockActual": 15,
-      "detalle": "Diseño de titanio, pantalla Super Retina XDR de 6.7 pulgadas.",
+      "detalle": "Diseño de titanio con estructura aeroespacial, pantalla Super Retina XDR de 6.7 pulgadas con ProMotion hasta 120Hz, sistema de cámaras profesionales con teleobjetivo 5x, Action Button personalizable y puerto USB-C con velocidad USB 3.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
@@ -16,54 +16,430 @@
       "mensajeEnvio": "Envío gratis",
       "calificacion": 4.9,
       "totalReviews": 18,
-      "genero": { "idGenero": 3, "nombre": "Mujer" },
-      "marca": { "idMarca": 75, "nombre": "Evening Star" },
-      "coleccion": { "idColeccion": 4, "nombre": "Invierno 2024" },
-      "categorias": [{ "idCategoria": 223, "nombre": "Vestidos de Noche" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "Material", "valor": "Terciopelo" }],
-      "imagenes": [{ "idImagen": 170, "url": "https://picsum.photos/seed/dress/800/1000", "descripcion": "Modelo" }],
-      "color": { "id": 70, "nombre": "Vino", "valor": "#800000" },
-      "opcionAdicional": { "id": 12, "nombre": "M", "valor": "M" },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [225]
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 101,
+          "nombre": "iPhone"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Procesador",
+          "valor": "Apple A17 Pro chip de 3nm, CPU 6 núcleos, GPU 6 núcleos, Neural Engine 16 núcleos"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "Super Retina XDR OLED 6.7\" (2796 x 1290px) 460 ppi, ProMotion 1-120Hz, HDR, True Tone, 2000 nits pico"
+        },
+        {
+          "nombre": "Cámaras",
+          "valor": "Principal 48MP f/1.78 | Ultra Wide 12MP f/2.2 120° | Teleobjetivo 12MP f/2.8 zoom óptico 5x | Frontal 12MP f/1.9 TrueDepth"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "valor": "256GB NVMe (opciones: 256GB/512GB/1TB)"
+        },
+        {
+          "nombre": "Memoria RAM",
+          "valor": "8GB LPDDR5"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "4422 mAh, hasta 29h reproducción video, carga USB-C PD 27W, MagSafe 15W, Qi 7.5W"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "5G (sub-6 GHz y mmWave), WiFi 6E, Bluetooth 5.3, UWB chip U2, NFC, GPS dual"
+        },
+        {
+          "nombre": "Sistema Operativo",
+          "valor": "iOS 17 (actualizable a iOS 18)"
+        },
+        {
+          "nombre": "Resistencia",
+          "valor": "IP68 (6m hasta 30min), Ceramic Shield, marco titanio grado 5"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "159.9 x 76.7 x 8.25 mm"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "221 gramos"
+        },
+        {
+          "nombre": "Características adicionales",
+          "valor": "Action Button, Dynamic Island, Face ID, Dolby Vision, Dolby Atmos, Emergency SOS vía satélite, Detección de choques"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 170,
+          "url": "https://picsum.photos/seed/iphone15pro/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 171,
+            "url": "https://picsum.photos/seed/iphone15pro-back/800/1000",
+            "descripcion": "Vista trasera"
+          },
+          {
+            "idImagen": 172,
+            "url": "https://picsum.photos/seed/iphone15pro-side/800/1000",
+            "descripcion": "Vista lateral"
+          },
+          {
+            "idImagen": 173,
+            "url": "https://picsum.photos/seed/iphone15pro-camera/800/1000",
+            "descripcion": "Detalle cámaras"
+          }
+        ]
+      },
+      "color": {
+        "id": 70,
+        "nombre": "Titanio Natural",
+        "valor": "#8B8680"
+      },
+      "opcionAdicional": {
+        "id": 12,
+        "nombre": "256GB",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": [
+        112,
+        133
+      ]
+    },
+    {
+      "idProducto": 121,
+      "nombre": "ASUS ROG Strix G16 (2024)",
+      "descripcion": "Laptop gaming de alto rendimiento con pantalla ROG Nebula Display",
+      "precioBase": 1899.99,
+      "precioDescuento": 1699.99,
+      "stockActual": 8,
+      "detalle": "Potencia gaming extrema con procesador Intel Core i9-13980HX de 13ª generación (24 núcleos, hasta 5.6 GHz), GPU NVIDIA GeForce RTX 4070 con 8GB GDDR6 y 140W TGP, pantalla ROG Nebula Display de 16 pulgadas WQXGA (2560x1600) 16:10 con 240Hz y 3ms, 100% DCI-P3, tecnología de enfriamiento Tri-Fan con metal líquido Conductonaut Extreme en CPU y GPU, teclado RGB por tecla con tecnología Overstroke, MUX Switch con NVIDIA Advanced Optimus, 4 altavoces con Dolby Atmos, batería de 90Wh, Wi-Fi 6E, iluminación RGB envolvente personalizable. Diseño Eclipse Gray con acabados premium ROG.",
+      "esReservio": false,
+      "esFavorito": true,
+      "disponibleRecojo": true,
+      "disponibleEnvio": true,
+      "tiempoEnvio": "Llega en 3 días",
+      "mensajeEnvio": "Envío gratis",
+      "calificacion": 4.9,
+      "totalReviews": 187,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 5,
+        "nombre": "ASUS"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 121,
+          "nombre": "Laptops Gaming"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        },
+        {
+          "idEtiqueta": 3,
+          "descripcion": "Oferta"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Procesador",
+          "valor": "Intel Core i9-13980HX (24 núcleos: 8P+16E, hasta 5.6GHz, 36MB Cache L3, TDP 55W base / 157W turbo)"
+        },
+        {
+          "nombre": "GPU",
+          "valor": "NVIDIA GeForce RTX 4070 Laptop 8GB GDDR6 (140W TGP con Dynamic Boost, 4608 CUDA cores, Ray Tracing 3rd Gen, DLSS 3)"
+        },
+        {
+          "nombre": "Memoria RAM",
+          "valor": "32GB DDR5-5600MHz (2x16GB SO-DIMM, dual channel, ampliable hasta 64GB)"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "valor": "1TB NVMe PCIe Gen 4.0 SSD M.2 2280 (hasta 7000 MB/s lectura, ranura adicional disponible)"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "16\" ROG Nebula Display WQXGA (2560x1600) 16:10, IPS 240Hz 3ms, 100% DCI-P3, 500 nits, G-SYNC, Dolby Vision, Adaptive Sync"
+        },
+        {
+          "nombre": "Sistema de refrigeración",
+          "valor": "Tri-Fan Technology + Arc Flow Fans, 4 salidas, 6 heat pipes, Metal Líquido Conductonaut Extreme en CPU y GPU, polvo anti-dust tunnel"
+        },
+        {
+          "nombre": "Teclado",
+          "valor": "RGB Aura Sync por tecla, switches Overstroke (1.7mm travel), teclas WASD destacadas, Numpad dedicado"
+        },
+        {
+          "nombre": "Audio",
+          "valor": "4 altavoces (2 woofers + 2 tweeters), Smart Amp, Dolby Atmos, Hi-Res Audio, Two-Way AI Noise Cancelation"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "WiFi 6E (802.11ax), Bluetooth 5.3, RJ45 LAN 2.5Gb"
+        },
+        {
+          "nombre": "Puertos",
+          "valor": "1x Thunderbolt 4 (40Gbps, DP 1.4, PD 3.0), 2x USB 3.2 Gen 2 Type-A, 1x USB 3.2 Gen 2 Type-C, HDMI 2.1 (4K 120Hz), 3.5mm combo, RJ45"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "90Wh 4-cell Li-ion, carga rápida 100% en 2h con adaptador 280W, hasta 8h uso mixto"
+        },
+        {
+          "nombre": "Cámara web",
+          "valor": "720p HD con privacy shutter físico"
+        },
+        {
+          "nombre": "Sistema Operativo",
+          "valor": "Windows 11 Home (actualizable a Pro)"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "354 x 264 x 22.6~31.2 mm"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "2.5 kg"
+        },
+        {
+          "nombre": "Características especiales",
+          "valor": "MUX Switch, NVIDIA Advanced Optimus, Armoury Crate software, GameFirst VI, ROG Aura Sync RGB, ROG RangeBoost"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 30,
+          "url": "https://picsum.photos/seed/rog-main/800/1000",
+          "descripcion": "Vista frontal abierta"
+        },
+        "secundarias": [
+          {
+            "idImagen": 31,
+            "url": "https://picsum.photos/seed/rog-top/800/1000",
+            "descripcion": "Vista superior cerrada"
+          },
+          {
+            "idImagen": 32,
+            "url": "https://picsum.photos/seed/rog-keyboard/800/1000",
+            "descripcion": "Detalle teclado RGB"
+          },
+          {
+            "idImagen": 33,
+            "url": "https://picsum.photos/seed/rog-ports/800/1000",
+            "descripcion": "Puertos laterales"
+          },
+          {
+            "idImagen": 34,
+            "url": "https://picsum.photos/seed/rog-screen/800/1000",
+            "descripcion": "Pantalla encendida gaming"
+          }
+        ]
+      },
+      "color": {
+        "id": 6,
+        "nombre": "Eclipse Gray",
+        "valor": "#333333"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "32GB RAM / 1TB SSD",
+        "valor": "32GB/1TB"
+      },
+      "tipoOpcionAdicional": "Configuración",
+      "productosRelacionados": [
+        155,
+        157,
+        701
+      ]
     },
     {
       "idProducto": 241,
-      "nombre": "Bolso Cuero Minimal",
-      "descripcion": "Bolso de mano cuero legítimo",
-      "precioBase": 120.00,
-      "precioDescuento": null,
-      "stockActual": 12,
-      "detalle": "Diseño estructurado con acabados dorados.",
+      "nombre": "Mochila Lenovo B210 15.6\"",
+      "descripcion": "Mochila casual para laptop con diseño minimalista",
+      "precioBase": 29.99,
+      "precioDescuento": 24.99,
+      "stockActual": 45,
+      "detalle": "Mochila casual diseñada para laptops de hasta 15.6 pulgadas, fabricada con tela resistente al agua que protege tus dispositivos de lluvia ligera. Diseño limpio y elegante perfecto para el uso diario, la oficina o la universidad. Compartimento acolchado principal para laptop que se adapta cómodamente a equipos de hasta 15.6', múltiples bolsillos internos organizadores para accesorios como mouse, cables, cargador y auriculares. Bolsillo frontal de acceso rápido para objetos pequeños, compartimento principal espacioso para libros, documentos y artículos personales. Correas ajustables acolchadas para mayor comodidad, panel trasero con diseño ergonómico para transpiración. Peso ligero de solo 400 gramos. Dimensiones: 42cm alto x 30cm ancho x 14cm profundidad.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
       "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.7,
-      "totalReviews": 40,
-      "genero": { "idGenero": 3, "nombre": "Mujer" },
-      "marca": { "idMarca": 80, "nombre": "Prada Style" },
-      "coleccion": { "idColeccion": 8, "nombre": "Accesorios 24" },
-      "categorias": [{ "idCategoria": 241, "nombre": "Bolsos" }],
-      "etiquetas": [{ "idEtiqueta": 6, "descripcion": "Elegante" }],
-      "especificaciones": [{ "nombre": "Origen", "valor": "Cuero vacuno" }],
-      "imagenes": [{ "idImagen": 180, "url": "https://picsum.photos/seed/bag/800/1000", "descripcion": "Bolso" }],
-      "color": { "id": 75, "nombre": "Camel", "valor": "#C19A6B" },
+      "mensajeEnvio": "Envío gratis",
+      "calificacion": 4.5,
+      "totalReviews": 523,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 110,
+        "nombre": "Lenovo"
+      },
+      "coleccion": {
+        "idColeccion": 10,
+        "nombre": "Accesorios 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 241,
+          "nombre": "Mochilas para Laptop"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        },
+        {
+          "idEtiqueta": 3,
+          "descripcion": "Oferta"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Compatibilidad",
+          "valor": "Laptops hasta 15.6 pulgadas (39.6cm diagonal)"
+        },
+        {
+          "nombre": "Material exterior",
+          "valor": "Poliéster 600D resistente al agua con recubrimiento hidrofóbico DWR"
+        },
+        {
+          "nombre": "Material interior",
+          "valor": "Forro de nylon suave anti-rasguños"
+        },
+        {
+          "nombre": "Acolchado",
+          "valor": "Espuma EVA 10mm en compartimento laptop, 5mm en panel trasero y correas"
+        },
+        {
+          "nombre": "Compartimentos",
+          "valor": "1 principal (laptop), 1 frontal organizador, 2 laterales para botellas, 1 oculto trasero anti-robo"
+        },
+        {
+          "nombre": "Bolsillos internos",
+          "valor": "6 organizadores: tablet, cables, mouse, tarjetas, bolígrafos, accesorios"
+        },
+        {
+          "nombre": "Dimensiones externas",
+          "valor": "42 x 30 x 14 cm (Alto x Ancho x Profundo)"
+        },
+        {
+          "nombre": "Dimensiones compartimento laptop",
+          "valor": "37 x 26 x 3 cm"
+        },
+        {
+          "nombre": "Capacidad",
+          "valor": "15 litros"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "400 gramos (vacía)"
+        },
+        {
+          "nombre": "Carga máxima",
+          "valor": "5 kg"
+        },
+        {
+          "nombre": "Correas",
+          "valor": "Ajustables 40-90cm, ancho 5cm, acolchadas transpirables con malla"
+        },
+        {
+          "nombre": "Panel trasero",
+          "valor": "Sistema Air-Flow con canales de ventilación"
+        },
+        {
+          "nombre": "Cremalleras",
+          "valor": "YKK #5 bidireccionales auto-reparables"
+        },
+        {
+          "nombre": "Características adicionales",
+          "valor": "Asa superior reforzada, ojal para candado, reflectantes para seguridad nocturna"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "12 meses del fabricante"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 180,
+          "url": "https://picsum.photos/seed/lenovo-bag/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 181,
+            "url": "https://picsum.photos/seed/lenovo-bag-open/800/1000",
+            "descripcion": "Vista abierta compartimentos"
+          },
+          {
+            "idImagen": 182,
+            "url": "https://picsum.photos/seed/lenovo-bag-side/800/1000",
+            "descripcion": "Vista lateral"
+          },
+          {
+            "idImagen": 183,
+            "url": "https://picsum.photos/seed/lenovo-bag-back/800/1000",
+            "descripcion": "Panel trasero ergonómico"
+          }
+        ]
+      },
+      "color": {
+        "id": 30,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
-      "productosRelacionados": [242]
+      "productosRelacionados": [
+        121,
+        501
+      ]
     },
     {
       "idProducto": 245,
-      "nombre": "Ray-Ban Aviator",
-      "descripcion": "Lentes de sol clásicos",
-      "precioBase": 160.00,
+      "nombre": "Ray-Ban Aviator Classic",
+      "descripcion": "Lentes de sol icónicos estilo aviador",
+      "precioBase": 160,
       "precioDescuento": null,
       "stockActual": 20,
-      "detalle": "Protección UV total y montura metálica dorada.",
+      "detalle": "Diseño atemporal de aviador creado en 1937, montura metálica dorada de alta calidad con acabado pulido, lentes de cristal genuino G-15 que ofrecen 100% protección UV, bloquean 85% de la luz visible y filtran el 100% de los rayos UVA/UVB dañinos. Almohadillas nasales ajustables para máximo confort, varillas delgadas con puntas confortables, incluye estuche rígido protector y paño de limpieza de microfibra. Medidas: 58mm ancho de lente, 14mm puente, 135mm varillas.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
@@ -72,222 +448,140 @@
       "mensajeEnvio": null,
       "calificacion": 4.8,
       "totalReviews": 500,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 85, "nombre": "Ray-Ban" },
-      "coleccion": { "idColeccion": 7, "nombre": "Clásicos" },
-      "categorias": [{ "idCategoria": 245, "nombre": "Lentes de Sol" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Filtro", "valor": "G-15" }],
-      "imagenes": [{ "idImagen": 190, "url": "https://picsum.photos/seed/sunglasses/800/1000", "descripcion": "Frontal" }],
-      "color": { "id": 80, "nombre": "Dorado/Verde", "valor": "#DAA520" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 85,
+        "nombre": "Ray-Ban"
+      },
+      "coleccion": {
+        "idColeccion": 7,
+        "nombre": "Clásicos"
+      },
+      "categorias": [
+        {
+          "idCategoria": 245,
+          "nombre": "Lentes de Sol"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Modelo",
+          "valor": "RB3025 Aviator Classic"
+        },
+        {
+          "nombre": "Material montura",
+          "valor": "Metal dorado oro pulido de alta calidad"
+        },
+        {
+          "nombre": "Material lentes",
+          "valor": "Cristal mineral genuino (Crystal Green G-15)"
+        },
+        {
+          "nombre": "Protección UV",
+          "valor": "100% UVA/UVB (Categoría 3 filtro)"
+        },
+        {
+          "nombre": "Transmisión luz",
+          "valor": "15% (bloquea 85% luz visible)"
+        },
+        {
+          "nombre": "Forma",
+          "valor": "Aviador clásico gota (Teardrop)"
+        },
+        {
+          "nombre": "Tamaño lente",
+          "valor": "58mm ancho x 50mm alto"
+        },
+        {
+          "nombre": "Puente nasal",
+          "valor": "14mm con almohadillas ajustables de silicona"
+        },
+        {
+          "nombre": "Longitud varillas",
+          "valor": "135mm con terminales de goma"
+        },
+        {
+          "nombre": "Ancho total",
+          "valor": "130mm (frente completo)"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "31 gramos"
+        },
+        {
+          "nombre": "Bisagras",
+          "valor": "Tornillos de metal reforzados (no flex)"
+        },
+        {
+          "nombre": "Tratamiento lentes",
+          "valor": "Anti-reflejo en superficie interna"
+        },
+        {
+          "nombre": "Tallas disponibles",
+          "valor": "55mm, 58mm (medium), 62mm (large)"
+        },
+        {
+          "nombre": "Incluye",
+          "valor": "Estuche rígido Ray-Ban, funda de cuero marrón, paño microfibra, tarjeta autenticidad"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "24 meses contra defectos de fabricación"
+        },
+        {
+          "nombre": "Origen",
+          "valor": "Fabricado en Italia"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 190,
+          "url": "https://picsum.photos/seed/rayban/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 191,
+            "url": "https://picsum.photos/seed/rayban-worn/800/1000",
+            "descripcion": "Modelo usando"
+          },
+          {
+            "idImagen": 192,
+            "url": "https://picsum.photos/seed/rayban-case/800/1000",
+            "descripcion": "Con estuche"
+          }
+        ]
+      },
+      "color": {
+        "id": 80,
+        "nombre": "Dorado/Verde",
+        "valor": "#DAA520"
+      },
+      "opcionAdicional": {
+        "id": 58,
+        "nombre": "58mm",
+        "valor": "58mm"
+      },
+      "tipoOpcionAdicional": "Talla",
       "productosRelacionados": []
-    },
-    {
-      "idProducto": 318,
-      "nombre": "Ropero Nordik 4 Puertas",
-      "descripcion": "Ropero de madera estilo nórdico",
-      "precioBase": 450.00,
-      "precioDescuento": null,
-      "stockActual": 2,
-      "detalle": "Gran capacidad con espejos internos incluidos.",
-      "esReservio": true,
-      "esFavorito": false,
-      "disponibleRecojo": false,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "10 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.3,
-      "totalReviews": 8,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 30, "nombre": "EcoHome" },
-      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
-      "categorias": [{ "idCategoria": 318, "nombre": "Roperos" }],
-      "etiquetas": [{ "idEtiqueta": 8, "descripcion": "Armado incluido" }],
-      "especificaciones": [{ "nombre": "Puertas", "valor": "4" }],
-      "imagenes": [{ "idImagen": 200, "url": "https://picsum.photos/seed/wardrobe/800/1000", "descripcion": "Abierto" }],
-      "color": { "id": 10, "nombre": "Blanco/Madera", "valor": "#F5F5F5" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [316]
-    },
-    {
-      "idProducto": 115,
-      "nombre": "Motorola Edge 40",
-      "descripcion": "Smartphone con pantalla curva 144Hz",
-      "precioBase": 699.00,
-      "precioDescuento": 599.00,
-      "stockActual": 18,
-      "detalle": "Resistencia al agua IP68 y carga ultra rápida.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.4,
-      "totalReviews": 85,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 90, "nombre": "Motorola" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 115, "nombre": "Motorola" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Carga", "valor": "68W TurboPower" }],
-      "imagenes": [{ "idImagen": 210, "url": "https://picsum.photos/seed/moto/800/1000", "descripcion": "Frontal" }],
-      "color": { "id": 85, "nombre": "Viva Magenta", "valor": "#BB2649" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [199]
-    },
-    {
-      "idProducto": 199,
-      "nombre": "Motorola Edge 40",
-      "descripcion": "Smartphone con pantalla curva 144Hz",
-      "precioBase": 699.00,
-      "precioDescuento": 599.00,
-      "stockActual": 18,
-      "detalle": "Resistencia al agua IP68 y carga ultra rápida.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.4,
-      "totalReviews": 85,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 90, "nombre": "Motorola" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 115, "nombre": "Motorola" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Carga", "valor": "68W TurboPower" }],
-      "imagenes": [{ "idImagen": 210, "url": "https://picsum.photos/seed/moto/800/1000", "descripcion": "Frontal" }],
-      "color": { "id": 88, "nombre": "Rojo", "valor": "#FF000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [115]
-    },
-    {
-      "idProducto": 133,
-      "nombre": "Cargador Baseus 100W",
-      "descripcion": "Cargador GaN 4 puertos",
-      "precioBase": 55.00,
-      "precioDescuento": null,
-      "stockActual": 100,
-      "detalle": "Carga laptops y celulares simultáneamente.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "mensajeEnvio": null,
-      "calificacion": 4.9,
-      "totalReviews": 400,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 95, "nombre": "Baseus" },
-      "coleccion": { "idColeccion": 2, "nombre": "Power" },
-      "categorias": [{ "idCategoria": 133, "nombre": "Cargadores Rápidos" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Puertos", "valor": "2 USB-C / 2 USB-A" }],
-      "imagenes": [{ "idImagen": 220, "url": "https://picsum.photos/seed/charger/800/1000", "descripcion": "Cargador" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [135]
-    },
-    {
-      "idProducto": 155,
-      "nombre": "Teclado Razer BlackWidow V4",
-      "descripcion": "Teclado mecánico gaming RGB",
-      "precioBase": 189.00,
-      "precioDescuento": null,
-      "stockActual": 14,
-      "detalle": "Switches mecánicos amarillos silenciosos.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.8,
-      "totalReviews": 210,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 100, "nombre": "Razer" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 155, "nombre": "Teclados Mecánicos" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "Switch", "valor": "Yellow Mechanical" }],
-      "imagenes": [{ "idImagen": 230, "url": "https://picsum.photos/seed/razer/800/1000", "descripcion": "Teclado" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [156, 157]
-    },
-    {
-      "idProducto": 235,
-      "nombre": "Body Algodón Orgánico",
-      "descripcion": "Pack de 3 bodies para bebés",
-      "precioBase": 30.00,
-      "precioDescuento": 25.00,
-      "stockActual": 60,
-      "detalle": "Hipoalergénico y suave para la piel del bebé.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "mensajeEnvio": "Envío gratis",
-      "calificacion": 4.9,
-      "totalReviews": 95,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 105, "nombre": "BabySoft" },
-      "coleccion": { "idColeccion": 9, "nombre": "Bebés 24" },
-      "categorias": [{ "idCategoria": 235, "nombre": "Bebés" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Tallas", "valor": "0-12 meses" }],
-      "imagenes": [{ "idImagen": 240, "url": "https://picsum.photos/seed/baby/800/1000", "descripcion": "Pack" }],
-      "color": { "id": 90, "nombre": "Pastel Mix", "valor": "#FFB6C1" },
-      "opcionAdicional": { "id": 1, "nombre": "3-6m", "valor": "3-6m" },
-      "tipoOpcionAdicional": "Edad",
-      "productosRelacionados": []
-    },
-    {
-      "idProducto": 313,
-      "nombre": "Mesa de Centro Industrial",
-      "descripcion": "Madera recuperada y hierro",
-      "precioBase": 140.00,
-      "precioDescuento": null,
-      "stockActual": 7,
-      "detalle": "Estilo rústico moderno para salas.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "3 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.4,
-      "totalReviews": 22,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 30, "nombre": "EcoHome" },
-      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
-      "categorias": [{ "idCategoria": 313, "nombre": "Mesas de Centro" }],
-      "etiquetas": [{ "idEtiqueta": 7, "descripcion": "Hecho a mano" }],
-      "especificaciones": [{ "nombre": "Material", "valor": "Roble y Acero" }],
-      "imagenes": [{ "idImagen": 250, "url": "https://picsum.photos/seed/table/800/1000", "descripcion": "Mesa" }],
-      "color": { "id": 95, "nombre": "Roble Oscuro", "valor": "#5C4033" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [311]
     },
     {
       "idProducto": 112,
       "nombre": "Samsung Galaxy S24 Ultra",
-      "descripcion": "IA integrada y cámara de 200MP",
-      "precioBase": 1350.00,
-      "precioDescuento": 1199.00,
+      "descripcion": "Smartphone flagship con IA integrada y S-Pen",
+      "precioBase": 1350,
+      "precioDescuento": 1199,
       "stockActual": 10,
-      "detalle": "Incluye S-Pen y pantalla Dynamic AMOLED 2X de 120Hz.",
+      "detalle": "El smartphone más avanzado de Samsung con Galaxy AI integrada para traducción en tiempo real, edición de fotos con IA y asistente inteligente. Cámara principal de 200MP con zoom óptico 5x y zoom espacial 100x, procesador Snapdragon 8 Gen 3 optimizado para Galaxy, pantalla Dynamic AMOLED 2X de 6.8 pulgadas QHD+ con 120Hz adaptativo, S-Pen incluido con latencia ultra baja, batería de 5000mAh con carga rápida 45W, marco de titanio ultra resistente, certificación IP68, 12GB RAM y hasta 1TB de almacenamiento.",
       "esReservio": false,
       "esFavorito": true,
       "disponibleRecojo": true,
@@ -296,70 +590,323 @@
       "mensajeEnvio": null,
       "calificacion": 4.8,
       "totalReviews": 150,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 2, "nombre": "Samsung" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 112, "nombre": "Samsung Galaxy" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Procesador", "valor": "Snapdragon 8 Gen 3" }],
-      "imagenes": [{ "idImagen": 20, "url": "https://picsum.photos/seed/s24u/800/1000", "descripcion": "Vista lateral" }],
-      "color": { "id": 5, "nombre": "Titanium Black", "valor": "#222222" },
-      "opcionAdicional": { "id": 2, "nombre": "512GB", "valor": "512GB" },
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 2,
+        "nombre": "Samsung"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 112,
+          "nombre": "Samsung Galaxy"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        },
+        {
+          "idEtiqueta": 3,
+          "descripcion": "Oferta"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Procesador",
+          "valor": "Qualcomm Snapdragon 8 Gen 3 for Galaxy (4nm), CPU Octa-core (1x3.39GHz Cortex-X4 + 3x3.1GHz + 2x2.9GHz + 2x2.2GHz), GPU Adreno 750"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "Dynamic AMOLED 2X 6.8\" (3088 x 1440px QHD+) 505ppi, 120Hz adaptativo 1-120Hz, Corning Gorilla Armor, 2600 nits pico, Vision Booster, HDR10+"
+        },
+        {
+          "nombre": "Cámara principal",
+          "valor": "200MP f/1.7 OIS (sensor ISOCELL HP2 1/1.3\", pixel binning 16-en-1, Super Quad Pixel AF)"
+        },
+        {
+          "nombre": "Teleobjetivo periscópico",
+          "valor": "50MP f/3.4 OIS (zoom óptico 5x, zoom digital 100x con AI, PDAF)"
+        },
+        {
+          "nombre": "Teleobjetivo",
+          "valor": "10MP f/2.4 OIS (zoom óptico 3x, Dual Pixel AF)"
+        },
+        {
+          "nombre": "Ultra gran angular",
+          "valor": "12MP f/2.2 (FOV 120°, Dual Pixel AF, Macro Focus)"
+        },
+        {
+          "nombre": "Cámara frontal",
+          "valor": "12MP f/2.2 (Dual Pixel AF, HDR10+)"
+        },
+        {
+          "nombre": "Video",
+          "valor": "8K 30fps, 4K 60fps, 1080p 240fps, HDR10+, Super Steady OIS+EIS, Audio Zoom, Director's View"
+        },
+        {
+          "nombre": "Memoria RAM",
+          "valor": "12GB LPDDR5X (8533Mbps)"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "valor": "512GB UFS 4.0 (opciones: 256GB/512GB/1TB, no expandible)"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "5000mAh Li-Ion no removible, carga rápida 45W, carga inalámbrica 15W, PowerShare inalámbrico reverso 4.5W"
+        },
+        {
+          "nombre": "S Pen",
+          "valor": "Integrado, latencia 2.8ms, Bluetooth, gestos Air Actions, IP68"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "5G (Sub6/mmWave), WiFi 7 (802.11be) tri-band, Bluetooth 5.3, NFC, UWB, GPS (L1+L5 dual-band)"
+        },
+        {
+          "nombre": "Sistema Operativo",
+          "valor": "Android 14 con One UI 6.1, 7 años actualizaciones garantizadas"
+        },
+        {
+          "nombre": "Seguridad",
+          "valor": "Ultrasonic Fingerprint (mejorado 1.7x área), reconocimiento facial, Samsung Knox Vault, Secure Folder"
+        },
+        {
+          "nombre": "Resistencia",
+          "valor": "IP68 (1.5m hasta 30min), marco titanio grado 2, Gorilla Armor (cristal más resistente de Samsung)"
+        },
+        {
+          "nombre": "Audio",
+          "valor": "Altavoces estéreo by AKG, Dolby Atmos, sonido envolvente 360°, sin jack 3.5mm"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "162.3 x 79 x 8.6 mm"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "232 gramos"
+        },
+        {
+          "nombre": "Funciones Galaxy AI",
+          "valor": "Circle to Search con Google, Live Translate llamadas/mensajes, Note Assist, Chat Assist, Photo Assist (borrado generativo), Instant Slow-mo"
+        },
+        {
+          "nombre": "Sensores",
+          "valor": "Acelerómetro, giroscopio, proximidad, brújula, barómetro, sensor Hall, sensor de luz"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 20,
+          "url": "https://picsum.photos/seed/s24u/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 21,
+            "url": "https://picsum.photos/seed/s24u-back/800/1000",
+            "descripcion": "Vista trasera con cámaras"
+          },
+          {
+            "idImagen": 22,
+            "url": "https://picsum.photos/seed/s24u-spen/800/1000",
+            "descripcion": "S-Pen extraído"
+          },
+          {
+            "idImagen": 23,
+            "url": "https://picsum.photos/seed/s24u-titanium/800/1000",
+            "descripcion": "Detalle marco titanio"
+          }
+        ]
+      },
+      "color": {
+        "id": 5,
+        "nombre": "Titanium Black",
+        "valor": "#222222"
+      },
+      "opcionAdicional": {
+        "id": 2,
+        "nombre": "512GB",
+        "valor": "512GB"
+      },
       "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": [113, 133]
-    },
-    {
-      "idProducto": 121,
-      "nombre": "Laptop ASUS ROG Zephyrus G14",
-      "descripcion": "Laptop potente para gaming y diseño",
-      "precioBase": 1599.99,
-      "precioDescuento": null,
-      "stockActual": 4,
-      "detalle": "RTX 4060, Ryzen 9, 16GB RAM, pantalla Nebula Display.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": false,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "3-5 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.7,
-      "totalReviews": 85,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 5, "nombre": "ASUS" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 121, "nombre": "Laptops Gaming" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "GPU", "valor": "NVIDIA RTX 4060" }],
-      "imagenes": [{ "idImagen": 30, "url": "https://picsum.photos/seed/rog/800/1000", "descripcion": "Cerrada" }],
-      "color": { "id": 6, "nombre": "Eclipse Gray", "valor": "#333333" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [156, 157]
+      "productosRelacionados": [
+        133,
+        135
+      ]
     },
     {
       "idProducto": 131,
       "nombre": "Sony WH-1000XM5",
-      "descripcion": "Audífonos con cancelación de ruido líder",
-      "precioBase": 349.00,
+      "descripcion": "Audífonos premium con cancelación de ruido líder en la industria",
+      "precioBase": 349,
       "precioDescuento": null,
       "stockActual": 25,
-      "detalle": "30 horas de batería y llamadas ultra nítidas.",
+      "detalle": "Audífonos inalámbricos over-ear con la mejor cancelación de ruido del mercado gracias a dos procesadores QN1 y 8 micrófonos, diseño renovado más ligero y cómodo para uso prolongado, calidad de audio Hi-Res con drivers de 30mm especialmente diseñados, hasta 30 horas de batería con ANC activado (40 horas sin ANC), carga rápida de 3 minutos para 3 horas de reproducción, Multipoint Bluetooth para conectar 2 dispositivos simultáneamente, controles táctiles intuitivos, Speak-to-Chat que pausa automáticamente la música al hablar, sonido adaptativo que ajusta el ANC según tu entorno.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
       "tiempoEnvio": "Llega hoy",
       "mensajeEnvio": null,
-      "calificacion": 5.0,
+      "calificacion": 5,
       "totalReviews": 2100,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 8, "nombre": "Sony" },
-      "coleccion": { "idColeccion": 2, "nombre": "Audio Pro" },
-      "categorias": [{ "idCategoria": 131, "nombre": "Audífonos Bluetooth" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "ANC", "valor": "Dual Processor V1" }],
-      "imagenes": [{ "idImagen": 40, "url": "https://picsum.photos/seed/sony/800/1000", "descripcion": "Puestos" }],
-      "color": { "id": 7, "nombre": "Plata", "valor": "#C0C0C0" },
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 8,
+        "nombre": "Sony"
+      },
+      "coleccion": {
+        "idColeccion": 2,
+        "nombre": "Audio Pro"
+      },
+      "categorias": [
+        {
+          "idCategoria": 131,
+          "nombre": "Audífonos Bluetooth"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Tipo",
+          "valor": "Over-ear circumaurales cerrados"
+        },
+        {
+          "nombre": "Drivers",
+          "valor": "30mm dinámicos de domo con diafragma de carbono reforzado"
+        },
+        {
+          "nombre": "Respuesta frecuencia",
+          "valor": "4Hz - 40,000Hz (cable), 20Hz - 20,000Hz (Bluetooth)"
+        },
+        {
+          "nombre": "Impedancia",
+          "valor": "48Ω (1kHz) con cable, 16Ω Bluetooth"
+        },
+        {
+          "nombre": "Sensibilidad",
+          "valor": "102dB/mW con cable, 100dB/mW Bluetooth"
+        },
+        {
+          "nombre": "Cancelación ruido",
+          "valor": "Híbrida ANC con 2x Procesadores QN1e + 8 micrófonos (4 feedback + 4 feedforward), Auto NC Optimizer"
+        },
+        {
+          "nombre": "Procesador audio",
+          "valor": "Integrated Processor V1 + HD Noise Cancelling Processor QN1"
+        },
+        {
+          "nombre": "Códecs Bluetooth",
+          "valor": "LDAC, AAC, SBC (Hi-Res Audio Wireless con LDAC)"
+        },
+        {
+          "nombre": "Bluetooth",
+          "valor": "5.2 con Multipoint (conecta 2 dispositivos simultáneos), A2DP, AVRCP, HFP, HSP"
+        },
+        {
+          "nombre": "Alcance Bluetooth",
+          "valor": "Hasta 10 metros (línea de vista)"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "Recargable Li-ion, 30h con ANC ON, 40h con ANC OFF"
+        },
+        {
+          "nombre": "Carga rápida",
+          "valor": "USB-C: 3 min = 3h reproducción, carga completa en 3.5h"
+        },
+        {
+          "nombre": "Micrófonos",
+          "valor": "8 micrófonos para ANC + 4 micrófonos beam-forming para llamadas, Precise Voice Pickup, AI-based noise reduction"
+        },
+        {
+          "nombre": "Controles",
+          "valor": "Panel táctil capacitivo (deslizar volumen, tocar play/pausa, doble toque siguiente), botón físico NC/Ambient"
+        },
+        {
+          "nombre": "Funciones inteligentes",
+          "valor": "Speak-to-Chat (auto-pausa al hablar), Adaptive Sound Control, Quick Attention Mode, Wearing Detection"
+        },
+        {
+          "nombre": "Asistentes voz",
+          "valor": "Google Assistant, Amazon Alexa, Siri (activación por voz)"
+        },
+        {
+          "nombre": "Sonido 360",
+          "valor": "Compatible con Sony 360 Reality Audio"
+        },
+        {
+          "nombre": "App",
+          "valor": "Sony Headphones Connect (iOS/Android) - EQ personalizable, DSEE Extreme upscaling"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "250 gramos (sin cable)"
+        },
+        {
+          "nombre": "Materiales",
+          "valor": "Diadema nylon soft-fit con almohadillas de espuma suave, almohadillas auriculares de uretano sintético"
+        },
+        {
+          "nombre": "Plegable",
+          "valor": "Diseño plano plegable para estuche compacto"
+        },
+        {
+          "nombre": "Incluye",
+          "valor": "Estuche rígido de viaje, cable USB-C de carga, cable audio 3.5mm (1.2m), adaptador avión de doble clavija"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "12 meses del fabricante"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 40,
+          "url": "https://picsum.photos/seed/sony/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 41,
+            "url": "https://picsum.photos/seed/sony-worn/800/1000",
+            "descripcion": "Modelo usando"
+          },
+          {
+            "idImagen": 42,
+            "url": "https://picsum.photos/seed/sony-fold/800/1000",
+            "descripcion": "Plegados en estuche"
+          },
+          {
+            "idImagen": 43,
+            "url": "https://picsum.photos/seed/sony-detail/800/1000",
+            "descripcion": "Detalle controles"
+          }
+        ]
+      },
+      "color": {
+        "id": 7,
+        "nombre": "Plata",
+        "valor": "#C0C0C0"
+      },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
       "productosRelacionados": []
@@ -367,11 +914,11 @@
     {
       "idProducto": 151,
       "nombre": "PlayStation 5 Slim",
-      "descripcion": "Consola con lector de discos",
+      "descripcion": "Consola de nueva generación con diseño compacto",
       "precioBase": 499.99,
       "precioDescuento": null,
       "stockActual": 12,
-      "detalle": "SSD de 1TB de ultra alta velocidad y soporte 4K.",
+      "detalle": "Consola PS5 en versión Slim con 30% menos volumen que el modelo original, lector de discos 4K UHD Blu-ray incluido, SSD ultra rápido de 1TB personalizado para tiempos de carga instantáneos, CPU AMD Zen 2 de 8 núcleos, GPU personalizada RDNA 2 con Ray Tracing acelerado por hardware, soporte para resolución 4K a 120fps y 8K, tecnología Tempest 3D AudioTech para audio espacial inmersivo, retrocompatibilidad con más de 4000 juegos de PS4, DualSense controller incluido con feedback háptico avanzado y gatillos adaptativos.",
       "esReservio": false,
       "esFavorito": true,
       "disponibleRecojo": true,
@@ -380,82 +927,335 @@
       "mensajeEnvio": null,
       "calificacion": 4.9,
       "totalReviews": 5400,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 8, "nombre": "Sony" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 151, "nombre": "PlayStation 5" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Almacenamiento", "valor": "1TB SSD" }],
-      "imagenes": [{ "idImagen": 50, "url": "https://picsum.photos/seed/ps5/800/1000", "descripcion": "Vertical" }],
-      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 8,
+        "nombre": "Sony"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 151,
+          "nombre": "PlayStation 5"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "CPU",
+          "valor": "AMD Zen 2, 8 núcleos x86-64-AMD Ryzen @ 3.5GHz (frecuencia variable)"
+        },
+        {
+          "nombre": "GPU",
+          "valor": "AMD RDNA 2, 36 CUs @ 2.23GHz (frecuencia variable), 10.28 TFLOPs, Ray Tracing Acceleration acelerado por hardware"
+        },
+        {
+          "nombre": "Memoria",
+          "valor": "16GB GDDR6/256-bit, Ancho banda 448GB/s"
+        },
+        {
+          "nombre": "Almacenamiento interno",
+          "valor": "1TB SSD PCIe Gen4 NVMe personalizado (825GB utilizables), velocidad lectura 5.5GB/s (raw), hasta 9GB/s (comprimido)"
+        },
+        {
+          "nombre": "Almacenamiento expandible",
+          "valor": "Ranura M.2 NVMe SSD (PCIe Gen4 x4, capacidad 250GB-4TB, requiere disipador)"
+        },
+        {
+          "nombre": "Lector óptico",
+          "valor": "Ultra HD Blu-ray 4K (hasta 100GB por disco), lectura BD-ROM a 3x velocidad CAV (72-108Mbps)"
+        },
+        {
+          "nombre": "Resolución salida video",
+          "valor": "4K @ 120Hz, 8K @ 60Hz, 1080p, 720p"
+        },
+        {
+          "nombre": "Ray Tracing",
+          "valor": "Acelerado por hardware"
+        },
+        {
+          "nombre": "Tecnologías gráficas",
+          "valor": "HDR, VRR (Variable Refresh Rate 48-120Hz), 120fps @ 120Hz"
+        },
+        {
+          "nombre": "Audio",
+          "valor": "Tempest 3D AudioTech (cientos de fuentes sonido simultáneas), salida estéreo, 5.1, 7.1 (Dolby Atmos/DTS:X vía actualizaciones)"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "WiFi 6 (802.11ax), Bluetooth 5.1, Gigabit Ethernet"
+        },
+        {
+          "nombre": "Puertos USB",
+          "valor": "2x USB Type-A (Hi-Speed USB), 2x USB Type-C (SuperSpeed USB 10Gbps)"
+        },
+        {
+          "nombre": "Video",
+          "valor": "HDMI 2.1 con soporte HDCP 2.2/2.3, ALLM, VRR"
+        },
+        {
+          "nombre": "Consumo energético",
+          "valor": "Máximo 340W, standby <1.5W"
+        },
+        {
+          "nombre": "Dimensiones (horizontal)",
+          "valor": "358 x 96 x 216 mm (ancho x alto x profundidad)"
+        },
+        {
+          "nombre": "Dimensiones (vertical)",
+          "valor": "358 x 216 x 96 mm"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "3.2 kg"
+        },
+        {
+          "nombre": "Diseño",
+          "valor": "30% menor volumen vs PS5 original, paneles laterales removibles"
+        },
+        {
+          "nombre": "DualSense incluido",
+          "valor": "1x Control inalámbrico con haptic feedback, gatillos adaptativos, micrófono integrado, speaker, giroscopio, acelerómetro, touchpad, batería 1560mAh, USB-C"
+        },
+        {
+          "nombre": "Accesorios incluidos",
+          "valor": "Base horizontal, cable HDMI, cable alimentación AC, cable USB-C, materiales impresos"
+        },
+        {
+          "nombre": "Retrocompatibilidad",
+          "valor": "Más de 4000 juegos PS4 jugables"
+        },
+        {
+          "nombre": "PlayStation VR",
+          "valor": "Compatible con PSVR (adaptador requerido), soporte PSVR2"
+        },
+        {
+          "nombre": "Servicios",
+          "valor": "PlayStation Plus, PlayStation Store, Remote Play, Share Play"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 50,
+          "url": "https://picsum.photos/seed/ps5/800/1000",
+          "descripcion": "Consola vertical"
+        },
+        "secundarias": [
+          {
+            "idImagen": 51,
+            "url": "https://picsum.photos/seed/ps5-controller/800/1000",
+            "descripcion": "DualSense incluido"
+          },
+          {
+            "idImagen": 52,
+            "url": "https://picsum.photos/seed/ps5-ports/800/1000",
+            "descripcion": "Puertos y conexiones"
+          },
+          {
+            "idImagen": 53,
+            "url": "https://picsum.photos/seed/ps5-horizontal/800/1000",
+            "descripcion": "Posición horizontal"
+          }
+        ]
+      },
+      "color": {
+        "id": 10,
+        "nombre": "Blanco",
+        "valor": "#FFFFFF"
+      },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
-      "productosRelacionados": [156, 157]
+      "productosRelacionados": [
+        156,
+        157
+      ]
     },
     {
-      "idProducto": 201,
-      "nombre": "Camisa Formal Executive",
-      "descripcion": "Corte Slim Fit algodón egipcio",
-      "precioBase": 45.00,
+      "idProducto": 501,
+      "nombre": "MacBook Air 13\" M3",
+      "descripcion": "Laptop ultradelgada con chip M3 de Apple",
+      "precioBase": 1099,
       "precioDescuento": null,
-      "stockActual": 50,
-      "detalle": "Ideal para reuniones de negocios y eventos de gala.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.2,
-      "totalReviews": 45,
-      "genero": { "idGenero": 2, "nombre": "Hombre" },
-      "marca": { "idMarca": 10, "nombre": "Executive" },
-      "coleccion": { "idColeccion": 3, "nombre": "Formal 2024" },
-      "categorias": [{ "idCategoria": 211, "nombre": "Camisas Formales" }],
-      "etiquetas": [{ "idEtiqueta": 6, "descripcion": "Formal" }],
-      "especificaciones": [{ "nombre": "Material", "valor": "100% Algodón" }],
-      "imagenes": [{ "idImagen": 60, "url": "https://picsum.photos/seed/shirt1/800/1000", "descripcion": "Doblada" }],
-      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
-      "opcionAdicional": { "id": 10, "nombre": "M", "valor": "M" },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [214, 216]
-    },
-    {
-      "idProducto": 221,
-      "nombre": "Blusa Seda Elegante",
-      "descripcion": "Blusa de seda natural con lazo",
-      "precioBase": 75.00,
-      "precioDescuento": null,
-      "stockActual": 18,
-      "detalle": "Textura suave y caída elegante para oficina o eventos.",
+      "stockActual": 8,
+      "detalle": "La laptop más delgada de Apple con apenas 1.13cm de grosor, chip M3 de 8 núcleos CPU y hasta 10 núcleos GPU para rendimiento excepcional, pantalla Liquid Retina de 13.6 pulgadas con brillo de 500 nits y amplia gama de colores P3, hasta 18 horas de batería para trabajar todo el día, diseño fanless completamente silencioso, teclado Magic Keyboard retroiluminado con Touch ID, cámara FaceTime HD 1080p, sistema de sonido con audio espacial y Dolby Atmos, 8GB de memoria unificada expandible hasta 24GB, carga rápida MagSafe 3, dos puertos Thunderbolt/USB 4. Cuerpo de aluminio 100% reciclado.",
       "esReservio": false,
       "esFavorito": true,
       "disponibleRecojo": true,
       "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
+      "tiempoEnvio": "Llega mañana",
       "mensajeEnvio": null,
-      "calificacion": 4.6,
-      "totalReviews": 32,
-      "genero": { "idGenero": 3, "nombre": "Mujer" },
-      "marca": { "idMarca": 12, "nombre": "Zara Style" },
-      "coleccion": { "idColeccion": 4, "nombre": "Otoño 2024" },
-      "categorias": [{ "idCategoria": 221, "nombre": "Blusas Elegantes" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "Tejido", "valor": "100% Seda" }],
-      "imagenes": [{ "idImagen": 70, "url": "https://picsum.photos/seed/blouse/800/1000", "descripcion": "Frontal" }],
-      "color": { "id": 15, "nombre": "Esmeralda", "valor": "#008B8B" },
-      "opcionAdicional": { "id": 11, "nombre": "S", "valor": "S" },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [223, 225]
+      "calificacion": 4.9,
+      "totalReviews": 45,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 1,
+        "nombre": "Apple"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 122,
+          "nombre": "Laptops Trabajo"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Chip",
+          "valor": "Apple M3 (arquitectura 3nm), CPU 8 núcleos (4 performance + 4 efficiency), GPU 10 núcleos, Neural Engine 16 núcleos (18 TOPS)"
+        },
+        {
+          "nombre": "Memoria unificada",
+          "valor": "8GB LPDDR5 (ancho banda 100GB/s, configurable a 16GB o 24GB)"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "valor": "256GB SSD (configurable a 512GB, 1TB, 2TB)"
+        },
+        {
+          "nombre": "Pantalla",
+          "valor": "Liquid Retina 13.6\" IPS LED (2560 x 1664px) 224 ppi, True Tone, P3 wide color, 500 nits brillo, soporte 1 billón colores"
+        },
+        {
+          "nombre": "Cámara",
+          "valor": "FaceTime HD 1080p con ISP avanzado del chip M3"
+        },
+        {
+          "nombre": "Audio",
+          "valor": "Sistema 4 altavoces con Spatial Audio, soporte Dolby Atmos, beamforming array 3 micrófonos, jack 3.5mm (salida alta impedancia)"
+        },
+        {
+          "nombre": "Carga y expansión",
+          "valor": "Puerto MagSafe 3 (carga magnética), 2x Thunderbolt/USB 4 (hasta 40Gbps, DisplayPort, carga, USB 3.1 Gen 2)"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "WiFi 6E (802.11ax), Bluetooth 5.3"
+        },
+        {
+          "nombre": "Teclado",
+          "valor": "Magic Keyboard retroiluminado con Touch ID (sensor biométrico), teclas función full-height, recorrido 1mm"
+        },
+        {
+          "nombre": "Trackpad",
+          "valor": "Force Touch trackpad multitáctil con feedback háptico"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "52.6Wh Li-polymer integrada, hasta 18h navegación web, 15h video Apple TV"
+        },
+        {
+          "nombre": "Adaptador corriente",
+          "valor": "30W USB-C incluido (opcional 35W dual o 67W carga rápida 50% en 30min)"
+        },
+        {
+          "nombre": "Sistema Operativo",
+          "valor": "macOS Sonoma (actualizable a macOS Sequoia)"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "304.1 x 215 x 11.3 mm (cerrada)"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "1.24 kg"
+        },
+        {
+          "nombre": "Material",
+          "valor": "Unibody aluminio 100% reciclado"
+        },
+        {
+          "nombre": "Colores disponibles",
+          "valor": "Medianoche, Luz de Estrellas, Gris Espacial, Plata"
+        },
+        {
+          "nombre": "Soporte displays externos",
+          "valor": "1 display hasta 6K @ 60Hz (Thunderbolt) + pantalla integrada simultáneamente"
+        },
+        {
+          "nombre": "Codecs video",
+          "valor": "H.264, HEVC, ProRes, ProRes RAW (decode acelerado por hardware)"
+        },
+        {
+          "nombre": "Certificaciones",
+          "valor": "ENERGY STAR, EPEAT Gold, libre mercurio, BFR, PVC, berilio"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "1 año limitada (extensible con AppleCare+)"
+        },
+        {
+          "nombre": "Incluye",
+          "valor": "MacBook Air, adaptador corriente USB-C 30W, cable carga USB-C a MagSafe 3 (2m)"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 120,
+          "url": "https://picsum.photos/seed/mac/800/1000",
+          "descripcion": "Vista abierta"
+        },
+        "secundarias": [
+          {
+            "idImagen": 121,
+            "url": "https://picsum.photos/seed/mac-closed/800/1000",
+            "descripcion": "Vista cerrada"
+          },
+          {
+            "idImagen": 122,
+            "url": "https://picsum.photos/seed/mac-side/800/1000",
+            "descripcion": "Perfil delgado"
+          },
+          {
+            "idImagen": 123,
+            "url": "https://picsum.photos/seed/mac-keyboard/800/1000",
+            "descripcion": "Teclado Magic Keyboard"
+          }
+        ]
+      },
+      "color": {
+        "id": 40,
+        "nombre": "Medianoche",
+        "valor": "#2F353B"
+      },
+      "opcionAdicional": {
+        "id": 10,
+        "nombre": "256GB SSD",
+        "valor": "256GB"
+      },
+      "tipoOpcionAdicional": "Almacenamiento",
+      "productosRelacionados": []
     },
     {
-      "idProducto": 254,
-      "nombre": "Nike Air Zoom Pegasus 40",
-      "descripcion": "Zapatillas para running profesional",
-      "precioBase": 129.99,
+      "idProducto": 155,
+      "nombre": "Teclado Razer BlackWidow V4",
+      "descripcion": "Teclado mecánico gaming RGB premium",
+      "precioBase": 189,
       "precioDescuento": null,
-      "stockActual": 35,
-      "detalle": "Amortiguación reactiva y ajuste seguro.",
+      "stockActual": 14,
+      "detalle": "Teclado mecánico profesional con switches Razer Yellow mecánicos lineales y silenciosos, tiempo de respuesta de 0.2ms, iluminación Razer Chroma RGB con 16.8 millones de colores personalizable por tecla, reposamuñecas magnético ergonómico incluido, dial multifunción programable para control de volumen y más, 8 teclas macro dedicadas programables, teclas de medios dedicadas, cable USB-C trenzado desmontable, construcción en aluminio de grado militar para máxima durabilidad, memoria integrada para guardar hasta 5 perfiles, compatible con Razer Synapse 3.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
@@ -463,167 +1263,173 @@
       "tiempoEnvio": "Llega mañana",
       "mensajeEnvio": null,
       "calificacion": 4.8,
-      "totalReviews": 890,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 20, "nombre": "Nike" },
-      "coleccion": { "idColeccion": 5, "nombre": "Sport 2024" },
-      "categorias": [{ "idCategoria": 254, "nombre": "Zapatillas Running" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Uso", "valor": "Asfalto" }],
-      "imagenes": [{ "idImagen": 80, "url": "https://picsum.photos/seed/nike/800/1000", "descripcion": "Perfil" }],
-      "color": { "id": 18, "nombre": "Volt Green", "valor": "#CEFF00" },
-      "opcionAdicional": { "id": 42, "nombre": "42", "valor": "42" },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [251, 252]
-    },
-    {
-      "idProducto": 311,
-      "nombre": "Sofá Modular Cloud",
-      "descripcion": "Sofá de 3 piezas ultra confortable",
-      "precioBase": 899.00,
-      "precioDescuento": null,
-      "stockActual": 3,
-      "detalle": "Tapiz resistente a mascotas y fácil limpieza.",
-      "esReservio": true,
-      "esFavorito": false,
-      "disponibleRecojo": false,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "10-15 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.5,
-      "totalReviews": 12,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 30, "nombre": "EcoHome" },
-      "coleccion": { "idColeccion": 6, "nombre": "Living 2024" },
-      "categorias": [{ "idCategoria": 311, "nombre": "Sofás" }],
-      "etiquetas": [{ "idEtiqueta": 8, "descripcion": "Gran volumen" }],
-      "especificaciones": [{ "nombre": "Dimensiones", "valor": "240x90cm" }],
-      "imagenes": [{ "idImagen": 90, "url": "https://picsum.photos/seed/sofa/800/1000", "descripcion": "Ambiente" }],
-      "color": { "id": 25, "nombre": "Gris Perla", "valor": "#E1E1E1" },
+      "totalReviews": 210,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 100,
+        "nombre": "Razer"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 155,
+          "nombre": "Teclados Mecánicos"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 1,
+          "descripcion": "Nuevo"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Tipo de switch",
+          "valor": "Razer Yellow Mechanical Switch (lineal silencioso, 45g fuerza actuación, 1.2mm punto actuación, 3.5mm recorrido total)"
+        },
+        {
+          "nombre": "Durabilidad switches",
+          "valor": "80 millones pulsaciones por tecla"
+        },
+        {
+          "nombre": "Polling rate",
+          "valor": "1000Hz (1ms tiempo respuesta)"
+        },
+        {
+          "nombre": "Anti-ghosting",
+          "valor": "N-Key Rollover completo (todas las teclas)"
+        },
+        {
+          "nombre": "Iluminación",
+          "valor": "Razer Chroma RGB por tecla individual, 16.8 millones colores, efectos dinámicos programables"
+        },
+        {
+          "nombre": "Teclas totales",
+          "valor": "104 teclas (Full-size) + 8 teclas macro dedicadas + dial digital"
+        },
+        {
+          "nombre": "Dial multifunción",
+          "valor": "Encoder rotatorio programable (volumen, brillo, zoom, shortcuts personalizables), 3 perfiles por dial"
+        },
+        {
+          "nombre": "Teclas multimedia",
+          "valor": "Dedicadas: Play/Pause, Adelante, Atrás, Silencio, Volumen +/- (rodillo dedicado)"
+        },
+        {
+          "nombre": "Teclas macro",
+          "valor": "8 teclas dedicadas programables on-the-fly con grabación macro"
+        },
+        {
+          "nombre": "Memoria interna",
+          "valor": "Hybrid on-board memory para 5 perfiles (iluminación + configuración teclas)"
+        },
+        {
+          "nombre": "Material construcción",
+          "valor": "Top plate aluminio 5052 grado militar, base ABS reforzado"
+        },
+        {
+          "nombre": "Keycaps",
+          "valor": "Doble inyección ABS con recubrimiento mate, transparentes para luz RGB, perfil OEM"
+        },
+        {
+          "nombre": "Estabilizadores",
+          "valor": "Costar wire con lubricación de fábrica en teclas largas (espacio, shift, enter)"
+        },
+        {
+          "nombre": "Reposamuñecas",
+          "valor": "Magnético ergonómico acolchado cuero sintético, extraíble"
+        },
+        {
+          "nombre": "Cable",
+          "valor": "USB-C a USB-A trenzado desmontable 2m, con routing canales"
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "USB-C cableado (USB 2.0)"
+        },
+        {
+          "nombre": "Compatibilidad",
+          "valor": "Windows 10/11, macOS (funcionalidad limitada)"
+        },
+        {
+          "nombre": "Software",
+          "valor": "Razer Synapse 3 (remapeo teclas, macros, RGB, perfiles, estadísticas)"
+        },
+        {
+          "nombre": "Integración",
+          "valor": "Compatible Chroma ecosystem (sincronización con +150 juegos, Philips Hue, Nanoleaf)"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "448 x 166 x 42.3 mm (con reposamuñecas: 448 x 249 x 42.3 mm)"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "1285g sin cable (1540g con reposamuñecas)"
+        },
+        {
+          "nombre": "Patas ajustables",
+          "valor": "2 posiciones altura (3° y 7.5°)"
+        },
+        {
+          "nombre": "Certificaciones",
+          "valor": "CE, FCC"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "2 años del fabricante"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 230,
+          "url": "https://picsum.photos/seed/razer/800/1000",
+          "descripcion": "Vista superior"
+        },
+        "secundarias": [
+          {
+            "idImagen": 231,
+            "url": "https://picsum.photos/seed/razer-rgb/800/1000",
+            "descripcion": "RGB encendido"
+          },
+          {
+            "idImagen": 232,
+            "url": "https://picsum.photos/seed/razer-dial/800/1000",
+            "descripcion": "Dial multifunción"
+          },
+          {
+            "idImagen": 233,
+            "url": "https://picsum.photos/seed/razer-side/800/1000",
+            "descripcion": "Vista lateral"
+          }
+        ]
+      },
+      "color": {
+        "id": 30,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
-      "productosRelacionados": [313]
-    },
-    {
-      "idProducto": 401,
-      "nombre": "Smart TV LG OLED G3 65\"",
-      "descripcion": "Televisor OLED 4K con tecnología Evo",
-      "precioBase": 2299.00,
-      "precioDescuento": 1999.00,
-      "stockActual": 6,
-      "detalle": "Brillo superior y negros perfectos para cine.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "3 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.9,
-      "totalReviews": 140,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 35, "nombre": "LG" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 141, "nombre": "Smart TV 4K" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Refresh Rate", "valor": "120Hz" }],
-      "imagenes": [{ "idImagen": 100, "url": "https://picsum.photos/seed/tv/800/1000", "descripcion": "Pantalla encendida" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [143, 144]
-    },
-    {
-      "idProducto": 405,
-      "nombre": "Nintendo Switch OLED",
-      "descripcion": "Consola híbrida con pantalla OLED",
-      "precioBase": 349.00,
-      "precioDescuento": null,
-      "stockActual": 20,
-      "detalle": "Colores vibrantes y soporte ajustable ancho.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.7,
-      "totalReviews": 2300,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 40, "nombre": "Nintendo" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 153, "nombre": "Nintendo Switch" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Pantalla", "valor": "7\" OLED" }],
-      "imagenes": [{ "idImagen": 110, "url": "https://picsum.photos/seed/switch/800/1000", "descripcion": "Modo portátil" }],
-      "color": { "id": 10, "nombre": "Blanco", "valor": "#FFFFFF" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [156]
-    },
-    {
-      "idProducto": 501,
-      "nombre": "MacBook Air 13\" M3",
-      "descripcion": "Laptop ultra delgada con chip M3",
-      "precioBase": 1099.00,
-      "precioDescuento": null,
-      "stockActual": 8,
-      "detalle": "Silenciosa y potente con hasta 18h de batería.",
-      "esReservio": false,
-      "esFavorito": true,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.9,
-      "totalReviews": 45,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 1, "nombre": "Apple" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 122, "nombre": "Laptops Trabajo" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "Chip", "valor": "Apple M3" }],
-      "imagenes": [{ "idImagen": 120, "url": "https://picsum.photos/seed/mac/800/1000", "descripcion": "Abierta" }],
-      "color": { "id": 40, "nombre": "Medianoche", "valor": "#2F353B" },
-      "opcionAdicional": { "id": 10, "nombre": "256GB SSD", "valor": "256GB" },
-      "tipoOpcionAdicional": "Almacenamiento",
-      "productosRelacionados": []
-    },
-    {
-      "idProducto": 601,
-      "nombre": "Xiaomi 14 Ultra",
-      "descripcion": "Cámara Leica de nivel profesional",
-      "precioBase": 999.00,
-      "precioDescuento": null,
-      "stockActual": 5,
-      "detalle": "Sensor de 1 pulgada y carga rápida de 90W.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": false,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "5 días",
-      "mensajeEnvio": null,
-      "calificacion": 4.6,
-      "totalReviews": 60,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 45, "nombre": "Xiaomi" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 113, "nombre": "Xiaomi" }],
-      "etiquetas": [{ "idEtiqueta": 1, "descripcion": "Nuevo" }],
-      "especificaciones": [{ "nombre": "Cámara", "valor": "Leica Optic" }],
-      "imagenes": [{ "idImagen": 130, "url": "https://picsum.photos/seed/xiaomi/800/1000", "descripcion": "Trasera" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [134]
+      "productosRelacionados": [
+        156,
+        157
+      ]
     },
     {
       "idProducto": 701,
-      "nombre": "Silla Gaming Secretlab Titan",
-      "descripcion": "Ergonomía premium para largas jornadas",
-      "precioBase": 549.00,
+      "nombre": "Silla Gaming Secretlab Titan Evo 2024",
+      "descripcion": "Silla ergonómica profesional para gaming",
+      "precioBase": 549,
       "precioDescuento": null,
       "stockActual": 10,
-      "detalle": "Soporte lumbar magnético y cuero sintético híbrido.",
+      "detalle": "Silla gaming premium con ergonomía diseñada por profesionales de la salud, soporte lumbar magnético ajustable en 4 direcciones con tecnología patentada, reposabrazos CloudSwap 4D totalmente ajustables en altura, ángulo, profundidad y rotación, reclinación hasta 165° con mecanismo de inclinación multi-tilt, espuma fría de alta densidad que mantiene su forma por años, tapizado en cuero sintético PRIME 2.0 híbrido ultra duradero y fácil de limpiar, base de aluminio ADC12 resistente que soporta hasta 130kg, ruedas de goma silenciosas de 65mm, pistón de gas clase 4 certificado, reposacabezas magnético de memoria incluido. Garantía de 5 años.",
       "esReservio": false,
       "esFavorito": true,
       "disponibleRecojo": false,
@@ -632,26 +1438,181 @@
       "mensajeEnvio": null,
       "calificacion": 4.9,
       "totalReviews": 1200,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 50, "nombre": "Secretlab" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 154, "nombre": "Sillas Gaming" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Material", "valor": "Cuero Neo" }],
-      "imagenes": [{ "idImagen": 140, "url": "https://picsum.photos/seed/chair/800/1000", "descripcion": "Frontal" }],
-      "color": { "id": 55, "nombre": "Stealth", "valor": "#1A1A1A" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [155, 156]
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 50,
+        "nombre": "Secretlab"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 154,
+          "nombre": "Sillas Gaming"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Tallas disponibles",
+          "valor": "Small (hasta 170cm / 80kg), Regular (hasta 185cm / 90kg), XL (hasta 200cm / 130kg)"
+        },
+        {
+          "nombre": "Material tapizado",
+          "valor": "Secretlab NEO Hybrid Leatherette (cuero sintético PU premium con textura doble, resistente agua/manchas/desgaste)"
+        },
+        {
+          "nombre": "Opciones tapizado",
+          "valor": "NEO Hybrid (estándar), SoftWeave Plus (tejido premium transpirable), NAPA Leather (cuero genuino top-grain)"
+        },
+        {
+          "nombre": "Relleno",
+          "valor": "Secretlab ColdCure Leatherette espuma fría alta densidad 4-way stretch (mantiene forma hasta 10 años, temperatura regulada)"
+        },
+        {
+          "nombre": "Soporte lumbar",
+          "valor": "Secretlab L-ADAPT Lumbar System magnético ajustable 4 direcciones (altura, profundidad, firmeza, ángulo), sensor postura inteligente"
+        },
+        {
+          "nombre": "Reposacabezas",
+          "valor": "Memory Foam magnético ajustable altura, espuma viscoelástica adaptable"
+        },
+        {
+          "nombre": "Reposabrazos",
+          "valor": "CloudSwap 4D magnéticos (ajuste altura 7 posiciones, ángulo 30°, profundidad 5cm, rotación 360°, almohadillas magnéticas reemplazables gel-infused)"
+        },
+        {
+          "nombre": "Reclinación",
+          "valor": "85° - 165° con sistema multi-tilt lock 11 posiciones, recline tension ajustable"
+        },
+        {
+          "nombre": "Base",
+          "valor": "Aluminio ADC12 forjado 5 estrellas, diámetro 710mm, acabado pulido"
+        },
+        {
+          "nombre": "Ruedas",
+          "valor": "Secretlab SoftWeave Plus 65mm goma silenciosa (protección suelos, giro 360°, carga 130kg)"
+        },
+        {
+          "nombre": "Pistón gas",
+          "valor": "Clase 4 certificado TÜV/SGS (rango ajuste altura 10cm, resistencia 130kg)"
+        },
+        {
+          "nombre": "Ajuste altura asiento",
+          "valor": "46-56cm desde suelo (depende talla)"
+        },
+        {
+          "nombre": "Ancho asiento",
+          "valor": "Small: 44cm | Regular: 49cm | XL: 54cm"
+        },
+        {
+          "nombre": "Profundidad asiento",
+          "valor": "Small: 44cm | Regular: 49cm | XL: 54cm"
+        },
+        {
+          "nombre": "Altura respaldo",
+          "valor": "Small: 78cm | Regular: 83cm | XL: 88cm"
+        },
+        {
+          "nombre": "Ancho respaldo",
+          "valor": "Small: 50cm | Regular: 54cm | XL: 58cm"
+        },
+        {
+          "nombre": "Ancho entre reposabrazos",
+          "valor": "Small: 45cm | Regular: 51cm | XL: 56cm"
+        },
+        {
+          "nombre": "Peso máximo usuario",
+          "valor": "Small: 80kg | Regular: 90kg | XL: 130kg"
+        },
+        {
+          "nombre": "Peso silla",
+          "valor": "Small: 29kg | Regular: 32kg | XL: 35kg"
+        },
+        {
+          "nombre": "Marco interno",
+          "valor": "Acero reforzado de grado automotriz con soldadura robótica"
+        },
+        {
+          "nombre": "Certificaciones",
+          "valor": "BIFMA certificado (durabilidad +24h uso diario), TÜV Rheinland, SGS"
+        },
+        {
+          "nombre": "Ensamblaje",
+          "valor": "Requiere armado (15-20 min), herramientas incluidas, manual ilustrado paso a paso"
+        },
+        {
+          "nombre": "Garantía",
+          "valor": "5 años extendida (marco, mecanismos, base, ruedas, pistón gas), 2 años tapizado"
+        },
+        {
+          "nombre": "Incluye",
+          "valor": "Reposacabezas magnético, cojín lumbar magnético 4D, herramientas ensamblaje, guantes, manual"
+        },
+        {
+          "nombre": "Características adicionales",
+          "valor": "Sistema cooling airflow integrado, anti-bacterial treatment, resistente UV, costuras reforzadas triple stitch"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 140,
+          "url": "https://picsum.photos/seed/chair/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 141,
+            "url": "https://picsum.photos/seed/chair-back/800/1000",
+            "descripcion": "Soporte lumbar"
+          },
+          {
+            "idImagen": 142,
+            "url": "https://picsum.photos/seed/chair-armrest/800/1000",
+            "descripcion": "Reposabrazos 4D"
+          },
+          {
+            "idImagen": 143,
+            "url": "https://picsum.photos/seed/chair-recline/800/1000",
+            "descripcion": "Reclinada"
+          }
+        ]
+      },
+      "color": {
+        "id": 55,
+        "nombre": "Stealth",
+        "valor": "#1A1A1A"
+      },
+      "opcionAdicional": {
+        "id": 1,
+        "nombre": "Medium",
+        "valor": "M"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        155,
+        156,
+        121
+      ]
     },
     {
       "idProducto": 801,
       "nombre": "GoPro Hero 12 Black",
-      "descripcion": "Cámara de acción 5.3K",
-      "precioBase": 399.00,
+      "descripcion": "Cámara de acción 5.3K con estabilización HyperSmooth 6.0",
+      "precioBase": 399,
       "precioDescuento": null,
       "stockActual": 15,
-      "detalle": "Estabilización HyperSmooth 6.0 y resistente al agua.",
+      "detalle": "Cámara de acción más avanzada de GoPro con grabación de video 5.3K a 60fps y 4K a 120fps para cámara lenta épica, sensor de imagen mejorado con mejor rendimiento en poca luz, estabilización HyperSmooth 6.0 a nivel de gimbal con AutoBoost inteligente, horizonte bloqueado hasta 360° para videos siempre nivelados, HDR para fotos y videos con rango dinámico excepcional, resistente al agua hasta 10m sin necesidad de carcasa adicional, pantalla táctil frontal y trasera para encuadre fácil, TimeWarp 3.0 para timelapses estabilizados, transmisión en vivo 1080p, control por voz en 14 idiomas, batería Enduro incluida para mejor rendimiento en frío.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
@@ -660,82 +1621,207 @@
       "mensajeEnvio": null,
       "calificacion": 4.8,
       "totalReviews": 310,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 60, "nombre": "GoPro" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 163, "nombre": "GoPro" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Resolución", "valor": "5.3K 60fps" }],
-      "imagenes": [{ "idImagen": 150, "url": "https://picsum.photos/seed/gopro/800/1000", "descripcion": "Cámara" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 60,
+        "nombre": "GoPro"
+      },
+      "coleccion": {
+        "idColeccion": 1,
+        "nombre": "2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 163,
+          "nombre": "Cámaras de Acción"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Sensor imagen",
+          "valor": "1/1.9\" CMOS 27.6MP (8:7 aspect), tamaño pixel mejorado para mejor low-light"
+        },
+        {
+          "nombre": "Procesador",
+          "valor": "GP2 (segunda generación)"
+        },
+        {
+          "nombre": "Resolución video",
+          "valor": "5.3K60 / 5.3K30 / 4K120 / 4K60 / 4K30 / 2.7K240 / 2.7K120 / 1080p240"
+        },
+        {
+          "nombre": "Bitrate video",
+          "valor": "Hasta 120 Mbps (5.3K60)"
+        },
+        {
+          "nombre": "Formato video",
+          "valor": "H.264 / HEVC (H.265), 10-bit color"
+        },
+        {
+          "nombre": "HDR Video",
+          "valor": "5.3K/4K/2.7K HDR (hasta 30fps)"
+        },
+        {
+          "nombre": "Resolución foto",
+          "valor": "27MP, 24.7MP (16:9), 19.6MP (9:16), 12MP (4:3)"
+        },
+        {
+          "nombre": "Formatos foto",
+          "valor": "SuperPhoto (HDR automático), RAW (Adobe DNG), JPEG"
+        },
+        {
+          "nombre": "Burst foto",
+          "valor": "25 fotos/segundo (27MP)"
+        },
+        {
+          "nombre": "Estabilización",
+          "valor": "HyperSmooth 6.0 (in-body gimbal-like), AutoBoost, Horizon Lock 360°, Horizon Leveling"
+        },
+        {
+          "nombre": "Campo visión",
+          "valor": "SuperView, Wide, Linear, Linear + Horizon Lock, Narrow (ajustable digitalmente)"
+        },
+        {
+          "nombre": "Zoom digital",
+          "valor": "Hasta 2x sin pérdida calidad (4K60)"
+        },
+        {
+          "nombre": "TimeWarp",
+          "valor": "3.0 con velocidad automática/manual (hasta 30x), Audio pistas en TimeWarp"
+        },
+        {
+          "nombre": "Slow Motion",
+          "valor": "8x (4K120), 8x realtime playback (2.7K240)"
+        },
+        {
+          "nombre": "Pantalla trasera",
+          "valor": "2.27\" LCD táctil (720x540px) touch-zoom, swipe navigation"
+        },
+        {
+          "nombre": "Pantalla frontal",
+          "valor": "1.4\" LCD (300x300px) para vlogging/selfie"
+        },
+        {
+          "nombre": "Audio",
+          "valor": "3 micrófonos con Wind Noise Reduction avanzado, Audio estéreo RAW, compatible Media Mod (micrófonos externos)"
+        },
+        {
+          "nombre": "Transmisión live",
+          "valor": "1080p via GoPro Quik app (requiere suscripción GoPro), plataformas: YouTube, Facebook, Twitch, más"
+        },
+        {
+          "nombre": "Control voz",
+          "valor": "14 idiomas, comandos: start/stop recording, HiGoPro photo, turn off, etc."
+        },
+        {
+          "nombre": "Conectividad",
+          "valor": "WiFi 5GHz/2.4GHz, Bluetooth 5.0 (BLE)"
+        },
+        {
+          "nombre": "GPS",
+          "valor": "Integrado con telemetría (velocidad, distancia, elevación, G-force) - overlay en Quik app"
+        },
+        {
+          "nombre": "Resistencia agua",
+          "valor": "10 metros sin carcasa (waterproof hasta 60m con carcasa protectora opcional)"
+        },
+        {
+          "nombre": "Batería",
+          "valor": "Enduro 1720mAh Li-ion removible (incluida), hasta 70min grabación continua 5.3K60, mejorado en frío -10°C a -20°C"
+        },
+        {
+          "nombre": "Carga",
+          "valor": "USB-C (5V/2A), carga rápida 0-100% en 1.5h, pass-through charging durante grabación"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "valor": "microSD compatible (hasta 512GB, Clase 10 / UHS-I V30 mínimo, recomendado U3 / V30 para 5.3K)"
+        },
+        {
+          "nombre": "Puerto USB",
+          "valor": "USB-C para carga, transferencia datos (USB 3.0), salida video, conexión accesorios Media Mod"
+        },
+        {
+          "nombre": "Montajes",
+          "valor": "Folding Fingers integrados (compatible sistema GoPro), soporte magnético en batería Enduro"
+        },
+        {
+          "nombre": "Dimensiones",
+          "valor": "71.8 x 50.8 x 33.6 mm"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "154g con batería Enduro"
+        },
+        {
+          "nombre": "Temperatura operación",
+          "valor": "-10°C a 35°C (con batería Enduro hasta -20°C)"
+        },
+        {
+          "nombre": "App móvil",
+          "valor": "GoPro Quik (iOS/Android) - edición automática Mural, transferencia inalámbrica, control remoto, live preview"
+        },
+        {
+          "nombre": "Suscripción GoPro",
+          "valor": "Opcional: backup cloud ilimitado, descuentos, reemplazo dañada (no-questions-asked), accesorios descuento"
+        },
+        {
+          "nombre": "Incluye",
+          "valor": "Hero 12 Black, batería Enduro, Curved Adhesive Mount, montaje adhesivo base, tornillo thumb screw, cable USB-C"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 150,
+          "url": "https://picsum.photos/seed/gopro/800/1000",
+          "descripcion": "Vista frontal"
+        },
+        "secundarias": [
+          {
+            "idImagen": 151,
+            "url": "https://picsum.photos/seed/gopro-action/800/1000",
+            "descripcion": "En uso deportivo"
+          },
+          {
+            "idImagen": 152,
+            "url": "https://picsum.photos/seed/gopro-screen/800/1000",
+            "descripcion": "Pantalla trasera"
+          },
+          {
+            "idImagen": 153,
+            "url": "https://picsum.photos/seed/gopro-underwater/800/1000",
+            "descripcion": "Bajo el agua"
+          }
+        ]
+      },
+      "color": {
+        "id": 30,
+        "nombre": "Negro",
+        "valor": "#000000"
+      },
       "opcionAdicional": null,
       "tipoOpcionAdicional": null,
-      "productosRelacionados": [166]
+      "productosRelacionados": [
+        166
+      ]
     },
     {
-      "idProducto": 213,
-      "nombre": "Jeans Levi's 501",
-      "descripcion": "Jeans de corte recto clásicos",
-      "precioBase": 89.00,
+      "idProducto": 254,
+      "nombre": "Nike Air Zoom Pegasus 40",
+      "descripcion": "Zapatillas de running para todo tipo de corredor",
+      "precioBase": 129.99,
       "precioDescuento": null,
-      "stockActual": 40,
-      "detalle": "El diseño original desde 1873. Denim de alta calidad.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": null,
-      "calificacion": 4.5,
-      "totalReviews": 1500,
-      "genero": { "idGenero": 2, "nombre": "Hombre" },
-      "marca": { "idMarca": 70, "nombre": "Levi's" },
-      "coleccion": { "idColeccion": 7, "nombre": "Clásicos" },
-      "categorias": [{ "idCategoria": 213, "nombre": "Pantalones Jeans" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Corte", "valor": "Straight Fit" }],
-      "imagenes": [{ "idImagen": 160, "url": "https://picsum.photos/seed/levis/800/1000", "descripcion": "Perfil" }],
-      "color": { "id": 65, "nombre": "Blue Denim", "valor": "#4169E1" },
-      "opcionAdicional": { "id": 32, "nombre": "32", "valor": "32" },
-      "tipoOpcionAdicional": "Talla",
-      "productosRelacionados": [212]
-    },
-    {
-      "idProducto": 135,
-      "nombre": "Cargador GaN 4 Puertos",
-      "descripcion": "Cargador rápido con tecnología GaN",
-      "precioBase": 55.00,
-      "precioDescuento": null,
-      "stockActual": 100,
-      "detalle": "Carga laptops y celulares simultáneamente.",
-      "esReservio": false,
-      "esFavorito": false,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega hoy",
-      "mensajeEnvio": null,
-      "calificacion": 4.9,
-      "totalReviews": 420,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 90, "nombre": "Anker" },
-      "coleccion": { "idColeccion": 1, "nombre": "2024" },
-      "categorias": [{ "idCategoria": 135, "nombre": "Cargadores" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Potencia", "valor": "100W" }],
-      "imagenes": [{ "idImagen": 220, "url": "https://picsum.photos/seed/charger/800/1000", "descripcion": "Cargador" }],
-      "color": { "id": 30, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [136, 137]
-    },
-    {
-      "idProducto": 232,
-      "nombre": "Teclado Mecánico Razer BlackWidow V4",
-      "descripcion": "Teclado mecánico gaming RGB",
-      "precioBase": 189.00,
-      "precioDescuento": null,
-      "stockActual": 14,
-      "detalle": "Switches mecánicos amarillos silenciosos.",
+      "stockActual": 35,
+      "detalle": "Zapatillas de running versátiles para entrenamiento diario, doble unidad Air Zoom en antepié para máxima amortiguación reactiva, espuma React más alta que nunca para mayor confort en largas distancias, upper de malla diseñada para transpirabilidad óptima con zonas de soporte donde más se necesitan, lengüeta acolchada integrada para ajuste cómodo sin puntos de presión, suela de goma Waffle mejorada para tracción duradera en asfalto y superficies variadas, drop de 10mm ideal para corredores de talón a punta, diseño renovado más moderno. Perfectas tanto para entrenamientos de velocidad como para rodajes largos.",
       "esReservio": false,
       "esFavorito": false,
       "disponibleRecojo": true,
@@ -743,46 +1829,168 @@
       "tiempoEnvio": "Llega mañana",
       "mensajeEnvio": null,
       "calificacion": 4.8,
-      "totalReviews": 220,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 95, "nombre": "Razer" },
-      "coleccion": { "idColeccion": 8, "nombre": "Gaming 2024" },
-      "categorias": [{ "idCategoria": 232, "nombre": "Teclados Gaming" }],
-      "etiquetas": [{ "idEtiqueta": 2, "descripcion": "Más vendido" }],
-      "especificaciones": [{ "nombre": "Switches", "valor": "Mechanical Yellow" }],
-      "imagenes": [{ "idImagen": 230, "url": "https://picsum.photos/seed/keyboard/800/1000", "descripcion": "Teclado" }],
-      "color": { "id": 80, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [233, 234]
-    },
-    {
-      "idProducto": 233,
-      "nombre": "Teclado Mecánico Razer BlackWidow V4 Pro",
-      "descripcion": "Teclado mecánico gaming RGB premium",
-      "precioBase": 249.00,
-      "precioDescuento": 219.00,
-      "stockActual": 8,
-      "detalle": "Switches mecánicos amarillos silenciosos con conectividad inalámbrica.",
-      "esReservio": false,
-      "esFavorito": true,
-      "disponibleRecojo": true,
-      "disponibleEnvio": true,
-      "tiempoEnvio": "Llega mañana",
-      "mensajeEnvio": "Envío gratis",
-      "calificacion": 4.9,
-      "totalReviews": 150,
-      "genero": { "idGenero": 1, "nombre": "Unisex" },
-      "marca": { "idMarca": 95, "nombre": "Razer" },
-      "coleccion": { "idColeccion": 8, "nombre": "Gaming 2024" },
-      "categorias": [{ "idCategoria": 232, "nombre": "Teclados Gaming" }],
-      "etiquetas": [{ "idEtiqueta": 3, "descripcion": "Oferta" }],
-      "especificaciones": [{ "nombre": "Switches", "valor": "Mechanical Yellow" }],
-      "imagenes": [{ "idImagen": 235, "url": "https://picsum.photos/seed/keyboardpro/800/1000", "descripcion": "Teclado Pro" }],
-      "color": { "id": 80, "nombre": "Negro", "valor": "#000000" },
-      "opcionAdicional": null,
-      "tipoOpcionAdicional": null,
-      "productosRelacionados": [232, 234]
+      "totalReviews": 890,
+      "genero": {
+        "idGenero": 1,
+        "nombre": "Unisex"
+      },
+      "marca": {
+        "idMarca": 20,
+        "nombre": "Nike"
+      },
+      "coleccion": {
+        "idColeccion": 5,
+        "nombre": "Sport 2024"
+      },
+      "categorias": [
+        {
+          "idCategoria": 254,
+          "nombre": "Zapatillas Running"
+        }
+      ],
+      "etiquetas": [
+        {
+          "idEtiqueta": 2,
+          "descripcion": "Más vendido"
+        }
+      ],
+      "especificaciones": [
+        {
+          "nombre": "Tipo calzado",
+          "valor": "Running neutral / Entrenamiento diario"
+        },
+        {
+          "nombre": "Amortiguación antepié",
+          "valor": "2 unidades Nike Air Zoom (bolsas aire presurizado para respuesta energética)"
+        },
+        {
+          "nombre": "Mediasuela",
+          "valor": "Nike ReactX Foam (13% más retorno energía vs React, +43% durabilidad, amortiguación suave-firme balanceada)"
+        },
+        {
+          "nombre": "Altura mediasuela",
+          "valor": "Antepié: 22mm | Talón: 32mm"
+        },
+        {
+          "nombre": "Drop (diferencia altura)",
+          "valor": "10mm (talón a antepié)"
+        },
+        {
+          "nombre": "Upper (empeine)",
+          "valor": "Engineered mesh monocapa con zonas refuerzo Flywire integradas, transpirable multi-direccional"
+        },
+        {
+          "nombre": "Ajuste",
+          "valor": "Lengüeta acolchada integrada con gusseted construction (sin desplazamiento lateral)"
+        },
+        {
+          "nombre": "Sistema cordones",
+          "valor": "Ojales asimétricos para ajuste personalizado según forma pie"
+        },
+        {
+          "nombre": "Collar",
+          "valor": "Acolchado foam memory en tobillo para confort sin rozaduras"
+        },
+        {
+          "nombre": "Suela exterior",
+          "valor": "Goma Nike Waffle diseño renovado con patrón tracción direccional, rubber crash pad en talón para durabilidad"
+        },
+        {
+          "nombre": "Flexibilidad",
+          "valor": "Flex grooves en antepié para transición natural"
+        },
+        {
+          "nombre": "Peso",
+          "valor": "Hombre US9: 283g | Mujer US8: 242g"
+        },
+        {
+          "nombre": "Arco",
+          "valor": "Soporte neutral (apto arco normal a alto)"
+        },
+        {
+          "nombre": "Terreno",
+          "valor": "Asfalto, pista sintética, superficies pavimentadas"
+        },
+        {
+          "nombre": "Distancias",
+          "valor": "5K hasta maratón (versátil para rodajes largos y tempo runs)"
+        },
+        {
+          "nombre": "Tipo pisada",
+          "valor": "Neutra (no corrige pronación)"
+        },
+        {
+          "nombre": "Velocidad óptima",
+          "valor": "4:00-6:30 min/km (ritmo moderado a rápido)"
+        },
+        {
+          "nombre": "Durabilidad estimada",
+          "valor": "500-650 km dependiendo peso corredor y superficie"
+        },
+        {
+          "nombre": "Breathability (transpirabilidad)",
+          "valor": "Alta (mesh open-weave zones)"
+        },
+        {
+          "nombre": "Reflectantes",
+          "valor": "Detalles reflectantes en lateral y talón para visibilidad nocturna"
+        },
+        {
+          "nombre": "Tallas disponibles",
+          "valor": "Hombre: US 6-15 (incluye medias tallas) | Mujer: US 5-12 (incluye medias tallas)"
+        },
+        {
+          "nombre": "Ancho",
+          "valor": "Ancho estándar (D hombre / B mujer), Wide (2E) disponible en tallas seleccionadas"
+        },
+        {
+          "nombre": "Uso recomendado",
+          "valor": "Entrenamiento diario, rodajes fáciles, tempo runs, carreras hasta 21K"
+        },
+        {
+          "nombre": "Mantenimiento",
+          "valor": "Limpiar con paño húmedo, no lavadora, secar aire (no secadora/calor directo)"
+        }
+      ],
+      "imagenes": {
+        "principal": {
+          "idImagen": 80,
+          "url": "https://picsum.photos/seed/nike/800/1000",
+          "descripcion": "Vista lateral"
+        },
+        "secundarias": [
+          {
+            "idImagen": 81,
+            "url": "https://picsum.photos/seed/nike-top/800/1000",
+            "descripcion": "Vista superior"
+          },
+          {
+            "idImagen": 82,
+            "url": "https://picsum.photos/seed/nike-sole/800/1000",
+            "descripcion": "Suela Waffle"
+          },
+          {
+            "idImagen": 83,
+            "url": "https://picsum.photos/seed/nike-worn/800/1000",
+            "descripcion": "Puestas corriendo"
+          }
+        ]
+      },
+      "color": {
+        "id": 18,
+        "nombre": "Volt Green",
+        "valor": "#CEFF00"
+      },
+      "opcionAdicional": {
+        "id": 42,
+        "nombre": "42",
+        "valor": "42"
+      },
+      "tipoOpcionAdicional": "Talla",
+      "productosRelacionados": [
+        251,
+        252
+      ]
     }
   ]
 }
