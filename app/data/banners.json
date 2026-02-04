@@ -1,0 +1,94 @@
+{
+  "banners": [
+    {
+      "idBanner": 1,
+      "titulo": "Nueva Colección Electrónica",
+      "subtitulo": "Hasta 40% de descuento",
+      "descripcion": "Los mejores smartphones del mercado",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-tech/1920/600",
+        "alt": "Banner de electrónica con smartphones y tecnología"
+      },
+      "idCategoria": 11,
+      "activo": true,
+      "orden": 1,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-02-28"
+    },
+    {
+      "idBanner": 2,
+      "titulo": "Moda de Temporada",
+      "subtitulo": "Nuevos estilos para ti",
+      "descripcion": "Descubre las últimas tendencias en ropa",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-fashion/1920/600",
+        "alt": "Banner de moda con ropa de temporada"
+      },
+      "idCategoria": 21,
+      "activo": true,
+      "orden": 2,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-03-31"
+    },
+    {
+      "idBanner": 3,
+      "titulo": "Renueva tu Hogar",
+      "subtitulo": "Muebles y decoración",
+      "descripcion": "Transforma tus espacios con estilo",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-home/1920/600",
+        "alt": "Banner de hogar con muebles y decoración"
+      },
+      "idCategoria": 31,
+      "activo": true,
+      "orden": 3,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-02-15"
+    },
+    {
+      "idBanner": 4,
+      "titulo": "Gaming Zone",
+      "subtitulo": "Equipamiento profesional",
+      "descripcion": "Lo mejor para gamers exigentes",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-gaming/1920/600",
+        "alt": "Banner de gaming con consolas y accesorios"
+      },
+      "idCategoria": 15,
+      "activo": true,
+      "orden": 4,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-02-20"
+    },
+    {
+      "idBanner": 5,
+      "titulo": "Belleza y Cuidado Personal",
+      "subtitulo": "Productos premium",
+      "descripcion": "Lo mejor para tu piel y cabello",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-beauty/1920/600",
+        "alt": "Banner de belleza con productos de cuidado personal"
+      },
+      "idCategoria": 61,
+      "activo": true,
+      "orden": 5,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-03-01"
+    },
+    {
+      "idBanner": 6,
+      "titulo": "Deportes y Fitness",
+      "subtitulo": "Entrena como profesional",
+      "descripcion": "Equipamiento deportivo de calidad",
+      "imagen": {
+        "url": "https://picsum.photos/seed/banner-sports/1920/600",
+        "alt": "Banner de deportes con equipamiento fitness"
+      },
+      "idCategoria": 41,
+      "activo": true,
+      "orden": 6,
+      "fechaInicio": "2026-02-01",
+      "fechaFin": "2026-02-25"
+    }
+  ]
+}

@@ -114,8 +114,8 @@ export default function HeaderPublic() {
         
         {/* Header principal - padding bottom 10px solo en móviles */}
         <header className="w-full bg-[#2c1ff1] shadow-md font-sans pb-[10px] md:pb-0">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 py-2 sm:py-0">
-            <div className="flex items-center gap-2 sm:gap-4 lg:gap-6">
+          <div className="mx-auto max-w-[1600px] px-4 sm:px-6 py-2 sm:py-0">
+            <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
               <Link href="/" className="flex-shrink-0 cursor-pointer">
                 <Image
                   src="/logo.png"
@@ -128,15 +128,15 @@ export default function HeaderPublic() {
 
               <button
                 onClick={() => setShowMenuSidebar(!showMenuSidebar)}
-                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 lg:px-5 py-2 sm:py-2.5 lg:py-3 bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
+                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-5 lg:px-7 py-2 sm:py-2.5 lg:py-3 hover:bg-[#2416c9] transition-colors cursor-pointer"
               >
-                <Menu className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#2c1ff1]" />
-                <span className="hidden sm:inline text-sm lg:text-base font-semibold text-[#2c1ff1]">
+                <Menu className="w-9 h-9 sm:w-10 sm:h-10 lg:w-11 lg:h-11 text-white" />
+                <span className="hidden sm:inline text-base lg:text-xl font-semibold text-white">
                   Menú
                 </span>
               </button>
 
-              <div className="flex-1 max-w-2xl hidden md:block md:ml-8 lg:ml-12">
+              <div className="flex-1 hidden md:block md:ml-4 lg:ml-6 md:mr-4 lg:mr-6">
                 <div className="relative">
                   <input
                     type="text"
@@ -148,19 +148,19 @@ export default function HeaderPublic() {
                       }
                     }}
                     placeholder="Buscar productos..."
-                    className="w-full px-4 py-2.5 lg:py-3 pr-12 border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm lg:text-base"
+                    className="w-full px-4 py-2.5 lg:py-3 pr-12 border border-gray-300 bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 text-gray-700 placeholder-gray-400 text-sm lg:text-base shadow-sm"
                   />
                   <button
                     onClick={handleSearch}
-                    className="absolute right-4 top-1/2 -translate-y-1/2"
+                    className="absolute right-1 top-1/2 -translate-y-1/2 w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-gray-700 hover:bg-gray-800 flex items-center justify-center transition-colors"
                     aria-label="Buscar"
                   >
-                    <Search className="text-gray-400 w-5 h-5" />
+                    <Search className="text-white w-5 h-5" />
                   </button>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 sm:gap-8 lg:gap-12 ml-auto md:ml-8 lg:ml-12">
+              <div className="flex items-center gap-3 sm:gap-4 lg:gap-6">
                 {/* Menú de usuario no autenticado */}
                 {!isAuthenticated && (
                   <div 
@@ -171,9 +171,9 @@ export default function HeaderPublic() {
                   >
                     <button
                       onClick={toggleProfileMenu}
-                      className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
+                      className="flex items-center justify-center hover:bg-[#2416c9] transition-colors cursor-pointer p-2"
                     >
-                      <User className="w-6 h-6 lg:w-7 lg:h-7 text-[#2c1ff1]" />
+                      <User className="w-9 h-9 lg:w-11 lg:h-11 text-white" />
                     </button>
 
                     <UserMenuDropdown
@@ -195,7 +195,7 @@ export default function HeaderPublic() {
                   </div>
                 )}
 
-                {/* Menú de usuario autenticado - SIN rounded */}
+                {/* Menú de usuario autenticado */}
                 {isAuthenticated && user && (
                   <div 
                     className="relative"
@@ -205,9 +205,9 @@ export default function HeaderPublic() {
                   >
                     <button
                       onClick={toggleProfileMenu}
-                      className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white hover:bg-gray-50 transition-colors shadow-md cursor-pointer"
+                      className="flex items-center justify-center hover:bg-[#2416c9] transition-colors cursor-pointer p-2"
                     >
-                      <div className="w-full h-full bg-blue-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl">
+                      <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center text-[#2c1ff1] font-bold text-xl lg:text-2xl">
                         {user.nombre.charAt(0).toUpperCase()}
                       </div>
                     </button>
@@ -252,11 +252,11 @@ export default function HeaderPublic() {
 
                 <Link
                   href="/cart"
-                  className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white hover:bg-gray-50 transition-colors relative shadow-md cursor-pointer"
+                  className="flex items-center justify-center hover:bg-[#2416c9] transition-colors relative cursor-pointer p-2 ml-2 lg:ml-4"
                 >
-                  <ShoppingCart className="w-6 h-6 lg:w-7 lg:h-7 text-[#2c1ff1]" />
+                  <ShoppingCart className="w-9 h-9 lg:w-11 lg:h-11 text-white" />
                   {hasHydrated && itemsCount > 0 && (
-                    <span className="absolute -top-1 -right-1 w-6 h-6 sm:w-7 sm:h-7 bg-red-500 text-white text-xs font-bold flex items-center justify-center shadow-md">
+                    <span className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-red-500 text-white text-xs font-bold flex items-center justify-center rounded-full shadow-md">
                       {itemsCount}
                     </span>
                   )}
@@ -276,11 +276,11 @@ export default function HeaderPublic() {
                     }
                   }}
                   placeholder="Buscar productos..."
-                  className="w-full px-4 py-3 pr-14 border-2 border-white bg-white focus:outline-none focus:ring-2 focus:ring-white focus:border-white text-gray-700 placeholder-gray-400 text-sm"
+                  className="w-full px-4 py-3 pr-14 border border-gray-300 bg-white rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-gray-400 text-gray-700 placeholder-gray-400 text-sm shadow-sm"
                 />
                 <button
                   onClick={handleSearch}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 bg-gray-100 text-gray-500 active:scale-95 hover:bg-gray-200 transition"
+                  className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 bg-gray-700 hover:bg-gray-800 text-white rounded-full active:scale-95 transition"
                   aria-label="Buscar"
                 >
                   <Search className="w-5 h-5" />
