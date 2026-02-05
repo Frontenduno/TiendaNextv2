@@ -291,8 +291,7 @@ export default function HeaderPublic() {
         </header>
       </div>
 
-      {/* Espaciador para compensar el header fijo */}
-      <div className="h-32 sm:h-36 md:h-36 lg:h-40"></div>
+      <div className="h-43 sm:h-36 md:h-28 lg:h-32"></div>
 
       <MenuSidebar
         isOpen={showMenuSidebar}
