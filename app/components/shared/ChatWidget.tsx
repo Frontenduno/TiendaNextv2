@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Send, MessageCircle, Bot, ChevronDown } from "lucide-react";
 
-// ─── Tipos ────────────────────────────────────────────────────────────────────
 
 type Role = "user" | "assistant";
 
@@ -13,11 +12,11 @@ interface Message {
   text: string;
   ts: number;
   isError?: boolean;
+  isStreaming?: boolean;
 }
 
 type Status = "idle" | "loading" | "error";
 
-// ─── Constantes ───────────────────────────────────────────────────────────────
 
 const BACKEND_URL =
   process.env.NEXT_PUBLIC_ASSISTANT_URL ?? "http://localhost:8000";
@@ -29,7 +28,9 @@ const SUGGESTED = [
   "¿Cómo hago una devolución?",
 ];
 
-// ─── Utilidades ───────────────────────────────────────────────────────────────
+const TYPEWRITER_BASE_MS = 12;
+const TYPEWRITER_PAUSE_MS = 60;
+
 
 function uid() {
   return Math.random().toString(36).slice(2, 9);
@@ -42,7 +43,55 @@ function formatTime(ts: number) {
   });
 }
 
-// ─── Sub-componentes ──────────────────────────────────────────────────────────
+function useTypewriter(
+  fullText: string | undefined,
+  isStreaming: boolean,
+  onDone: () => void
+): string {
+  const [displayed, setDisplayed] = useState("");
+  const indexRef = useRef(0);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (!isStreaming || !fullText) {
+      const t = setTimeout(() => {
+        setDisplayed(fullText ?? "");
+        indexRef.current = fullText?.length ?? 0;
+      }, 0);
+      return () => clearTimeout(t);
+    }
+
+    indexRef.current = 0;
+    const resetTimer = setTimeout(() => setDisplayed(""), 0);
+
+    function tick() {
+      const i = indexRef.current;
+      if (!fullText || i >= fullText.length) {
+        onDone();
+        return;
+      }
+
+      const ch = fullText[i];
+      setDisplayed(fullText.slice(0, i + 1));
+      indexRef.current = i + 1;
+
+      const isPause = [".", "!", "?", "\n"].includes(ch);
+      const jitter = Math.random() * 8 - 4;
+      const delay = isPause ? TYPEWRITER_PAUSE_MS : TYPEWRITER_BASE_MS + jitter;
+
+      timerRef.current = setTimeout(tick, delay);
+    }
+
+    timerRef.current = setTimeout(tick, 80);
+
+    return () => {
+      clearTimeout(resetTimer);
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [fullText, isStreaming]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return displayed;
+}
 
 function TypingDots() {
   return (
@@ -59,30 +108,61 @@ function TypingDots() {
       <style>{`
         @keyframes bounce {
           0%, 80%, 100% { transform: translateY(0); }
-          40% { transform: translateY(-6px); }
+          40%            { transform: translateY(-6px); }
         }
       `}</style>
     </div>
   );
 }
 
-function MessageBubble({ msg }: { msg: Message }) {
+function BlinkingCursor() {
+  return (
+    <>
+      <style>{`
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+        .cursor { display:inline-block; width:2px; height:1em; background:currentColor;
+                  vertical-align:text-bottom; margin-left:1px;
+                  animation: blink 0.8s step-end infinite; }
+      `}</style>
+      <span className="cursor" aria-hidden />
+    </>
+  );
+}
+
+function MessageBubble({
+  msg,
+  onStreamDone,
+}: {
+  msg: Message;
+  onStreamDone: (id: string) => void;
+}) {
   const isUser = msg.role === "user";
+
+  const displayed = useTypewriter(
+    msg.text,
+    msg.isStreaming ?? false,
+    () => onStreamDone(msg.id)
+  );
+
+  const stillTyping = msg.isStreaming && displayed.length < (msg.text?.length ?? 0);
 
   return (
     <div
       className={`flex gap-2 mb-3 ${isUser ? "flex-row-reverse" : "flex-row"}`}
     >
-      {/* Avatar */}
       {!isUser && (
         <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#2c1ff1] to-[#4c3ff3] flex items-center justify-center shrink-0 mt-1">
           <Bot className="w-4 h-4 text-white" />
         </div>
       )}
 
-      <div className={`max-w-[78%] ${isUser ? "items-end" : "items-start"} flex flex-col gap-1`}>
+      <div
+        className={`max-w-[78%] ${
+          isUser ? "items-end" : "items-start"
+        } flex flex-col gap-1`}
+      >
         <div
-          className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+          className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
             isUser
               ? "bg-[#2c1ff1] text-white rounded-tr-sm"
               : msg.isError
@@ -90,7 +170,8 @@ function MessageBubble({ msg }: { msg: Message }) {
               : "bg-white text-gray-800 border border-gray-100 shadow-sm rounded-tl-sm"
           }`}
         >
-          {msg.text}
+          {displayed}
+          {stillTyping && !isUser && !msg.isError && <BlinkingCursor />}
         </div>
         <span className="text-[10px] text-gray-400 px-1">
           {formatTime(msg.ts)}
@@ -100,43 +181,52 @@ function MessageBubble({ msg }: { msg: Message }) {
   );
 }
 
-// ─── Componente principal ─────────────────────────────────────────────────────
-
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [showSuggested, setShowSuggested] = useState(true);
-  const [waitNote, setWaitNote] = useState(false); // aviso de demora
+  const [waitNote, setWaitNote] = useState(false);
 
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const waitTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Scroll al fondo
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, status]);
 
-  // Focus al abrir
   useEffect(() => {
-    if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 100);
-    }
+    if (isOpen) setTimeout(() => inputRef.current?.focus(), 100);
   }, [isOpen]);
 
-  // Limpiar timer al desmontar
   useEffect(() => {
     return () => {
       if (waitTimerRef.current) clearTimeout(waitTimerRef.current);
     };
   }, []);
 
-  const addMessage = useCallback((role: Role, text: string, isError = false) => {
-    const msg: Message = { id: uid(), role, text, ts: Date.now(), isError };
-    setMessages((prev) => [...prev, msg]);
-    return msg;
+  const addMessage = useCallback(
+    (role: Role, text: string, isError = false, streaming = false) => {
+      const msg: Message = {
+        id: uid(),
+        role,
+        text,
+        ts: Date.now(),
+        isError,
+        isStreaming: streaming,
+      };
+      setMessages((prev) => [...prev, msg]);
+      return msg;
+    },
+    []
+  );
+
+  const handleStreamDone = useCallback((id: string) => {
+    setMessages((prev) =>
+      prev.map((m) => (m.id === id ? { ...m, isStreaming: false } : m))
+    );
   }, []);
 
   const sendMessage = useCallback(
@@ -150,17 +240,14 @@ export default function ChatWidget() {
       setStatus("loading");
       setWaitNote(false);
 
-      // Aviso de demora después de 25s
-      waitTimerRef.current = setTimeout(() => {
-        setWaitNote(true);
-      }, 25_000);
+      waitTimerRef.current = setTimeout(() => setWaitNote(true), 25_000);
 
       try {
         const res = await fetch(`${BACKEND_URL}/qa/ask`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query: text, top_k: 5, use_cache: true }),
-          signal: AbortSignal.timeout(310_000), // 5min + margen
+          signal: AbortSignal.timeout(310_000),
         });
 
         if (waitTimerRef.current) clearTimeout(waitTimerRef.current);
@@ -174,10 +261,10 @@ export default function ChatWidget() {
               : err?.detail?.error === "NO_RESULTS"
               ? "No encontré información sobre eso. ¿Puedes reformular tu pregunta?"
               : "Hubo un problema al procesar tu consulta. Intenta de nuevo.";
-          addMessage("assistant", errMsg, true);
+          addMessage("assistant", errMsg, true, false);
         } else {
           const data = await res.json();
-          addMessage("assistant", data.answer);
+          addMessage("assistant", data.answer, false, true);
         }
       } catch {
         if (waitTimerRef.current) clearTimeout(waitTimerRef.current);
@@ -185,7 +272,8 @@ export default function ChatWidget() {
         addMessage(
           "assistant",
           "No pude conectarme al asistente. Verifica tu conexión e intenta de nuevo.",
-          true
+          true,
+          false
         );
       } finally {
         setStatus("idle");
@@ -204,7 +292,6 @@ export default function ChatWidget() {
   const handleOpen = () => {
     setIsOpen(true);
     if (messages.length === 0) {
-      // Mensaje de bienvenida
       setTimeout(() => {
         setMessages([
           {
@@ -212,6 +299,7 @@ export default function ChatWidget() {
             role: "assistant",
             text: "¡Hola! 👋 Soy el asistente virtual de J&P. Puedo ayudarte con información sobre envíos, devoluciones, garantías, horarios y más. ¿En qué te ayudo hoy?",
             ts: Date.now(),
+            isStreaming: true,
           },
         ]);
       }, 300);
@@ -220,7 +308,6 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* ── Botón flotante ────────────────────────────────────────────── */}
       {!isOpen && (
         <button
           onClick={handleOpen}
@@ -232,12 +319,10 @@ export default function ChatWidget() {
                      transition-all duration-200 active:scale-95"
         >
           <MessageCircle className="w-6 h-6 text-white" />
-          {/* Pulso */}
           <span className="absolute inset-0 rounded-full bg-[#2c1ff1] opacity-30 animate-ping" />
         </button>
       )}
 
-      {/* ── Panel de chat ─────────────────────────────────────────────── */}
       {isOpen && (
         <div
           className="fixed bottom-6 right-6 z-50
@@ -255,11 +340,15 @@ export default function ChatWidget() {
               <Bot className="w-5 h-5 text-white" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-white font-semibold text-sm leading-tight">Asistente J&P</p>
+              <p className="text-white font-semibold text-sm leading-tight">
+                Asistente J&P
+              </p>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 shrink-0" />
                 <p className="text-white/80 text-xs truncate">
-                  {status === "loading" ? "Procesando tu consulta..." : "En línea"}
+                  {status === "loading"
+                    ? "Procesando tu consulta..."
+                    : "En línea"}
                 </p>
               </div>
             </div>
@@ -275,10 +364,13 @@ export default function ChatWidget() {
           {/* Mensajes */}
           <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1 scrollbar-hide">
             {messages.map((msg) => (
-              <MessageBubble key={msg.id} msg={msg} />
+              <MessageBubble
+                key={msg.id}
+                msg={msg}
+                onStreamDone={handleStreamDone}
+              />
             ))}
 
-            {/* Typing indicator */}
             {status === "loading" && (
               <div className="flex gap-2 mb-3">
                 <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#2c1ff1] to-[#4c3ff3] flex items-center justify-center shrink-0 mt-1">
@@ -290,14 +382,12 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {/* Aviso demora */}
             {waitNote && (
               <p className="text-center text-xs text-gray-400 py-1 px-3">
                 ⏳ Procesando respuesta, esto puede tardar hasta 90 seg...
               </p>
             )}
 
-            {/* Sugerencias */}
             {showSuggested && messages.length === 1 && (
               <div className="pt-2 space-y-2">
                 <p className="text-xs text-gray-400 text-center">
@@ -322,7 +412,6 @@ export default function ChatWidget() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Input */}
           <div className="px-3 py-3 border-t border-gray-100 bg-white shrink-0">
             <div className="flex items-center gap-2">
               <input
